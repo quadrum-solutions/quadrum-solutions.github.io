@@ -1,0 +1,3949 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Mercury API",
+    "description": "This Api will be responsible for overall data distribution.",
+    "contact": {
+      "name": "Quadrum Solutions",
+      "url": "https://quadrum-solutions.ch",
+      "email": "info@quadrum-solutions.ch"
+    },
+    "version": "v1",
+    "x-logo": {
+      "url": "https://quadrum-solutions.ch/img/Quadrum_logo.png",
+      "altText": "Quadrum Solutions"
+    }
+  },
+  "paths": {
+    "/Adaptation": {
+      "get": {
+        "tags": [
+          "Adaptation"
+        ],
+        "summary": "Allow to fetch all items",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Adaptation"
+        ],
+        "summary": "Allow to create an item",
+        "requestBody": {
+          "description": "Item to create",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Adaptation"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Adaptation"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Adaptation"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Adaptation"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Adaptation"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Adaptation"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Adaptation"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Adaptation/{id}": {
+      "get": {
+        "tags": [
+          "Adaptation"
+        ],
+        "summary": "Allow to fetch one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Adaptation"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id og the item to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Descriptions": {
+      "get": {
+        "tags": [
+          "Descriptions"
+        ],
+        "summary": "Allow to fetch the description of a field",
+        "parameters": [
+          {
+            "name": "language",
+            "in": "query",
+            "description": "Language of the description",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "field",
+            "in": "query",
+            "description": "Field of the description",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "Name of the description",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Engine/CalcFields/{lcId}": {
+      "post": {
+        "tags": [
+          "Engine"
+        ],
+        "summary": "Run the calculated field calculation",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the LoadCollection to run",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Engine/CalcB3/{lcId}": {
+      "post": {
+        "tags": [
+          "Engine"
+        ],
+        "summary": "Run the Basel 3 CRM calculation",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the LoadCollection to run",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Engine/CalcCrmB3/{lcId}": {
+      "post": {
+        "tags": [
+          "Engine"
+        ],
+        "summary": "Run the Basel 3 CRM calculation",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the LoadCollection to run",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Engine/CalcCrmMona/{lcId}": {
+      "post": {
+        "tags": [
+          "Engine"
+        ],
+        "summary": "Run the Mona CRM calculation",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the LoadCollection to run",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Entity": {
+      "get": {
+        "tags": [
+          "Entity"
+        ],
+        "summary": "Allow to fetch all items",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Entity"
+        ],
+        "summary": "Allow to create an item",
+        "requestBody": {
+          "description": "Item to create",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Entity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Entity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Entity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Entity"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Entity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Entity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Entity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Entity/{id}": {
+      "get": {
+        "tags": [
+          "Entity"
+        ],
+        "summary": "Allow to fetch one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Entity"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id og the item to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Import/RT01": {
+      "post": {
+        "tags": [
+          "Import"
+        ],
+        "summary": "Allow to import data from a rt01 file",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "Name of the load",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "date",
+            "in": "query",
+            "description": "Reporting date",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Import/Excel": {
+      "post": {
+        "tags": [
+          "Import"
+        ],
+        "summary": "Allow to import data from an excel file",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "Name of the load",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "date",
+            "in": "query",
+            "description": "Reporting date",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Import/Views": {
+      "post": {
+        "tags": [
+          "Import"
+        ],
+        "summary": "Allow to import from SQL views",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "Name of the load",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "date",
+            "in": "query",
+            "description": "Reporting date",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Import/Logs": {
+      "get": {
+        "tags": [
+          "Import"
+        ],
+        "summary": "Allow to retrieve logs summaries",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "description": "Id of the load",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Import/LogsDetail": {
+      "get": {
+        "tags": [
+          "Import"
+        ],
+        "summary": "Allow to retrieve logs details",
+        "parameters": [
+          {
+            "name": "logId",
+            "in": "query",
+            "description": "Id of the log summary",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/List/LoadAll": {
+      "post": {
+        "tags": [
+          "List"
+        ],
+        "summary": "Allow to load of the static files",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Load": {
+      "get": {
+        "tags": [
+          "Load"
+        ],
+        "summary": "Allow to fetch all items",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Load"
+        ],
+        "summary": "Allow to create an item",
+        "requestBody": {
+          "description": "Item to create",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Load"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Load"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Load"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Load"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Load"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Load"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Load"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Load/{id}": {
+      "get": {
+        "tags": [
+          "Load"
+        ],
+        "summary": "Allow to fetch one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Load"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id og the item to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/LoadCollection/Load": {
+      "post": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to add a load to a load collection",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "description": "Id of the load",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "LoadCollectionId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to remove a load from a load collection",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "description": "Id of the load",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "LoadCollectionId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/LoadCollection": {
+      "get": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to fetch all items",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to create an item",
+        "requestBody": {
+          "description": "Item to create",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollection"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollection"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollection"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollection"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollection"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollection"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/LoadCollection/{id}": {
+      "get": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to fetch one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id og the item to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Parameter": {
+      "get": {
+        "tags": [
+          "Parameter"
+        ],
+        "summary": "Allow to fetch all items",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Parameter"
+        ],
+        "summary": "Allow to create an item",
+        "requestBody": {
+          "description": "Item to create",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Parameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Parameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Parameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Parameter"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Parameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Parameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Parameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Parameter/{id}": {
+      "get": {
+        "tags": [
+          "Parameter"
+        ],
+        "summary": "Allow to fetch one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Parameter"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id og the item to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Reports/Reload": {
+      "post": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to reload the reports files",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Reports/Calculate": {
+      "post": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to calculate a survey",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "surveyName",
+            "in": "query",
+            "description": "Name of the survey",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "surveyVersion",
+            "in": "query",
+            "description": "Version of the survey",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Reports/FetchSurvey": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to fetch a calculated survey",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "surveyName",
+            "in": "query",
+            "description": "Name of the survey",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "surveyVersion",
+            "in": "query",
+            "description": "Version of the survey",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Reports/FetchReport": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to fetch a report",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "surveyName",
+            "in": "query",
+            "description": "Name of the survey",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "surveyVersion",
+            "in": "query",
+            "description": "Version of the survey",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "reportName",
+            "in": "query",
+            "description": "Name of the report",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Reports/CalculateAndFetchSurvey": {
+      "post": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to calculate and fetch a survey",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "surveyName",
+            "in": "query",
+            "description": "Name of the survey",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "surveyVersion",
+            "in": "query",
+            "description": "Version of the survey",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Reports/Audit": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to fetch the audit of a cell",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "surveyName",
+            "in": "query",
+            "description": "Name of the survey",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "surveyVersion",
+            "in": "query",
+            "description": "Version of the survey",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cellPosition",
+            "in": "query",
+            "description": "Position of the cell",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "reportName",
+            "in": "query",
+            "description": "Name of the report if needed",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Reports/AuditPosition": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to fetch the audit of a cell for only one position",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "surveyName",
+            "in": "query",
+            "description": "Name of the survey",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "surveyVersion",
+            "in": "query",
+            "description": "Version of the survey",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cellPosition",
+            "in": "query",
+            "description": "Position of the cell",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "positionId",
+            "in": "query",
+            "description": "Id of the position",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "reportName",
+            "in": "query",
+            "description": "Name of the report if needed",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Reports/Edit": {
+      "post": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to edit a cell value",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "surveyName",
+            "in": "query",
+            "description": "Name of the survey",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "surveyVersion",
+            "in": "query",
+            "description": "Version of the survey",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cellPosition",
+            "in": "query",
+            "description": "Position of the cell",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "value",
+            "in": "query",
+            "description": "New value of the cell",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "reason",
+            "in": "query",
+            "description": "Reason of the change",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Reports/Excel": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to fetch the audit of a cell in Excel",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "surveyName",
+            "in": "query",
+            "description": "Name of the survey",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "surveyVersion",
+            "in": "query",
+            "description": "Version of the survey",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cellPosition",
+            "in": "query",
+            "description": "Position of the cell",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Reports/Export": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to export a survey in XML",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "surveyName",
+            "in": "query",
+            "description": "Name of the survey",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "surveyVersion",
+            "in": "query",
+            "description": "Version of the survey",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Reports/FetchDynReport": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to retieve an object from the database",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "objectName",
+            "in": "query",
+            "description": "Name of the object",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Reports/FetchDynReportWhere": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to retieve an object from the database with a where clause",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "objectName",
+            "in": "query",
+            "description": "Name of the object",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "whereClause",
+            "in": "query",
+            "description": "Where clause",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Rules": {
+      "get": {
+        "tags": [
+          "Rules"
+        ],
+        "summary": "Allow to fetch all rules",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Rules/{id}": {
+      "get": {
+        "tags": [
+          "Rules"
+        ],
+        "summary": "Allow to fetch one rule with detail",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TagClasses": {
+      "get": {
+        "tags": [
+          "TagClasses"
+        ],
+        "summary": "Allow to fetch all items",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "TagClasses"
+        ],
+        "summary": "Allow to create an item",
+        "requestBody": {
+          "description": "Item to create",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TagClass"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TagClass"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TagClass"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "TagClasses"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TagClass"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TagClass"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TagClass"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TagClasses/{id}": {
+      "get": {
+        "tags": [
+          "TagClasses"
+        ],
+        "summary": "Allow to fetch one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "TagClasses"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id og the item to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Tags": {
+      "get": {
+        "tags": [
+          "Tags"
+        ],
+        "summary": "Allow to fetch all items",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Tags"
+        ],
+        "summary": "Allow to create an item",
+        "requestBody": {
+          "description": "Item to create",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Tag"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Tag"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Tag"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Tags"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Tag"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Tag"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Tag"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Tags/{id}": {
+      "get": {
+        "tags": [
+          "Tags"
+        ],
+        "summary": "Allow to fetch one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Tags"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id og the item to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Adaptation": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "author": {
+            "type": "string",
+            "nullable": true
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "impact": {
+            "type": "string",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "table": {
+            "type": "string",
+            "nullable": true
+          },
+          "join": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Amortization": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "loadId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "load": {
+            "$ref": "#/components/schemas/Load"
+          },
+          "typeOf": {
+            "type": "string",
+            "nullable": true
+          },
+          "frequency": {
+            "type": "string",
+            "nullable": true
+          },
+          "nextAmortizationDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "amortizationAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "amortizationWeight": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DerivativeCalc": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "loadId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "load": {
+            "$ref": "#/components/schemas/Load"
+          },
+          "numberOfUnderlyings": {
+            "type": "number",
+            "format": "double"
+          },
+          "replacementValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "ead": {
+            "type": "number",
+            "format": "double"
+          },
+          "rAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "pAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "rpv": {
+            "type": "number",
+            "format": "double"
+          },
+          "ppv": {
+            "type": "number",
+            "format": "double"
+          },
+          "impliedVolatility": {
+            "type": "number",
+            "format": "double"
+          },
+          "assetClass": {
+            "type": "string",
+            "nullable": true
+          },
+          "pfeFactor": {
+            "type": "number",
+            "format": "float"
+          },
+          "delta": {
+            "type": "number",
+            "format": "float"
+          },
+          "gamma": {
+            "type": "number",
+            "format": "float"
+          },
+          "vega": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Entity": {
+        "required": [
+          "id"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "deliveryType": {
+            "type": "string",
+            "nullable": true
+          },
+          "contentType": {
+            "type": "string",
+            "nullable": true
+          },
+          "subjectName": {
+            "type": "string",
+            "nullable": true
+          },
+          "subGroupName": {
+            "type": "string",
+            "nullable": true
+          },
+          "divisionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "referredPerson": {
+            "type": "string",
+            "nullable": true
+          },
+          "streetName": {
+            "type": "string",
+            "nullable": true
+          },
+          "streetNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "postBox": {
+            "type": "string",
+            "nullable": true
+          },
+          "zip": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactName": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactType": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactPhone": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactEmail": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InterestRate": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "loadId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "load": {
+            "$ref": "#/components/schemas/Load"
+          },
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "spread": {
+            "type": "number",
+            "format": "float"
+          },
+          "ir": {
+            "type": "number",
+            "format": "float"
+          },
+          "typeOf": {
+            "type": "string",
+            "nullable": true
+          },
+          "nextFixingDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "reFixingFrequency": {
+            "type": "string",
+            "nullable": true
+          },
+          "nextPaymentDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "paymentFrequency": {
+            "type": "string",
+            "nullable": true
+          },
+          "compoundingType": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Load": {
+        "type": "object",
+        "properties": {
+          "loadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "amortizations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Amortization"
+            },
+            "nullable": true
+          },
+          "derivativeCalcs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DerivativeCalc"
+            },
+            "nullable": true
+          },
+          "interestRates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InterestRate"
+            },
+            "nullable": true
+          },
+          "loadCollections": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LoadCollection"
+            },
+            "nullable": true
+          },
+          "logDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LogSummary"
+            },
+            "nullable": true
+          },
+          "moduleSpecifics": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ModuleSpecific"
+            },
+            "nullable": true
+          },
+          "positionCalcs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PositionCalc"
+            },
+            "nullable": true
+          },
+          "positionSingles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PositionSingle"
+            },
+            "nullable": true
+          },
+          "positions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Position"
+            },
+            "nullable": true
+          },
+          "properties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Property"
+            },
+            "nullable": true
+          },
+          "toString": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "id": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoadCollection": {
+        "type": "object",
+        "properties": {
+          "loadCollectionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "loads": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Load"
+            },
+            "nullable": true
+          },
+          "entityId": {
+            "type": "string",
+            "nullable": true
+          },
+          "entity": {
+            "$ref": "#/components/schemas/Entity"
+          },
+          "id": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LogDetail": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "logSummaryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "positionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "type": {
+            "$ref": "#/components/schemas/LogType"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "logSummary": {
+            "$ref": "#/components/schemas/LogSummary"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LogSummary": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "warnings": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "errors": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "lines": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "load": {
+            "$ref": "#/components/schemas/Load"
+          },
+          "logDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LogDetail"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LogType": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "ModuleSpecific": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "loadId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "load": {
+            "$ref": "#/components/schemas/Load"
+          },
+          "finrepMapping": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "capitalTierSpecificDeduction": {
+            "type": "string",
+            "nullable": true
+          },
+          "loanSpecification": {
+            "type": "string",
+            "nullable": true
+          },
+          "pledgedCashType": {
+            "type": "string",
+            "nullable": true
+          },
+          "forceHQLALevel": {
+            "type": "string",
+            "nullable": true
+          },
+          "forceHaircut": {
+            "type": "number",
+            "format": "float"
+          },
+          "forceRiskWeight": {
+            "type": "number",
+            "format": "float"
+          },
+          "forceInflow": {
+            "type": "boolean"
+          },
+          "excludeInflow": {
+            "type": "boolean"
+          },
+          "excludeOutflow": {
+            "type": "boolean"
+          },
+          "excludeZIR": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Parameter": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "category": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Position": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "loadId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "load": {
+            "$ref": "#/components/schemas/Load"
+          },
+          "amortization": {
+            "$ref": "#/components/schemas/Amortization"
+          },
+          "derivativeCalc": {
+            "$ref": "#/components/schemas/DerivativeCalc"
+          },
+          "moduleSpecific": {
+            "$ref": "#/components/schemas/ModuleSpecific"
+          },
+          "positionCalc": {
+            "$ref": "#/components/schemas/PositionCalc"
+          },
+          "property": {
+            "$ref": "#/components/schemas/Property"
+          },
+          "bookingCenterId": {
+            "type": "string",
+            "nullable": true
+          },
+          "legalAccountNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "internalReference1": {
+            "type": "string",
+            "nullable": true
+          },
+          "internalReference2": {
+            "type": "string",
+            "nullable": true
+          },
+          "internalReference3": {
+            "type": "string",
+            "nullable": true
+          },
+          "internalReference4": {
+            "type": "string",
+            "nullable": true
+          },
+          "internalReference5": {
+            "type": "string",
+            "nullable": true
+          },
+          "dataSource": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionCurrencyBookAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "bookAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "encumberedFlag": {
+            "type": "boolean"
+          },
+          "encumberedAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "encumbranceEndDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "notional": {
+            "type": "number",
+            "format": "double"
+          },
+          "internalLendingValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "pv": {
+            "type": "number",
+            "format": "double"
+          },
+          "provision": {
+            "type": "number",
+            "format": "double"
+          },
+          "capacity": {
+            "type": "string",
+            "nullable": true
+          },
+          "maturityDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "maturityType": {
+            "type": "string",
+            "nullable": true
+          },
+          "impairedFlag": {
+            "type": "boolean"
+          },
+          "nonPerformingFlag": {
+            "type": "boolean"
+          },
+          "ratingClass": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "irbFlag": {
+            "type": "boolean"
+          },
+          "relatedPartyType": {
+            "type": "string",
+            "nullable": true
+          },
+          "subordination": {
+            "type": "boolean"
+          },
+          "priorityClaimLevel": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "participationLevel": {
+            "type": "number",
+            "format": "float"
+          },
+          "goodsXBorderFlag": {
+            "type": "boolean"
+          },
+          "pledgeLink": {
+            "type": "string",
+            "nullable": true
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "generalLedger": {
+            "type": "string",
+            "nullable": true
+          },
+          "tradingBookFlag": {
+            "type": "boolean"
+          },
+          "numberOfComponents": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "longContractFlag": {
+            "type": "boolean"
+          },
+          "nettingSetId": {
+            "type": "string",
+            "nullable": true
+          },
+          "nettingAgreementType": {
+            "type": "string",
+            "nullable": true
+          },
+          "counterpartyId": {
+            "type": "string",
+            "nullable": true
+          },
+          "counterpartyPIT": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "counterpartyBookingCenterId": {
+            "type": "string",
+            "nullable": true
+          },
+          "marginAgreementId": {
+            "type": "string",
+            "nullable": true
+          },
+          "marginAgreementPIT": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "pledgedFlag": {
+            "type": "boolean"
+          },
+          "pledgeEndDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "collateralHolderId": {
+            "type": "string",
+            "nullable": true
+          },
+          "contractId": {
+            "type": "string",
+            "nullable": true
+          },
+          "account": {
+            "type": "string",
+            "nullable": true
+          },
+          "derivativeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "derivativeSwapId": {
+            "type": "string",
+            "nullable": true
+          },
+          "securityId": {
+            "type": "string",
+            "nullable": true
+          },
+          "securityPIT": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "commodityId": {
+            "type": "string",
+            "nullable": true
+          },
+          "commodityPIT": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "typeOf": {
+            "type": "string",
+            "nullable": true
+          },
+          "subType": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PositionCalc": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "loadId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "load": {
+            "$ref": "#/components/schemas/Load"
+          },
+          "mortgageLoanClaimLevel": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "accountGroupLevel1": {
+            "type": "string",
+            "nullable": true
+          },
+          "riskCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "riskCountryAfter": {
+            "type": "string",
+            "nullable": true
+          },
+          "ccf": {
+            "type": "number",
+            "format": "float"
+          },
+          "caRiskWeight": {
+            "type": "number",
+            "format": "float"
+          },
+          "leRiskWeight": {
+            "type": "number",
+            "format": "float"
+          },
+          "exposureType": {
+            "type": "string",
+            "nullable": true
+          },
+          "longShort": {
+            "type": "string",
+            "nullable": true
+          },
+          "regulatoryHaircut": {
+            "type": "number",
+            "format": "float"
+          },
+          "collateralType": {
+            "type": "string",
+            "nullable": true
+          },
+          "reportingCategory": {
+            "type": "string",
+            "nullable": true
+          },
+          "monaExposure": {
+            "type": "number",
+            "format": "double"
+          },
+          "monaExposureAfterCRM": {
+            "type": "number",
+            "format": "double"
+          },
+          "monaCollateralUsedAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "caExposure": {
+            "type": "number",
+            "format": "double"
+          },
+          "caExposureAfterCRM": {
+            "type": "number",
+            "format": "double"
+          },
+          "caCollateralUsedAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "leExposure": {
+            "type": "number",
+            "format": "double"
+          },
+          "leExposureAfterCRM": {
+            "type": "number",
+            "format": "double"
+          },
+          "leCollateralUsedAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "carwa": {
+            "type": "number",
+            "format": "double"
+          },
+          "lerwa": {
+            "type": "number",
+            "format": "double"
+          },
+          "initialDurationDays": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "residualDurationDays": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "chAbroadFlag": {
+            "type": "boolean"
+          },
+          "positionDefaultFlag": {
+            "type": "boolean"
+          },
+          "counterpartyDefaultFlag": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PositionSingle": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "loadId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "load": {
+            "$ref": "#/components/schemas/Load"
+          },
+          "accountNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "entity": {
+            "type": "string",
+            "nullable": true
+          },
+          "entityType": {
+            "type": "string",
+            "nullable": true
+          },
+          "currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "riskDomicile": {
+            "type": "string",
+            "nullable": true
+          },
+          "counterpartyDomicile": {
+            "type": "string",
+            "nullable": true
+          },
+          "issuerDomicile": {
+            "type": "string",
+            "nullable": true
+          },
+          "hqDomicile": {
+            "type": "string",
+            "nullable": true
+          },
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "ccpType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "foreignCurrencyAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "referenceCurrencyAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "encumberedAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "replacementValueAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "contractVolumeAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "lendingValueAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "marketValueAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "counterpartyType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "maturityDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "maturityType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "businessType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "irbReportingCategory": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "subordination": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "quotationType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pledgedCashType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "valuationMethod": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "relatedParties": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "periodicRevaluation": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mortgageRank": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "propertyPledge": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "externalRating": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "finrepMapping": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "qualifiedParticipationLevel": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "underlyingInstrumentType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "issuerType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "issuerId": {
+            "type": "string",
+            "nullable": true
+          },
+          "portfolioId": {
+            "type": "string",
+            "nullable": true
+          },
+          "nettingAgreementType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "clientType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "liquidityCategory": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "counterpartyGroupId": {
+            "type": "string",
+            "nullable": true
+          },
+          "provisionAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "issuedAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "exchangeRate": {
+            "type": "number",
+            "format": "float"
+          },
+          "securityId": {
+            "type": "string",
+            "nullable": true
+          },
+          "issuerGroupId": {
+            "type": "string",
+            "nullable": true
+          },
+          "instrumentId": {
+            "type": "string",
+            "nullable": true
+          },
+          "numberOfUnderlying": {
+            "type": "number",
+            "format": "double"
+          },
+          "deltaValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "interestRate": {
+            "type": "number",
+            "format": "float"
+          },
+          "interestPaymentFrequency": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "interestRateType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nextInterestFixingDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "vegaValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "instrumentType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "internalAccountNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "intercompanyEntity": {
+            "type": "string",
+            "nullable": true
+          },
+          "intercompanyEntityType": {
+            "type": "string",
+            "nullable": true
+          },
+          "collateralPledgeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "nextInterestPaymentDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "counterpartySize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "canton": {
+            "type": "string",
+            "nullable": true
+          },
+          "nettingAgreementId1": {
+            "type": "string",
+            "nullable": true
+          },
+          "nettingAgreementId2": {
+            "type": "string",
+            "nullable": true
+          },
+          "noga": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "customField1": {
+            "type": "string",
+            "nullable": true
+          },
+          "customField2": {
+            "type": "string",
+            "nullable": true
+          },
+          "customField3": {
+            "type": "number",
+            "format": "double"
+          },
+          "customField4": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "customField5": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "probabilityDefault": {
+            "type": "number",
+            "format": "float"
+          },
+          "expectedLoss": {
+            "type": "number",
+            "format": "float"
+          },
+          "encumberedDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "startingDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "classLoansProbabilityDefault": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": { }
+      },
+      "Property": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "loadId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "load": {
+            "$ref": "#/components/schemas/Load"
+          },
+          "typeOf": {
+            "type": "string",
+            "nullable": true
+          },
+          "useOf": {
+            "type": "string",
+            "nullable": true
+          },
+          "marketValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "acquisitionValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "rentalValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "country": {
+            "type": "string",
+            "nullable": true
+          },
+          "canton": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "codePost": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "acquisitionDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "lendingValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "portfolioId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Tag": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "desc": {
+            "type": "string",
+            "nullable": true
+          },
+          "tagClassId": {
+            "type": "string",
+            "nullable": true
+          },
+          "tagClass": {
+            "$ref": "#/components/schemas/TagClass"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TagClass": {
+        "required": [
+          "desc",
+          "id"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "desc": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Tag"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Input your Bearer token in this format - Bearer {your token here} to access this API",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}
