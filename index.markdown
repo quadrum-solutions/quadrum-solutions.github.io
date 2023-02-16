@@ -5,6 +5,8 @@
 layout: default
 ---
 
-### Swagger
+# Quadrum Documentation
+
+## Swagger
 The swagger documentation can be found here : [api](api)
 

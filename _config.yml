@@ -21,7 +21,7 @@
 title: Quadrum Solutions Docs
 email: info@quadrum-solutions.ch
 description: >- # this means to ignore newlines until "baseurl:"
-  Quadrum solutions public documentations
+  Quadrum solutions public documentation
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://quadrum-solutions.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 repository: quadrum-solutions/quadrum-solutions.github.io
