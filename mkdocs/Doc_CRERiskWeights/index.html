@@ -1,0 +1,1022 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.quadrum-solutions.net/Doc_CRERiskWeights/">
+      
+      
+        <link rel="prev" href="../Doc_CRMMona/">
+      
+      
+        <link rel="next" href="../Doc_CRMCA/">
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.12">
+    
+    
+      
+        <title>Risk weight - Mercury Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0d440cfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Poppins";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#risk-weight-for-credit-risk" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Mercury Documentation" class="md-header__button md-logo" aria-label="Mercury Documentation" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mercury Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Risk weight
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Mercury Documentation" class="md-nav__button md-logo" aria-label="Mercury Documentation" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    Mercury Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Transformations and outputs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Transformations and outputs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          SNB
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          SNB
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Doc_CRMMona/" class="md-nav__link">
+        Credit risk mitigataion - Mona
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          CRE
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          CRE
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Risk weight
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Risk weight
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#used-in-the-following-modules" class="md-nav__link">
+    Used in the following modules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legal-references" class="md-nav__link">
+    Legal references
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retail-test" class="md-nav__link">
+    Retail test
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-fields" class="md-nav__link">
+    Input fields
+  </a>
+  
+    <nav class="md-nav" aria-label="Input fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list_counterparties" class="md-nav__link">
+    list_counterparties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-fields" class="md-nav__link">
+    Output fields
+  </a>
+  
+    <nav class="md-nav" aria-label="Output fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core_positions_calc" class="md-nav__link">
+    core_positions_calc
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Doc_CRMCA/" class="md-nav__link">
+        Credit risk mitigataion - Capital adequacy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Doc_CCF/" class="md-nav__link">
+        Credit conversion factor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Doc_CMA_LTA/" class="md-nav__link">
+        Collectively managed assets - Look-through approach
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Doc_SFTs/" class="md-nav__link">
+        Security financing transctions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Doc_CEM/" class="md-nav__link">
+        Current exposure method
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          MAR
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          MAR
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Doc_MAREquityRisk/" class="md-nav__link">
+        Equity Risk
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Doc_MARIRRisk/" class="md-nav__link">
+        Interest Rate Risk
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Doc_MARExchangeRateRisk/" class="md-nav__link">
+        Exchange Rate Risk
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Doc_MARCommodityRisk/" class="md-nav__link">
+        Commodity Risk
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Doc_MARNetting/" class="md-nav__link">
+        Netting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Doc_MAROptions/" class="md-nav__link">
+        Options
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          LEX
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          LEX
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Doc_LEX/" class="md-nav__link">
+        Large exposure reporting
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+          Other
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Other
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Doc_Conso/" class="md-nav__link">
+        Consolidation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Doc_Other/" class="md-nav__link">
+        Other
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Transactions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Transactions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Doc_CollectivelyManagedAssets/" class="md-nav__link">
+        Collectively Managed Assets
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#used-in-the-following-modules" class="md-nav__link">
+    Used in the following modules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legal-references" class="md-nav__link">
+    Legal references
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retail-test" class="md-nav__link">
+    Retail test
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-fields" class="md-nav__link">
+    Input fields
+  </a>
+  
+    <nav class="md-nav" aria-label="Input fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list_counterparties" class="md-nav__link">
+    list_counterparties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-fields" class="md-nav__link">
+    Output fields
+  </a>
+  
+    <nav class="md-nav" aria-label="Output fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core_positions_calc" class="md-nav__link">
+    core_positions_calc
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div id="mkdocs-encrypted-content" style="display:none">3+POHELR132QzWaOa9r9dQ==;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;^</div>
+<div id="mkdocs-decrypted-content">
+    <form id="mkdocs-decrypt-form">
+        <h1>This content is protected with AES encryption. </h1>
+        <p>Contact your administrator for access to this page.</p>
+        <input type="password" id="mkdocs-content-password" placeholder="Use CTRL+ENTER to provide global password" />
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
+</div>
+
+<script type="text/javascript">
+var encryptcontent_path = "Doc_CRERiskWeights/";
+var decryption_failure_message = "Invalid password.";
+</script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/enc-base64.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/cipher-core.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pad-nopadding.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/md5.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.js"></script>
+<script type="text/javascript" src="../assets/javascripts/decrypt-contents.js" defer></script>
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../Doc_CRMMona/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Credit risk mitigataion - Mona" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Previous
+                </span>
+                Credit risk mitigataion - Mona
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Doc_CRMCA/" class="md-footer__link md-footer__link--next" aria-label="Next: Credit risk mitigataion - Capital adequacy" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Next
+                </span>
+                Credit risk mitigataion - Capital adequacy
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 Quadrum SA
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer"], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4b2c34cd.min.js"></script>
+      
+    
+  </body>
+</html>
