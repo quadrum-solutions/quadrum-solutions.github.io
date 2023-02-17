@@ -7,6 +7,9 @@ layout: default
 
 # Quadrum Documentation
 
+## Docs
+The general documentation can be found here : [mkdocs](mkdocs/index.html)
+
 ## Swagger
 The swagger documentation can be found here : [api](api)
 
