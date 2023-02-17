@@ -8,8 +8,8 @@ layout: default
 # Quadrum Documentation
 
 ## Docs
-The general documentation can be found here : [mkdocs](mkdocs/index.html)
+The transformation and output documentation can be found here : [doc](mkdocs/index.html){:target="_blank"}
 
-## Swagger
-The swagger documentation can be found here : [api](api)
+## Swagger APIs
+The swagger documentation can be found here : [api](api){:target="_blank"}
 
