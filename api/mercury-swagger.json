@@ -23,7 +23,17 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Adaptation"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -61,7 +71,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -102,7 +112,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -120,22 +130,31 @@
           {
             "name": "id",
             "in": "path",
+            "description": "Id of the item",
             "required": true,
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "1"
           }
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Adaptation"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -151,7 +170,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id og the item to delete",
+            "description": "Id of the item to delete",
             "required": true,
             "schema": {
               "type": "string"
@@ -167,7 +186,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -188,7 +207,8 @@
             "description": "Language of the description",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "FR"
           },
           {
             "name": "field",
@@ -196,7 +216,8 @@
             "description": "Field of the description",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "LegalAccountNumber"
           },
           {
             "name": "name",
@@ -204,19 +225,27 @@
             "description": "Name of the description",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "10100"
           }
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Description"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -239,7 +268,8 @@
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "example": 1
           }
         ],
         "responses": {
@@ -251,7 +281,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -277,7 +307,8 @@
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "example": 1
           }
         ],
         "responses": {
@@ -289,7 +320,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -315,7 +346,8 @@
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "example": 1
           }
         ],
         "responses": {
@@ -327,7 +359,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -353,7 +385,8 @@
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "example": 1
           }
         ],
         "responses": {
@@ -365,7 +398,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -384,7 +417,17 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Entity"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -422,7 +465,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -463,7 +506,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -481,22 +524,31 @@
           {
             "name": "id",
             "in": "path",
+            "description": "Id of the item",
             "required": true,
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "1"
           }
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Entity"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -512,7 +564,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id og the item to delete",
+            "description": "Id of the item to delete",
             "required": true,
             "schema": {
               "type": "string"
@@ -528,7 +580,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -549,7 +601,8 @@
             "description": "Name of the load",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "My Load"
           },
           {
             "name": "date",
@@ -557,7 +610,8 @@
             "description": "Reporting date",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "2022-12-31"
           }
         ],
         "requestBody": {
@@ -589,7 +643,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -610,7 +664,8 @@
             "description": "Name of the load",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "My Load"
           },
           {
             "name": "date",
@@ -618,7 +673,8 @@
             "description": "Reporting date",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "2022-12-31"
           }
         ],
         "requestBody": {
@@ -650,7 +706,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -671,7 +727,8 @@
             "description": "Name of the load",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "My Load"
           },
           {
             "name": "date",
@@ -679,7 +736,8 @@
             "description": "Reporting date",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "2022-12-31"
           }
         ],
         "responses": {
@@ -691,7 +749,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -713,19 +771,30 @@
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "example": 1
           }
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LogSummary"
+                  }
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -747,19 +816,30 @@
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "example": 1
           }
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LogSummary"
+                  }
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -791,7 +871,17 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Load"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -829,7 +919,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -870,7 +960,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -888,22 +978,31 @@
           {
             "name": "id",
             "in": "path",
+            "description": "Id of the item",
             "required": true,
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "1"
           }
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Load"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -919,7 +1018,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id og the item to delete",
+            "description": "Id of the item to delete",
             "required": true,
             "schema": {
               "type": "string"
@@ -935,7 +1034,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -978,7 +1077,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -988,7 +1087,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1029,7 +1128,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1039,7 +1138,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1055,7 +1154,17 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LoadCollection"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -1093,7 +1202,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1134,7 +1243,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1152,22 +1261,31 @@
           {
             "name": "id",
             "in": "path",
+            "description": "Id of the item",
             "required": true,
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "1"
           }
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoadCollection"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1183,7 +1301,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id og the item to delete",
+            "description": "Id of the item to delete",
             "required": true,
             "schema": {
               "type": "string"
@@ -1199,7 +1317,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1215,7 +1333,17 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Parameter"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -1253,7 +1381,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1294,7 +1422,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1312,22 +1440,31 @@
           {
             "name": "id",
             "in": "path",
+            "description": "Id of the item",
             "required": true,
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "1"
           }
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Parameter"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1343,7 +1480,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id og the item to delete",
+            "description": "Id of the item to delete",
             "required": true,
             "schema": {
               "type": "string"
@@ -1359,7 +1496,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1382,7 +1519,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1407,7 +1544,8 @@
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "example": 1
           },
           {
             "name": "surveyName",
@@ -1415,7 +1553,8 @@
             "description": "Name of the survey",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "MONA_U"
           },
           {
             "name": "surveyVersion",
@@ -1423,7 +1562,8 @@
             "description": "Version of the survey",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "1.3.0"
           }
         ],
         "responses": {
@@ -1435,7 +1575,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1460,7 +1600,8 @@
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "example": 1
           },
           {
             "name": "surveyName",
@@ -1468,7 +1609,8 @@
             "description": "Name of the survey",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "MONA_U"
           },
           {
             "name": "surveyVersion",
@@ -1476,19 +1618,27 @@
             "description": "Version of the survey",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "1.3.0"
           }
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SurveyDTO"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1498,7 +1648,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1523,7 +1673,8 @@
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "example": 1
           },
           {
             "name": "surveyName",
@@ -1531,7 +1682,8 @@
             "description": "Name of the survey",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "MONA_U"
           },
           {
             "name": "surveyVersion",
@@ -1539,7 +1691,8 @@
             "description": "Version of the survey",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "1.3.0"
           },
           {
             "name": "reportName",
@@ -1547,19 +1700,27 @@
             "description": "Name of the report",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "M201"
           }
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SurveyDTO"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1569,7 +1730,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1594,7 +1755,8 @@
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "example": 1
           },
           {
             "name": "surveyName",
@@ -1602,7 +1764,8 @@
             "description": "Name of the survey",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "MONA_U"
           },
           {
             "name": "surveyVersion",
@@ -1610,19 +1773,27 @@
             "description": "Version of the survey",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "1.3.0"
           }
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SurveyDTO"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1632,7 +1803,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1657,7 +1828,8 @@
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "example": 1
           },
           {
             "name": "surveyName",
@@ -1665,7 +1837,8 @@
             "description": "Name of the survey",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "MONA_U"
           },
           {
             "name": "surveyVersion",
@@ -1673,7 +1846,8 @@
             "description": "Version of the survey",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "1.3.0"
           },
           {
             "name": "cellPosition",
@@ -1681,7 +1855,8 @@
             "description": "Position of the cell",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "BILAKTFMINOTICHF"
           },
           {
             "name": "reportName",
@@ -1689,19 +1864,27 @@
             "description": "Name of the report if needed",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "M201"
           }
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuditDTO"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1711,7 +1894,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1736,7 +1919,8 @@
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "example": 1
           },
           {
             "name": "surveyName",
@@ -1744,7 +1928,8 @@
             "description": "Name of the survey",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "MONA_U"
           },
           {
             "name": "surveyVersion",
@@ -1752,7 +1937,8 @@
             "description": "Version of the survey",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "1.3.0"
           },
           {
             "name": "cellPosition",
@@ -1760,7 +1946,8 @@
             "description": "Position of the cell",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "BILAKTFMINOTICHF"
           },
           {
             "name": "positionId",
@@ -1768,7 +1955,8 @@
             "description": "Id of the position",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "28"
           },
           {
             "name": "reportName",
@@ -1776,19 +1964,27 @@
             "description": "Name of the report if needed",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "M201"
           }
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuditDTO"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1798,7 +1994,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1823,7 +2019,8 @@
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "example": 1
           },
           {
             "name": "surveyName",
@@ -1831,7 +2028,8 @@
             "description": "Name of the survey",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "MONA_U"
           },
           {
             "name": "surveyVersion",
@@ -1839,7 +2037,8 @@
             "description": "Version of the survey",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "1.3.0"
           },
           {
             "name": "cellPosition",
@@ -1847,7 +2046,8 @@
             "description": "Position of the cell",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "BILAKTFMINOTICHF"
           },
           {
             "name": "value",
@@ -1855,7 +2055,8 @@
             "description": "New value of the cell",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "12345"
           },
           {
             "name": "reason",
@@ -1863,7 +2064,8 @@
             "description": "Reason of the change",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "my reason"
           }
         ],
         "responses": {
@@ -1875,7 +2077,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1885,7 +2087,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1910,7 +2112,8 @@
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "example": 1
           },
           {
             "name": "surveyName",
@@ -1918,7 +2121,8 @@
             "description": "Name of the survey",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "MONA_U"
           },
           {
             "name": "surveyVersion",
@@ -1926,7 +2130,8 @@
             "description": "Version of the survey",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "1.3.0"
           },
           {
             "name": "cellPosition",
@@ -1934,19 +2139,28 @@
             "description": "Position of the cell",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "BILAKTFMINOTICHF"
           }
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1956,7 +2170,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -1981,7 +2195,8 @@
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "example": 1
           },
           {
             "name": "surveyName",
@@ -1989,7 +2204,8 @@
             "description": "Name of the survey",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "MONA_U"
           },
           {
             "name": "surveyVersion",
@@ -1997,19 +2213,28 @@
             "description": "Version of the survey",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "1.3.0"
           }
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -2019,7 +2244,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -2044,7 +2269,8 @@
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "example": 1
           },
           {
             "name": "objectName",
@@ -2052,19 +2278,28 @@
             "description": "Name of the object",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "V_my_view"
           }
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { }
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -2086,7 +2321,8 @@
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "example": 1
           },
           {
             "name": "objectName",
@@ -2094,7 +2330,8 @@
             "description": "Name of the object",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "v_my_view"
           },
           {
             "name": "whereClause",
@@ -2102,19 +2339,28 @@
             "description": "Where clause",
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "lcId=1"
           }
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { }
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -2130,7 +2376,17 @@
         "summary": "Allow to fetch all rules",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RuleGroup"
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -2153,14 +2409,21 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RuleGroup"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -2176,7 +2439,17 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TagClass"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -2214,7 +2487,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -2255,7 +2528,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -2273,22 +2546,31 @@
           {
             "name": "id",
             "in": "path",
+            "description": "Id of the item",
             "required": true,
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "1"
           }
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TagClass"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -2304,7 +2586,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id og the item to delete",
+            "description": "Id of the item to delete",
             "required": true,
             "schema": {
               "type": "string"
@@ -2320,7 +2602,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -2336,7 +2618,17 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Tag"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -2374,7 +2666,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -2415,7 +2707,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -2433,22 +2725,31 @@
           {
             "name": "id",
             "in": "path",
+            "description": "Id of the item",
             "required": true,
             "schema": {
               "type": "string"
-            }
+            },
+            "example": "1"
           }
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tag"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -2464,7 +2765,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id og the item to delete",
+            "description": "Id of the item to delete",
             "required": true,
             "schema": {
               "type": "string"
@@ -2480,7 +2781,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
+                  "type": "string"
                 }
               }
             }
@@ -2578,6 +2879,137 @@
         },
         "additionalProperties": false
       },
+      "AuditDTO": {
+        "type": "object",
+        "properties": {
+          "row": {
+            "type": "string",
+            "nullable": true
+          },
+          "column": {
+            "type": "string",
+            "nullable": true
+          },
+          "position": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTech": {
+            "type": "string",
+            "nullable": true
+          },
+          "sums": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AuditSumDTO"
+            },
+            "nullable": true
+          },
+          "editions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EditDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AuditSumDTO": {
+        "type": "object",
+        "properties": {
+          "rulesReport": {
+            "type": "string",
+            "nullable": true
+          },
+          "rulesRow": {
+            "type": "string",
+            "nullable": true
+          },
+          "rulesColumn": {
+            "type": "string",
+            "nullable": true
+          },
+          "rulesCell": {
+            "type": "string",
+            "nullable": true
+          },
+          "rule": {
+            "type": "string",
+            "nullable": true
+          },
+          "isReference": {
+            "type": "boolean"
+          },
+          "columns": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ColumnDTO"
+            },
+            "nullable": true
+          },
+          "positions": {
+            "type": "array",
+            "items": { },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CellDTO": {
+        "type": "object",
+        "properties": {
+          "row": {
+            "type": "string",
+            "nullable": true
+          },
+          "column": {
+            "type": "string",
+            "nullable": true
+          },
+          "position": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTech": {
+            "type": "string",
+            "nullable": true
+          },
+          "originalValue": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          },
+          "isEdited": {
+            "type": "boolean"
+          },
+          "editions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EditDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ColumnDTO": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "DerivativeCalc": {
         "type": "object",
         "properties": {
@@ -2644,6 +3076,58 @@
           "vega": {
             "type": "number",
             "format": "float"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Description": {
+        "required": [
+          "id"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "language": {
+            "type": "string",
+            "nullable": true
+          },
+          "field": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EditDTO": {
+        "type": "object",
+        "properties": {
+          "lastModifiedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastModified": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "reason": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -3792,33 +4276,6 @@
         },
         "additionalProperties": false
       },
-      "ProblemDetails": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "nullable": true
-          },
-          "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "status": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "detail": {
-            "type": "string",
-            "nullable": true
-          },
-          "instance": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": { }
-      },
       "Property": {
         "type": "object",
         "properties": {
@@ -3880,6 +4337,139 @@
           },
           "portfolioId": {
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReportDTO": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "version": {
+            "type": "string",
+            "nullable": true
+          },
+          "order": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cells": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CellDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RuleGroup": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "query": {
+            "type": "string",
+            "nullable": true
+          },
+          "tableAlias": {
+            "type": "string",
+            "nullable": true
+          },
+          "tableName": {
+            "type": "string",
+            "nullable": true
+          },
+          "field": {
+            "type": "string",
+            "nullable": true
+          },
+          "defaultValue": {
+            "type": "string",
+            "nullable": true
+          },
+          "order": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "ruleItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RuleItem"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RuleItem": {
+        "type": "object",
+        "properties": {
+          "ruleGroupId": {
+            "type": "string",
+            "nullable": true
+          },
+          "ruleGroup": {
+            "$ref": "#/components/schemas/RuleGroup"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          },
+          "order": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SurveyDTO": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "version": {
+            "type": "string",
+            "nullable": true
+          },
+          "validated": {
+            "type": "boolean"
+          },
+          "exported": {
+            "type": "boolean"
+          },
+          "reports": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReportDTO"
+            },
             "nullable": true
           }
         },
