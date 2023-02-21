@@ -1151,7 +1151,7 @@
         "tags": [
           "LoadCollection"
         ],
-        "summary": "Allow to retrieve an load collection with details",
+        "summary": "Allow to retrieve a load collection with details",
         "parameters": [
           {
             "name": "id",
@@ -1177,6 +1177,19 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/LoadCollection/Detail": {
+      "get": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to retrieve a load collection with details",
+        "responses": {
+          "200": {
+            "description": "Success"
           }
         }
       }
