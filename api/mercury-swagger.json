@@ -3951,6 +3951,12 @@
             "type": "number",
             "format": "double"
           },
+          "caEligibilityFlag": {
+            "type": "boolean"
+          },
+          "caExposureFlag": {
+            "type": "boolean"
+          },
           "caExposure": {
             "type": "number",
             "format": "double"
