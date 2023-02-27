@@ -3584,6 +3584,13 @@
             },
             "nullable": true
           },
+          "pledges": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Pledge"
+            },
+            "nullable": true
+          },
           "positionCalcs": {
             "type": "array",
             "items": {
@@ -3838,6 +3845,45 @@
             "type": "string",
             "nullable": true,
             "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Pledge": {
+        "type": "object",
+        "properties": {
+          "loadId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "payerId": {
+            "type": "string",
+            "nullable": true
+          },
+          "receiverId": {
+            "type": "string",
+            "nullable": true
+          },
+          "payerPledgeLink": {
+            "type": "string",
+            "nullable": true
+          },
+          "receiverPledgeLink": {
+            "type": "string",
+            "nullable": true
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "priority": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "maxAmount": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
