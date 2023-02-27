@@ -1885,7 +1885,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SurveyDTO"
+                  "$ref": "#/components/schemas/CalcSurveyDTO"
                 }
               }
             }
@@ -1967,7 +1967,182 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SurveyDTO"
+                  "$ref": "#/components/schemas/CalcSurveyDTO"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Reports/FetchVarianceSurvey": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to fetch the variance between two surveys",
+        "parameters": [
+          {
+            "name": "lcIdA",
+            "in": "query",
+            "description": "Id of the load collection A",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "lcIdB",
+            "in": "query",
+            "description": "Id of the load collection B",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 2
+          },
+          {
+            "name": "surveyName",
+            "in": "query",
+            "description": "Name of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "MONA_U"
+          },
+          {
+            "name": "surveyVersion",
+            "in": "query",
+            "description": "Version of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1.3.0"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalcSurveyDTO"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Reports/FetchVarianceReport": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to fetch the variance between two reports",
+        "parameters": [
+          {
+            "name": "lcIdA",
+            "in": "query",
+            "description": "Id of the load collection A",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "lcIdB",
+            "in": "query",
+            "description": "Id of the load collection B",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 2
+          },
+          {
+            "name": "surveyName",
+            "in": "query",
+            "description": "Name of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "MONA_U"
+          },
+          {
+            "name": "surveyVersion",
+            "in": "query",
+            "description": "Version of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1.3.0"
+          },
+          {
+            "name": "reportName",
+            "in": "query",
+            "description": "Name of the report",
+            "schema": {
+              "type": "string"
+            },
+            "example": "M201"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalcSurveyDTO"
                 }
               }
             }
@@ -2040,7 +2215,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SurveyDTO"
+                  "$ref": "#/components/schemas/CalcSurveyDTO"
                 }
               }
             }
@@ -3165,7 +3340,7 @@
           "editions": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/EditDTO"
+              "$ref": "#/components/schemas/CalcEditDTO"
             },
             "nullable": true
           }
@@ -3213,7 +3388,7 @@
         },
         "additionalProperties": false
       },
-      "CellDTO": {
+      "CalcCellDTO": {
         "type": "object",
         "properties": {
           "row": {
@@ -3246,7 +3421,82 @@
           "editions": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/EditDTO"
+              "$ref": "#/components/schemas/CalcEditDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CalcEditDTO": {
+        "type": "object",
+        "properties": {
+          "lastModifiedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastModified": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "reason": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CalcReportDTO": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "version": {
+            "type": "string",
+            "nullable": true
+          },
+          "order": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cells": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CalcCellDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CalcSurveyDTO": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "version": {
+            "type": "string",
+            "nullable": true
+          },
+          "validated": {
+            "type": "boolean"
+          },
+          "exported": {
+            "type": "boolean"
+          },
+          "reports": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CalcReportDTO"
             },
             "nullable": true
           }
@@ -3356,29 +3606,6 @@
             "nullable": true
           },
           "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "value": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "EditDTO": {
-        "type": "object",
-        "properties": {
-          "lastModifiedBy": {
-            "type": "string",
-            "nullable": true
-          },
-          "lastModified": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "reason": {
             "type": "string",
             "nullable": true
           },
@@ -4665,31 +4892,6 @@
         },
         "additionalProperties": false
       },
-      "ReportDTO": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "version": {
-            "type": "string",
-            "nullable": true
-          },
-          "order": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "cells": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CellDTO"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "ReportingEntity": {
         "required": [
           "id"
@@ -4834,33 +5036,6 @@
           },
           "description": {
             "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "SurveyDTO": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "version": {
-            "type": "string",
-            "nullable": true
-          },
-          "validated": {
-            "type": "boolean"
-          },
-          "exported": {
-            "type": "boolean"
-          },
-          "reports": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ReportDTO"
-            },
             "nullable": true
           }
         },
