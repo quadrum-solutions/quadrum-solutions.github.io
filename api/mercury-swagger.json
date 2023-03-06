@@ -1761,6 +1761,30 @@
         }
       }
     },
+    "/ReportingEntity/Tree/{id}": {
+      "get": {
+        "tags": [
+          "ReportingEntity"
+        ],
+        "summary": "Allow to retrieve the reporting structure for a reporting entity",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the reporting entity",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/ReportingEntity": {
       "get": {
         "tags": [
