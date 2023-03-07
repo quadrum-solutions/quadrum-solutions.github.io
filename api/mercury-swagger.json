@@ -588,185 +588,6 @@
         }
       }
     },
-    "/Entity": {
-      "get": {
-        "tags": [
-          "Entity"
-        ],
-        "summary": "Allow to fetch all items",
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Entity"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Entity"
-        ],
-        "summary": "Allow to create an item",
-        "requestBody": {
-          "description": "Item to create",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Entity"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Entity"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Entity"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Entity"
-        ],
-        "summary": "Allow to update an item",
-        "requestBody": {
-          "description": "Item to update",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Entity"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Entity"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Entity"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/Entity/{id}": {
-      "get": {
-        "tags": [
-          "Entity"
-        ],
-        "summary": "Allow to fetch one item",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Id of the item",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "example": "1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Entity"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Entity"
-        ],
-        "summary": "Allow to delete one item",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Id of the item to delete",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/Import/RT01": {
       "post": {
         "tags": [
@@ -3781,6 +3602,10 @@
             "type": "string",
             "format": "date"
           },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
           "officeType": {
             "type": "string",
             "nullable": true
@@ -4028,86 +3853,6 @@
         },
         "additionalProperties": false
       },
-      "Entity": {
-        "required": [
-          "id"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "loadCollections": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LoadCollection"
-            },
-            "nullable": true
-          },
-          "deliveryType": {
-            "type": "string",
-            "nullable": true
-          },
-          "contentType": {
-            "type": "string",
-            "nullable": true
-          },
-          "subjectName": {
-            "type": "string",
-            "nullable": true
-          },
-          "subGroupName": {
-            "type": "string",
-            "nullable": true
-          },
-          "divisionName": {
-            "type": "string",
-            "nullable": true
-          },
-          "referredPerson": {
-            "type": "string",
-            "nullable": true
-          },
-          "streetName": {
-            "type": "string",
-            "nullable": true
-          },
-          "streetNumber": {
-            "type": "string",
-            "nullable": true
-          },
-          "postBox": {
-            "type": "string",
-            "nullable": true
-          },
-          "zip": {
-            "type": "string",
-            "nullable": true
-          },
-          "city": {
-            "type": "string",
-            "nullable": true
-          },
-          "contactName": {
-            "type": "string",
-            "nullable": true
-          },
-          "contactType": {
-            "type": "string",
-            "nullable": true
-          },
-          "contactPhone": {
-            "type": "string",
-            "nullable": true
-          },
-          "contactEmail": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "InterestRate": {
         "type": "object",
         "properties": {
@@ -4297,13 +4042,6 @@
             },
             "nullable": true
           },
-          "entityId": {
-            "type": "string",
-            "nullable": true
-          },
-          "entity": {
-            "$ref": "#/components/schemas/Entity"
-          },
           "reportingEntityId": {
             "type": "string",
             "nullable": true
@@ -4431,7 +4169,7 @@
             "type": "string",
             "nullable": true
           },
-          "forceHQLALevel": {
+          "forceHQLACategory": {
             "type": "string",
             "nullable": true
           },
@@ -4553,9 +4291,6 @@
           },
           "positionCalc": {
             "$ref": "#/components/schemas/PositionCalc"
-          },
-          "property": {
-            "$ref": "#/components/schemas/Property"
           },
           "bookingCenterId": {
             "type": "string",
@@ -4738,7 +4473,16 @@
             "type": "string",
             "nullable": true
           },
+          "collateralHolderPIT": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
           "contractId": {
+            "type": "string",
+            "nullable": true
+          },
+          "propertyId": {
             "type": "string",
             "nullable": true
           },
@@ -4810,7 +4554,7 @@
             "type": "string",
             "nullable": true
           },
-          "riskCountryAfter": {
+          "astaUltimateRiskCountry": {
             "type": "string",
             "nullable": true
           },
@@ -4826,10 +4570,6 @@
             "type": "number",
             "format": "float"
           },
-          "exposureType": {
-            "type": "string",
-            "nullable": true
-          },
           "longShort": {
             "type": "string",
             "nullable": true
@@ -4837,10 +4577,6 @@
           "regulatoryHaircut": {
             "type": "number",
             "format": "float"
-          },
-          "collateralType": {
-            "type": "string",
-            "nullable": true
           },
           "reportingCategory": {
             "type": "string",
@@ -4912,6 +4648,10 @@
           },
           "counterpartyDefaultFlag": {
             "type": "boolean"
+          },
+          "hqlaCategory": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -5325,6 +5065,10 @@
             "type": "string",
             "format": "date"
           },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
           "snbCode": {
             "type": "string",
             "nullable": true
@@ -5337,6 +5081,54 @@
           },
           "consoLevelGroup": {
             "type": "boolean"
+          },
+          "streetName": {
+            "type": "string",
+            "nullable": true
+          },
+          "streetNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "postBox": {
+            "type": "string",
+            "nullable": true
+          },
+          "zip": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactName": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactType": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactPhone": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "subGroupName": {
+            "type": "string",
+            "nullable": true
+          },
+          "divisionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "referredPerson": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
