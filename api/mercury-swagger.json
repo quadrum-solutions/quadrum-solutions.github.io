@@ -471,7 +471,7 @@
         }
       }
     },
-    "/Engine/CalcB3/{lcId}": {
+    "/Engine/CalcCa/{lcId}": {
       "post": {
         "tags": [
           "Engine"
@@ -510,7 +510,7 @@
         }
       }
     },
-    "/Engine/CalcCrmB3/{lcId}": {
+    "/Engine/CalcCrmCa/{lcId}": {
       "post": {
         "tags": [
           "Engine"
