@@ -887,6 +887,76 @@
         }
       }
     },
+    "/Lifeline/Flags": {
+      "get": {
+        "tags": [
+          "Lifeline"
+        ],
+        "summary": "Get the list of all the flags",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LifelineDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Lifeline/PositionFlags": {
+      "get": {
+        "tags": [
+          "Lifeline"
+        ],
+        "summary": "Get the flags of a position",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "description": "Id of the Load",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Id of the position",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LifelineFlag"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
     "/List/LoadAll": {
       "post": {
         "tags": [
@@ -3917,6 +3987,30 @@
         },
         "additionalProperties": false
       },
+      "LifelineDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LifelineFlag": {
+        "enum": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
       "Load": {
         "type": "object",
         "properties": {
@@ -4662,6 +4756,9 @@
           "hqlaCategory": {
             "type": "string",
             "nullable": true
+          },
+          "lifeLine": {
+            "$ref": "#/components/schemas/LifelineFlag"
           }
         },
         "additionalProperties": false
