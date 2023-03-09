@@ -768,6 +768,16 @@
               "default": true
             },
             "example": true
+          },
+          {
+            "name": "addDateParameter",
+            "in": "query",
+            "description": "Add the date parameter for functions",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            },
+            "example": true
           }
         ],
         "responses": {
