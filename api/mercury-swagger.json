@@ -4654,6 +4654,10 @@
             "type": "string",
             "nullable": true
           },
+          "webeSector": {
+            "type": "string",
+            "nullable": true
+          },
           "riskCountry": {
             "type": "string",
             "nullable": true
