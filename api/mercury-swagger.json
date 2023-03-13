@@ -3980,7 +3980,7 @@
             "type": "string",
             "nullable": true
           },
-          "nettingAgreementId": {
+          "nettingSetId": {
             "type": "string",
             "nullable": true
           }
@@ -5166,11 +5166,11 @@
             "type": "string",
             "nullable": true
           },
-          "nettingAgreementId1": {
+          "nettingSetId1": {
             "type": "string",
             "nullable": true
           },
-          "nettingAgreementId2": {
+          "nettingSetId2": {
             "type": "string",
             "nullable": true
           },
