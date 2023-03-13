@@ -3900,6 +3900,42 @@
           "vega": {
             "type": "number",
             "format": "float"
+          },
+          "sen": {
+            "type": "number",
+            "format": "float"
+          },
+          "en": {
+            "type": "number",
+            "format": "float"
+          },
+          "an": {
+            "type": "number",
+            "format": "float"
+          },
+          "mf": {
+            "type": "number",
+            "format": "float"
+          },
+          "mpor": {
+            "type": "number",
+            "format": "float"
+          },
+          "supervisoryDelta": {
+            "type": "number",
+            "format": "float"
+          },
+          "subHedgingSetId": {
+            "type": "string",
+            "nullable": true
+          },
+          "hedgingSetId": {
+            "type": "string",
+            "nullable": true
+          },
+          "nettingAgreementId": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -4566,6 +4602,19 @@
             "format": "int32",
             "nullable": true
           },
+          "clearingFacilityTypeOf": {
+            "type": "string",
+            "nullable": true
+          },
+          "clearingFacilityId": {
+            "type": "string",
+            "nullable": true
+          },
+          "clearingFacilityPIT": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
           "pledgedFlag": {
             "type": "boolean"
           },
@@ -4618,6 +4667,42 @@
           "commodityPIT": {
             "type": "integer",
             "format": "int32",
+            "nullable": true
+          },
+          "irReference": {
+            "type": "string",
+            "nullable": true
+          },
+          "irSpread": {
+            "type": "number",
+            "format": "float"
+          },
+          "interestRate": {
+            "type": "number",
+            "format": "float"
+          },
+          "irTypeOf": {
+            "type": "string",
+            "nullable": true
+          },
+          "irNextFixingDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "irReFixingFrequency": {
+            "type": "string",
+            "nullable": true
+          },
+          "irNextPaymentDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "irPaymentFrequency": {
+            "type": "string",
+            "nullable": true
+          },
+          "irCompoundingType": {
+            "type": "string",
             "nullable": true
           },
           "typeOf": {
@@ -5183,6 +5268,10 @@
           "snbCode": {
             "type": "string",
             "nullable": true
+          },
+          "finmaCategory": {
+            "type": "integer",
+            "format": "int32"
           },
           "consoLevelBankOffice": {
             "type": "boolean"
