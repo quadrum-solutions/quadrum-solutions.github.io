@@ -3942,11 +3942,11 @@
             "type": "number",
             "format": "float"
           },
-          "en": {
+          "effectiveNotional": {
             "type": "number",
             "format": "float"
           },
-          "an": {
+          "adjustedNotional": {
             "type": "number",
             "format": "float"
           },
@@ -3959,6 +3959,14 @@
             "format": "float"
           },
           "supervisoryDelta": {
+            "type": "number",
+            "format": "float"
+          },
+          "sd": {
+            "type": "number",
+            "format": "float"
+          },
+          "sf": {
             "type": "number",
             "format": "float"
           },
