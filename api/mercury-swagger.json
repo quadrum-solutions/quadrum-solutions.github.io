@@ -2990,16 +2990,6 @@
         "summary": "Allow to retieve an object from the database",
         "parameters": [
           {
-            "name": "lcId",
-            "in": "query",
-            "description": "Id of the load collection",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
             "name": "objectName",
             "in": "query",
             "description": "Name of the object",
@@ -3007,6 +2997,16 @@
               "type": "string"
             },
             "example": "V_my_view"
+          },
+          {
+            "name": "whereClause",
+            "in": "query",
+            "description": "Where clause",
+            "schema": {
+              "type": "string",
+              "default": ""
+            },
+            "example": "lcId=1"
           }
         ],
         "responses": {
@@ -3034,12 +3034,74 @@
         }
       }
     },
-    "/Reports/FetchDynReportWhere": {
+    "/Reports/FetchDynReportByLoadId": {
       "get": {
         "tags": [
           "Reports"
         ],
-        "summary": "Allow to retieve an object from the database with a where clause",
+        "summary": "Allow to retieve an object from the database by LoadId",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "objectName",
+            "in": "query",
+            "description": "Name of the object",
+            "schema": {
+              "type": "string"
+            },
+            "example": "V_my_view"
+          },
+          {
+            "name": "whereClause",
+            "in": "query",
+            "description": "Where clause",
+            "schema": {
+              "type": "string",
+              "default": ""
+            },
+            "example": "lcId=1"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Reports/FetchDynReportByLcId": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to retieve an object from the database by LoadCollectionId",
         "parameters": [
           {
             "name": "lcId",
@@ -3058,14 +3120,15 @@
             "schema": {
               "type": "string"
             },
-            "example": "v_my_view"
+            "example": "V_my_view"
           },
           {
             "name": "whereClause",
             "in": "query",
             "description": "Where clause",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": ""
             },
             "example": "lcId=1"
           }
