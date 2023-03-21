@@ -588,6 +588,104 @@
         }
       }
     },
+    "/Engine/GetCrmCaResults/{lcId}": {
+      "post": {
+        "tags": [
+          "Engine"
+        ],
+        "summary": "Retrieve CRM CA results",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the LoadCollection",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "counterpartyId",
+            "in": "query",
+            "description": "Id of the LoadCollection",
+            "schema": {
+              "type": "string",
+              "default": ""
+            },
+            "example": "1"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Engine/GetCrmMonaResults/{lcId}": {
+      "post": {
+        "tags": [
+          "Engine"
+        ],
+        "summary": "Retrieve CRM Mona results",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the LoadCollection",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "counterpartyId",
+            "in": "query",
+            "description": "Id of the LoadCollection",
+            "schema": {
+              "type": "string",
+              "default": ""
+            },
+            "example": "1"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
     "/Import/RT01": {
       "post": {
         "tags": [
