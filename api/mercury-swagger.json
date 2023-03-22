@@ -373,7 +373,7 @@
         }
       }
     },
-    "/Descriptions": {
+    "/Descriptions/Descriptions": {
       "get": {
         "tags": [
           "Descriptions"
@@ -425,6 +425,83 @@
               "application/json": {
                 "schema": {
                   "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Descriptions/Values": {
+      "get": {
+        "tags": [
+          "Descriptions"
+        ],
+        "summary": "Allow to fetch all the different values of a field",
+        "parameters": [
+          {
+            "name": "language",
+            "in": "query",
+            "description": "Language of the value",
+            "schema": {
+              "type": "string"
+            },
+            "example": "FR"
+          },
+          {
+            "name": "field",
+            "in": "query",
+            "description": "Field of the value",
+            "schema": {
+              "type": "string"
+            },
+            "example": "LegalAccountNumber"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Description"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Descriptions/Fields": {
+      "get": {
+        "tags": [
+          "Descriptions"
+        ],
+        "summary": "Allow to fetch all the fields for a language",
+        "parameters": [
+          {
+            "name": "language",
+            "in": "query",
+            "description": "Language",
+            "schema": {
+              "type": "string"
+            },
+            "example": "FR"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
