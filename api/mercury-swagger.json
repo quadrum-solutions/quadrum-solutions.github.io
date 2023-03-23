@@ -688,8 +688,7 @@
             "in": "query",
             "description": "Id of the LoadCollection",
             "schema": {
-              "type": "string",
-              "default": ""
+              "type": "string"
             },
             "example": "1"
           }
@@ -700,6 +699,16 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -737,8 +746,7 @@
             "in": "query",
             "description": "Id of the LoadCollection",
             "schema": {
-              "type": "string",
-              "default": ""
+              "type": "string"
             },
             "example": "1"
           }
@@ -749,6 +757,16 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -4716,6 +4734,34 @@
           "positionCalc": {
             "$ref": "#/components/schemas/PositionCalc"
           },
+          "positionsCrmCaExposures": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PositionCrmCa"
+            },
+            "nullable": true
+          },
+          "positionsCrmCaCollaterals": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PositionCrmCa"
+            },
+            "nullable": true
+          },
+          "positionsCrmMonaExposures": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PositionCrmMona"
+            },
+            "nullable": true
+          },
+          "positionsCrmMonaCollaterals": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PositionCrmMona"
+            },
+            "nullable": true
+          },
           "bookingCenterId": {
             "type": "string",
             "nullable": true
@@ -5132,6 +5178,122 @@
           },
           "lifeLine": {
             "$ref": "#/components/schemas/LifelineFlag"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PositionCrmCa": {
+        "type": "object",
+        "properties": {
+          "loadCollectionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "loadCollection": {
+            "$ref": "#/components/schemas/LoadCollection"
+          },
+          "positionExposure": {
+            "$ref": "#/components/schemas/Position"
+          },
+          "positionCollateral": {
+            "$ref": "#/components/schemas/Position"
+          },
+          "collateralLoadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "collateralId": {
+            "type": "string",
+            "nullable": true
+          },
+          "exposureLoadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "exposureId": {
+            "type": "string",
+            "nullable": true
+          },
+          "order": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "amountCovered": {
+            "type": "number",
+            "format": "double"
+          },
+          "collateralAmountUsed": {
+            "type": "number",
+            "format": "double"
+          },
+          "fxHaircut": {
+            "type": "number",
+            "format": "double"
+          },
+          "maturityHaircut": {
+            "type": "number",
+            "format": "double"
+          },
+          "adaptedHaircut": {
+            "type": "number",
+            "format": "double"
+          },
+          "rwa": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PositionCrmMona": {
+        "type": "object",
+        "properties": {
+          "loadCollectionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "loadCollection": {
+            "$ref": "#/components/schemas/LoadCollection"
+          },
+          "positionExposure": {
+            "$ref": "#/components/schemas/Position"
+          },
+          "positionCollateral": {
+            "$ref": "#/components/schemas/Position"
+          },
+          "collateralLoadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "collateralId": {
+            "type": "string",
+            "nullable": true
+          },
+          "exposureLoadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "exposureId": {
+            "type": "string",
+            "nullable": true
+          },
+          "order": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "amountCovered": {
+            "type": "number",
+            "format": "double"
+          },
+          "collateralTypeOf": {
+            "type": "string",
+            "nullable": true
+          },
+          "collateralSubType": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
