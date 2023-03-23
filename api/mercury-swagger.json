@@ -4154,6 +4154,14 @@
             "type": "number",
             "format": "double"
           },
+          "rCurrency": {
+            "type": "string",
+            "nullable": true
+          },
+          "pCurrency": {
+            "type": "string",
+            "nullable": true
+          },
           "rAmount": {
             "type": "number",
             "format": "double"
@@ -4969,6 +4977,11 @@
             "type": "string",
             "nullable": true
           },
+          "propertyPIT": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
           "account": {
             "type": "string",
             "nullable": true
@@ -5627,13 +5640,9 @@
             "type": "string",
             "nullable": true
           },
-          "loadId": {
+          "pointInTime": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "load": {
-            "$ref": "#/components/schemas/Load"
+            "format": "int32"
           },
           "typeOf": {
             "type": "string",
