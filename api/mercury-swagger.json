@@ -5140,6 +5140,10 @@
             "type": "number",
             "format": "double"
           },
+          "caIssuerExposure": {
+            "type": "number",
+            "format": "double"
+          },
           "caExposureAfterCRM": {
             "type": "number",
             "format": "double"
