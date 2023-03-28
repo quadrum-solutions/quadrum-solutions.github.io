@@ -3992,6 +3992,10 @@
             "type": "string",
             "nullable": true
           },
+          "positionTechIgnoreDyn": {
+            "type": "string",
+            "nullable": true
+          },
           "originalValue": {
             "type": "string",
             "nullable": true
