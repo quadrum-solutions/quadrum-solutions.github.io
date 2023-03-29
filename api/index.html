@@ -193,12 +193,14 @@
 //# sourceMappingURL=crypto-js.min.js.map</script>
 
 <script>
-    var cryptoEngine = ((function(){
+    // do not remove this comment, it is used to detect the version of the script
+    // STATICRYPT_VERSION: async
+
+    const cryptoEngine = ((function(){
   const exports = {};
   
 /**
  * Salt and encrypt a msg with a password.
- * Inspired by https://github.com/adonespitogo
  */
 function encrypt(msg, hashedPassphrase) {
   var iv = CryptoJS.lib.WordArray.random(128 / 8);
@@ -217,7 +219,6 @@ exports.encrypt = encrypt;
 
 /**
  * Decrypt a salted msg using a password.
- * Inspired by https://github.com/adonespitogo
  *
  * @param {string} encryptedMsg
  * @param {string} hashedPassphrase
@@ -337,128 +338,131 @@ exports.signMessage = signMessage;
 
   return exports;
 })())
-    var codec = ((function(){
+    const codec = ((function(){
   const exports = {};
   /**
+ * TODO: delete this file in next major version. This is a version of the codec that doesn't use async, so we can use it
+ *  in old custom password_template. It will only be used with the cryptoJS engine.
+ *
  * Initialize the codec with the provided cryptoEngine - this return functions to encode and decode messages.
  *
  * @param cryptoEngine - the engine to use for encryption / decryption
  */
 function init(cryptoEngine) {
-  // TODO: remove on next major version bump. This is a hack to make the salt available in all functions here in a
-  //  backward compatible way (not requiring to  change the password_template).
-  const backwardCompatibleSalt = '45e7a31690c0f582b40ce2fc3cf58d4a';
+    // TODO: remove on next major version bump. This is a hack to make the salt available in all functions here in a
+    //  backward compatible way (not requiring to  change the password_template).
+    const backwardCompatibleSalt = 'a38580c01d7e6ffc070fdb4aa29b7fe6';
 
-  const exports = {};
+    const exports = {};
 
-  /**
-   * Top-level function for encoding a message.
-   * Includes password hashing, encryption, and signing.
-   *
-   * @param {string} msg
-   * @param {string} password
-   * @param {string} salt
-   * @param {boolean} isLegacy - whether to use the legacy hashing algorithm (1k iterations) or not
-   *
-   * @returns {string} The encoded text
-   */
-  function encode(msg, password, salt, isLegacy = false) {
-    // TODO: remove in the next major version bump. This is to not break backwards compatibility with the old way of hashing
-    const hashedPassphrase = isLegacy
-        ? cryptoEngine.hashLegacyRound(password, salt)
-        : cryptoEngine.hashPassphrase(password, salt);
-    const encrypted = cryptoEngine.encrypt(msg, hashedPassphrase);
-    // we use the hashed password in the HMAC because this is effectively what will be used a password (so we can store
-    // it in localStorage safely, we don't use the clear text password)
-    const hmac = cryptoEngine.signMessage(hashedPassphrase, encrypted);
+    /**
+     * Top-level function for encoding a message.
+     * Includes password hashing, encryption, and signing.
+     *
+     * @param {string} msg
+     * @param {string} password
+     * @param {string} salt
+     * @param {boolean} isLegacy - whether to use the legacy hashing algorithm (1k iterations) or not
+     *
+     * @returns {string} The encoded text
+     */
+    function encode(msg, password, salt, isLegacy = false) {
+        // TODO: remove in the next major version bump. This is to not break backwards compatibility with the old way of hashing
+        const hashedPassphrase = isLegacy
+            ? cryptoEngine.hashLegacyRound(password, salt)
+            : cryptoEngine.hashPassphrase(password, salt);
+        const encrypted = cryptoEngine.encrypt(msg, hashedPassphrase);
+        // we use the hashed password in the HMAC because this is effectively what will be used a password (so we can store
+        // it in localStorage safely, we don't use the clear text password)
+        const hmac = cryptoEngine.signMessage(hashedPassphrase, encrypted);
 
-    return hmac + encrypted;
-  }
-  exports.encode = encode;
-
-  /**
-   * Top-level function for decoding a message.
-   * Includes signature check and decryption.
-   *
-   * @param {string} signedMsg
-   * @param {string} hashedPassphrase
-   * @param {string} backwardCompatibleHashedPassword
-   *
-   * @returns {Object} {success: true, decoded: string} | {success: false, message: string}
-   */
-  function decode(signedMsg, hashedPassphrase, backwardCompatibleHashedPassword = '') {
-    const encryptedHMAC = signedMsg.substring(0, 64);
-    const encryptedMsg = signedMsg.substring(64);
-    const decryptedHMAC = cryptoEngine.signMessage(hashedPassphrase, encryptedMsg);
-
-    if (decryptedHMAC !== encryptedHMAC) {
-      // TODO: remove in next major version bump. This is to not break backwards compatibility with the old 1k
-      //  iterations in PBKDF2 - if the key we try isn't working, it might be because it's a remember-me/autodecrypt
-      //  link key, generated with 1k iterations. Try again with the updated iteration count.
-      if (!backwardCompatibleHashedPassword) {
-        return decode(
-            signedMsg,
-            cryptoEngine.hashSecondRound(hashedPassphrase, backwardCompatibleSalt),
-            hashedPassphrase
-        );
-      }
-
-      return { success: false, message: "Signature mismatch" };
+        return hmac + encrypted;
     }
+    exports.encode = encode;
 
-    // TODO: remove in next major version bump. If we're trying to double hash for backward compatibility reasons,
-    //  and the attempt is successful, we check if we should update the stored password in localStorage. This avoids
-    //  having to compute the upgrade each time.
-    if (backwardCompatibleHashedPassword) {
-      if (window && window.localStorage) {
-        const storedPassword = window.localStorage.getItem('staticrypt_passphrase');
+    /**
+     * Top-level function for decoding a message.
+     * Includes signature check and decryption.
+     *
+     * @param {string} signedMsg
+     * @param {string} hashedPassphrase
+     * @param {string} backwardCompatibleHashedPassword
+     *
+     * @returns {Object} {success: true, decoded: string} | {success: false, message: string}
+     */
+    function decode(signedMsg, hashedPassphrase, backwardCompatibleHashedPassword = '') {
+        const encryptedHMAC = signedMsg.substring(0, 64);
+        const encryptedMsg = signedMsg.substring(64);
+        const decryptedHMAC = cryptoEngine.signMessage(hashedPassphrase, encryptedMsg);
 
-        // check the stored password is actually the backward compatible one, so we don't save the new one and trigger
-        // the "remember-me" by mistake, leaking the password
-        if (storedPassword === backwardCompatibleHashedPassword) {
-          window.localStorage.setItem('staticrypt_passphrase', hashedPassphrase);
+        if (decryptedHMAC !== encryptedHMAC) {
+            // TODO: remove in next major version bump. This is to not break backwards compatibility with the old 1k
+            //  iterations in PBKDF2 - if the key we try isn't working, it might be because it's a remember-me/autodecrypt
+            //  link key, generated with 1k iterations. Try again with the updated iteration count.
+            if (!backwardCompatibleHashedPassword) {
+                return decode(
+                    signedMsg,
+                    cryptoEngine.hashSecondRound(hashedPassphrase, backwardCompatibleSalt),
+                    hashedPassphrase
+                );
+            }
+
+            return { success: false, message: "Signature mismatch" };
         }
-      }
+
+        // TODO: remove in next major version bump. If we're trying to double hash for backward compatibility reasons,
+        //  and the attempt is successful, we check if we should update the stored password in localStorage. This avoids
+        //  having to compute the upgrade each time.
+        if (backwardCompatibleHashedPassword) {
+            if (window && window.localStorage) {
+                const storedPassword = window.localStorage.getItem('staticrypt_passphrase');
+
+                // check the stored password is actually the backward compatible one, so we don't save the new one and trigger
+                // the "remember-me" by mistake, leaking the password
+                if (storedPassword === backwardCompatibleHashedPassword) {
+                    window.localStorage.setItem('staticrypt_passphrase', hashedPassphrase);
+                }
+            }
+        }
+
+        return {
+            success: true,
+            decoded: cryptoEngine.decrypt(encryptedMsg, hashedPassphrase),
+        };
     }
+    exports.decode = decode;
 
-    return {
-      success: true,
-      decoded: cryptoEngine.decrypt(encryptedMsg, hashedPassphrase),
-    };
-  }
-  exports.decode = decode;
-
-  return exports;
+    return exports;
 }
 exports.init = init;
 
   return exports;
 })())
-    var decode = codec.init(cryptoEngine).decode;
+    const decode = codec.init(cryptoEngine).decode;
 
     // variables to be filled when generating the file
-    var encryptedMsg = '15e68084a018211b6b40a9e6984069666d80a32e6370115e57f61e039e0e890bcc3a4b71625419d93afbd0e867b39c9dU2FsdGVkX1+WDV3Tx1SyqFwB8tXyCd+NxCLIYG+DT16rPfeK07torN9GJj/9cbmysk+aSEWeE1AehuUR7COwetM2DqRqL5WEIjZgVRxvN7vF1d/U5nCOi8GCCrWMnPb7+TPrkeE3wM+LMCNUtD1/hnMKBlnphVeqPHtKxmOLGzVLdKXK3dQIhUPdjiSTLUylWT5cZqvMLFLzoEImJ3DFKXpoiGn/XMZW0kRlESFrQigtkX5qihUFrkjZ8hsCJq3Vb8tbya2Q8ngZpuJIoarpN4n5WNek40kHMgZ1xkOaH+G+UPG5wygaD53rYgAXxolXO3RXzKBgP8LEiQ2hgBkhBph38maumwRJTBUyE6YFyKdnwS8ij5wYFkTWNf89E0oLtUKnX6SQdiWzGiQIfaVyQE3bSO5rIZHVBVZELgE0iH48vfpzp7T3qk85SxhnSx+vzHilt8+pTAxklpMLY2GcQsEVtqrGgfPhSD+It2juExg6iRKkQ5PkBVbVBQWBrlIy1/tXWNDma9EPa3YUm5hdD7C+WhidllMI84W9i2LWJNL/L6/xw9dGTKfNhPmYUU+OEZslLFESyhMmIJc9YRu3hvT/MEJdW9HbjreCtNA+YrPlRythc8XnANNFgCFs2XNvz5D273ch1LWVJpSOWbOxjq7Qar1IiiU0sABOsV/i01UoZTEeMvlxeduCiJILHk2UOK1YvwibF+edsX7jtcPNcU9Xnt2Cu+8qs7VuZsZgAqe7SJScuNPMWpJ1nojmczmByz7S+xhFAu6VsIftcaiGnK0/ReihiN1K0ZmrGGoNEx4+wg1SGhCu+c3LRR/mckV5H5R+fV8xNDrdpHMdw1es9BrG4tP5xGAiPFMn4REXj9QeuzVkvaYDurCfC/Ywbd1m2mXLODI/qsv9XrIohFbKZ4kxO7j0NLavuXe7EvywzBsng9B47mHwNz78Ub8gu3PrDJ84q910jkjVofpX2Rp/ZznT4FyAnMtaPhhm199jYMEopMlLxBqgsd2Ja3AMno56jrmkHjVfvucxmr7nlDPem0HSwK0A7NcKSKlVMUWRXtdbHb54KTafK1fhO9s/vCXpWg6hedoBgl3JM/2Oe/4n9AYz8jYj+wK5o0HvZtv86mhMoe9MFa7dHrrWiPw74JC8lPC7V+wOXjUwQHEQH+pAWvpv0mwyCdE1GW3lVVyP6nkYRWz2igzQYNuMVjDsh5047ZPIFktoLf7TjQrkvjpViobZtvL3+GCcnPc1eBFViEAp75vy26uCE4JE0S9GLiRhxiySMXroQcoerC9tJZBGyhgcpQcO8oL9r/H2WrtBl7ncQ4flKwT+6Xq6GQfUCjO2UQRAnYXHpQXN0Qa9DJqHyFdDVXKws2NVi2F1MkuxipWDwQ+ufcnOCM3xjahjhOSeZSdI4GD7Ihn9QzuKGW+A6g8f7zQGwvH3FvceUNKLdxIwO5cGqA8DRW61V8ll6rpvD7UMCFnUfn8EZwpaRX0kDza9ybABBOvUWNqylNw3Tp1haOuRgvmdeFmKhbGSDTID1eYvdr7dbOkFsnaLSicx6Xb1NHozNReC7XvreUDH4wNyXhj//a/LDL3EVECXhjzrD74je8RnnU+l3+CaJrtZ8A==',
-        salt = '45e7a31690c0f582b40ce2fc3cf58d4a',
+    const encryptedMsg = 'b857f7d7a9675404d9a2264d52058575bf7027401f9ae712d9cccae5607e882732238d6d5e7848323398ba0a2fcc88c9U2FsdGVkX1+uDcv3buTijZL6S7NR9CNkNc2TZYIzC5hgIZuGPGdx74FVLXdFKyF9G4cEIllbgQ8PLuCVow4w8QtCyLnHjC5ljUeVZiRkvV8Mo9haoozP3QQbor4tH70HTA9oP0gRx7Fw2I7TBa9aJqpjY6FhnT1hLAveOHjOOOg7QLvNavkgD0eYbayDzyU28QFHWf/N3KxNuYw2uBXGMF131OFp4j0tagC6Uzizutf3E84HvAtaWbS2CyEBO7rIMTQaBt0uLXNrD+50rKt0eOU/INnT+I8/1Na6B2vIuj+m1v1aYDbh19DOg7EFaQkvG8Op9Hh1Ii2NtfzZEf2Hlj6GGf+HzbEBiqEevgGGPw6zvm1YNiUhriG4RCwrmHr/1Vyg7UJM0TBrrRrhbBqPoYcN2W1qtxYkBAAZief7iH/eRv8U0ULh05bWPf6Pw5ud+Wfjyqdkcplks/DmuHhsjGVS7KDmNTbyVQZC0bzKFWeILMIgQ3g/ZpVFPr6+/d7H97NIiAHphBisevKsXuA5Q7XPrzruUHAJsaZcHfDjUXc+GIXOO6Fb9QV4dzjqOFliKhT/JoOAninp1l0aAcXXYTeBKamVPdICm+h9QGgtPu7HGfDk4mvqQpVTKg7td9c3T3cL5Bg2O8f0FAE5Jox6Ap4Q/JQ3RsMlBunoJZLRr6n1itPIOi9V/2SWKGBrhEUkeGkzMgRuoLbQU9bz38WCxVvC6tj9lP0plsSHPpFZUeF6E9/RuM6+Cs+jt1EwS6K/JtOullv2HcR7JFqbbdmKJkUWogUsx3YgPy8pmdQAD6RxuySKR8vK9CXNzrI7XtAvE3H7m0Ovg62VwGWRZzzIOLDb761jymkzPN/t2RNOGaK7+cXi5tpr4T8xIa+WOIj97CS+iAW9ce5M96kIwxlWdWRkTH74QZVh/9cHt/8HeHYd0f3AcpmUcd+9knyU2HTMAtS4/XeJGXiUOgKY6wBRPk7X535/55BeL3l4GKtw3mpUkrT0gxiE5B6MYsl/J+RMWBfNkBAvxjBTWx/MlBeFkjC1AgRB95UZL8VMCvY52lEYu9essbehDc69beuDKic5QqFIiEl8o+bvkAI0u/BHEiicxTGxk5IKk5XN8RVy1Y2OmGnOm6WEF1EfuswYEvv9CAC5qMJ4QE8dLEA0XloyIjGK7orY8IR6EVrQieAjmv7wX1hRSGf4EDHPAITAB18P6Va7X1MQcJasj6i5e2YXXAUy4xzduE2lCP/WNvxH2B/e3BAkYUgopwGSGOhnk66I9kIRrcMg4vFeyHl0WwupDsajg+r1pm/68Ghxt3o3h4wP0drkZrpUPzqpzVP6eF0bdFJtqqgAL53JOYMiLmx+dHl26XdldaXf6okk81E5sMGUObGZZrUZzz009BidXpSCDNevZS/Q7qEc9BnVEbKvocKb8TttFJipsFPnIQykwkM+DuWxu8qDA2SrPwOWXkN2XwL8pofaGgzSTnwOqYqN1QjV5wIFWfZOMwpqsrwXoBwErgsXVuIeWpA4VjWeG3XBJzNiseOtiNXja6zjuYudGI7Ol1bKY+W0BXiaAxxpfmbcffDtjoYezJtWTdWf7H5T0M13058r9G4RcLr0tRGk8w==',
+        salt = 'a38580c01d7e6ffc070fdb4aa29b7fe6',
         labelError = 'Bad password!',
         isRememberEnabled = true,
         rememberDurationInDays = 0; // 0 means forever
 
     // constants
-    var rememberPassphraseKey = 'staticrypt_passphrase',
+    const rememberPassphraseKey = 'staticrypt_passphrase',
         rememberExpirationKey = 'staticrypt_expiration';
 
     /**
      * Decrypt our encrypted page, replace the whole HTML.
      *
      * @param  hashedPassphrase
-     * @returns 
+     * @returns {Promise<boolean>}
      */
-    function decryptAndReplaceHtml(hashedPassphrase) {
-        var result = decode(encryptedMsg, hashedPassphrase);
+    async function decryptAndReplaceHtml(hashedPassphrase) {
+        const result = await decode(encryptedMsg, hashedPassphrase, salt);
         if (!result.success) {
             return false;
         }
-        var plainHTML = result.decoded;
+        const plainHTML = result.decoded;
 
         document.write(plainHTML);
         document.close();
@@ -474,12 +478,37 @@ exports.init = init;
     }
 
     /**
+     * Clear storage if we are logging out
+     *
+     * @returns  - whether we logged out
+     */
+    function logoutIfNeeded() {
+        const logoutKey = "staticrypt_logout";
+
+        // handle logout through query param
+        const queryParams = new URLSearchParams(window.location.search);
+        if (queryParams.has(logoutKey)) {
+            clearLocalStorage();
+            return true;
+        }
+
+        // handle logout through URL fragment
+        const hash = window.location.hash.substring(1);
+        if (hash.includes(logoutKey)) {
+            clearLocalStorage();
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
      * To be called on load: check if we want to try to decrypt and replace the HTML with the decrypted content, and
      * try to do it if needed.
      *
-     * @returns  true if we derypted and replaced the whole page, false otherwise
+     * @returns {Promise<boolean>} true if we derypted and replaced the whole page, false otherwise
      */
-    function decryptOnLoadFromRememberMe() {
+    async function decryptOnLoadFromRememberMe() {
         if (!isRememberEnabled) {
             return false;
         }
@@ -487,17 +516,14 @@ exports.init = init;
         // show the remember me checkbox
         document.getElementById('staticrypt-remember-label').classList.remove('hidden');
 
-        // if we are login out, clear the storage and terminate
-        var queryParams = new URLSearchParams(window.location.search);
-
-        if (queryParams.has("staticrypt_logout")) {
-            clearLocalStorage();
+        // if we are login out, terminate
+        if (logoutIfNeeded()) {
             return false;
         }
 
         // if there is expiration configured, check if we're not beyond the expiration
         if (rememberDurationInDays && rememberDurationInDays > 0) {
-            var expiration = localStorage.getItem(rememberExpirationKey),
+            const expiration = localStorage.getItem(rememberExpirationKey),
                 isExpired = expiration && new Date().getTime() > parseInt(expiration);
 
             if (isExpired) {
@@ -506,11 +532,11 @@ exports.init = init;
             }
         }
 
-        var hashedPassphrase = localStorage.getItem(rememberPassphraseKey);
+        const hashedPassphrase = localStorage.getItem(rememberPassphraseKey);
 
         if (hashedPassphrase) {
             // try to decrypt
-            var isDecryptionSuccessful = decryptAndReplaceHtml(hashedPassphrase);
+            const isDecryptionSuccessful = await decryptAndReplaceHtml(hashedPassphrase);
 
             // if the decryption is unsuccessful the password might be wrong - silently clear the saved data and let
             // the user fill the password form again
@@ -525,9 +551,18 @@ exports.init = init;
         return false;
     }
 
-    function decryptOnLoadFromQueryParam() {
-        var queryParams = new URLSearchParams(window.location.search);
-        var hashedPassphrase = queryParams.get("staticrypt_pwd");
+    function decryptOnLoadFromUrl() {
+        const passwordKey = "staticrypt_pwd";
+
+        // get the password from the query param
+        const queryParams = new URLSearchParams(window.location.search);
+        const hashedPassphraseQuery = queryParams.get(passwordKey);
+
+        // get the password from the url fragment
+        const hashRegexMatch = window.location.hash.substring(1).match(new RegExp(passwordKey + "=(.*)"));
+        const hashedPassphraseFragment = hashRegexMatch ? hashRegexMatch[1] : null;
+
+        const hashedPassphrase = hashedPassphraseFragment || hashedPassphraseQuery;
 
         if (hashedPassphrase) {
             return decryptAndReplaceHtml(hashedPassphrase);
@@ -537,11 +572,11 @@ exports.init = init;
     }
 
     // try to automatically decrypt on load if there is a saved password
-    window.onload = function () {
-        var hasDecrypted = decryptOnLoadFromQueryParam();
+    window.onload = async function () {
+        let hasDecrypted = await decryptOnLoadFromUrl();
 
         if (!hasDecrypted) {
-            hasDecrypted = decryptOnLoadFromRememberMe();
+            hasDecrypted = await decryptOnLoadFromRememberMe();
         }
 
         // if we didn't decrypt anything, show the password prompt. Otherwise the content has already been replaced, no
@@ -554,15 +589,15 @@ exports.init = init;
     }
 
     // handle password form submission
-    document.getElementById('staticrypt-form').addEventListener('submit', function (e) {
+    document.getElementById('staticrypt-form').addEventListener('submit', async function (e) {
         e.preventDefault();
 
-        var passphrase = document.getElementById('staticrypt-password').value,
+        const passphrase = document.getElementById('staticrypt-password').value,
             shouldRememberPassphrase = document.getElementById('staticrypt-remember').checked;
 
         // decrypt and replace the whole page
-        var hashedPassphrase = cryptoEngine.hashPassphrase(passphrase, salt);
-        var isDecryptionSuccessful = decryptAndReplaceHtml(hashedPassphrase);
+        const hashedPassphrase = await cryptoEngine.hashPassphrase(passphrase, salt);
+        const isDecryptionSuccessful = await decryptAndReplaceHtml(hashedPassphrase);
 
         if (isDecryptionSuccessful) {
             // remember the hashedPassphrase and set its expiration if necessary
