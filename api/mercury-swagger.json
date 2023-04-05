@@ -5408,41 +5408,27 @@
           "load": {
             "$ref": "#/components/schemas/Load"
           },
-          "finrepMapping": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "capitalTierSpecificDeduction": {
-            "type": "string",
-            "nullable": true
-          },
-          "loanSpecification": {
-            "type": "string",
-            "nullable": true
-          },
-          "pledgedCashType": {
-            "type": "string",
-            "nullable": true
-          },
           "forceHQLACategory": {
             "type": "string",
             "nullable": true
           },
-          "forceHaircut": {
+          "caForceHaircut": {
             "type": "number",
             "format": "float"
           },
-          "forceRiskWeight": {
+          "caForceRiskWeight": {
             "type": "number",
             "format": "float"
           },
-          "forceInflow": {
-            "type": "boolean"
+          "lcrForceFlow": {
+            "type": "integer",
+            "format": "int32"
           },
-          "excludeInflow": {
-            "type": "boolean"
+          "lcrForceRate": {
+            "type": "integer",
+            "format": "int32"
           },
-          "excludeOutflow": {
+          "lcrExcludeFlow": {
             "type": "boolean"
           },
           "excludeZIR": {
@@ -6040,6 +6026,10 @@
             "type": "boolean"
           },
           "hqlaCategory": {
+            "type": "string",
+            "nullable": true
+          },
+          "ownShare": {
             "type": "string",
             "nullable": true
           },
