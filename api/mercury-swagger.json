@@ -5031,6 +5031,14 @@
             "type": "number",
             "format": "float"
           },
+          "supervisoryVolatility": {
+            "type": "number",
+            "format": "float"
+          },
+          "supervisoryRho": {
+            "type": "number",
+            "format": "float"
+          },
           "sd": {
             "type": "number",
             "format": "float"
