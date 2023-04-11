@@ -6043,6 +6043,10 @@
           },
           "lifeLine": {
             "$ref": "#/components/schemas/LifelineFlag"
+          },
+          "liqTypeOf": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
