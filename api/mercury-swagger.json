@@ -1318,12 +1318,85 @@
         }
       }
     },
+    "/List/Load": {
+      "post": {
+        "tags": [
+          "List"
+        ],
+        "summary": "Allow to load a static file from the API",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "Name of the static file",
+            "schema": {
+              "type": "string"
+            },
+            "example": "Adaptation"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
     "/List/LoadAll": {
       "post": {
         "tags": [
           "List"
         ],
-        "summary": "Allow to load of the static files",
+        "summary": "Allow to load all the static files from the docker directory",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/List/SaveAll": {
+      "post": {
+        "tags": [
+          "List"
+        ],
+        "summary": "Allow to save all the static files from the docker directory",
         "responses": {
           "200": {
             "description": "Success"
