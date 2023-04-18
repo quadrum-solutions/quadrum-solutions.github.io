@@ -3813,6 +3813,15 @@
               "type": "string"
             },
             "example": "BILAKTFMINOTICHF"
+          },
+          {
+            "name": "reportName",
+            "in": "query",
+            "description": "Name of the report if needed",
+            "schema": {
+              "type": "string"
+            },
+            "example": "BalanceSheetOverview"
           }
         ],
         "responses": {
