@@ -5196,6 +5196,22 @@
           "nettingSetId": {
             "type": "string",
             "nullable": true
+          },
+          "rNextRefixingDays": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pNextRefixingDays": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "startDateReferencePeriodDays": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "endDateReferencePeriodDays": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
