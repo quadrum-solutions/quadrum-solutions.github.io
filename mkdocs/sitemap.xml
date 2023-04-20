@@ -71,6 +71,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_LIQDepositGaranteeCalc/</loc>
+         <lastmod>2023-04-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_LIQHighValueDeposit/</loc>
+         <lastmod>2023-04-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_MARCommodityRisk/</loc>
          <lastmod>2023-04-20</lastmod>
          <changefreq>daily</changefreq>
