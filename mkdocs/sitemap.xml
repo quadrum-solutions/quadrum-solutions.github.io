@@ -36,6 +36,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_CRENettingByIssuer/</loc>
+         <lastmod>2023-04-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_CRERiskWeights/</loc>
          <lastmod>2023-04-21</lastmod>
          <changefreq>daily</changefreq>
@@ -66,12 +71,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_LIQ/</loc>
+         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_LIQDepositGaranteeCalc/</loc>
          <lastmod>2023-04-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_LIQDepositGaranteeCalc/</loc>
+         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_LIQDerivatives/</loc>
          <lastmod>2023-04-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -122,11 +127,6 @@
     </url>
     <url>
          <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_Mortgages/</loc>
-         <lastmod>2023-04-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_NettingByIssuer/</loc>
          <lastmod>2023-04-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
