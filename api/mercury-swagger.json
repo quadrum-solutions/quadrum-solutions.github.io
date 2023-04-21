@@ -4725,7 +4725,81 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/RunningTask"
+                    "$ref": "#/components/schemas/RunningTaskDTO"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Task/LastXTasks": {
+      "get": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "Allow to fetch the x last created tasks",
+        "parameters": [
+          {
+            "name": "number",
+            "in": "query",
+            "description": "Number of tasks to return",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RunningTaskDTO"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Task/TasksSince": {
+      "get": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "Allow to fetch all the tasks since a date",
+        "parameters": [
+          {
+            "name": "since",
+            "in": "query",
+            "description": "Date from when fetching the tasks",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RunningTaskDTO"
                   }
                 }
               }
@@ -4751,7 +4825,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/RunningTask"
+                    "$ref": "#/components/schemas/RunningTaskDTO"
                   }
                 }
               }
@@ -6989,15 +7063,12 @@
         },
         "additionalProperties": false
       },
-      "RunningTask": {
-        "required": [
-          "id"
-        ],
+      "RunningTaskDTO": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int64"
+          "creationDate": {
+            "type": "string",
+            "format": "date-time"
           },
           "startDate": {
             "type": "string",
@@ -7021,6 +7092,22 @@
           "error": {
             "type": "string",
             "nullable": true
+          },
+          "isStarted": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isOver": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isCompleted": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isError": {
+            "type": "boolean",
+            "readOnly": true
           }
         },
         "additionalProperties": false
