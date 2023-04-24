@@ -116,12 +116,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_MARNetting/</loc>
+         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_MAROptions/</loc>
          <lastmod>2023-04-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_MAROptions/</loc>
+         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_MARPositionPresentationAndNetting/</loc>
          <lastmod>2023-04-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
