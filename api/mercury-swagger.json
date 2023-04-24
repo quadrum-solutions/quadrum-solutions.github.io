@@ -7268,6 +7268,9 @@
             "type": "string",
             "nullable": true
           },
+          "query": {
+            "$ref": "#/components/schemas/RunningTaskQueryDTO"
+          },
           "isStarted": {
             "type": "boolean",
             "readOnly": true
@@ -7283,6 +7286,31 @@
           "isError": {
             "type": "boolean",
             "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RunningTaskQueryDTO": {
+        "type": "object",
+        "properties": {
+          "host": {
+            "type": "string",
+            "nullable": true
+          },
+          "path": {
+            "type": "string",
+            "nullable": true
+          },
+          "method": {
+            "type": "string",
+            "nullable": true
+          },
+          "parameters": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
