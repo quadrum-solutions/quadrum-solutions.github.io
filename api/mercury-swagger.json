@@ -3770,6 +3770,98 @@
         }
       }
     },
+    "/Reports/AuditExcel": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to fetch the audit of a cell in Excel",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "surveyName",
+            "in": "query",
+            "description": "Name of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "MONA_U"
+          },
+          {
+            "name": "surveyVersion",
+            "in": "query",
+            "description": "Version of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1.3.0"
+          },
+          {
+            "name": "cellPosition",
+            "in": "query",
+            "description": "Position of the cell",
+            "schema": {
+              "type": "string"
+            },
+            "example": "BILAKTFMINOTICHF"
+          },
+          {
+            "name": "reportName",
+            "in": "query",
+            "description": "Name of the report if needed",
+            "schema": {
+              "type": "string"
+            },
+            "example": "BalanceSheetOverview"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
     "/Reports/Excel": {
       "get": {
         "tags": [
@@ -3813,6 +3905,89 @@
               "type": "string"
             },
             "example": "BILAKTFMINOTICHF"
+          },
+          {
+            "name": "reportName",
+            "in": "query",
+            "description": "Name of the report if needed",
+            "schema": {
+              "type": "string"
+            },
+            "example": "BalanceSheetOverview"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Reports/ReportExcel": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to fetch the report in Excel",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "surveyName",
+            "in": "query",
+            "description": "Name of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "MONA_U"
+          },
+          {
+            "name": "surveyVersion",
+            "in": "query",
+            "description": "Version of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1.3.0"
           },
           {
             "name": "reportName",
