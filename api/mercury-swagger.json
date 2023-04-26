@@ -3102,6 +3102,15 @@
               "type": "string"
             },
             "example": "1.3.0"
+          },
+          {
+            "name": "async",
+            "in": "query",
+            "description": "False to wait for the task to end",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
           }
         ],
         "responses": {
