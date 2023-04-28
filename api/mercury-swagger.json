@@ -1077,6 +1077,113 @@
         }
       }
     },
+    "/Import/RT01Import": {
+      "post": {
+        "tags": [
+          "Import"
+        ],
+        "summary": "Allow to execute the import step of the UploadRt01",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "Name of the load",
+            "schema": {
+              "type": "string"
+            },
+            "example": "My Load"
+          },
+          {
+            "name": "date",
+            "in": "query",
+            "description": "Reporting date",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2022-12-31"
+          },
+          {
+            "name": "overwrite",
+            "in": "query",
+            "description": "Overwite the existing data if any",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            },
+            "example": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Import/RT01Calc": {
+      "post": {
+        "tags": [
+          "Import"
+        ],
+        "summary": "Allow to execute the calculation step of the UploadRt01",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "description": "Id of the load",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Import/Excel": {
       "post": {
         "tags": [
