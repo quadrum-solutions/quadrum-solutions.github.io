@@ -7484,6 +7484,14 @@
             "type": "string",
             "nullable": true
           },
+          "loadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lcId": {
+            "type": "integer",
+            "format": "int32"
+          },
           "parameters": {
             "type": "object",
             "additionalProperties": {
