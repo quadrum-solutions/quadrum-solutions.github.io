@@ -3211,6 +3211,15 @@
             "example": "1.3.0"
           },
           {
+            "name": "keepEdit",
+            "in": "query",
+            "description": "True to keep the manual edit of the report",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
             "name": "async",
             "in": "query",
             "description": "False to wait for the task to end",
@@ -3626,6 +3635,15 @@
               "type": "string"
             },
             "example": "1.3.0"
+          },
+          {
+            "name": "keepEdit",
+            "in": "query",
+            "description": "True to keep the manual edit of the report",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
           }
         ],
         "responses": {
