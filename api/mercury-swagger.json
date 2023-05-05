@@ -8173,6 +8173,9 @@
       "ValidationBreachDetailDTO": {
         "type": "object",
         "properties": {
+          "isTechError": {
+            "type": "boolean"
+          },
           "formulaTech": {
             "type": "string",
             "nullable": true
