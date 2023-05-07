@@ -995,6 +995,101 @@
         }
       }
     },
+    "/GlobalInput/Search": {
+      "get": {
+        "tags": [
+          "GlobalInput"
+        ],
+        "summary": "Allow to fetch a list of items",
+        "parameters": [
+          {
+            "name": "loadCollectionId",
+            "in": "query",
+            "description": "Id of the loadcollection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "property1",
+            "in": "query",
+            "description": "Value of the property 1",
+            "schema": {
+              "type": "string",
+              "default": ""
+            },
+            "example": "string"
+          },
+          {
+            "name": "property2",
+            "in": "query",
+            "description": "Value of the property 2",
+            "schema": {
+              "type": "string",
+              "default": ""
+            },
+            "example": "string"
+          },
+          {
+            "name": "property3",
+            "in": "query",
+            "description": "Value of the property 3",
+            "schema": {
+              "type": "string",
+              "default": ""
+            },
+            "example": "string"
+          },
+          {
+            "name": "property4",
+            "in": "query",
+            "description": "Value of the property 4",
+            "schema": {
+              "type": "string",
+              "default": ""
+            },
+            "example": "string"
+          },
+          {
+            "name": "property5",
+            "in": "query",
+            "description": "Value of the property 5",
+            "schema": {
+              "type": "string",
+              "default": ""
+            },
+            "example": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GlobalInput"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/GlobalInput": {
       "get": {
         "tags": [
