@@ -5722,6 +5722,29 @@
           }
         }
       }
+    },
+    "/Technical": {
+      "get": {
+        "tags": [
+          "Technical"
+        ],
+        "summary": "Allow to fetch the technical information",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TechnicalInfoDTO"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -8148,6 +8171,28 @@
             "items": {
               "$ref": "#/components/schemas/Tag"
             },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TechnicalInfoDTO": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string",
+            "nullable": true
+          },
+          "revision": {
+            "type": "string",
+            "nullable": true
+          },
+          "datetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dbProviderName": {
+            "type": "string",
             "nullable": true
           }
         },
