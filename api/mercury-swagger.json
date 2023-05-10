@@ -3688,7 +3688,7 @@
       }
     },
     "/Reports/Breaches": {
-      "post": {
+      "get": {
         "tags": [
           "Reports"
         ],
