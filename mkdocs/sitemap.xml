@@ -151,7 +151,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.quadrum-solutions.net/TechnicalDoc/Doc_Tech_Mercury/</loc>
+         <loc>https://docs.quadrum-solutions.net/TechnicalDoc/Doc_Config_Mercury/</loc>
+         <lastmod>2023-05-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.quadrum-solutions.net/TechnicalDoc/Doc_SQL/</loc>
          <lastmod>2023-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
