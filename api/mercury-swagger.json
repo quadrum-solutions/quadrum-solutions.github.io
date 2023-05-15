@@ -995,6 +995,46 @@
         }
       }
     },
+    "/GlobalInput/FindEntitySpec": {
+      "get": {
+        "tags": [
+          "GlobalInput"
+        ],
+        "summary": "Allow to fetch an item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Composite Id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GlobalInput"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/GlobalInput/Search": {
       "get": {
         "tags": [
