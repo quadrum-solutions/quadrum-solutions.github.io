@@ -5785,6 +5785,75 @@
           }
         }
       }
+    },
+    "/Technical/Infos": {
+      "get": {
+        "tags": [
+          "Technical"
+        ],
+        "summary": "Allow to fetch the technical information",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TechnicalInfoDTO"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Technical/Logs": {
+      "get": {
+        "tags": [
+          "Technical"
+        ],
+        "summary": "Allow to fetch the logs of the day",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Technical/LogFile": {
+      "get": {
+        "tags": [
+          "Technical"
+        ],
+        "summary": "Allow to fetch the logs of the day in a file",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
     }
   },
   "components": {
