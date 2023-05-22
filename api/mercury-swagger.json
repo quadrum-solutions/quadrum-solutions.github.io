@@ -7391,6 +7391,10 @@
             "type": "integer",
             "format": "int32"
           },
+          "residualEncumberedDurationDays": {
+            "type": "integer",
+            "format": "int32"
+          },
           "chAbroadFlag": {
             "type": "boolean"
           },
