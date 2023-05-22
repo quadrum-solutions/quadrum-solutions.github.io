@@ -8311,6 +8311,14 @@
           "dbProviderName": {
             "type": "string",
             "nullable": true
+          },
+          "dbServerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "dbName": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
