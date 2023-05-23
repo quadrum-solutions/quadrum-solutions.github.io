@@ -6285,6 +6285,10 @@
             "type": "number",
             "format": "double"
           },
+          "marGammaWeight": {
+            "type": "number",
+            "format": "double"
+          },
           "assetClass": {
             "type": "string",
             "nullable": true
