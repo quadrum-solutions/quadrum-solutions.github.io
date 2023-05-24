@@ -6289,6 +6289,10 @@
             "type": "number",
             "format": "double"
           },
+          "marGammaNettingCategory": {
+            "type": "string",
+            "nullable": true
+          },
           "assetClass": {
             "type": "string",
             "nullable": true
