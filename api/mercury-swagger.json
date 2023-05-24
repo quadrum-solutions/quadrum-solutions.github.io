@@ -551,10 +551,10 @@
         }
       }
     },
-    "/DataPosition/PagedByLoadId": {
+    "/CorePosition/PagedByLoadId": {
       "get": {
         "tags": [
-          "DataPosition"
+          "CorePosition"
         ],
         "summary": "Allow to fetch pages items by Load Id",
         "parameters": [
@@ -600,10 +600,10 @@
         }
       }
     },
-    "/DataPosition/PagedByLcId": {
+    "/CorePosition/PagedByLcId": {
       "get": {
         "tags": [
-          "DataPosition"
+          "CorePosition"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
@@ -649,10 +649,10 @@
         }
       }
     },
-    "/DataPosition": {
+    "/CorePosition": {
       "put": {
         "tags": [
-          "DataPosition"
+          "CorePosition"
         ],
         "summary": "Allow to update an item",
         "requestBody": {
@@ -697,10 +697,10 @@
         }
       }
     },
-    "/DataPosition/{id}": {
+    "/CorePosition/{id}": {
       "patch": {
         "tags": [
-          "DataPosition"
+          "CorePosition"
         ],
         "summary": "Allow to patch an item",
         "parameters": [
