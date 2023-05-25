@@ -1193,7 +1193,7 @@
       }
     },
     "/Engine/GetCrmCaResults/{lcId}": {
-      "post": {
+      "get": {
         "tags": [
           "Engine"
         ],
@@ -1213,7 +1213,7 @@
           {
             "name": "counterpartyId",
             "in": "query",
-            "description": "Id of the LoadCollection",
+            "description": "Counterparty Id",
             "schema": {
               "type": "string"
             },
@@ -1251,7 +1251,7 @@
       }
     },
     "/Engine/GetCrmMonaResults/{lcId}": {
-      "post": {
+      "get": {
         "tags": [
           "Engine"
         ],
@@ -1271,7 +1271,7 @@
           {
             "name": "counterpartyId",
             "in": "query",
-            "description": "Id of the LoadCollection",
+            "description": "Counterparty Id",
             "schema": {
               "type": "string"
             },
