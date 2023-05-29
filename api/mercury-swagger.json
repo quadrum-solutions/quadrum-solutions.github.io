@@ -7129,6 +7129,10 @@
           },
           "excludeZIR": {
             "type": "boolean"
+          },
+          "forceLIQCurrency": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
