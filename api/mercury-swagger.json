@@ -6212,6 +6212,10 @@
             "type": "string",
             "nullable": true
           },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          },
           "id": {
             "type": "string",
             "nullable": true,
