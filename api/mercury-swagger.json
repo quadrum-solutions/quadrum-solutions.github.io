@@ -7890,6 +7890,10 @@
           "load": {
             "$ref": "#/components/schemas/Load"
           },
+          "computedId": {
+            "type": "integer",
+            "format": "int64"
+          },
           "accountNumber": {
             "type": "integer",
             "format": "int32"
