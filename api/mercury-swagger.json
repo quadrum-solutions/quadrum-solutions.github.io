@@ -6281,6 +6281,10 @@
             "type": "string",
             "nullable": true
           },
+          "value": {
+            "type": "string",
+            "nullable": true
+          },
           "sums": {
             "type": "array",
             "items": {
