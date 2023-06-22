@@ -2008,6 +2008,16 @@
             "example": "2022-12-31"
           },
           {
+            "name": "perimeter",
+            "in": "query",
+            "description": "Perimeter to import",
+            "schema": {
+              "type": "string",
+              "default": "DEFAULT"
+            },
+            "example": "DEFAULT"
+          },
+          {
             "name": "overwrite",
             "in": "query",
             "description": "Overwite the existing data if any",
