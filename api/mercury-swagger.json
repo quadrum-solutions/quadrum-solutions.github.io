@@ -7676,6 +7676,9 @@
             "type": "number",
             "format": "float"
           },
+          "irSpreadFlag": {
+            "type": "boolean"
+          },
           "interestRate": {
             "type": "number",
             "format": "float"
@@ -7701,6 +7704,10 @@
             "nullable": true
           },
           "irCompoundingType": {
+            "type": "string",
+            "nullable": true
+          },
+          "irDayCount": {
             "type": "string",
             "nullable": true
           },
