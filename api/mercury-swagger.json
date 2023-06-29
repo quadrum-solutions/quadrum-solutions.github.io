@@ -7290,6 +7290,10 @@
             "type": "number",
             "format": "double"
           },
+          "singleUnderlyingMarketValue": {
+            "type": "number",
+            "format": "double"
+          },
           "ead": {
             "type": "number",
             "format": "double"
