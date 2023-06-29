@@ -21,6 +21,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_AccruedIncome/</loc>
+         <lastmod>2023-06-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_CCF/</loc>
          <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
@@ -62,6 +67,11 @@
     </url>
     <url>
          <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_Conso/</loc>
+         <lastmod>2023-06-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_Derivatives/</loc>
          <lastmod>2023-06-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
