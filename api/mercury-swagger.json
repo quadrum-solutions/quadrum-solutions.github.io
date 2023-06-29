@@ -6851,7 +6851,30 @@
         "tags": [
           "Technical"
         ],
-        "summary": "Allow to fetch the logs of the day",
+        "summary": "Allow to fetch the business logs of the day",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Technical/BusinessLogs": {
+      "get": {
+        "tags": [
+          "Technical"
+        ],
+        "summary": "Allow to fetch the business logs of the day",
         "responses": {
           "200": {
             "description": "Success",
@@ -6874,7 +6897,76 @@
         "tags": [
           "Technical"
         ],
-        "summary": "Allow to fetch the logs of the day in a file",
+        "summary": "Allow to fetch the business logs of the day in a file",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Technical/BusinessLogFile": {
+      "get": {
+        "tags": [
+          "Technical"
+        ],
+        "summary": "Allow to fetch the business logs of the day in a file",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Technical/TechLogs": {
+      "get": {
+        "tags": [
+          "Technical"
+        ],
+        "summary": "Allow to fetch the business logs of the day",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Technical/TechLogFile": {
+      "get": {
+        "tags": [
+          "Technical"
+        ],
+        "summary": "Allow to fetch the business logs of the day in a file",
         "responses": {
           "200": {
             "description": "Success",
