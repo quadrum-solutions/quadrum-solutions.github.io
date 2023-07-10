@@ -4857,6 +4857,34 @@
           "200": {
             "description": "Success"
           },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Reports/Reload/{surveyfilename}": {
+      "post": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to reload one survey file",
+        "parameters": [
+          {
+            "name": "surveyfilename",
+            "in": "path",
+            "description": "Name of the file to reload",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "MONA_U.json"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
           "404": {
             "description": "Not Found",
             "content": {
