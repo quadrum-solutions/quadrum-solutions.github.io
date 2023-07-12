@@ -8378,6 +8378,42 @@
           "forceLIQCurrency": {
             "type": "string",
             "nullable": true
+          },
+          "forceLiqTypeOf": {
+            "type": "string",
+            "nullable": true
+          },
+          "posRiskDomicile": {
+            "type": "string",
+            "nullable": true
+          },
+          "posCounterpartyDomicile": {
+            "type": "string",
+            "nullable": true
+          },
+          "posIssuerDomicile": {
+            "type": "string",
+            "nullable": true
+          },
+          "posHQDomicile": {
+            "type": "string",
+            "nullable": true
+          },
+          "posCounterpartyType": {
+            "type": "string",
+            "nullable": true
+          },
+          "posIssuerType": {
+            "type": "string",
+            "nullable": true
+          },
+          "posClientEconomicActivityType": {
+            "type": "string",
+            "nullable": true
+          },
+          "posIssuerEconomicActivityType": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
