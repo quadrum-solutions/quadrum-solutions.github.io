@@ -7338,6 +7338,10 @@
             "type": "string",
             "nullable": true
           },
+          "bookingCenter": {
+            "type": "string",
+            "nullable": true
+          },
           "id": {
             "type": "string",
             "nullable": true,
