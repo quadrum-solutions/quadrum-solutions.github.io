@@ -7616,6 +7616,17 @@
             "type": "string",
             "nullable": true
           },
+          "calculationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dataDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "upToDate": {
+            "type": "boolean"
+          },
           "validated": {
             "type": "boolean"
           },
@@ -8088,6 +8099,10 @@
             "type": "string",
             "nullable": true
           },
+          "lastUpdate": {
+            "type": "string",
+            "format": "date-time"
+          },
           "amortizations": {
             "type": "array",
             "items": {
@@ -8196,6 +8211,10 @@
           "name": {
             "type": "string",
             "nullable": true
+          },
+          "lastUpdate": {
+            "type": "string",
+            "format": "date-time"
           },
           "loads": {
             "type": "array",
