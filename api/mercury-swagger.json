@@ -8002,6 +8002,16 @@
             "type": "string",
             "nullable": true,
             "readOnly": true
+          },
+          "maturityInMonths": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "maturityInDays": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -8051,6 +8061,11 @@
           "shock": {
             "type": "integer",
             "format": "int32"
+          },
+          "shockPercentage": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
           },
           "id": {
             "type": "string",
