@@ -630,6 +630,40 @@
         }
       }
     },
+    "/CorePosition/ByLoadId/{loadId}": {
+      "get": {
+        "tags": [
+          "CorePosition"
+        ],
+        "summary": "Allow to fetch items by Load Id",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Position"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/CorePosition/PagedByLcId": {
       "get": {
         "tags": [
@@ -672,6 +706,79 @@
                   "items": {
                     "$ref": "#/components/schemas/Position"
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePosition/ByLcId/{lcId}": {
+      "get": {
+        "tags": [
+          "CorePosition"
+        ],
+        "summary": "Allow to fetch pages by LoadCollection",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Position"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePosition/{loadId}/{id}": {
+      "get": {
+        "tags": [
+          "CorePosition"
+        ],
+        "summary": "Allow to fetch one item by Load Id and Id",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Position"
                 }
               }
             }
