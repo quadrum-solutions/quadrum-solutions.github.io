@@ -9259,7 +9259,7 @@
           },
           "lendingValueAmount": {
             "type": "number",
-            "format": "double"
+            "format": "float"
           },
           "marketValueAmount": {
             "type": "number",
@@ -9395,7 +9395,7 @@
           },
           "deltaValue": {
             "type": "number",
-            "format": "double"
+            "format": "float"
           },
           "interestRate": {
             "type": "number",
@@ -9415,7 +9415,7 @@
           },
           "vegaValue": {
             "type": "number",
-            "format": "double"
+            "format": "float"
           },
           "instrumentType": {
             "type": "integer",
