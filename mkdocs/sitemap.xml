@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_BISUltimateCountryRiskCalc/</loc>
+         <lastmod>2023-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_CCF/</loc>
          <lastmod>2023-07-19</lastmod>
          <changefreq>daily</changefreq>
@@ -111,7 +116,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_LIQOperationalAmountTreatment/</loc>
+         <lastmod>2023-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_LIQRetailSmeEligibleFlag/</loc>
+         <lastmod>2023-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_LIQWithdrawalLimit/</loc>
          <lastmod>2023-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -172,6 +187,11 @@
     </url>
     <url>
          <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_SFTs/</loc>
+         <lastmod>2023-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_SNBLimitCalculation/</loc>
          <lastmod>2023-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
