@@ -1949,6 +1949,24 @@
               "type": "boolean",
               "default": true
             }
+          },
+          {
+            "name": "createLc",
+            "in": "query",
+            "description": "True to creat a LoadCollection",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "nameLc",
+            "in": "query",
+            "description": "Specify the name of the load collection",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
           }
         ],
         "requestBody": {
@@ -2022,6 +2040,24 @@
               "default": true
             },
             "example": true
+          },
+          {
+            "name": "createLc",
+            "in": "query",
+            "description": "True to creat a LoadCollection",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "nameLc",
+            "in": "query",
+            "description": "Specify the name of the load collection",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
           }
         ],
         "requestBody": {
@@ -2138,6 +2174,24 @@
               "type": "boolean",
               "default": true
             }
+          },
+          {
+            "name": "createLc",
+            "in": "query",
+            "description": "True to creat a LoadCollection",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "nameLc",
+            "in": "query",
+            "description": "Specify the name of the load collection",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
           }
         ],
         "requestBody": {
@@ -2229,6 +2283,24 @@
             "schema": {
               "type": "boolean",
               "default": true
+            }
+          },
+          {
+            "name": "createLc",
+            "in": "query",
+            "description": "True to creat a LoadCollection",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "nameLc",
+            "in": "query",
+            "description": "Specify the name of the load collection",
+            "schema": {
+              "type": "string",
+              "default": ""
             }
           }
         ],
