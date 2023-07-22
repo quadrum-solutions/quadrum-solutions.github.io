@@ -7893,7 +7893,7 @@
             "type": "number",
             "format": "double"
           },
-          "ead": {
+          "eadDistributed": {
             "type": "number",
             "format": "double"
           },
