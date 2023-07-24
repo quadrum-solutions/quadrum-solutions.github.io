@@ -3460,54 +3460,6 @@
         }
       }
     },
-    "/Load/Detail/{id}": {
-      "get": {
-        "tags": [
-          "Load"
-        ],
-        "summary": "Allow to retrieve a load with details",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Id of the load",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/Load/Detail": {
-      "get": {
-        "tags": [
-          "Load"
-        ],
-        "summary": "Allow to retrieve a load with details",
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
     "/Load": {
       "get": {
         "tags": [
@@ -7851,6 +7803,13 @@
             "type": "string",
             "format": "date-time"
           },
+          "dataDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "upToDate": {
+            "type": "boolean"
+          },
           "validated": {
             "type": "boolean"
           },
@@ -7863,9 +7822,6 @@
               "$ref": "#/components/schemas/CalcReportDTO"
             },
             "nullable": true
-          },
-          "hasCalcOlderThanLoadCollectionCalc": {
-            "type": "boolean"
           }
         },
         "additionalProperties": false
