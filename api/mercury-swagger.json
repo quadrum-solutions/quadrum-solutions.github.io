@@ -1953,19 +1953,20 @@
           {
             "name": "createLc",
             "in": "query",
-            "description": "True to creat a LoadCollection",
+            "description": "True to create a LoadCollection",
             "schema": {
               "type": "boolean",
               "default": true
             }
           },
           {
-            "name": "nameLc",
+            "name": "idLc",
             "in": "query",
-            "description": "Specify the name of the load collection",
+            "description": "Specify the id of the load collection",
             "schema": {
-              "type": "string",
-              "default": ""
+              "type": "integer",
+              "format": "int32",
+              "default": 0
             }
           }
         ],
@@ -2051,12 +2052,13 @@
             }
           },
           {
-            "name": "nameLc",
+            "name": "idLc",
             "in": "query",
-            "description": "Specify the name of the load collection",
+            "description": "Specify the id of the load collection",
             "schema": {
-              "type": "string",
-              "default": ""
+              "type": "integer",
+              "format": "int32",
+              "default": 0
             }
           }
         ],
@@ -2185,12 +2187,13 @@
             }
           },
           {
-            "name": "nameLc",
+            "name": "idLc",
             "in": "query",
-            "description": "Specify the name of the load collection",
+            "description": "Specify the id of the load collection",
             "schema": {
-              "type": "string",
-              "default": ""
+              "type": "integer",
+              "format": "int32",
+              "default": 0
             }
           }
         ],
@@ -2295,12 +2298,13 @@
             }
           },
           {
-            "name": "nameLc",
+            "name": "idLc",
             "in": "query",
-            "description": "Specify the name of the load collection",
+            "description": "Specify the id of the load collection",
             "schema": {
-              "type": "string",
-              "default": ""
+              "type": "integer",
+              "format": "int32",
+              "default": 0
             }
           }
         ],
