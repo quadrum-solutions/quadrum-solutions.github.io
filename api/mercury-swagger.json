@@ -7941,10 +7941,6 @@
             "type": "number",
             "format": "double"
           },
-          "eadDistributed": {
-            "type": "number",
-            "format": "double"
-          },
           "rCurrency": {
             "type": "string",
             "nullable": true
@@ -8009,30 +8005,6 @@
             "type": "number",
             "format": "float"
           },
-          "sen": {
-            "type": "number",
-            "format": "float"
-          },
-          "effectiveNotional": {
-            "type": "number",
-            "format": "float"
-          },
-          "adjustedNotional": {
-            "type": "number",
-            "format": "float"
-          },
-          "mf": {
-            "type": "number",
-            "format": "float"
-          },
-          "mpor": {
-            "type": "number",
-            "format": "float"
-          },
-          "supervisoryDelta": {
-            "type": "number",
-            "format": "float"
-          },
           "supervisoryVolatility": {
             "type": "number",
             "format": "float"
@@ -8041,21 +8013,9 @@
             "type": "number",
             "format": "float"
           },
-          "sd": {
-            "type": "number",
-            "format": "float"
-          },
           "sf": {
             "type": "number",
             "format": "float"
-          },
-          "subHedgingSetId": {
-            "type": "string",
-            "nullable": true
-          },
-          "hedgingSetId": {
-            "type": "string",
-            "nullable": true
           },
           "nettingSetId": {
             "type": "string",
@@ -8066,14 +8026,6 @@
             "format": "int32"
           },
           "pNextRefixingDays": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "startDateReferencePeriodDays": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "endDateReferencePeriodDays": {
             "type": "integer",
             "format": "int32"
           }
@@ -9186,14 +9138,6 @@
             "type": "number",
             "format": "double"
           },
-          "monaExposureAfterCRM": {
-            "type": "number",
-            "format": "double"
-          },
-          "monaCollateralUsedAmount": {
-            "type": "number",
-            "format": "double"
-          },
           "caEligibilityFlag": {
             "type": "boolean"
           },
@@ -9216,31 +9160,7 @@
             "type": "number",
             "format": "double"
           },
-          "caExposureAfterCRM": {
-            "type": "number",
-            "format": "double"
-          },
-          "caCollateralUsedAmount": {
-            "type": "number",
-            "format": "double"
-          },
           "leExposure": {
-            "type": "number",
-            "format": "double"
-          },
-          "leExposureAfterCRM": {
-            "type": "number",
-            "format": "double"
-          },
-          "leCollateralUsedAmount": {
-            "type": "number",
-            "format": "double"
-          },
-          "carwa": {
-            "type": "number",
-            "format": "double"
-          },
-          "lerwa": {
             "type": "number",
             "format": "double"
           },
