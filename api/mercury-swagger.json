@@ -1377,6 +1377,54 @@
         }
       }
     },
+    "/Engine/CalcCrmAsta/{lcId}": {
+      "post": {
+        "tags": [
+          "Engine"
+        ],
+        "summary": "Run the Asta CRM calculation",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the LoadCollection to run",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "async",
+            "in": "query",
+            "description": "False to wait for the task to end",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
     "/Engine/GetCrmCaResults/{lcId}": {
       "get": {
         "tags": [
@@ -8273,7 +8321,8 @@
           0,
           1,
           2,
-          4
+          4,
+          8
         ],
         "type": "integer",
         "format": "int32"
@@ -8779,6 +8828,20 @@
             },
             "nullable": true
           },
+          "positionsCrmAstaExposures": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PositionCrmAsta"
+            },
+            "nullable": true
+          },
+          "positionsCrmAstaCollaterals": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PositionCrmAsta"
+            },
+            "nullable": true
+          },
           "bookingCenterId": {
             "type": "string",
             "nullable": true
@@ -9106,10 +9169,6 @@
             "type": "string",
             "nullable": true
           },
-          "astaUltimateRiskCountry": {
-            "type": "string",
-            "nullable": true
-          },
           "ccf": {
             "type": "number",
             "format": "float"
@@ -9211,6 +9270,54 @@
           "zirCategory": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PositionCrmAsta": {
+        "type": "object",
+        "properties": {
+          "loadCollectionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "loadCollection": {
+            "$ref": "#/components/schemas/LoadCollection"
+          },
+          "positionExposure": {
+            "$ref": "#/components/schemas/Position"
+          },
+          "positionCollateral": {
+            "$ref": "#/components/schemas/Position"
+          },
+          "collateralLoadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "collateralId": {
+            "type": "string",
+            "nullable": true
+          },
+          "exposureLoadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "exposureId": {
+            "type": "string",
+            "nullable": true
+          },
+          "order": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "amountCovered": {
+            "type": "number",
+            "format": "double"
+          },
+          "astaUltimateRiskCountry": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
