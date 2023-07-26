@@ -1951,9 +1951,9 @@
             }
           },
           {
-            "name": "createLc",
+            "name": "linkToLc",
             "in": "query",
-            "description": "True to create a LoadCollection",
+            "description": "True to link Load a LoadCollection",
             "schema": {
               "type": "boolean",
               "default": true
@@ -2043,9 +2043,9 @@
             "example": true
           },
           {
-            "name": "createLc",
+            "name": "linkToLc",
             "in": "query",
-            "description": "True to creat a LoadCollection",
+            "description": "True to link Load a LoadCollection",
             "schema": {
               "type": "boolean",
               "default": true
@@ -2178,9 +2178,9 @@
             }
           },
           {
-            "name": "createLc",
+            "name": "linkToLc",
             "in": "query",
-            "description": "True to creat a LoadCollection",
+            "description": "True to link Load a LoadCollection",
             "schema": {
               "type": "boolean",
               "default": true
@@ -2289,9 +2289,9 @@
             }
           },
           {
-            "name": "createLc",
+            "name": "linkToLc",
             "in": "query",
-            "description": "True to creat a LoadCollection",
+            "description": "True to link Load a LoadCollection",
             "schema": {
               "type": "boolean",
               "default": true
