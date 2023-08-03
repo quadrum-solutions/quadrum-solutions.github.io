@@ -16709,6 +16709,18 @@
           "zirCategory": {
             "type": "integer",
             "format": "int32"
+          },
+          "mortgageLoanClaimLevel1": {
+            "type": "number",
+            "format": "double"
+          },
+          "mortgageLoanClaimLevel2": {
+            "type": "number",
+            "format": "double"
+          },
+          "mortgageLoanClaimLevel3": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
