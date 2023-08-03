@@ -4559,6 +4559,29 @@
         }
       }
     },
+    "/Reports/List": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to retieve the list of available surveys and reports",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SurveyListDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Rules": {
       "get": {
         "tags": [
@@ -17724,6 +17747,30 @@
           },
           "hqlaCategory": {
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SurveyListDTO": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "version": {
+            "type": "string",
+            "nullable": true
+          },
+          "isContentBased": {
+            "type": "boolean"
+          },
+          "reports": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
             "nullable": true
           }
         },
