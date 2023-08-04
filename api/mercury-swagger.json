@@ -3408,6 +3408,108 @@
         }
       }
     },
+    "/Reports/FetchVariances": {
+      "post": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to fetch variances of list of cells between two different load collections",
+        "parameters": [
+          {
+            "name": "lcIdA",
+            "in": "query",
+            "description": "Id of the load collection A",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "lcIdB",
+            "in": "query",
+            "description": "Id of the load collection B",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          }
+        ],
+        "requestBody": {
+          "description": "List of cells to get the variance from",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CellCoordinatesDTO"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CellCoordinatesDTO"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CellCoordinatesDTO"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CellCoordinatesDTO"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalcSurveyDTO"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
     "/Reports/FetchReport": {
       "get": {
         "tags": [
@@ -14087,6 +14189,28 @@
           "absolute": {
             "type": "number",
             "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CellCoordinatesDTO": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "version": {
+            "type": "string",
+            "nullable": true
+          },
+          "report": {
+            "type": "string",
+            "nullable": true
+          },
+          "position": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
