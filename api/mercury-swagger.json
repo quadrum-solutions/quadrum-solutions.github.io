@@ -15333,6 +15333,10 @@
           "mortgageLoanClaimLevel3": {
             "type": "number",
             "format": "double"
+          },
+          "availableLimit": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
