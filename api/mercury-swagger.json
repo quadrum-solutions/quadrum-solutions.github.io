@@ -1061,6 +1061,17 @@
             "example": "2022-12-31"
           },
           {
+            "name": "msaId",
+            "in": "query",
+            "description": "Id of the Mercury Staging Area to load",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            },
+            "example": 1
+          },
+          {
             "name": "perimeter",
             "in": "query",
             "description": "Perimeter to import",
@@ -16130,6 +16141,9 @@
           "description": {
             "type": "string",
             "nullable": true
+          },
+          "isMSA": {
+            "type": "boolean"
           },
           "ruleItems": {
             "type": "array",
