@@ -1769,27 +1769,6 @@
       }
     },
     "/Load": {
-      "get": {
-        "tags": [
-          "Load"
-        ],
-        "summary": "Allow to fetch all items",
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Load"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
       "post": {
         "tags": [
           "Load"
@@ -1891,81 +1870,30 @@
             }
           }
         }
-      }
-    },
-    "/Load/{id}": {
+      },
       "get": {
         "tags": [
           "Load"
         ],
-        "summary": "Allow to fetch one item",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Id of the item",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "example": "1"
-          }
-        ],
+        "summary": "Allow to fetch all items",
         "responses": {
           "200": {
             "description": "Success",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Load"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Load"
+                  }
                 }
               }
             }
           }
         }
-      },
-      "delete": {
-        "tags": [
-          "Load"
-        ],
-        "summary": "Allow to delete one item",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Id of the item to delete",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      },
+      }
+    },
+    "/Load/{id}": {
       "patch": {
         "tags": [
           "Load"
@@ -2032,6 +1960,78 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Load"
+        ],
+        "summary": "Allow to fetch one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "1"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Load"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Load"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
           },
           "404": {
             "description": "Not Found",
