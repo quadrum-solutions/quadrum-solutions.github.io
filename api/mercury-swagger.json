@@ -13448,6 +13448,17 @@
         },
         "additionalProperties": false
       },
+      "CalculationTypes": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
       "CellCoordinatesDTO": {
         "type": "object",
         "properties": {
@@ -14482,9 +14493,12 @@
             "type": "string",
             "nullable": true
           },
-          "lastUpdate": {
-            "type": "string",
-            "format": "date-time"
+          "calculations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LoadCollectionCalculation"
+            },
+            "nullable": true
           },
           "loads": {
             "type": "array",
@@ -14514,6 +14528,19 @@
             "type": "string",
             "nullable": true,
             "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoadCollectionCalculation": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/CalculationTypes"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false
