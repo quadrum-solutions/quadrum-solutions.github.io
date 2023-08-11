@@ -15390,6 +15390,10 @@
           "availableLimit": {
             "type": "number",
             "format": "double"
+          },
+          "operationalAmount": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
