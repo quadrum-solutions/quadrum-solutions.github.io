@@ -13125,6 +13125,21 @@
             "type": "string",
             "nullable": true
           },
+          "alias": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "aliasDot": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "bookingCenterCondition": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
           "id": {
             "type": "string",
             "nullable": true,
