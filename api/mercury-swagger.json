@@ -15443,6 +15443,10 @@
           "operationalAmount": {
             "type": "number",
             "format": "double"
+          },
+          "pnlCategory": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
