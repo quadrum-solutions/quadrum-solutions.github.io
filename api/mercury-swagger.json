@@ -15346,6 +15346,10 @@
             "type": "string",
             "nullable": true
           },
+          "issuerReportingCategory": {
+            "type": "string",
+            "nullable": true
+          },
           "monaExposure": {
             "type": "number",
             "format": "double"
