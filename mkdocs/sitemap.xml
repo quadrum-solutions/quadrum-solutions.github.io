@@ -96,6 +96,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_Interco_Conso/</loc>
+         <lastmod>2023-08-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_LEX/</loc>
          <lastmod>2023-08-18</lastmod>
          <changefreq>daily</changefreq>
@@ -172,6 +177,11 @@
     </url>
     <url>
          <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_Mortgages/</loc>
+         <lastmod>2023-08-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_Provisions/</loc>
          <lastmod>2023-08-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
