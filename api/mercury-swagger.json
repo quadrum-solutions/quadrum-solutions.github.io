@@ -13930,11 +13930,19 @@
             "type": "number",
             "format": "double"
           },
-          "underlyingMarketValue": {
+          "underlyingSpotValue": {
             "type": "number",
             "format": "double"
           },
-          "singleUnderlyingMarketValue": {
+          "underlyingStrikeForwardValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "singleUnderlyingSpotValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "singleUnderlyingStrikeForwardValue": {
             "type": "number",
             "format": "double"
           },
