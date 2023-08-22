@@ -14417,7 +14417,8 @@
           1,
           2,
           4,
-          8
+          8,
+          16
         ],
         "type": "integer",
         "format": "int32"
@@ -14995,6 +14996,20 @@
             },
             "nullable": true
           },
+          "positionsCrmLiqExposures": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PositionCrmLiq"
+            },
+            "nullable": true
+          },
+          "positionsCrmLiqCollaterals": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PositionCrmLiq"
+            },
+            "nullable": true
+          },
           "bookingCenterId": {
             "type": "string",
             "nullable": true
@@ -15563,6 +15578,69 @@
           "rwa": {
             "type": "number",
             "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PositionCrmLiq": {
+        "type": "object",
+        "properties": {
+          "loadCollectionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "loadCollection": {
+            "$ref": "#/components/schemas/LoadCollection"
+          },
+          "positionExposure": {
+            "$ref": "#/components/schemas/Position"
+          },
+          "positionCollateral": {
+            "$ref": "#/components/schemas/Position"
+          },
+          "collateralLoadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "collateralId": {
+            "type": "string",
+            "nullable": true
+          },
+          "exposureLoadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "exposureId": {
+            "type": "string",
+            "nullable": true
+          },
+          "order": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "amountCovered": {
+            "type": "number",
+            "format": "double"
+          },
+          "collateralPVUsed": {
+            "type": "number",
+            "format": "double"
+          },
+          "collateralHQLACategory": {
+            "type": "string",
+            "nullable": true
+          },
+          "collateralLiqTypeOf": {
+            "type": "string",
+            "nullable": true
+          },
+          "collateralCARiskWeight": {
+            "type": "number",
+            "format": "float"
+          },
+          "isRetailDepositRunoff": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
