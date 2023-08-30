@@ -13734,6 +13734,10 @@
             "type": "integer",
             "format": "int32"
           },
+          "reportingEntityId": {
+            "type": "string",
+            "nullable": true
+          },
           "name": {
             "type": "string",
             "nullable": true
@@ -13745,6 +13749,9 @@
           "limitAris": {
             "type": "number",
             "format": "float"
+          },
+          "reportingEntity": {
+            "$ref": "#/components/schemas/ReportingEntity"
           }
         },
         "additionalProperties": false
@@ -13759,6 +13766,10 @@
           "pointInTime": {
             "type": "integer",
             "format": "int32"
+          },
+          "reportingEntityId": {
+            "type": "string",
+            "nullable": true
           },
           "name": {
             "type": "string",
@@ -13775,6 +13786,9 @@
           "limitLex": {
             "type": "number",
             "format": "float"
+          },
+          "reportingEntity": {
+            "$ref": "#/components/schemas/ReportingEntity"
           }
         },
         "additionalProperties": false
@@ -16183,6 +16197,20 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LoadCollection"
+            },
+            "nullable": true
+          },
+          "counterpartyGroupsAris": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CounterpartyGroupAris"
+            },
+            "nullable": true
+          },
+          "counterpartyGroupsLex": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CounterpartyGroupLex"
             },
             "nullable": true
           },
