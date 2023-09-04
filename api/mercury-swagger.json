@@ -14051,6 +14051,10 @@
           "pNextRefixingDays": {
             "type": "integer",
             "format": "int32"
+          },
+          "lexIssuerExposureRaw": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
@@ -15492,6 +15496,38 @@
           "pnlCategory": {
             "type": "string",
             "nullable": true
+          },
+          "lexExposure": {
+            "type": "number",
+            "format": "double"
+          },
+          "lexIssuerExposure": {
+            "type": "number",
+            "format": "double"
+          },
+          "lexRiskWeight": {
+            "type": "number",
+            "format": "double"
+          },
+          "lexIssuerRiskWeight": {
+            "type": "number",
+            "format": "double"
+          },
+          "lexIssuerRWA": {
+            "type": "number",
+            "format": "double"
+          },
+          "lexccf": {
+            "type": "number",
+            "format": "double"
+          },
+          "lexAdjustmentFactor": {
+            "type": "number",
+            "format": "double"
+          },
+          "lexIssuerAdjustmentFactor": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
@@ -16611,6 +16647,9 @@
           "hqlaCategory": {
             "type": "string",
             "nullable": true
+          },
+          "lexGuaranteedFlag": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
