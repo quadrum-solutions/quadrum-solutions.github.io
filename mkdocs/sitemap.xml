@@ -61,6 +61,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_CRMLEX/</loc>
+         <lastmod>2023-09-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_CRMMona/</loc>
          <lastmod>2023-09-04</lastmod>
          <changefreq>daily</changefreq>
