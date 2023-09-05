@@ -17149,6 +17149,10 @@
             "type": "number",
             "format": "double"
           },
+          "irResidualPaymentDays": {
+            "type": "integer",
+            "format": "int32"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
