@@ -16400,6 +16400,10 @@
           "lcrExcludeFlow": {
             "type": "boolean"
           },
+          "operationalAmount": {
+            "type": "number",
+            "format": "double"
+          },
           "excludeZIR": {
             "type": "boolean"
           },
