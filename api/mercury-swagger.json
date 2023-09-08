@@ -683,6 +683,19 @@
         }
       }
     },
+    "/Engine/GetCalcEndpoints": {
+      "get": {
+        "tags": [
+          "Engine"
+        ],
+        "summary": "Provide the list of endpoints to run the calculations",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/Engine/GetCrmCaResults/{lcId}": {
       "get": {
         "tags": [
