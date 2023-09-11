@@ -400,7 +400,7 @@
         "tags": [
           "Engine"
         ],
-        "summary": "Run the Basel 3 CRM calculation",
+        "summary": "Run the Basel 3 CRM CA calculation",
         "parameters": [
           {
             "name": "lcId",
@@ -448,7 +448,55 @@
         "tags": [
           "Engine"
         ],
-        "summary": "Run the Basel 3 CRM calculation",
+        "summary": "Run the Basel 3 CRM CA calculation",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the LoadCollection to run",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "async",
+            "in": "query",
+            "description": "False to wait for the task to end",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Engine/CalcCrmLex/{lcId}": {
+      "post": {
+        "tags": [
+          "Engine"
+        ],
+        "summary": "Run the Basel 3 CRM LEX calculation",
         "parameters": [
           {
             "name": "lcId",
@@ -15050,7 +15098,8 @@
           2,
           3,
           4,
-          5
+          5,
+          6
         ],
         "type": "integer",
         "format": "int32"
@@ -16050,7 +16099,8 @@
           2,
           4,
           8,
-          16
+          16,
+          32
         ],
         "type": "integer",
         "format": "int32"
@@ -16634,6 +16684,20 @@
             },
             "nullable": true
           },
+          "positionsCrmLexExposures": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PositionCrmLex"
+            },
+            "nullable": true
+          },
+          "positionsCrmLexCollaterals": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PositionCrmLex"
+            },
+            "nullable": true
+          },
           "positionsCrmMonaExposures": {
             "type": "array",
             "items": {
@@ -17016,10 +17080,6 @@
             "type": "number",
             "format": "float"
           },
-          "leRiskWeight": {
-            "type": "number",
-            "format": "float"
-          },
           "longShort": {
             "type": "string",
             "nullable": true
@@ -17056,13 +17116,9 @@
           },
           "caIssuerRiskWeight": {
             "type": "number",
-            "format": "double"
+            "format": "float"
           },
           "caIssuerRWA": {
-            "type": "number",
-            "format": "double"
-          },
-          "leExposure": {
             "type": "number",
             "format": "double"
           },
@@ -17148,11 +17204,11 @@
           },
           "lexRiskWeight": {
             "type": "number",
-            "format": "double"
+            "format": "float"
           },
           "lexIssuerRiskWeight": {
             "type": "number",
-            "format": "double"
+            "format": "float"
           },
           "lexIssuerRWA": {
             "type": "number",
@@ -17235,6 +17291,70 @@
         "additionalProperties": false
       },
       "PositionCrmCa": {
+        "type": "object",
+        "properties": {
+          "loadCollectionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "loadCollection": {
+            "$ref": "#/components/schemas/LoadCollection"
+          },
+          "positionExposure": {
+            "$ref": "#/components/schemas/Position"
+          },
+          "positionCollateral": {
+            "$ref": "#/components/schemas/Position"
+          },
+          "collateralLoadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "collateralId": {
+            "type": "string",
+            "nullable": true
+          },
+          "exposureLoadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "exposureId": {
+            "type": "string",
+            "nullable": true
+          },
+          "order": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "amountCovered": {
+            "type": "number",
+            "format": "double"
+          },
+          "collateralAmountUsed": {
+            "type": "number",
+            "format": "double"
+          },
+          "fxHaircut": {
+            "type": "number",
+            "format": "double"
+          },
+          "maturityHaircut": {
+            "type": "number",
+            "format": "double"
+          },
+          "adaptedHaircut": {
+            "type": "number",
+            "format": "double"
+          },
+          "rwa": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PositionCrmLex": {
         "type": "object",
         "properties": {
           "loadCollectionId": {
