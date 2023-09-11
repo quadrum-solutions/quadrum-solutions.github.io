@@ -15609,6 +15609,10 @@
             "type": "number",
             "format": "double"
           },
+          "issuerGroupLEXId": {
+            "type": "string",
+            "nullable": true
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
@@ -17169,6 +17173,10 @@
           "irResidualPaymentDays": {
             "type": "integer",
             "format": "int32"
+          },
+          "groupLEXId": {
+            "type": "string",
+            "nullable": true
           },
           "uniqueId": {
             "type": "string",
