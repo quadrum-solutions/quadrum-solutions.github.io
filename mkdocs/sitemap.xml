@@ -111,6 +111,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_LIQCalculatedAmountsFields/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.quadrum-solutions.net/FunctionalDoc/Doc_LIQDepositGaranteeCalc/</loc>
          <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
