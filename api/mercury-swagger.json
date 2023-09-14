@@ -16468,6 +16468,29 @@
         },
         "additionalProperties": false
       },
+      "AuditableBaseEntity": {
+        "type": "object",
+        "properties": {
+          "lastModifiedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastModified": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "reason": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "BookingCenter": {
         "type": "object",
         "properties": {
@@ -17842,6 +17865,13 @@
           },
           "reportingEntity": {
             "$ref": "#/components/schemas/ReportingEntity"
+          },
+          "surveys": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SurveyFullCalc"
+            },
+            "nullable": true
           },
           "id": {
             "type": "string",
@@ -20076,6 +20106,191 @@
         },
         "additionalProperties": false
       },
+      "SurveyCellCalc": {
+        "type": "object",
+        "properties": {
+          "row": {
+            "type": "string",
+            "nullable": true
+          },
+          "column": {
+            "type": "string",
+            "nullable": true
+          },
+          "sums": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SurveyCellCalcSum"
+            },
+            "nullable": true
+          },
+          "originalValue": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          },
+          "isRef": {
+            "type": "boolean"
+          },
+          "dependencyOrder": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isEdited": {
+            "type": "boolean"
+          },
+          "toExport": {
+            "type": "boolean"
+          },
+          "mappingTech": {
+            "type": "string",
+            "nullable": true
+          },
+          "mappingDynTech": {
+            "type": "string",
+            "nullable": true
+          },
+          "mapping": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "mappingDyn": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "editions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AuditableBaseEntity"
+            },
+            "nullable": true
+          },
+          "position": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "positionTech": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "positionTechIgnoreDyn": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SurveyCellCalcSum": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "where": {
+            "type": "string",
+            "nullable": true
+          },
+          "audit": {
+            "type": "string",
+            "nullable": true
+          },
+          "auditSummary": {
+            "type": "string",
+            "nullable": true
+          },
+          "conditionReport": {
+            "type": "string",
+            "nullable": true
+          },
+          "conditionRow": {
+            "type": "string",
+            "nullable": true
+          },
+          "conditionColumn": {
+            "type": "string",
+            "nullable": true
+          },
+          "conditionCell": {
+            "type": "string",
+            "nullable": true
+          },
+          "sum": {
+            "type": "string",
+            "nullable": true
+          },
+          "isAlphanumeric": {
+            "type": "boolean"
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SurveyFullCalc": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loadCollectionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "loadCollection": {
+            "$ref": "#/components/schemas/LoadCollection"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "version": {
+            "type": "string",
+            "nullable": true
+          },
+          "isContentBased": {
+            "type": "boolean"
+          },
+          "validated": {
+            "type": "boolean"
+          },
+          "exported": {
+            "type": "boolean"
+          },
+          "calcDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "reports": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SurveyReportCalc"
+            },
+            "nullable": true
+          },
+          "breachedValidationRuleSets": {
+            "maxItems": -1,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "SurveyListDTO": {
         "type": "object",
         "properties": {
@@ -20096,6 +20311,48 @@
               "type": "string"
             },
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SurveyReportCalc": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "version": {
+            "type": "string",
+            "nullable": true
+          },
+          "order": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dependencyOrder": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cellsCalc": {
+            "maxItems": -1,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SurveyCellCalc"
+            },
+            "nullable": true
+          },
+          "surveyCalcId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "surveyFullCalc": {
+            "$ref": "#/components/schemas/SurveyFullCalc"
           }
         },
         "additionalProperties": false
