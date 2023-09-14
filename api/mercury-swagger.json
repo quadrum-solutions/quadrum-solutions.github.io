@@ -16927,9 +16927,6 @@
             "type": "number",
             "format": "float"
           },
-          "reportingEntity": {
-            "$ref": "#/components/schemas/ReportingEntity"
-          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
@@ -16968,9 +16965,6 @@
           "limitLex": {
             "type": "number",
             "format": "float"
-          },
-          "reportingEntity": {
-            "$ref": "#/components/schemas/ReportingEntity"
           },
           "uniqueId": {
             "type": "string",
@@ -19657,20 +19651,6 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LoadCollection"
-            },
-            "nullable": true
-          },
-          "counterpartyGroupsAris": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CounterpartyGroupAris"
-            },
-            "nullable": true
-          },
-          "counterpartyGroupsLex": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CounterpartyGroupLex"
             },
             "nullable": true
           },
