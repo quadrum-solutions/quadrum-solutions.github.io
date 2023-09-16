@@ -18825,6 +18825,10 @@
             "type": "string",
             "nullable": true
           },
+          "irNextPaymentAmount": {
+            "type": "number",
+            "format": "double"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
