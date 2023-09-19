@@ -17246,6 +17246,18 @@
             "type": "string",
             "nullable": true
           },
+          "issuerGroupLEXPIT": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "issuerLEXId": {
+            "type": "string",
+            "nullable": true
+          },
+          "issuerLEXPIT": {
+            "type": "integer",
+            "format": "int32"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
@@ -18828,6 +18840,18 @@
           "irNextPaymentAmount": {
             "type": "number",
             "format": "double"
+          },
+          "groupLEXPIT": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "counterpartyLEXId": {
+            "type": "string",
+            "nullable": true
+          },
+          "counterpartyLEXPIT": {
+            "type": "integer",
+            "format": "int32"
           },
           "uniqueId": {
             "type": "string",
