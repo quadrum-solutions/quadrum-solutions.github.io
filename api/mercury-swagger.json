@@ -961,6 +961,110 @@
         }
       }
     },
+    "/Import/RT01s": {
+      "post": {
+        "tags": [
+          "Import"
+        ],
+        "summary": "Allow to import data from a rt01 file",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "Name of the load",
+            "schema": {
+              "type": "string"
+            },
+            "example": "My Load"
+          },
+          {
+            "name": "date",
+            "in": "query",
+            "description": "Reporting date",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2022-12-31"
+          },
+          {
+            "name": "overwrite",
+            "in": "query",
+            "description": "Overwite the existing data if any",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            },
+            "example": true
+          },
+          {
+            "name": "async",
+            "in": "query",
+            "description": "False to wait for the task to end",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "linkToLc",
+            "in": "query",
+            "description": "True to link Load a LoadCollection",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "idLc",
+            "in": "query",
+            "description": "Specify the id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "inputFiles": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              },
+              "encoding": {
+                "inputFiles": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Import/RT01Import": {
       "post": {
         "tags": [
@@ -1030,6 +1134,101 @@
               },
               "encoding": {
                 "file": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Import/RT01sImport": {
+      "post": {
+        "tags": [
+          "Import"
+        ],
+        "summary": "Allow to execute the import step of the UploadRt01",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "Name of the load",
+            "schema": {
+              "type": "string"
+            },
+            "example": "My Load"
+          },
+          {
+            "name": "date",
+            "in": "query",
+            "description": "Reporting date",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2022-12-31"
+          },
+          {
+            "name": "overwrite",
+            "in": "query",
+            "description": "Overwite the existing data if any",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            },
+            "example": true
+          },
+          {
+            "name": "linkToLc",
+            "in": "query",
+            "description": "True to link Load a LoadCollection",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "idLc",
+            "in": "query",
+            "description": "Specify the id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "inputFiles": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              },
+              "encoding": {
+                "inputFiles": {
                   "style": "form"
                 }
               }
