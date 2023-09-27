@@ -5508,17 +5508,72 @@
         "tags": [
           "Task"
         ],
-        "summary": "Allow to end all the running tasks",
+        "summary": "Allow to cancel all the running tasks",
         "responses": {
           "200": {
             "description": "Success",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/RunningTaskDTO"
-                  }
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Task/Cancel": {
+      "post": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "Allow to cancel all the running tasks",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Task/Cancel/{id}": {
+      "post": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "Allow to end one task",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the task to cancel",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActionResult"
                 }
               }
             }
@@ -16451,6 +16506,10 @@
   },
   "components": {
     "schemas": {
+      "ActionResult": {
+        "type": "object",
+        "additionalProperties": false
+      },
       "Adaptation": {
         "required": [
           "name"
@@ -20084,6 +20143,10 @@
       "RunningTaskDTO": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
           "creationDate": {
             "type": "string",
             "format": "date-time"
@@ -20129,6 +20192,9 @@
           "isError": {
             "type": "boolean",
             "readOnly": true
+          },
+          "isCancelled": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
