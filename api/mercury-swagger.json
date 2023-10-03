@@ -18375,6 +18375,10 @@
             "type": "string",
             "nullable": true
           },
+          "beneficialOwnerId": {
+            "type": "string",
+            "nullable": true
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
