@@ -20195,6 +20195,9 @@
           },
           "isCancelled": {
             "type": "boolean"
+          },
+          "isCancelling": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
