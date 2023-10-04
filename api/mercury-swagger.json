@@ -19115,6 +19115,9 @@
             "type": "integer",
             "format": "int32"
           },
+          "lexUnknownClientFlag": {
+            "type": "boolean"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
