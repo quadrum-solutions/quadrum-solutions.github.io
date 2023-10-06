@@ -21132,6 +21132,9 @@
           },
           "variance": {
             "$ref": "#/components/schemas/CalcVarianceDTO"
+          },
+          "toExport": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
