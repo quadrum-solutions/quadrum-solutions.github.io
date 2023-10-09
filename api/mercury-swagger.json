@@ -21311,7 +21311,15 @@
             "type": "string",
             "nullable": true
           },
-          "subType": {
+          "creType": {
+            "type": "string",
+            "nullable": true
+          },
+          "marType": {
+            "type": "string",
+            "nullable": true
+          },
+          "marSubType": {
             "type": "string",
             "nullable": true
           },
