@@ -21670,6 +21670,14 @@
             "type": "number",
             "format": "float"
           },
+          "domicileCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "economicActivityType": {
+            "type": "string",
+            "nullable": true
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
