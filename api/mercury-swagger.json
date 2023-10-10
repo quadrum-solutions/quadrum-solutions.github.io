@@ -5580,6 +5580,15 @@
               "type": "string"
             },
             "example": "my reason"
+          },
+          {
+            "name": "reportName",
+            "in": "query",
+            "description": "Name of the report if needed",
+            "schema": {
+              "type": "string"
+            },
+            "example": "M201"
           }
         ],
         "responses": {
