@@ -2448,6 +2448,32 @@
         }
       }
     },
+    "/List/LoadRules": {
+      "post": {
+        "tags": [
+          "List"
+        ],
+        "summary": "Allow to load the rules",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
     "/List/LoadAll": {
       "post": {
         "tags": [
