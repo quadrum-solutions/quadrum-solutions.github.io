@@ -34,7 +34,14 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdaptationValidationResultDTO"
+                }
+              }
+            }
           },
           "400": {
             "description": "Bad Request",
@@ -20943,6 +20950,23 @@
             "$ref": "#/components/schemas/Adaptation"
           },
           "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdaptationValidationResultDTO": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "isValid": {
+            "type": "boolean"
+          },
+          "error": {
             "type": "string",
             "nullable": true
           }
