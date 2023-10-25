@@ -1487,7 +1487,7 @@
         }
       }
     },
-    "/Engine/ApplySingleAdaptation/{lcId}": {
+    "/Engine/ApplySingleAdaptation/{lcId}/{adaptationId}": {
       "post": {
         "tags": [
           "Engine"
@@ -1506,9 +1506,10 @@
             "example": 1
           },
           {
-            "name": "adaptationName",
-            "in": "query",
-            "description": "Name of the adaptation to apply",
+            "name": "adaptationId",
+            "in": "path",
+            "description": "Id of the adaptation to apply",
+            "required": true,
             "schema": {
               "type": "string"
             }
