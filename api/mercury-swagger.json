@@ -24116,6 +24116,10 @@
             "type": "string",
             "nullable": true
           },
+          "posGroupLEXId": {
+            "type": "string",
+            "nullable": true
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
