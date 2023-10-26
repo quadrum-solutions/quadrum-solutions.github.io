@@ -3062,6 +3062,59 @@
         }
       }
     },
+    "/List/Download/{name}": {
+      "post": {
+        "tags": [
+          "List"
+        ],
+        "summary": "Allow to download a static file from the API",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "Name of the static file",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "Adaptation"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Load/Detail/{id}": {
       "get": {
         "tags": [
