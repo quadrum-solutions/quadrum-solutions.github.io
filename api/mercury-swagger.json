@@ -21451,6 +21451,9 @@
           "isEdited": {
             "type": "boolean"
           },
+          "isFormula": {
+            "type": "boolean"
+          },
           "editions": {
             "type": "array",
             "items": {
