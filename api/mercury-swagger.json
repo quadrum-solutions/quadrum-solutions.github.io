@@ -24123,6 +24123,10 @@
             "type": "number",
             "format": "double"
           },
+          "limitWithdrawalAmount": {
+            "type": "number",
+            "format": "double"
+          },
           "excludeZIR": {
             "type": "boolean"
           },
@@ -25113,6 +25117,10 @@
           },
           "lexUnknownClientFlag": {
             "type": "boolean"
+          },
+          "limitWithdrawalAmount": {
+            "type": "number",
+            "format": "double"
           },
           "uniqueId": {
             "type": "string",
