@@ -15712,7 +15712,7 @@
         }
       }
     },
-    "/IrrbbReplicationKey": {
+    "/IrrbbReplicationKeyRule": {
       "get": {
         "tags": [
           "zGenericDyn"
@@ -15726,7 +15726,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/IrrbbReplicationKey"
+                    "$ref": "#/components/schemas/IrrbbReplicationKeyRule"
                   }
                 }
               }
@@ -15744,22 +15744,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/IrrbbReplicationKey"
+                "$ref": "#/components/schemas/IrrbbReplicationKeyRule"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/IrrbbReplicationKey"
+                "$ref": "#/components/schemas/IrrbbReplicationKeyRule"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/IrrbbReplicationKey"
+                "$ref": "#/components/schemas/IrrbbReplicationKeyRule"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/IrrbbReplicationKey"
+                "$ref": "#/components/schemas/IrrbbReplicationKeyRule"
               }
             }
           }
@@ -15800,22 +15800,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/IrrbbReplicationKey"
+                "$ref": "#/components/schemas/IrrbbReplicationKeyRule"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/IrrbbReplicationKey"
+                "$ref": "#/components/schemas/IrrbbReplicationKeyRule"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/IrrbbReplicationKey"
+                "$ref": "#/components/schemas/IrrbbReplicationKeyRule"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/IrrbbReplicationKey"
+                "$ref": "#/components/schemas/IrrbbReplicationKeyRule"
               }
             }
           }
@@ -15847,7 +15847,7 @@
         }
       }
     },
-    "/IrrbbReplicationKey/{id}": {
+    "/IrrbbReplicationKeyRule/{id}": {
       "get": {
         "tags": [
           "zGenericDyn"
@@ -15871,7 +15871,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/IrrbbReplicationKey"
+                  "$ref": "#/components/schemas/IrrbbReplicationKeyRule"
                 }
               }
             }
@@ -16000,7 +16000,7 @@
         }
       }
     },
-    "/IrrbbReplicationKey/withcomment": {
+    "/IrrbbReplicationKeyRule/withcomment": {
       "put": {
         "tags": [
           "zGenericDyn"
@@ -16011,22 +16011,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/IrrbbReplicationKeyRecordAuditUpdateDTO"
+                "$ref": "#/components/schemas/IrrbbReplicationKeyRuleRecordAuditUpdateDTO"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/IrrbbReplicationKeyRecordAuditUpdateDTO"
+                "$ref": "#/components/schemas/IrrbbReplicationKeyRuleRecordAuditUpdateDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/IrrbbReplicationKeyRecordAuditUpdateDTO"
+                "$ref": "#/components/schemas/IrrbbReplicationKeyRuleRecordAuditUpdateDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/IrrbbReplicationKeyRecordAuditUpdateDTO"
+                "$ref": "#/components/schemas/IrrbbReplicationKeyRuleRecordAuditUpdateDTO"
               }
             }
           }
@@ -16058,7 +16058,7 @@
         }
       }
     },
-    "/IrrbbReplicationKey/withcomment/{id}": {
+    "/IrrbbReplicationKeyRule/withcomment/{id}": {
       "patch": {
         "tags": [
           "zGenericDyn"
@@ -16080,22 +16080,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/IrrbbReplicationKeyRecordAuditPatchDTO"
+                "$ref": "#/components/schemas/IrrbbReplicationKeyRuleRecordAuditPatchDTO"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/IrrbbReplicationKeyRecordAuditPatchDTO"
+                "$ref": "#/components/schemas/IrrbbReplicationKeyRuleRecordAuditPatchDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/IrrbbReplicationKeyRecordAuditPatchDTO"
+                "$ref": "#/components/schemas/IrrbbReplicationKeyRuleRecordAuditPatchDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/IrrbbReplicationKeyRecordAuditPatchDTO"
+                "$ref": "#/components/schemas/IrrbbReplicationKeyRuleRecordAuditPatchDTO"
               }
             }
           }
@@ -16127,7 +16127,466 @@
         }
       }
     },
-    "/IrrbbReplicationKey/RecordsAuditById/{id}": {
+    "/IrrbbReplicationKeyRule/RecordsAuditById/{id}": {
+      "get": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/IrrbbReplicationKeySplit": {
+      "get": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to fetch all items",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IrrbbReplicationKeySplit"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to create an item",
+        "requestBody": {
+          "description": "Item to create",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IrrbbReplicationKeySplit"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IrrbbReplicationKeySplit"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IrrbbReplicationKeySplit"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IrrbbReplicationKeySplit"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IrrbbReplicationKeySplit"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IrrbbReplicationKeySplit"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IrrbbReplicationKeySplit"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IrrbbReplicationKeySplit"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/IrrbbReplicationKeySplit/{id}": {
+      "get": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to fetch one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "1"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IrrbbReplicationKeySplit"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to patch an item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Item to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/IrrbbReplicationKeySplit/withcomment": {
+      "put": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to update an item with comment",
+        "requestBody": {
+          "description": "Item to update with comment",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IrrbbReplicationKeySplitRecordAuditUpdateDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IrrbbReplicationKeySplitRecordAuditUpdateDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IrrbbReplicationKeySplitRecordAuditUpdateDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IrrbbReplicationKeySplitRecordAuditUpdateDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/IrrbbReplicationKeySplit/withcomment/{id}": {
+      "patch": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to patch an item with comment",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Item to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IrrbbReplicationKeySplitRecordAuditPatchDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IrrbbReplicationKeySplitRecordAuditPatchDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IrrbbReplicationKeySplitRecordAuditPatchDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IrrbbReplicationKeySplitRecordAuditPatchDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/IrrbbReplicationKeySplit/RecordsAuditById/{id}": {
       "get": {
         "tags": [
           "zGenericDyn"
@@ -23322,14 +23781,113 @@
         },
         "additionalProperties": false
       },
-      "IrrbbReplicationKey": {
+      "IrrbbReplicationKeyRule": {
         "type": "object",
         "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
           "currency": {
             "type": "string",
             "nullable": true
           },
           "accountGroupLevel1": {
+            "type": "string",
+            "nullable": true
+          },
+          "extendedCondition": {
+            "type": "string",
+            "nullable": true
+          },
+          "split": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IrrbbReplicationKeyRuleJsonPatchDocument": {
+        "type": "object",
+        "properties": {
+          "operations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IrrbbReplicationKeyRuleOperation"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "contractResolver": {
+            "$ref": "#/components/schemas/IContractResolver"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IrrbbReplicationKeyRuleOperation": {
+        "type": "object",
+        "properties": {
+          "operationType": {
+            "$ref": "#/components/schemas/OperationType"
+          },
+          "path": {
+            "type": "string",
+            "nullable": true
+          },
+          "op": {
+            "type": "string",
+            "nullable": true
+          },
+          "from": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IrrbbReplicationKeyRuleRecordAuditPatchDTO": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/IrrbbReplicationKeyRuleJsonPatchDocument"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IrrbbReplicationKeyRuleRecordAuditUpdateDTO": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/IrrbbReplicationKeyRule"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IrrbbReplicationKeySplit": {
+        "type": "object",
+        "properties": {
+          "name": {
             "type": "string",
             "nullable": true
           },
@@ -23354,13 +23912,13 @@
         },
         "additionalProperties": false
       },
-      "IrrbbReplicationKeyJsonPatchDocument": {
+      "IrrbbReplicationKeySplitJsonPatchDocument": {
         "type": "object",
         "properties": {
           "operations": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/IrrbbReplicationKeyOperation"
+              "$ref": "#/components/schemas/IrrbbReplicationKeySplitOperation"
             },
             "nullable": true,
             "readOnly": true
@@ -23371,7 +23929,7 @@
         },
         "additionalProperties": false
       },
-      "IrrbbReplicationKeyOperation": {
+      "IrrbbReplicationKeySplitOperation": {
         "type": "object",
         "properties": {
           "operationType": {
@@ -23395,11 +23953,11 @@
         },
         "additionalProperties": false
       },
-      "IrrbbReplicationKeyRecordAuditPatchDTO": {
+      "IrrbbReplicationKeySplitRecordAuditPatchDTO": {
         "type": "object",
         "properties": {
           "item": {
-            "$ref": "#/components/schemas/IrrbbReplicationKeyJsonPatchDocument"
+            "$ref": "#/components/schemas/IrrbbReplicationKeySplitJsonPatchDocument"
           },
           "comment": {
             "type": "string",
@@ -23408,11 +23966,11 @@
         },
         "additionalProperties": false
       },
-      "IrrbbReplicationKeyRecordAuditUpdateDTO": {
+      "IrrbbReplicationKeySplitRecordAuditUpdateDTO": {
         "type": "object",
         "properties": {
           "item": {
-            "$ref": "#/components/schemas/IrrbbReplicationKey"
+            "$ref": "#/components/schemas/IrrbbReplicationKeySplit"
           },
           "comment": {
             "type": "string",
