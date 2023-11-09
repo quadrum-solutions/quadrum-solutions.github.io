@@ -7574,6 +7574,79 @@
         }
       }
     },
+    "/Technical/Tables": {
+      "get": {
+        "tags": [
+          "Technical"
+        ],
+        "summary": "Allow to fetch the list of all tables in the datamodel",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Technical/Columns/{tableName}": {
+      "get": {
+        "tags": [
+          "Technical"
+        ],
+        "summary": "Allow to fetch the list of all columns for a specific table",
+        "parameters": [
+          {
+            "name": "tableName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/CoreAmortization/PagedByLoadId": {
       "get": {
         "tags": [
