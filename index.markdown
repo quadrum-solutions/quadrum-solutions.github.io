@@ -13,3 +13,5 @@ The transformation and output documentation can be found here : [doc](mkdocs/ind
 ## Swagger APIs
 The swagger documentation can be found here : [api](api){:target="_blank"}
 
+## Hashs
+The hash of the different releases can be found here : [hash](hash){:target="_blank"}
