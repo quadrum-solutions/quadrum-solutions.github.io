@@ -1,19 +1,6 @@
-## Mercury
+# Hashs
 
-{% for file in site.static_files %}
-{% if file.path contains 'hash/mercury' %}
+| Mercury | Freddie |
+|---|---|
+| {% for file in site.static_files reversed %}{% if file.path contains 'hash/mercury' %}[{{ file.name }}]({{ site.baseurl }}{{ file.path }})<br /> {% endif %}{% endfor %} |  {% for file in site.static_files reversed %}{% if file.path contains 'hash/freddie' %}[{{ file.name }}]({{ site.baseurl }}{{ file.path }})<br /> {% endif %}{% endfor %}| 
 
-  - [{{ file.name }}]({{ site.baseurl }}{{ file.path }})
-
-{% endif %}
-{% endfor %}
-
-## Freddie
-
-{% for file in site.static_files %}
-{% if file.path contains 'hash/freddie' %}
-
-  - [{{ file.name }}]({{ site.baseurl }}{{ file.path }})
-
-{% endif %}
-{% endfor %}
