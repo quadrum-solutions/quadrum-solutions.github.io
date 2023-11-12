@@ -1,3 +1,0 @@
-Version : sebgerber-patch-1
-Date : 2023-11-12T08:29:44
-Digest : 5edff96560f24c2ef87bd699da31fd1822c82c3f72c4f2190708dee8e321d2ec
