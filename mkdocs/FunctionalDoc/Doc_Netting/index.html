@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://docs.quadrum-solutions.net/FunctionalDoc/Doc_Netting/">
       
       
+        <link rel="prev" href="../Doc_Fidu/">
+      
+      
+        <link rel="next" href="../Doc_SFTs/">
       
       
       <link rel="icon" href="../../assets/favicon.ico">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Netting - Mercury Documentation</title>
+        <title>Balance Sheet Netting - Mercury Documentation</title>
       
     
     
@@ -104,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Netting
+              Balance Sheet Netting
             
           </span>
         </div>
@@ -230,18 +234,20 @@
       
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -255,7 +261,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Transformations and outputs
@@ -1114,18 +1120,20 @@
                 
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" checked>
         
           
           <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
@@ -1139,7 +1147,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_8">
             <span class="md-nav__icon md-icon"></span>
             Other
@@ -1221,6 +1229,154 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Balance Sheet Netting
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Balance Sheet Netting
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#used-in-the-following-modules" class="md-nav__link">
+    Used in the following modules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legal-references" class="md-nav__link">
+    Legal references
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principles-for-netting" class="md-nav__link">
+    Principles for netting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-for-rt01-input" class="md-nav__link">
+    Workflow for RT01 input
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-fields" class="md-nav__link">
+    Input fields
+  </a>
+  
+    <nav class="md-nav" aria-label="Input fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core_positions" class="md-nav__link">
+    core_positions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#param_netting" class="md-nav__link">
+    param_netting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-fields" class="md-nav__link">
+    Output fields
+  </a>
+  
+    <nav class="md-nav" aria-label="Output fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core_positions_1" class="md-nav__link">
+    core_positions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1703,7 +1859,7 @@
                   
 
 
-<div id="mkdocs-encrypted-content" style="display:none">Cup8u5wFbAxcxPGbGlQWdQ==;7MygSI+dS/NgiC0N1E1M4EYptSdVWzdDRlpQw3DjBIKLEtNe7ipKEgqMPnhG6TLi1RIEitgs46rhpgCMgp9C8+UZ9ggpwxsvV4Lk5Sgb5USXx5gNv3aCrTYshYFetlX2tEl9HRCWczhbTvkU2rGAI7EZm9nAb3GEj9CObWuPPxjoF9F42LAUzAhGO4s61O3mvAodW2uCNCKuOz79G/rUlBjv9UZQQTM81CMne6PpKChuAgS8H/iLCR6BFDLxkX2DEquda59YijcKvSPDvIa1zecT/wcYUYR1YyfhAw7KXuuKNeGB9z4s6vXUDi/AcheHWemSkfO/d+MqGEn50ZnSNt0BwZw1rJ3tTqfoay++1p3DKB/I2qcW4fT2/DKQYcjjO/YjFu+/PlBvtjb6FD81MRNf+UihFSHyu5wFWSR+cMT8NqZU2T9/MvaizYYMqnUGES9jSMnf7C4+UH3R44VN5C/Z54X5Sq99lhfMqJsBkX1axiL4fa+EwiNq8MqSpPHY+Vtu3jVHJ+lop4ImgghGqNhT5llzKhFaoH54Ed69MBmPnvVeERA8oXzvpWHL8Ebj2AKReRS+UD9i+LddRHCUXljwgooj7KeJPFFzhxZmeTSg4u5qNQeJvle1nlEpeD1JSfvDrRMp1TGVOe/UdxI0M8zkgmdaIZyu8JaKvMDc+CGga70AI/DTO6l886uKU2A+bPJFeqJJQl1rpmx9l7bvcETLTn6x+EFzqHipR+YI00Sd1V1reph5xh4m/A94vRSbHIdOeNANgr4gv54t3ay9Y9tC4ekP6Z6XcqF33ST6usRGT9F7IQjiS37GMGga0Vl7m6FDeeW5VFscO5ImRgUACMfcvQBOlGd44b2kZeCGi8lMJgXR5gjWlACxylPdDdGxV63sOcGn3n5WgqHoUdw1NciDlHjJbBVJCFFe829T71S/D7ac7qO7TIY+Wzi3+FOVNaLqbMBG4LpKHrW3LWCW4r4jRhoNsWd5YQckooqJhtxrxGVQsAFZKkjrcFx1ZOFLlvmKbapfYW6+Q/uUB/995tpAhXAU5XeSWotBbyHaA9gUy6h9mC2FysLJody8H9zKXsqLOXdeopA7IySNXhIRpjw8yUd3fs6vb8F9k2KgnczjVHY7F5eSpTO5OYvPT5zxJPJFy1dk//EUAGoEbxwT411sZ+iwDjgqBSC6307HKGVDpXiusjVhPr0Zxz4x1S8kIcD3xVT1epNUPrxntZRI/Qg/FwIkK+C/rsFYonHaVzL7r4EfbLPghHGrHNuy5H+s+dUjLqJm/okyoeKSBmatkYThPio83XSXKAJrXZWarqIy7i/diJr4UidgmE/8UncyCeMlVbjMo3qPpwMWZ8smnUjNiObPMbgYzc2dmRKQhwW4Fab0HjMBhbixfwJLGtk39jpflBoVUGBOfU8WigEoQV2fclYPtelj1uaqmHeJDrWqGLgA2M3iCoytMloB+cAe9dljzEWryx/m+NKq1nX9Va92pMjRc3GBt2ResAZAwIuJjiWRXe3MTOSn0hPMOuKANB9THlwQOeNi91iqii8RvQMk1sCj9sTx6FnbR2ndjow/TY7FeWoqIyHbC2eaE6R9jmL+wx2CHNA76B/J4f6HBqvZisD5+cKnigsp6mpmSsIxLCimoyxrTt9ApNoc+WjG</div>
+<div id="mkdocs-encrypted-content" style="display:none">2Y228p1T9GfnIdwumSyLmQ==;ZtFAPEzymyXRIKGjEsTSQa+wvAqkdSfvYKScKdk6bHB3iNtQJtCKxUmecoCPs/I9hKrn5npDyaXEDZzb6L4FRW5ZmrdfanAlaAlmcAbplClDUKkzb6K9qSeFp5XRADYj8dGP4mPKPrB6jemXzdI5lIul6ssdDyW+n5vzlqugPFjDWam8d1dqs5UOhzKYkRfRaXrwKjUmuOcqYeZ12PTIfSrQ+oemMh5zttDa2vcm4o/3/Qa6AHt2zANMdZTCBcyWjI9OsZSb5+xC93cVRFpneGsnMaW5SAmC2kO66tcxINrLoI14+wUl4yZii8mQsmgEH9J0BuW1uQY4T7uzexIUocOs7elR/1m8S6qne1BaxQovckHCch+YpRHoKs8xLAr3DK0cNY5ixTHC2gWoYmb+xyBidkGZKgptgRaeH8unVRIztUVABiePVLD6ppKtxVTHhOdRShMvgtqsm+zZrxTXUgXlmC3L3/K9s4BfBPyX45YVxvvlOsjr7tr3VmnZA7YC/ImoUfDtNOySOfPYKZzDFGzZqP/zOlH6LHBK6PAEgTS59p8wdxc59ViORtdrw/GWB1ATOpkIGG7yClpwWCFhy8lQ1vl3e1O1lUg9BSixyl7Je24ctEfsCX2tUFzAtRyywsV5BtfUfrbsYYgOQ52+XSeEV/f/QrS+VYh5P6kuN4R0vmDqRpEH9MXjAamK3/PzhDND1X54hfBB0rSulPYlpG0Hrg7aXkwaeo8ClJbUMpwkG4moNai5vqc/9Ndkl3LgyR63oV6XVvIv/19cGXFxYWQcZSQoJzjV47lj8pjY97WH7BaNUcpbcYusiVaDS1RrNvAcsCaO3VZsoFLPQKgGtyB3tmRgx5AYvakV6Gvzo4Nz8mo8Ss0xrU4/74B9JlRBMQeZS+bIB+g1/iupkgu845T62QOuC+l8irA2bMtShYIPI+fg4CuXEa2qMn0C/3Ur6pzjC7O58fwwG1etWNsAE2kw1oHTeskKF3wBlAtIfukdqv0DstornukwMnFPJ6XiFD06fSWTT+YeyjmmHIcr+XPTVBvJ6QLh33kaOu0W+2atqTgIBo1s8v4lHk3HaCPD39RhCLrSA7TPyHXoAvmVi3X2S1qhR1JlBoNtXw59hR+SFrT6ACD/pK32Q3XKEJyrNX8lBDGGxFGzsoV4Hz+/VCgKabv+V0Xuqu99NQ39qoAOmhNqZipOqPwETPBpRLVpAf/EJZ63H+N+waYqS+aSirG+kABTPRB3DcXuCA8dTZKHfmFlk1pTufKe9sQSj2ZOYACs8qN8BJY9TMTCpvIbnUuSKLOCN6fVLMFhNH0Qrt1jofaSKP6Fo3z65fyeHtYzHL3+x5lMevvFcdDaUJ0z9OyPk1pZ8SRpVt5mPAzSmBG+4SOjMLJi+IUMcZ8bYMhO0sHHdJlXbhtu5QB5o1rAbTb6Pb2Dy5UAKSNiZl7NWzGw/JmKWge35NsqMh4GexpC6S4LYbzDumsCYkIRVSX/lnJj6TM563CUTINBsr6tzOsUOnyn1hnmMMfPxhf8CKyYimS8jTZr9aqWhK8xzJyU4c8Kp6F/Q3pFfnHtVRavsun2ee/mpG2vIY+p0Y4MnoFua4hkxGWBngLPxQGgRrltdVchjDgcN3C135JKTVVivhYD53MiX138w7JRPZuEpqZa</div>
 <div id="mkdocs-decrypted-content">
     <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
         <h1>This content is protected with AES encryption. </h1>
@@ -1718,7 +1874,7 @@
 var encryptcontent_id = "encryptcontent_1";
 var encryptcontent_path = "FunctionalDoc/Doc_Netting/";
 var decryption_failure_message = "Invalid password.";
-var encryptcontent_keystore = ["DxTW7lPbgghu/ClL+nGxWQ==;r77hiU1+FJjPIDMdvv3slCS4DRUr3rgwlQps0Cd79SXgXszzbRv/C7NMs+YFtOcreUxr2brsRiDBLPPO/N0W8+iGMTlFCdc8r103uhI1d6CQZ3iCIheVyE+9d1Fm9jVS;G9m52OusFWanKSOwtik9vA=="];
+var encryptcontent_keystore = ["WRMKmPoPCKOCNoZxPcvIaw==;oXjcq0vF/fCHWidoY9M9LrHceLkdAvE6lUbqE09AQU837IDa+7syp7SM7TdeACcF/ckS4aEeomnhoWzE0TNVJhH6ABvPGkLwzSdrMft9zCRSu0BA00Ea7O01W2WTJnKr;DdB0nYKugLvOrpw4Gj9H/g=="];
 var encryptcontent_obfuscate = 0;
 
 </script>
@@ -1747,6 +1903,44 @@ var encryptcontent_obfuscate = 0;
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../Doc_Fidu/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Fiduciary Generation">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Fiduciary Generation
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Doc_SFTs/" class="md-footer__link md-footer__link--next" aria-label="Next: Security financing transctions">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Security financing transctions
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
