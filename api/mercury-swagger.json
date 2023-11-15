@@ -26695,6 +26695,14 @@
             "type": "integer",
             "format": "int32"
           },
+          "issuerGroupARISId": {
+            "type": "string",
+            "nullable": true
+          },
+          "issuerGroupARISPIT": {
+            "type": "integer",
+            "format": "int32"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
@@ -29487,6 +29495,14 @@
           "limitWithdrawalAmount": {
             "type": "number",
             "format": "double"
+          },
+          "groupARISId": {
+            "type": "string",
+            "nullable": true
+          },
+          "groupARISPIT": {
+            "type": "integer",
+            "format": "int32"
           },
           "uniqueId": {
             "type": "string",
