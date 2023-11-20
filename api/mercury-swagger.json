@@ -31828,6 +31828,20 @@
         },
         "additionalProperties": false
       },
+      "ValidationBreachCellsDTO": {
+        "type": "object",
+        "properties": {
+          "position": {
+            "type": "string",
+            "nullable": true
+          },
+          "report": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "ValidationBreachDTO": {
         "type": "object",
         "properties": {
@@ -31872,6 +31886,13 @@
           },
           "formulaValues": {
             "type": "string",
+            "nullable": true
+          },
+          "cells": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ValidationBreachCellsDTO"
+            },
             "nullable": true
           }
         },
