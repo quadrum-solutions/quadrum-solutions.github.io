@@ -28272,6 +28272,10 @@
             "type": "string",
             "nullable": true
           },
+          "computedPositionId": {
+            "type": "string",
+            "nullable": true
+          },
           "type": {
             "$ref": "#/components/schemas/LogType"
           },
