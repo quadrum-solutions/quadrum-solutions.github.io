@@ -57,27 +57,6 @@
       }
     },
     "/Adaptation": {
-      "get": {
-        "tags": [
-          "Adaptation"
-        ],
-        "summary": "Allow to fetch all items",
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Adaptation"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
       "post": {
         "tags": [
           "Adaptation"
@@ -112,6 +91,26 @@
           "200": {
             "description": "Success"
           },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -121,13 +120,24 @@
                 }
               }
             }
-          },
-          "409": {
-            "description": "Conflict",
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Adaptation"
+        ],
+        "summary": "Allow to fetch all items",
+        "responses": {
+          "200": {
+            "description": "Success",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Adaptation"
+                  }
                 }
               }
             }
@@ -24733,14 +24743,15 @@
         "additionalProperties": false
       },
       "Adaptation": {
-        "required": [
-          "name"
-        ],
         "type": "object",
         "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
           "name": {
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "type": {
             "type": "string",
@@ -24792,11 +24803,6 @@
             "readOnly": true
           },
           "bookingCenterCondition": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "id": {
             "type": "string",
             "nullable": true,
             "readOnly": true
