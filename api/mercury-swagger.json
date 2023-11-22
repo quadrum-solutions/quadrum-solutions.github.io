@@ -7566,6 +7566,52 @@
         }
       }
     },
+    "/Task/FinishedTasksBetween": {
+      "get": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "Allow to fetch all the tasks between two dates",
+        "parameters": [
+          {
+            "name": "since",
+            "in": "query",
+            "description": "Date from when fetching the tasks",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "until",
+            "in": "query",
+            "description": "Date from when fetching the tasks",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RunningTaskDTO"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
     "/Task/Clean": {
       "post": {
         "tags": [
