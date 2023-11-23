@@ -7210,6 +7210,14 @@
             }
           },
           {
+            "name": "scenarioTypeName",
+            "in": "query",
+            "description": "Type of scenario to apply",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "async",
             "in": "query",
             "description": "False to wait for the task to end",
@@ -7276,6 +7284,14 @@
               "format": "int32"
             },
             "example": 1
+          },
+          {
+            "name": "scenarioTypeName",
+            "in": "query",
+            "description": "Type of scenario to apply",
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "async",
