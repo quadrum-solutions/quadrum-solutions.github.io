@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.quadrum-solutions.net/ApplicationGuide/UserGuide/Doc_Scenarios/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.quadrum-solutions.net/ApplicationGuide/UserGuide/Doc_UserGuide/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
