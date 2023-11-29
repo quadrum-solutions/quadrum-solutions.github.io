@@ -7678,7 +7678,7 @@
         "tags": [
           "Task"
         ],
-        "summary": "Allow to fetch all the tasks between two dates",
+        "summary": "Allow to fetch all the tasks between two dates in Excel format",
         "parameters": [
           {
             "name": "since",
