@@ -29294,6 +29294,15 @@
             "type": "string",
             "nullable": true
           },
+          "guarantorId": {
+            "type": "string",
+            "nullable": true
+          },
+          "guarantorPIT": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
           "counterpartyPIT": {
             "type": "integer",
             "format": "int32",
