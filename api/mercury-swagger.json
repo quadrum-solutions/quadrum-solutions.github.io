@@ -8058,7 +8058,7 @@
       }
     },
     "/Technical/Query": {
-      "get": {
+      "post": {
         "tags": [
           "Technical"
         ],
