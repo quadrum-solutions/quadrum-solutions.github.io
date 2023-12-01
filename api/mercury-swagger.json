@@ -551,6 +551,313 @@
         }
       }
     },
+    "/Audit/LastXRecords": {
+      "get": {
+        "tags": [
+          "Audit"
+        ],
+        "summary": "Allow to fetch the x last audit records",
+        "parameters": [
+          {
+            "name": "number",
+            "in": "query",
+            "description": "Number of records to return",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Audit/LastXrecords/{tableName}": {
+      "get": {
+        "tags": [
+          "Audit"
+        ],
+        "summary": "Allow to fetch the x last audit records",
+        "parameters": [
+          {
+            "name": "number",
+            "in": "query",
+            "description": "Number of records to return",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "tableName",
+            "in": "path",
+            "description": "Name of the table to filter records for",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Audit/RecordsSince": {
+      "get": {
+        "tags": [
+          "Audit"
+        ],
+        "summary": "Allow to fetch all audit records since the provided date",
+        "parameters": [
+          {
+            "name": "since",
+            "in": "query",
+            "description": "Date from when fetching the records",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Audit/RecordsSince/{tableName}": {
+      "get": {
+        "tags": [
+          "Audit"
+        ],
+        "summary": "Allow to fetch all audit records since the provided date",
+        "parameters": [
+          {
+            "name": "since",
+            "in": "query",
+            "description": "Date from when fetching the records",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "tableName",
+            "in": "path",
+            "description": "Name of the table to filter records for",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Audit/RecordsBetween": {
+      "get": {
+        "tags": [
+          "Audit"
+        ],
+        "summary": "Allow to fetch all audit records between two dates",
+        "parameters": [
+          {
+            "name": "since",
+            "in": "query",
+            "description": "Date from when fetching the records",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "until",
+            "in": "query",
+            "description": "Date until when fetching the records",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/Audit/RecordsBetween/{tableName}": {
+      "get": {
+        "tags": [
+          "Audit"
+        ],
+        "summary": "Allow to fetch all audit records between two dates",
+        "parameters": [
+          {
+            "name": "since",
+            "in": "query",
+            "description": "Date from when fetching the records",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "until",
+            "in": "query",
+            "description": "Date until when fetching the records",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "tableName",
+            "in": "path",
+            "description": "Name of the table to filter records for",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
     "/BookingCenter": {
       "post": {
         "tags": [
@@ -3729,6 +4036,38 @@
           }
         }
       },
+      "delete": {
+        "tags": [
+          "Load"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
       "get": {
         "tags": [
           "Load"
@@ -3756,38 +4095,6 @@
                 }
               }
             }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Load"
-        ],
-        "summary": "Allow to delete one item",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Id of the item to delete",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
           },
           "404": {
             "description": "Not Found",
@@ -4261,6 +4568,38 @@
       }
     },
     "/LoadCollection/{id}": {
+      "delete": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
       "get": {
         "tags": [
           "LoadCollection"
@@ -4288,38 +4627,6 @@
                 }
               }
             }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "LoadCollection"
-        ],
-        "summary": "Allow to delete one item",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Id of the item to delete",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
           },
           "404": {
             "description": "Not Found",
@@ -7667,7 +7974,7 @@
         "tags": [
           "Task"
         ],
-        "summary": "Allow to fetch all the tasks since a date",
+        "summary": "Allow to fetch all the tasks since a provided date",
         "parameters": [
           {
             "name": "since",
@@ -7704,7 +8011,7 @@
         "tags": [
           "Task"
         ],
-        "summary": "Allow to fetch all the tasks between two dates in Excel format",
+        "summary": "Allow to fetch all the finished tasks between two dates in Excel format",
         "parameters": [
           {
             "name": "since",
@@ -7718,7 +8025,7 @@
           {
             "name": "until",
             "in": "query",
-            "description": "Date from when fetching the tasks",
+            "description": "Date until when fetching the tasks",
             "schema": {
               "type": "string",
               "format": "date-time"
@@ -7735,6 +8042,16 @@
                   "items": {
                     "$ref": "#/components/schemas/RunningTaskDTO"
                   }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
