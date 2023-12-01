@@ -201,6 +201,32 @@
         }
       }
     },
+    "/Adaptation/Types": {
+      "get": {
+        "tags": [
+          "Adaptation"
+        ],
+        "summary": "Allow to get the list of all adaptation types",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Adaptation/{id}": {
       "get": {
         "tags": [
