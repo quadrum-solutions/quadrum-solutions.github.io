@@ -317,7 +317,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -456,7 +456,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -1222,7 +1222,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -3301,7 +3301,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -3440,7 +3440,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -4185,7 +4185,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -4337,27 +4337,6 @@
           }
         }
       },
-      "get": {
-        "tags": [
-          "LoadCollection"
-        ],
-        "summary": "Allow to fetch all items",
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/LoadCollection"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
       "put": {
         "tags": [
           "LoadCollection"
@@ -4384,6 +4363,307 @@
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/LoadCollection"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to fetch all items",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LoadCollection"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/LoadCollection/withcomment": {
+      "put": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to update an item with comment",
+        "requestBody": {
+          "description": "Item to update with comment",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollectionRecordAuditUpdateDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollectionRecordAuditUpdateDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollectionRecordAuditUpdateDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollectionRecordAuditUpdateDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/LoadCollection/{id}": {
+      "patch": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to patch an item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Item to patch",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to fetch one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "1"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoadCollection"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/LoadCollection/withcomment/{id}": {
+      "patch": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to patch a load collection with comment",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the load collection",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Load collection to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollectionRecordAuditPatchDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollectionRecordAuditPatchDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollectionRecordAuditPatchDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollectionRecordAuditPatchDTO"
               }
             }
           }
@@ -4563,286 +4843,6 @@
         "responses": {
           "200": {
             "description": "Success"
-          }
-        }
-      }
-    },
-    "/LoadCollection/{id}": {
-      "delete": {
-        "tags": [
-          "LoadCollection"
-        ],
-        "summary": "Allow to delete one item",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Id of the item to delete",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "LoadCollection"
-        ],
-        "summary": "Allow to fetch one item",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Id of the item",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "example": "1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LoadCollection"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      },
-      "patch": {
-        "tags": [
-          "LoadCollection"
-        ],
-        "summary": "Allow to patch an item",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Id of the item",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Item to update",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Operation"
-                }
-              }
-            },
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Operation"
-                }
-              }
-            },
-            "text/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Operation"
-                }
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Operation"
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/LoadCollection/withcomment": {
-      "put": {
-        "tags": [
-          "LoadCollection"
-        ],
-        "summary": "Allow to update an item with comment",
-        "requestBody": {
-          "description": "Item to update with comment",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoadCollectionRecordAuditUpdateDTO"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoadCollectionRecordAuditUpdateDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoadCollectionRecordAuditUpdateDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoadCollectionRecordAuditUpdateDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/LoadCollection/withcomment/{id}": {
-      "patch": {
-        "tags": [
-          "LoadCollection"
-        ],
-        "summary": "Allow to patch an item with comment",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Id of the item",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Item to update",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoadCollectionRecordAuditPatchDTO"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoadCollectionRecordAuditPatchDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoadCollectionRecordAuditPatchDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoadCollectionRecordAuditPatchDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
           }
         }
       }
@@ -5140,7 +5140,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -5279,7 +5279,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -5599,7 +5599,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -5738,7 +5738,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -15988,7 +15988,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -16127,7 +16127,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -16582,7 +16582,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -16721,7 +16721,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -17041,7 +17041,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -17180,7 +17180,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -17500,7 +17500,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -17639,7 +17639,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -17959,7 +17959,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -18098,7 +18098,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -18418,7 +18418,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -18557,7 +18557,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -18877,7 +18877,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -19016,7 +19016,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -19336,7 +19336,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -19475,7 +19475,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -19795,7 +19795,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -19934,7 +19934,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -20254,7 +20254,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -20393,7 +20393,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -20713,7 +20713,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -20852,7 +20852,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -21172,7 +21172,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -21311,7 +21311,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "Item to patch",
           "content": {
             "application/json-patch+json": {
               "schema": {
