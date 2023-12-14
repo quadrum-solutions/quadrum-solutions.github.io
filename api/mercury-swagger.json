@@ -31369,6 +31369,14 @@
             "type": "integer",
             "format": "int32"
           },
+          "initialDurationMonths": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "residualDurationMonths": {
+            "type": "integer",
+            "format": "int32"
+          },
           "residualEncumberedDurationDays": {
             "type": "integer",
             "format": "int32"
