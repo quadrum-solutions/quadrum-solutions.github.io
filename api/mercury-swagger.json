@@ -28,7 +28,8 @@
             "description": "Id of the adaptation to test",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int64"
             }
           }
         ],
@@ -2083,7 +2084,8 @@
             "description": "Id of the adaptation to apply",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int64"
             }
           }
         ],
@@ -26749,9 +26751,9 @@
       "AdaptationValidationResultDTO": {
         "type": "object",
         "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
+          "id": {
+            "type": "integer",
+            "format": "int64"
           },
           "isValid": {
             "type": "boolean"
