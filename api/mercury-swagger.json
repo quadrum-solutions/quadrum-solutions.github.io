@@ -2970,6 +2970,108 @@
         }
       }
     },
+    "/Import/Views/SP": {
+      "post": {
+        "tags": [
+          "Import"
+        ],
+        "summary": "Allow to import from SQL views",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "Name of the load",
+            "schema": {
+              "type": "string"
+            },
+            "example": "My Load"
+          },
+          {
+            "name": "date",
+            "in": "query",
+            "description": "Reporting date",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2022-12-31"
+          },
+          {
+            "name": "msaId",
+            "in": "query",
+            "description": "Id of the Mercury Staging Area to load",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            },
+            "example": 1
+          },
+          {
+            "name": "perimeter",
+            "in": "query",
+            "description": "Perimeter to import",
+            "schema": {
+              "type": "string",
+              "default": "DEFAULT"
+            },
+            "example": "DEFAULT"
+          },
+          {
+            "name": "overwrite",
+            "in": "query",
+            "description": "Overwite the existing data if any",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            },
+            "example": true
+          },
+          {
+            "name": "async",
+            "in": "query",
+            "description": "False to wait for the task to end",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "linkToLc",
+            "in": "query",
+            "description": "True to link Load a LoadCollection",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "idLc",
+            "in": "query",
+            "description": "Specify the id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Import/Logs": {
       "get": {
         "tags": [
