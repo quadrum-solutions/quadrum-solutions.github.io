@@ -158,6 +158,9 @@ function reload_js(src) {
             if (script_tag.src) {
                 new_script_tag.src = script_tag.src;
             }
+            if (script_tag.type) {
+                new_script_tag.type = script_tag.type;
+            }
             head.appendChild(new_script_tag);
         }
     } else {
@@ -258,12 +261,24 @@ function decryptor_reaction(key_or_keys, password_input, fallback_used=false) {
 
         // continue to decrypt others parts
         
+        if (typeof inject_something !== 'undefined') {
+            decrypted_element = decrypt_somethings(key, inject_something);
+        }
+        if (typeof delete_something !== 'undefined') {
+            let el = document.getElementById(delete_something)
+            if (el) {
+                el.remove();
+            }
+        }
 
         // any post processing on the decrypted content should be done here
         
         
         
         
+        if (typeof theme_run_after_decryption !== 'undefined') {
+            theme_run_after_decryption();
+        }
         if (window.location.hash) { //jump to anchor if hash given after decryption
             window.location.href = window.location.hash;
         }
