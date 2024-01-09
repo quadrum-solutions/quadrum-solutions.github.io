@@ -31169,6 +31169,14 @@
             "type": "integer",
             "format": "int32"
           },
+          "posSecuritiesPurchased": {
+            "type": "number",
+            "format": "double"
+          },
+          "posSecuritiesSold": {
+            "type": "number",
+            "format": "double"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
