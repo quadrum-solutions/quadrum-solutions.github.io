@@ -32304,15 +32304,15 @@
             "type": "integer",
             "format": "int32"
           },
-          "mortgageLoanClaimLevel1": {
+          "creMortgageLoanClaimLevel1": {
             "type": "number",
             "format": "double"
           },
-          "mortgageLoanClaimLevel2": {
+          "creMortgageLoanClaimLevel2": {
             "type": "number",
             "format": "double"
           },
-          "mortgageLoanClaimLevel3": {
+          "creMortgageLoanClaimLevel3": {
             "type": "number",
             "format": "double"
           },
@@ -32398,6 +32398,14 @@
           "groupARISPIT": {
             "type": "integer",
             "format": "int32"
+          },
+          "lexMortgageLoanClaimLevel1": {
+            "type": "number",
+            "format": "double"
+          },
+          "lexMortgageLoanClaimLevel2": {
+            "type": "number",
+            "format": "double"
           },
           "uniqueId": {
             "type": "string",
