@@ -31309,7 +31309,7 @@
             "type": "number",
             "format": "double"
           },
-          "limitWithdrawalAmount": {
+          "limitLIQAmount": {
             "type": "number",
             "format": "double"
           },
@@ -32450,7 +32450,7 @@
           "lexUnknownClientFlag": {
             "type": "boolean"
           },
-          "limitWithdrawalAmount": {
+          "limitLIQAmount": {
             "type": "number",
             "format": "double"
           },
