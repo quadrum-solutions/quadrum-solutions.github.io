@@ -8446,12 +8446,12 @@
           {
             "name": "language",
             "in": "query",
-            "description": "Language of the template (F, D, E)",
+            "description": "Language of the template (F, FR, D, DE, E, EN)",
             "schema": {
               "type": "string",
               "default": "F"
             },
-            "example": "F"
+            "example": "FR"
           }
         ],
         "responses": {
