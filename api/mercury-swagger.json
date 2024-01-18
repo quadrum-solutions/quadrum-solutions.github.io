@@ -31298,6 +31298,12 @@
             "type": "number",
             "format": "double"
           },
+          "marInclude": {
+            "type": "boolean"
+          },
+          "marExclude": {
+            "type": "boolean"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
@@ -34353,9 +34359,6 @@
             "nullable": true
           },
           "investmentGradeFlag": {
-            "type": "boolean"
-          },
-          "qualifiedIRInstrumentFlag": {
             "type": "boolean"
           },
           "timeSeriesId": {
