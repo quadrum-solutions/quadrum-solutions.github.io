@@ -33938,6 +33938,10 @@
           "isMSA": {
             "type": "boolean"
           },
+          "category": {
+            "type": "string",
+            "nullable": true
+          },
           "ruleItems": {
             "type": "array",
             "items": {
