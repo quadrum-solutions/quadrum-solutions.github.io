@@ -9028,6 +9028,16 @@
               "default": "F"
             },
             "example": "FR"
+          },
+          {
+            "name": "customTemplate",
+            "in": "query",
+            "description": "Name of the custom template to use",
+            "schema": {
+              "type": "string",
+              "default": ""
+            },
+            "example": "my_template"
           }
         ],
         "responses": {
