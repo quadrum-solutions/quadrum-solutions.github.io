@@ -29216,6 +29216,9 @@
             "type": "number",
             "format": "float"
           },
+          "lexLimitFlag": {
+            "type": "boolean"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
