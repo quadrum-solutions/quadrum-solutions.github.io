@@ -9020,6 +9020,15 @@
             }
           },
           {
+            "name": "divideBy1000",
+            "in": "query",
+            "description": "True to divide amounts by 1000",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
             "name": "language",
             "in": "query",
             "description": "Language of the template (F, FR, D, DE, E, EN)",
