@@ -28789,6 +28789,10 @@
           "validated": {
             "type": "boolean"
           },
+          "breaches": {
+            "type": "integer",
+            "format": "int32"
+          },
           "exported": {
             "type": "boolean"
           },
