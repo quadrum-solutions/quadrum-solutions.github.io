@@ -35220,6 +35220,9 @@
           "isContentBased": {
             "type": "boolean"
           },
+          "isXbrl": {
+            "type": "boolean"
+          },
           "validated": {
             "type": "boolean"
           },
@@ -35260,6 +35263,9 @@
             "nullable": true
           },
           "isContentBased": {
+            "type": "boolean"
+          },
+          "isXbrl": {
             "type": "boolean"
           },
           "reports": {
