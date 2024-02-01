@@ -3274,6 +3274,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "overrideRecords",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
           }
         ],
         "requestBody": {
