@@ -34196,11 +34196,6 @@
             "minLength": 1,
             "type": "string"
           },
-          "uniqueId": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
           "loadCollections": {
             "type": "array",
             "items": {
@@ -34280,6 +34275,11 @@
           "referredPerson": {
             "type": "string",
             "nullable": true
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
           }
         },
         "additionalProperties": false
