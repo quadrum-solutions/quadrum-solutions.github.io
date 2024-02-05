@@ -28410,6 +28410,10 @@
             "type": "string",
             "nullable": true
           },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
           "summary": {
             "type": "array",
             "items": {
