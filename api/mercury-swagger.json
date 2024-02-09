@@ -29237,10 +29237,6 @@
           "establishedRelationshipFlag": {
             "type": "boolean"
           },
-          "cvaWeight": {
-            "type": "number",
-            "format": "float"
-          },
           "lexLimitFlag": {
             "type": "boolean"
           },
@@ -33017,6 +33013,10 @@
           "lexMortgageLoanClaimLevel2": {
             "type": "number",
             "format": "double"
+          },
+          "cvaWeight": {
+            "type": "number",
+            "format": "float"
           },
           "uniqueId": {
             "type": "string",
