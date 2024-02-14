@@ -9505,7 +9505,7 @@
         }
       }
     },
-    "/Scenario/OnTheFly/{lcId}/{name}": {
+    "/Scenario/OnTheFlyWithLc/{lcId}": {
       "post": {
         "tags": [
           "Scenario"
@@ -9538,14 +9538,6 @@
             "schema": {
               "type": "boolean",
               "default": true
-            }
-          },
-          {
-            "name": "name",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
             }
           }
         ],
