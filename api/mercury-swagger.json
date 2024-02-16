@@ -28060,6 +28060,10 @@
             "type": "string",
             "nullable": true
           },
+          "order": {
+            "type": "integer",
+            "format": "int64"
+          },
           "alias": {
             "type": "string",
             "nullable": true,
