@@ -3783,12 +3783,43 @@
         }
       }
     },
-    "/Lifeline/Flags": {
+    "/Lifeline/Flags/{lcId}/{loadId}/{posId}": {
       "get": {
         "tags": [
           "Lifeline"
         ],
-        "summary": "Get the list of all the flags",
+        "summary": "Get the list of all the flags of a position",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Load collection ID of the position",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "Load Id of the position",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "posId",
+            "in": "path",
+            "description": "Id of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Success",
@@ -3806,31 +3837,50 @@
         }
       }
     },
-    "/Lifeline/PositionFlags": {
+    "/Lifeline/Flags/{lcId}/{loadId}/{posId}/{type}": {
       "get": {
         "tags": [
           "Lifeline"
         ],
-        "summary": "Get the flags of a position",
+        "summary": "Get the list of all the flags of a position for a specified type",
         "parameters": [
           {
-            "name": "loadId",
-            "in": "query",
-            "description": "Id of the Load",
+            "name": "lcId",
+            "in": "path",
+            "description": "Load collection ID of the position",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
-            },
-            "example": 1
+            }
           },
           {
-            "name": "id",
-            "in": "query",
+            "name": "loadId",
+            "in": "path",
+            "description": "Load Id of the position",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "posId",
+            "in": "path",
             "description": "Id of the position",
+            "required": true,
             "schema": {
               "type": "string"
-            },
-            "example": "1"
+            }
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "description": "Type to get the flags of",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -3841,14 +3891,11 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/LifelineFlag"
+                    "$ref": "#/components/schemas/LifelineDTO"
                   }
                 }
               }
             }
-          },
-          "500": {
-            "description": "Server Error"
           }
         }
       }
@@ -31227,29 +31274,40 @@
       "LifelineDTO": {
         "type": "object",
         "properties": {
-          "id": {
+          "loadCollectionId": {
             "type": "integer",
             "format": "int32"
           },
+          "loadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
           "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "result": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
             "type": "string",
             "nullable": true
           }
         },
         "additionalProperties": false
-      },
-      "LifelineFlag": {
-        "enum": [
-          0,
-          1,
-          2,
-          4,
-          8,
-          16,
-          32
-        ],
-        "type": "integer",
-        "format": "int32"
       },
       "Load": {
         "type": "object",
@@ -32456,6 +32514,13 @@
             },
             "nullable": true
           },
+          "positionsLifeline": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PositionLifeline"
+            },
+            "nullable": true
+          },
           "bookingCenterId": {
             "type": "string",
             "nullable": true
@@ -32883,9 +32948,6 @@
           "ownShare": {
             "type": "string",
             "nullable": true
-          },
-          "lifeLine": {
-            "$ref": "#/components/schemas/LifelineFlag"
           },
           "liqTypeOf": {
             "type": "string",
@@ -33389,6 +33451,44 @@
           },
           "contractResolver": {
             "$ref": "#/components/schemas/IContractResolver"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PositionLifeline": {
+        "type": "object",
+        "properties": {
+          "loadCollectionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "loadId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "load": {
+            "$ref": "#/components/schemas/Load"
+          },
+          "position": {
+            "$ref": "#/components/schemas/Position"
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
