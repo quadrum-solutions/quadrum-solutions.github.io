@@ -35251,6 +35251,16 @@
               "type": "string"
             },
             "nullable": true
+          },
+          "revision": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "versionWithoutRevision": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -35320,6 +35330,16 @@
           },
           "surveyFullCalc": {
             "$ref": "#/components/schemas/SurveyFullCalc"
+          },
+          "revision": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "versionWithoutRevision": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
           }
         },
         "additionalProperties": false
