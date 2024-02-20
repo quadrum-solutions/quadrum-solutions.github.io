@@ -35295,6 +35295,9 @@
           "isAlphanumeric": {
             "type": "boolean"
           },
+          "isRef": {
+            "type": "boolean"
+          },
           "value": {
             "type": "string",
             "nullable": true
