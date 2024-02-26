@@ -28645,6 +28645,9 @@
           "isFormula": {
             "type": "boolean"
           },
+          "type": {
+            "type": "string"
+          },
           "editions": {
             "type": "array",
             "items": {
@@ -35210,6 +35213,9 @@
           "toExport": {
             "type": "boolean"
           },
+          "type": {
+            "type": "string"
+          },
           "mappingTech": {
             "type": "string",
             "nullable": true
@@ -35292,8 +35298,8 @@
             "type": "string",
             "nullable": true
           },
-          "isAlphanumeric": {
-            "type": "boolean"
+          "type": {
+            "type": "string"
           },
           "isRef": {
             "type": "boolean"
