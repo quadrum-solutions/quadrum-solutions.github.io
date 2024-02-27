@@ -33079,6 +33079,10 @@
             "type": "number",
             "format": "float"
           },
+          "ccfB4": {
+            "type": "number",
+            "format": "float"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
