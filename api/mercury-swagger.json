@@ -2022,6 +2022,31 @@
         }
       }
     },
+    "/Engine/CalcsForSurvey/{surveyName}": {
+      "get": {
+        "tags": [
+          "Engine"
+        ],
+        "summary": "Provide the list of calcualtion for a survey",
+        "parameters": [
+          {
+            "name": "surveyName",
+            "in": "path",
+            "description": "Id of the LoadCollection",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "MONA_U"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/Engine/GetCrmCaResults/{lcId}": {
       "get": {
         "tags": [
