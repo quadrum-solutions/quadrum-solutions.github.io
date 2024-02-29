@@ -33108,6 +33108,14 @@
             "type": "number",
             "format": "float"
           },
+          "caPositionClass": {
+            "type": "string",
+            "nullable": true
+          },
+          "caPositionClassB4": {
+            "type": "string",
+            "nullable": true
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
