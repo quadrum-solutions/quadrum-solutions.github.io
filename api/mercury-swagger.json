@@ -33116,6 +33116,22 @@
             "type": "string",
             "nullable": true
           },
+          "caIssuerRiskWeightB4": {
+            "type": "number",
+            "format": "float"
+          },
+          "caIssuerExposureB4": {
+            "type": "number",
+            "format": "double"
+          },
+          "caExposureB4": {
+            "type": "number",
+            "format": "double"
+          },
+          "caRiskWeightB4": {
+            "type": "number",
+            "format": "float"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
