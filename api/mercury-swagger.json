@@ -29311,6 +29311,10 @@
           "lexLimitFlag": {
             "type": "boolean"
           },
+          "creditQuality": {
+            "type": "string",
+            "nullable": true
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
@@ -31996,6 +32000,10 @@
           "marExclude": {
             "type": "boolean"
           },
+          "caForceRiskWeightB4": {
+            "type": "number",
+            "format": "float"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
@@ -33131,6 +33139,9 @@
           "caRiskWeightB4": {
             "type": "number",
             "format": "float"
+          },
+          "caQualifiedRetailFlag": {
+            "type": "boolean"
           },
           "uniqueId": {
             "type": "string",
