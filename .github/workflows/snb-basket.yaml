@@ -1,0 +1,14 @@
+name: Security scan
+on:
+  schedule:
+    - cron: '0 8 1 * *'
+  workflow_dispatch: # Allow to manually trigger
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        run: |
+          wget https://www.snb.ch/dam/jcr:741ddc0e-d3ba-4170-a86f-3895a2614219/snbgc_full.en.xlsx
+          ls
