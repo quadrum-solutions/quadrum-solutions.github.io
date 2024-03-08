@@ -1,4 +1,4 @@
-# Hashs
+# SNB Basket
 
 | Full | Modifications |
 |---|---|
