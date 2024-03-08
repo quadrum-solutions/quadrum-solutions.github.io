@@ -35488,6 +35488,9 @@
             "type": "integer",
             "format": "int32"
           },
+          "toExport": {
+            "type": "boolean"
+          },
           "dependencyOrder": {
             "type": "integer",
             "format": "int32"
