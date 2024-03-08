@@ -8,6 +8,9 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Download File
         run: |
           curl https://www.snb.ch/public/en/rss/repos | grep -o '<link>.*xlsx</link>' | sed 's/\(<link>\|<\/link>\)//g' | xargs -n 1 wget
@@ -18,6 +21,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add *.xlsx
+          git add $(date -d @$last '+%Y-%m-%d')*.xlsx
           git commit -m "Upload new snb basket"
           git push
