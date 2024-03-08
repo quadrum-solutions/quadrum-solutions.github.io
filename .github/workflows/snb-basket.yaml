@@ -1,4 +1,4 @@
-name: Security scan
+name: Snb Basket
 on:
   schedule:
     - cron: '0 8 1 * *'
@@ -8,7 +8,16 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Download File
         run: |
-          wget https://www.snb.ch/dam/jcr:741ddc0e-d3ba-4170-a86f-3895a2614219/snbgc_full.en.xlsx
-          ls
+          wget -q -O- https://www.snb.ch/public/en/rss/repos | grep -o '<link>.*xlsx</link>' | sed 's/\(<link>\|<\/link>\)//g' | xargs -n 1 wget| wget
+          last=$(date --date="$(date +'%Y-%m-01') - 1 second" +%s)
+          for FILENAME in *; do mv $FILENAME $(date -d @$last '+%Y-%m-%d')$FILENAME; done
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add *.xlsx
+          git commit -m "Upload new snb basket"
+          git push
