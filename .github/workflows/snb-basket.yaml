@@ -13,12 +13,15 @@ jobs:
 
       - name: Download File
         run: |
+          mkdir -p snbbasket
+          cd snbbasket
           curl https://www.snb.ch/public/en/rss/repos | grep -o '<link>.*xlsx</link>' | sed 's/\(<link>\|<\/link>\)//g' | xargs -n 1 wget
           last=$(date --date="$(date +'%Y-%m-01') - 1 second" +%s)
           for FILENAME in *; do mv $FILENAME $(date -d @$last '+%Y-%m-%d')$FILENAME; done
 
       - name: Commit and push changes
         run: |
+          cd snbbasket
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add $(date -d @$last '+%Y-%m-%d')*.xlsx
