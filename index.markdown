@@ -10,8 +10,11 @@ layout: default
 ## Docs
 The transformation and output documentation can be found here : [doc](mkdocs/index.html){:target="_blank"}
 
-## Swagger APIs
-The swagger documentation can be found here : [api](api){:target="_blank"}
-
 ## Hashs
 The hash of the different releases can be found here : [hash](hash){:target="_blank"}
+
+## SNB Basket
+The SNB basket files of each months can be found here : [snbbasket](snbbasket){:target="_blank"}
+
+## Swagger APIs
+The swagger documentation can be found here : [api](api){:target="_blank"}

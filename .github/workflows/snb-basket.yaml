@@ -13,11 +13,12 @@ jobs:
 
       - name: Download File
         run: |
-          mkdir -p snbbasket
           cd snbbasket
           curl https://www.snb.ch/public/en/rss/repos | grep -o '<link>.*xlsx</link>' | sed 's/\(<link>\|<\/link>\)//g' | xargs -n 1 wget
           last=$(date --date="$(date +'%Y-%m-01') - 1 second" +%s)
           for FILENAME in *; do mv $FILENAME $(date -d @$last '+%Y-%m-%d')$FILENAME; done
+          mv -f *full.en.xlsx full
+          mv -f *modifications.en.xlsx modifications
 
       - name: Commit and push changes
         run: |
