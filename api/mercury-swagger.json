@@ -33143,6 +33143,14 @@
           "caQualifiedRetailFlag": {
             "type": "boolean"
           },
+          "regulatoryHaircutB4": {
+            "type": "number",
+            "format": "float"
+          },
+          "minimumHoldingPeriod": {
+            "type": "integer",
+            "format": "int32"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
