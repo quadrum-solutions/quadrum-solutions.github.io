@@ -10495,10 +10495,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Amortization"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -10540,34 +10537,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             }
           }
@@ -10578,10 +10563,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Amortization"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -10661,10 +10643,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Amortization"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -10706,34 +10685,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             }
           }
@@ -10744,10 +10711,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Amortization"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -11292,10 +11256,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Derivative"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -11337,34 +11298,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             }
           }
@@ -11375,10 +11324,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Derivative"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -11458,10 +11404,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Derivative"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -11503,34 +11446,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             }
           }
@@ -11541,10 +11472,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Derivative"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -12089,10 +12017,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DerivativeCalc"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -12134,34 +12059,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             }
           }
@@ -12172,10 +12085,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DerivativeCalc"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -12255,10 +12165,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DerivativeCalc"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -12300,34 +12207,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             }
           }
@@ -12338,10 +12233,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DerivativeCalc"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -12886,10 +12778,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DerivativesSwap"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -12931,34 +12820,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             }
           }
@@ -12969,10 +12846,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DerivativesSwap"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -13052,10 +12926,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DerivativesSwap"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -13097,34 +12968,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             }
           }
@@ -13135,10 +12994,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DerivativesSwap"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -13683,10 +13539,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/InterestRate"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -13728,34 +13581,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             }
           }
@@ -13766,10 +13607,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/InterestRate"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -13849,10 +13687,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/InterestRate"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -13894,34 +13729,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             }
           }
@@ -13932,10 +13755,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/InterestRate"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -14480,10 +14300,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ModuleSpecific"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -14525,34 +14342,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             }
           }
@@ -14563,10 +14368,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ModuleSpecific"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -14646,10 +14448,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ModuleSpecific"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -14691,34 +14490,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             }
           }
@@ -14729,10 +14516,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ModuleSpecific"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -15277,10 +15061,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Pledge"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -15322,34 +15103,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             }
           }
@@ -15360,10 +15129,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Pledge"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -15443,10 +15209,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Pledge"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -15488,34 +15251,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             }
           }
@@ -15526,10 +15277,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Pledge"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -16074,10 +15822,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Position"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -16119,34 +15864,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             }
           }
@@ -16157,10 +15890,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Position"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -16240,10 +15970,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Position"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -16285,34 +16012,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             }
           }
@@ -16323,10 +16038,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Position"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -16871,10 +16583,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PositionCalc"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -16916,34 +16625,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             }
           }
@@ -16954,10 +16651,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PositionCalc"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -17037,10 +16731,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PositionCalc"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -17082,34 +16773,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             }
           }
@@ -17120,10 +16799,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PositionCalc"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -17668,10 +17344,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PositionSingle"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -17713,34 +17386,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             }
           }
@@ -17751,10 +17412,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PositionSingle"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -17834,10 +17492,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PositionSingle"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -17879,34 +17534,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SearchParameter"
-                }
+                "$ref": "#/components/schemas/GetParameter"
               }
             }
           }
@@ -17917,10 +17560,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PositionSingle"
-                  }
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -31147,6 +30787,44 @@
         },
         "additionalProperties": false
       },
+      "FilterParameter": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string",
+            "nullable": true
+          },
+          "operator": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetParameter": {
+        "type": "object",
+        "properties": {
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FilterParameter"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "GlobalInput": {
         "type": "object",
         "properties": {
@@ -32683,6 +32361,33 @@
           },
           "comment": {
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ObjectPagedResponse": {
+        "type": "object",
+        "properties": {
+          "pageTotal": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "recordTotal": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "type": "array",
+            "items": { },
             "nullable": true
           }
         },
@@ -35525,24 +35230,6 @@
             "$ref": "#/components/schemas/ScenarioRule"
           },
           "comment": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "SearchParameter": {
-        "type": "object",
-        "properties": {
-          "field": {
-            "type": "string",
-            "nullable": true
-          },
-          "operator": {
-            "type": "string",
-            "nullable": true
-          },
-          "value": {
             "type": "string",
             "nullable": true
           }
