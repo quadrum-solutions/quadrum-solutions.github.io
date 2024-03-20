@@ -5154,55 +5154,28 @@
         }
       }
     },
-    "/Load/Detail/{id}": {
+    "/Load": {
       "get": {
         "tags": [
           "Load"
         ],
-        "summary": "Allow to retrieve a load with details",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Id of the load",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
+        "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success"
-          },
-          "404": {
-            "description": "Not Found",
+            "description": "Success",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Load"
+                  }
                 }
               }
             }
           }
         }
-      }
-    },
-    "/Load/Detail": {
-      "get": {
-        "tags": [
-          "Load"
-        ],
-        "summary": "Allow to retrieve a load with details",
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/Load": {
+      },
       "post": {
         "tags": [
           "Load"
@@ -5314,30 +5287,81 @@
             }
           }
         }
-      },
+      }
+    },
+    "/Load/{id}": {
       "get": {
         "tags": [
           "Load"
         ],
-        "summary": "Allow to fetch all items",
+        "summary": "Allow to fetch one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "1"
+          }
+        ],
         "responses": {
           "200": {
             "description": "Success",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Load"
-                  }
+                  "$ref": "#/components/schemas/Load"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
                 }
               }
             }
           }
         }
-      }
-    },
-    "/Load/{id}": {
+      },
+      "delete": {
+        "tags": [
+          "Load"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
       "patch": {
         "tags": [
           "Load"
@@ -5416,20 +5440,36 @@
             }
           }
         }
-      },
-      "delete": {
+      }
+    },
+    "/Load/Detail": {
+      "get": {
         "tags": [
           "Load"
         ],
-        "summary": "Allow to delete one item",
+        "summary": "Allow to retrieve a load with details",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Load/Detail/{id}": {
+      "get": {
+        "tags": [
+          "Load"
+        ],
+        "summary": "Allow to retrieve a load with details",
         "parameters": [
           {
             "name": "id",
             "in": "path",
-            "description": "Id of the item to delete",
+            "description": "Id of the load",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],
@@ -5448,12 +5488,14 @@
             }
           }
         }
-      },
+      }
+    },
+    "/Load/RecordsAuditById/{id}": {
       "get": {
         "tags": [
           "Load"
         ],
-        "summary": "Allow to fetch one item",
+        "summary": "Allow to retrieve all records audit",
         "parameters": [
           {
             "name": "id",
@@ -5462,8 +5504,7 @@
             "required": true,
             "schema": {
               "type": "string"
-            },
-            "example": "1"
+            }
           }
         ],
         "responses": {
@@ -5472,7 +5513,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Load"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
                 }
               }
             }
@@ -5617,23 +5661,12 @@
         }
       }
     },
-    "/Load/RecordsAuditById/{id}": {
+    "/LoadCollection": {
       "get": {
         "tags": [
-          "Load"
+          "LoadCollection"
         ],
-        "summary": "Allow to retrieve all records audit",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Id of the item",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "summary": "Allow to fetch all items",
         "responses": {
           "200": {
             "description": "Success",
@@ -5642,26 +5675,14 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/RecordAudit"
+                    "$ref": "#/components/schemas/LoadCollection"
                   }
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
                 }
               }
             }
           }
         }
-      }
-    },
-    "/LoadCollection": {
+      },
       "post": {
         "tags": [
           "LoadCollection"
@@ -5773,70 +5794,33 @@
             }
           }
         }
-      },
+      }
+    },
+    "/LoadCollection/{id}": {
       "get": {
         "tags": [
           "LoadCollection"
         ],
-        "summary": "Allow to fetch all items",
+        "summary": "Allow to fetch one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "1"
+          }
+        ],
         "responses": {
           "200": {
             "description": "Success",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/LoadCollection"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/LoadCollection/withcomment": {
-      "put": {
-        "tags": [
-          "LoadCollection"
-        ],
-        "summary": "Allow to update an item with comment",
-        "requestBody": {
-          "description": "Item to update with comment",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoadCollectionRecordAuditUpdateDTO"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoadCollectionRecordAuditUpdateDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoadCollectionRecordAuditUpdateDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoadCollectionRecordAuditUpdateDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/LoadCollection"
                 }
               }
             }
@@ -5852,9 +5836,39 @@
             }
           }
         }
-      }
-    },
-    "/LoadCollection/{id}": {
+      },
+      "delete": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
       "patch": {
         "tags": [
           "LoadCollection"
@@ -5933,20 +5947,36 @@
             }
           }
         }
-      },
-      "delete": {
+      }
+    },
+    "/LoadCollection/Detail": {
+      "get": {
         "tags": [
           "LoadCollection"
         ],
-        "summary": "Allow to delete one item",
+        "summary": "Allow to retrieve a load collection with details",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/LoadCollection/Detail/{id}": {
+      "get": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to retrieve a load collection with details",
         "parameters": [
           {
             "name": "id",
             "in": "path",
-            "description": "Id of the item to delete",
+            "description": "Id of the load collection",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],
@@ -5965,31 +5995,49 @@
             }
           }
         }
-      },
-      "get": {
+      }
+    },
+    "/LoadCollection/withcomment": {
+      "put": {
         "tags": [
           "LoadCollection"
         ],
-        "summary": "Allow to fetch one item",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Id of the item",
-            "required": true,
-            "schema": {
-              "type": "string"
+        "summary": "Allow to update an item with comment",
+        "requestBody": {
+          "description": "Item to update with comment",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollectionRecordAuditUpdateDTO"
+              }
             },
-            "example": "1"
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollectionRecordAuditUpdateDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollectionRecordAuditUpdateDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollectionRecordAuditUpdateDTO"
+              }
+            }
           }
-        ],
+        },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/LoadCollection"
+                  "type": "string"
                 }
               }
             }
@@ -6093,7 +6141,7 @@
             }
           },
           {
-            "name": "LoadCollectionId",
+            "name": "loadCollectionId",
             "in": "query",
             "description": "Id of the load collection",
             "schema": {
@@ -6144,7 +6192,7 @@
             }
           },
           {
-            "name": "LoadCollectionId",
+            "name": "loadCollectionId",
             "in": "query",
             "description": "Id of the load collection",
             "schema": {
@@ -6176,54 +6224,6 @@
                 }
               }
             }
-          }
-        }
-      }
-    },
-    "/LoadCollection/Detail/{id}": {
-      "get": {
-        "tags": [
-          "LoadCollection"
-        ],
-        "summary": "Allow to retrieve a load collection with details",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Id of the load collection",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/LoadCollection/Detail": {
-      "get": {
-        "tags": [
-          "LoadCollection"
-        ],
-        "summary": "Allow to retrieve a load collection with details",
-        "responses": {
-          "200": {
-            "description": "Success"
           }
         }
       }
@@ -9351,6 +9351,16 @@
               }
             }
           },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "404": {
             "description": "Not Found",
             "content": {
@@ -10390,6 +10400,16 @@
               }
             }
           },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -10436,6 +10456,16 @@
         "responses": {
           "200": {
             "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
             "content": {
               "application/json": {
                 "schema": {
