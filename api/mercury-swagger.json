@@ -33501,6 +33501,14 @@
           "astaUltimateRiskCountry": {
             "type": "string",
             "nullable": true
+          },
+          "collateralTypeOf": {
+            "type": "string",
+            "nullable": true
+          },
+          "collateralSubType": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
