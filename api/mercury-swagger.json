@@ -32232,6 +32232,20 @@
             "type": "integer",
             "format": "int32"
           },
+          "nsfrExcludeFunding": {
+            "type": "boolean"
+          },
+          "nsfrIncludeFunding": {
+            "type": "boolean"
+          },
+          "nsfrForceFundingWeightingFactor": {
+            "type": "number",
+            "format": "double"
+          },
+          "nsfrForceFunding": {
+            "type": "integer",
+            "format": "int32"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
