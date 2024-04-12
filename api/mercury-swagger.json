@@ -33406,6 +33406,10 @@
             "type": "integer",
             "format": "int32"
           },
+          "cvaWeightB4": {
+            "type": "number",
+            "format": "float"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
