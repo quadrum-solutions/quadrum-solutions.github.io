@@ -32250,6 +32250,9 @@
             "type": "integer",
             "format": "int32"
           },
+          "cemReducedPFEFactorFlag": {
+            "type": "boolean"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
