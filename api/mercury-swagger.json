@@ -4011,6 +4011,16 @@
               "type": "string"
             },
             "example": "Adaptation"
+          },
+          {
+            "name": "truncate",
+            "in": "query",
+            "description": "Truncate the list before loading",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            },
+            "example": true
           }
         ],
         "requestBody": {
