@@ -32263,6 +32263,9 @@
           "cemReducedPFEFactorFlag": {
             "type": "boolean"
           },
+          "encumberedCBFlag": {
+            "type": "boolean"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
