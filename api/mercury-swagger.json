@@ -32266,6 +32266,12 @@
           "encumberedCBFlag": {
             "type": "boolean"
           },
+          "forceCapitalDeduction": {
+            "type": "boolean"
+          },
+          "forceConsolidation": {
+            "type": "boolean"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
