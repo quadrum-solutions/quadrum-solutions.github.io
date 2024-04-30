@@ -4210,6 +4210,54 @@
         }
       }
     },
+    "/ListCounterpartyGroupAris/Load/{lcId}": {
+      "post": {
+        "tags": [
+          "ListCounterpartyGroupAris"
+        ],
+        "summary": "Allow to load a csv file",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "LoadCollectionId to update",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
     "/ListCounterpartyGroupAris": {
       "get": {
         "tags": [
@@ -4675,6 +4723,54 @@
           "ListCounterpartyGroupLex"
         ],
         "summary": "Allow to load a csv file",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/ListCounterpartyGroupLex/Load/{lcId}": {
+      "post": {
+        "tags": [
+          "ListCounterpartyGroupLex"
+        ],
+        "summary": "Allow to load a csv file",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "LoadCollectionId to update",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "multipart/form-data": {
