@@ -30038,6 +30038,10 @@
             "type": "integer",
             "format": "int32"
           },
+          "centralBank": {
+            "type": "string",
+            "nullable": true
+          },
           "id": {
             "type": "string",
             "nullable": true,
