@@ -33550,8 +33550,9 @@
             "type": "number",
             "format": "float"
           },
-          "capitalDeductionFlag": {
-            "type": "boolean"
+          "capitalDeductionAmount": {
+            "type": "number",
+            "format": "double"
           },
           "uniqueId": {
             "type": "string",
