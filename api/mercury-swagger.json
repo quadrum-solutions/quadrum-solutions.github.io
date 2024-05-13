@@ -32949,6 +32949,20 @@
             },
             "nullable": true
           },
+          "positionsCrmLtvExposures": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PositionCrmLtv"
+            },
+            "nullable": true
+          },
+          "positionsCrmLtvCollaterals": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PositionCrmLtv"
+            },
+            "nullable": true
+          },
           "positionsLifeline": {
             "type": "array",
             "items": {
@@ -33872,6 +33886,66 @@
           },
           "isRetailDepositRunoff": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PositionCrmLtv": {
+        "type": "object",
+        "properties": {
+          "loadCollectionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "loadCollection": {
+            "$ref": "#/components/schemas/LoadCollection"
+          },
+          "positionExposure": {
+            "$ref": "#/components/schemas/Position"
+          },
+          "positionCollateral": {
+            "$ref": "#/components/schemas/Position"
+          },
+          "collateralLoadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "collateralId": {
+            "type": "string",
+            "nullable": true
+          },
+          "exposureLoadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "exposureId": {
+            "type": "string",
+            "nullable": true
+          },
+          "propertyId": {
+            "type": "string",
+            "nullable": true
+          },
+          "amountCovered": {
+            "type": "number",
+            "format": "double"
+          },
+          "caltvRiskWeight": {
+            "type": "number",
+            "format": "double"
+          },
+          "caRiskWeightB4": {
+            "type": "number",
+            "format": "double"
+          },
+          "propertyTypeOf": {
+            "type": "string",
+            "nullable": true
+          },
+          "propertyUseOf": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
