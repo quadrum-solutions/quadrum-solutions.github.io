@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.quadrum-solutions.net/ApplicationGuide/TechnicalGuide/Doc_MercuryProcesses/</loc>
+         <lastmod>2024-05-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.quadrum-solutions.net/ApplicationGuide/TechnicalGuide/Doc_TechnicalRequirements/</loc>
          <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
