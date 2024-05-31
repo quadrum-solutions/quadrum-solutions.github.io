@@ -35,7 +35,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -106,7 +106,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -161,7 +161,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "409": {
             "description": "Conflict",
@@ -174,7 +174,7 @@
             }
           },
           "500": {
-            "description": "Server Error",
+            "description": "Internal Server Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -202,7 +202,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -248,7 +248,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -281,10 +281,10 @@
         "summary": "Allow to delete all adaptations",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "500": {
-            "description": "Server Error",
+            "description": "Internal Server Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -307,10 +307,10 @@
         "summary": "Allow to enable all adaptations",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "500": {
-            "description": "Server Error",
+            "description": "Internal Server Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -333,10 +333,10 @@
         "summary": "Allow to disable all adaptations",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "500": {
-            "description": "Server Error",
+            "description": "Internal Server Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -359,10 +359,10 @@
         "summary": "Allow to get the list of all adaptation types",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "500": {
-            "description": "Server Error",
+            "description": "Internal Server Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -397,7 +397,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -436,7 +436,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -505,7 +505,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -563,7 +563,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -632,7 +632,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -676,7 +676,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -720,7 +720,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -733,7 +733,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -766,7 +766,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -789,7 +789,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -813,7 +813,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -826,7 +826,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -859,7 +859,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -882,7 +882,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -915,7 +915,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -938,7 +938,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -980,7 +980,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1003,7 +1003,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -1041,7 +1041,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -1097,7 +1097,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -1128,7 +1128,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1199,7 +1199,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -1242,7 +1242,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1281,7 +1281,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -1329,7 +1329,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -1398,7 +1398,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -1442,7 +1442,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1523,7 +1523,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1553,7 +1553,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -1588,7 +1588,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -1611,7 +1611,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -1646,7 +1646,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -1669,7 +1669,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -1704,7 +1704,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -1727,7 +1727,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -1762,7 +1762,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -1785,7 +1785,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -1820,7 +1820,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -1843,7 +1843,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -1878,7 +1878,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -1901,7 +1901,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -1936,7 +1936,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -1959,7 +1959,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -1994,7 +1994,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -2017,7 +2017,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -2052,7 +2052,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -2075,7 +2075,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -2088,7 +2088,7 @@
         "summary": "Provide the list of endpoints to run the calculations",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -2113,7 +2113,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -2148,7 +2148,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -2171,7 +2171,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -2206,7 +2206,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -2229,7 +2229,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -2265,7 +2265,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -2288,7 +2288,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -2351,7 +2351,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -2374,7 +2374,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -2409,7 +2409,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -2432,7 +2432,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -2523,7 +2523,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -2627,7 +2627,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -2719,7 +2719,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -2814,7 +2814,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -2848,7 +2848,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -2949,7 +2949,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -3051,7 +3051,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -3153,7 +3153,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -3188,7 +3188,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3233,7 +3233,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3278,7 +3278,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3339,7 +3339,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -3352,7 +3352,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -3402,7 +3402,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -3415,7 +3415,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -3428,7 +3428,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3474,7 +3474,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -3530,7 +3530,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -3575,7 +3575,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3614,7 +3614,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -3683,7 +3683,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -3741,7 +3741,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -3810,7 +3810,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -3854,7 +3854,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3918,7 +3918,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3981,7 +3981,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4045,7 +4045,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -4058,7 +4058,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -4071,7 +4071,7 @@
         "summary": "Allow to load the rules",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -4084,7 +4084,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -4097,10 +4097,10 @@
         "summary": "Allow to load all the static files from the docker directory",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -4113,10 +4113,10 @@
         "summary": "Allow to save all the static files from the docker directory",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -4141,7 +4141,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4162,7 +4162,7 @@
             }
           },
           "500": {
-            "description": "Server Error",
+            "description": "Internal Server Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -4202,10 +4202,10 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -4250,10 +4250,10 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -4266,7 +4266,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4312,7 +4312,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -4368,7 +4368,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -4413,7 +4413,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4452,7 +4452,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -4521,7 +4521,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -4579,7 +4579,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -4648,7 +4648,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -4692,7 +4692,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4745,10 +4745,10 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -4793,10 +4793,10 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -4809,7 +4809,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4855,7 +4855,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -4911,7 +4911,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -4956,7 +4956,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4995,7 +4995,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -5064,7 +5064,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -5122,7 +5122,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -5191,7 +5191,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -5235,7 +5235,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -5268,7 +5268,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -5314,7 +5314,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -5370,7 +5370,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -5415,7 +5415,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -5454,7 +5454,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -5523,7 +5523,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -5556,7 +5556,7 @@
         "summary": "Allow to retrieve a load with details",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -5581,7 +5581,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -5615,7 +5615,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -5673,7 +5673,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -5742,7 +5742,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -5775,7 +5775,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -5821,7 +5821,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -5877,7 +5877,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -5922,7 +5922,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -5961,7 +5961,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -6030,7 +6030,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -6063,7 +6063,7 @@
         "summary": "Allow to retrieve a load collection with details",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -6088,7 +6088,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -6136,7 +6136,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -6205,7 +6205,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -6258,7 +6258,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -6309,7 +6309,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -6353,7 +6353,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -6407,7 +6407,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -6440,7 +6440,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -6486,7 +6486,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -6542,7 +6542,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -6587,7 +6587,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -6626,7 +6626,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -6695,7 +6695,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -6753,7 +6753,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -6822,7 +6822,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -6866,7 +6866,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -6910,7 +6910,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -6923,7 +6923,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -6969,7 +6969,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -7025,7 +7025,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -7070,7 +7070,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -7109,7 +7109,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -7178,7 +7178,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -7236,7 +7236,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -7305,7 +7305,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -7349,7 +7349,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -7382,7 +7382,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -7428,7 +7428,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -7484,7 +7484,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -7529,7 +7529,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -7568,7 +7568,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -7637,7 +7637,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -7695,7 +7695,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -7764,7 +7764,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -7808,7 +7808,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -7841,10 +7841,10 @@
         "summary": "Allow to reload the reports files",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -7869,7 +7869,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -7882,7 +7882,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -7943,7 +7943,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -7956,7 +7956,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -8008,7 +8008,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -8031,7 +8031,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -8074,7 +8074,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -8107,7 +8107,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -8161,7 +8161,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -8191,7 +8191,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -8234,7 +8234,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -8254,7 +8254,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -8297,7 +8297,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -8327,7 +8327,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -8360,7 +8360,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -8390,7 +8390,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -8462,7 +8462,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -8492,7 +8492,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -8555,7 +8555,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -8585,7 +8585,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -8638,7 +8638,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -8668,7 +8668,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -8730,7 +8730,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -8760,7 +8760,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -8812,7 +8812,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -8842,7 +8842,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -8903,7 +8903,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -8933,7 +8933,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -9003,7 +9003,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -9033,7 +9033,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -9112,7 +9112,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -9135,7 +9135,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -9196,7 +9196,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -9227,7 +9227,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -9308,7 +9308,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -9339,7 +9339,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -9382,7 +9382,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -9413,7 +9413,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -9447,7 +9447,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -9519,7 +9519,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -9581,7 +9581,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -9612,7 +9612,7 @@
         "summary": "Allow to retieve the list of available surveys and reports",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -9635,7 +9635,7 @@
         "summary": "Allow to fetch all rules",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -9668,7 +9668,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -9746,7 +9746,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -9759,7 +9759,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -9822,7 +9822,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -9845,7 +9845,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -9917,7 +9917,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -9940,7 +9940,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -9953,7 +9953,7 @@
         "summary": "Allow to fetch all the running tasks",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -9966,7 +9966,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -9979,7 +9979,7 @@
         "summary": "Allow to fetch all the tasks in queue",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -9992,7 +9992,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -10016,7 +10016,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10029,7 +10029,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -10053,7 +10053,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10066,7 +10066,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -10099,7 +10099,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10122,7 +10122,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -10135,7 +10135,7 @@
         "summary": "Allow to cancel all the running tasks",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10145,7 +10145,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -10158,7 +10158,7 @@
         "summary": "Allow to cancel all the running tasks",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10168,7 +10168,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -10193,7 +10193,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10203,7 +10203,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -10216,7 +10216,7 @@
         "summary": "Allow to fetch the technical information",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10226,7 +10226,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -10239,7 +10239,7 @@
         "summary": "Allow to fetch the technical information",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10249,7 +10249,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -10262,7 +10262,7 @@
         "summary": "Allow to fetch the business logs of the day",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10272,7 +10272,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -10285,7 +10285,7 @@
         "summary": "Allow to fetch the business logs of the day",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10295,7 +10295,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -10308,7 +10308,7 @@
         "summary": "Allow to fetch the business logs of the day in a file",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10318,7 +10318,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -10331,7 +10331,7 @@
         "summary": "Allow to fetch the business logs of the day in a file",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10341,7 +10341,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -10354,7 +10354,7 @@
         "summary": "Allow to fetch the business logs of the day",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10364,7 +10364,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -10377,7 +10377,7 @@
         "summary": "Allow to fetch the business logs of the day in a file",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10387,7 +10387,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -10400,7 +10400,7 @@
         "summary": "Allow to fetch the list of all tables in the datamodel",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10410,7 +10410,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -10433,7 +10433,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10473,7 +10473,7 @@
         "summary": "Allow to fetch the list of connected users",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10517,7 +10517,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10581,7 +10581,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10647,7 +10647,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10715,7 +10715,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10769,7 +10769,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -10793,7 +10793,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10842,7 +10842,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10910,7 +10910,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10964,7 +10964,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -10988,7 +10988,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -11030,7 +11030,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -11106,7 +11106,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -11158,7 +11158,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -11206,7 +11206,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "409": {
             "description": "Conflict",
@@ -11252,7 +11252,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -11310,7 +11310,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -11389,7 +11389,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -11443,7 +11443,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -11502,7 +11502,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -11570,7 +11570,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -11624,7 +11624,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -11648,7 +11648,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -11697,7 +11697,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -11765,7 +11765,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -11819,7 +11819,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -11843,7 +11843,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -11885,7 +11885,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -11961,7 +11961,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -12013,7 +12013,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -12061,7 +12061,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "409": {
             "description": "Conflict",
@@ -12107,7 +12107,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -12165,7 +12165,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -12244,7 +12244,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -12298,7 +12298,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -12357,7 +12357,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -12425,7 +12425,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -12479,7 +12479,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -12503,7 +12503,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -12552,7 +12552,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -12620,7 +12620,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -12674,7 +12674,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -12698,7 +12698,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -12740,7 +12740,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -12816,7 +12816,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -12868,7 +12868,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -12916,7 +12916,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "409": {
             "description": "Conflict",
@@ -12962,7 +12962,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -13020,7 +13020,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -13099,7 +13099,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -13153,7 +13153,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -13212,7 +13212,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -13280,7 +13280,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -13334,7 +13334,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -13358,7 +13358,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -13407,7 +13407,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -13475,7 +13475,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -13529,7 +13529,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -13553,7 +13553,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -13595,7 +13595,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -13671,7 +13671,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -13723,7 +13723,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -13771,7 +13771,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "409": {
             "description": "Conflict",
@@ -13817,7 +13817,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -13875,7 +13875,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -13954,7 +13954,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -14008,7 +14008,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -14067,7 +14067,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -14135,7 +14135,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -14189,7 +14189,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -14213,7 +14213,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -14262,7 +14262,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -14330,7 +14330,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -14384,7 +14384,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -14408,7 +14408,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -14450,7 +14450,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -14526,7 +14526,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -14578,7 +14578,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -14626,7 +14626,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "409": {
             "description": "Conflict",
@@ -14672,7 +14672,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -14730,7 +14730,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -14809,7 +14809,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -14863,7 +14863,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -14922,7 +14922,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -14990,7 +14990,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -15044,7 +15044,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -15068,7 +15068,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -15117,7 +15117,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -15185,7 +15185,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -15239,7 +15239,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -15263,7 +15263,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -15305,7 +15305,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -15381,7 +15381,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -15433,7 +15433,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -15481,7 +15481,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "409": {
             "description": "Conflict",
@@ -15527,7 +15527,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -15585,7 +15585,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -15664,7 +15664,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -15718,7 +15718,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -15777,7 +15777,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -15845,7 +15845,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -15899,7 +15899,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -15923,7 +15923,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -15972,7 +15972,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -16040,7 +16040,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -16094,7 +16094,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -16118,7 +16118,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -16160,7 +16160,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -16236,7 +16236,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -16288,7 +16288,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -16336,7 +16336,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "409": {
             "description": "Conflict",
@@ -16382,7 +16382,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -16440,7 +16440,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -16519,7 +16519,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -16573,7 +16573,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -16632,7 +16632,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -16700,7 +16700,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -16754,7 +16754,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -16778,7 +16778,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -16827,7 +16827,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -16895,7 +16895,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -16949,7 +16949,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -16973,7 +16973,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -17015,7 +17015,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -17091,7 +17091,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -17143,7 +17143,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -17191,7 +17191,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "409": {
             "description": "Conflict",
@@ -17237,7 +17237,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -17295,7 +17295,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -17374,7 +17374,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -17428,7 +17428,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -17487,7 +17487,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -17555,7 +17555,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -17609,7 +17609,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -17633,7 +17633,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -17682,7 +17682,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -17750,7 +17750,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -17804,7 +17804,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -17828,7 +17828,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -17870,7 +17870,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -17946,7 +17946,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -17998,7 +17998,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -18046,7 +18046,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "409": {
             "description": "Conflict",
@@ -18092,7 +18092,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -18150,7 +18150,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -18229,7 +18229,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -18283,7 +18283,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -18342,7 +18342,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -18410,7 +18410,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -18464,7 +18464,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -18488,7 +18488,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -18537,7 +18537,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -18605,7 +18605,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -18659,7 +18659,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -18683,7 +18683,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -18725,7 +18725,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -18801,7 +18801,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -18853,7 +18853,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -18901,7 +18901,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "409": {
             "description": "Conflict",
@@ -18947,7 +18947,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -19005,7 +19005,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -19084,7 +19084,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -19138,7 +19138,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -19200,7 +19200,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -19250,7 +19250,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -19284,7 +19284,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -19307,7 +19307,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -19353,7 +19353,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -19409,7 +19409,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -19454,7 +19454,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -19493,7 +19493,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -19562,7 +19562,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -19620,7 +19620,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -19689,7 +19689,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -19733,7 +19733,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -19776,7 +19776,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -19868,7 +19868,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -19901,7 +19901,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -19947,7 +19947,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -20003,7 +20003,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -20048,7 +20048,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -20087,7 +20087,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -20156,7 +20156,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -20214,7 +20214,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -20283,7 +20283,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -20327,7 +20327,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -20360,7 +20360,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -20406,7 +20406,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -20462,7 +20462,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -20507,7 +20507,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -20546,7 +20546,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -20615,7 +20615,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -20673,7 +20673,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -20742,7 +20742,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -20786,7 +20786,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -20819,7 +20819,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -20865,7 +20865,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -20921,7 +20921,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -20966,7 +20966,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -21005,7 +21005,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -21074,7 +21074,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -21132,7 +21132,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -21201,7 +21201,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -21245,7 +21245,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -21278,7 +21278,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -21324,7 +21324,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -21380,7 +21380,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -21425,7 +21425,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -21464,7 +21464,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -21533,7 +21533,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -21591,7 +21591,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -21660,7 +21660,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -21704,7 +21704,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -21737,7 +21737,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -21783,7 +21783,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -21839,7 +21839,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -21884,7 +21884,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -21923,7 +21923,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -21992,7 +21992,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -22050,7 +22050,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -22119,7 +22119,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -22163,7 +22163,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -22196,7 +22196,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -22242,7 +22242,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -22298,7 +22298,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -22343,7 +22343,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -22382,7 +22382,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -22451,7 +22451,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -22509,7 +22509,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -22578,7 +22578,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -22622,7 +22622,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -22655,7 +22655,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -22701,7 +22701,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -22757,7 +22757,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -22802,7 +22802,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -22841,7 +22841,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -22910,7 +22910,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -22968,7 +22968,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -23037,7 +23037,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -23081,7 +23081,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -23114,7 +23114,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -23160,7 +23160,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -23216,7 +23216,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -23261,7 +23261,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -23300,7 +23300,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -23369,7 +23369,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -23427,7 +23427,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -23496,7 +23496,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -23540,7 +23540,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -23573,7 +23573,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -23619,7 +23619,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -23675,7 +23675,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -23720,7 +23720,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -23759,7 +23759,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -23828,7 +23828,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -23886,7 +23886,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -23955,7 +23955,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -23999,7 +23999,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -24032,7 +24032,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -24078,7 +24078,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -24134,7 +24134,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -24179,7 +24179,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -24218,7 +24218,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -24287,7 +24287,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -24345,7 +24345,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -24414,7 +24414,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -24458,7 +24458,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -24491,7 +24491,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -24537,7 +24537,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -24593,7 +24593,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -24638,7 +24638,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -24677,7 +24677,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -24746,7 +24746,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -24804,7 +24804,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -24873,7 +24873,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -24917,7 +24917,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -24950,7 +24950,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -24996,7 +24996,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -25052,7 +25052,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -25097,7 +25097,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -25136,7 +25136,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -25205,7 +25205,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -25263,7 +25263,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -25332,7 +25332,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -25376,7 +25376,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -25409,7 +25409,7 @@
         "summary": "Allow to fetch all items",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -25455,7 +25455,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -25511,7 +25511,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -25556,7 +25556,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -25595,7 +25595,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -25664,7 +25664,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -25722,7 +25722,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -25791,7 +25791,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request",
@@ -25835,7 +25835,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -25887,7 +25887,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -25963,7 +25963,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -26005,7 +26005,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -26053,7 +26053,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "409": {
             "description": "Conflict",
@@ -26099,7 +26099,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -26147,7 +26147,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -26216,7 +26216,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -26260,7 +26260,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -26312,7 +26312,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -26388,7 +26388,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -26430,7 +26430,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -26478,7 +26478,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "409": {
             "description": "Conflict",
@@ -26524,7 +26524,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -26572,7 +26572,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -26641,7 +26641,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -26685,7 +26685,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -26737,7 +26737,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -26813,7 +26813,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -26855,7 +26855,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -26903,7 +26903,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "409": {
             "description": "Conflict",
@@ -26949,7 +26949,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -26997,7 +26997,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -27066,7 +27066,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -27110,7 +27110,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -27162,7 +27162,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -27238,7 +27238,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -27280,7 +27280,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -27328,7 +27328,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "409": {
             "description": "Conflict",
@@ -27374,7 +27374,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -27422,7 +27422,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -27491,7 +27491,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -27535,7 +27535,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -27587,7 +27587,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -27663,7 +27663,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -27705,7 +27705,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -27753,7 +27753,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "409": {
             "description": "Conflict",
@@ -27799,7 +27799,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -27847,7 +27847,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -27916,7 +27916,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -27960,7 +27960,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -28012,7 +28012,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -28088,7 +28088,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -28130,7 +28130,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -28178,7 +28178,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "409": {
             "description": "Conflict",
@@ -28224,7 +28224,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -28272,7 +28272,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -28341,7 +28341,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -28385,7 +28385,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -28437,7 +28437,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -28513,7 +28513,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -28555,7 +28555,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -28603,7 +28603,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "409": {
             "description": "Conflict",
@@ -28649,7 +28649,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -28697,7 +28697,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -28766,7 +28766,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -28810,7 +28810,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -28862,7 +28862,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -28938,7 +28938,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -28980,7 +28980,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -29028,7 +29028,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "409": {
             "description": "Conflict",
@@ -29074,7 +29074,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -29122,7 +29122,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -29191,7 +29191,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           },
           "404": {
             "description": "Not Found",
@@ -29235,7 +29235,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -36165,7 +36165,8 @@
             "format": "date-time"
           },
           "duration": {
-            "$ref": "#/components/schemas/TimeSpan"
+            "type": "string",
+            "format": "date-span"
           },
           "name": {
             "type": "string",
@@ -36968,86 +36969,6 @@
           "dbName": {
             "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "TimeSpan": {
-        "type": "object",
-        "properties": {
-          "ticks": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "days": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "hours": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "milliseconds": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "microseconds": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "nanoseconds": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "minutes": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "seconds": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "totalDays": {
-            "type": "number",
-            "format": "double",
-            "readOnly": true
-          },
-          "totalHours": {
-            "type": "number",
-            "format": "double",
-            "readOnly": true
-          },
-          "totalMilliseconds": {
-            "type": "number",
-            "format": "double",
-            "readOnly": true
-          },
-          "totalMicroseconds": {
-            "type": "number",
-            "format": "double",
-            "readOnly": true
-          },
-          "totalNanoseconds": {
-            "type": "number",
-            "format": "double",
-            "readOnly": true
-          },
-          "totalMinutes": {
-            "type": "number",
-            "format": "double",
-            "readOnly": true
-          },
-          "totalSeconds": {
-            "type": "number",
-            "format": "double",
-            "readOnly": true
           }
         },
         "additionalProperties": false
