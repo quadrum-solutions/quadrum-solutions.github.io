@@ -33315,6 +33315,9 @@
           "ccrExclude": {
             "type": "boolean"
           },
+          "lexExclude": {
+            "type": "boolean"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
@@ -34510,6 +34513,9 @@
           "capitalDeductionAmount": {
             "type": "number",
             "format": "double"
+          },
+          "caExposureFlagB4": {
+            "type": "boolean"
           },
           "uniqueId": {
             "type": "string",
