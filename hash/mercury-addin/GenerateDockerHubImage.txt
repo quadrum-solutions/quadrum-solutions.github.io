@@ -1,3 +1,0 @@
-Version : GenerateDockerHubImage
-Date : 2024-06-05T07:54:06
-Digest : 67fb65d03345251f45d74e4ed41febf3ea1f7acfcf341af5c2f4852897ffafbf
