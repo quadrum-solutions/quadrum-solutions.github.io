@@ -31925,6 +31925,9 @@
               "$ref": "#/components/schemas/FilterParameter"
             },
             "nullable": true
+          },
+          "order": {
+            "$ref": "#/components/schemas/OrderParameter"
           }
         },
         "additionalProperties": false
@@ -33569,6 +33572,19 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "OrderParameter": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string",
+            "nullable": true
+          },
+          "isAsc": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
       },
       "Parameter": {
         "required": [
