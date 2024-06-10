@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-04-16T15:44:50.165Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.1.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="8Rps5CKncYfm1hcD9_Ga" version="24.1.0" type="device">
+<mxfile host="Electron" modified="2024-06-10T00:01:48.897Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.5.1 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="hyQnEpwJYz7_AGPoyHae" version="24.5.1" type="device">
   <diagram id="8fR3vlSnVLAmuQqtyXcf" name="Page-1">
-    <mxGraphModel dx="1430" dy="825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1674" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -91,7 +91,7 @@
         <mxCell id="1I_q_eXfddDbX86g2_ze-41" value="Déduit du capital" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1010" y="420" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="1I_q_eXfddDbX86g2_ze-44" value="Pondéré selon OFR annexe 2" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="1I_q_eXfddDbX86g2_ze-44" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;RW = 100%150%&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;ann. 4 chi. 1.4 or 1.5&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="810" y="570" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="1I_q_eXfddDbX86g2_ze-45" value="&lt;br&gt;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(42, 42, 42); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Au dessus des 2ème ou 3ème seuil&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
