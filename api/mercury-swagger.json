@@ -33321,6 +33321,9 @@
           "lexExclude": {
             "type": "boolean"
           },
+          "caltvDefinedRWFlag": {
+            "type": "boolean"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
