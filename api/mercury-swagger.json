@@ -2437,6 +2437,68 @@
         }
       }
     },
+    "/Export/DfConnector": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Allow to export to the df connector",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Load collection Id to export",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "lotTypeFk",
+            "in": "query",
+            "description": "Lot type FK to export",
+            "schema": {
+              "type": "string"
+            },
+            "example": "myLotTypeFk"
+          },
+          {
+            "name": "overwrite",
+            "in": "query",
+            "description": "Overwite the existing data if any",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            },
+            "example": true
+          },
+          {
+            "name": "async",
+            "in": "query",
+            "description": "False to wait for the task to end",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Import/RT01": {
       "post": {
         "tags": [
@@ -36147,6 +36209,9 @@
             "nullable": true
           },
           "isMSA": {
+            "type": "boolean"
+          },
+          "isMCSA": {
             "type": "boolean"
           },
           "category": {
