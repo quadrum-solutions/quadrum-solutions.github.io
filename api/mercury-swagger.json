@@ -33548,7 +33548,7 @@
           "forceConsolidation": {
             "type": "boolean"
           },
-          "ccrExclude": {
+          "creExclude": {
             "type": "boolean"
           },
           "lexExclude": {
