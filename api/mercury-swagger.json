@@ -2454,13 +2454,22 @@
             }
           },
           {
-            "name": "lotTypeFk",
+            "name": "lotTypeName",
             "in": "query",
-            "description": "Lot type FK to export",
+            "description": "Lot type Name of the export",
             "schema": {
               "type": "string"
             },
-            "example": "myLotTypeFk"
+            "example": "lotTypeName"
+          },
+          {
+            "name": "mcsaId",
+            "in": "query",
+            "description": "Mercury staging connector Id of the export",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
           },
           {
             "name": "overwrite",
