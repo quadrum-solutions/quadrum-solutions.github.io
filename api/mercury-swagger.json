@@ -36443,6 +36443,10 @@
           "query": {
             "$ref": "#/components/schemas/RunningTaskQueryDTO"
           },
+          "beVersion": {
+            "type": "string",
+            "nullable": true
+          },
           "isStarted": {
             "type": "boolean",
             "readOnly": true
