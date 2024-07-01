@@ -11215,6 +11215,76 @@
         }
       }
     },
+    "/CoreAmortization/BulkUpdate/{lcId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to bulkupdate positions",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the load collection",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for items to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/CoreDerivative/PagedByLoadId": {
       "get": {
         "tags": [
@@ -12097,6 +12167,76 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreDerivative/BulkUpdate/{lcId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to bulkupdate positions",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the load collection",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for items to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -13033,6 +13173,76 @@
         }
       }
     },
+    "/CoreDerivativeCalc/BulkUpdate/{lcId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to bulkupdate positions",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the load collection",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for items to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/CoreDerivativesSwap/PagedByLoadId": {
       "get": {
         "tags": [
@@ -13915,6 +14125,76 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreDerivativesSwap/BulkUpdate/{lcId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to bulkupdate positions",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the load collection",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for items to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -14851,6 +15131,76 @@
         }
       }
     },
+    "/CoreInterestRate/BulkUpdate/{lcId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to bulkupdate positions",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the load collection",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for items to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/CoreModuleSpecific/PagedByLoadId": {
       "get": {
         "tags": [
@@ -15733,6 +16083,76 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreModuleSpecific/BulkUpdate/{lcId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to bulkupdate positions",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the load collection",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for items to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -16669,6 +17089,76 @@
         }
       }
     },
+    "/CorePledge/BulkUpdate/{lcId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to bulkupdate positions",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the load collection",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for items to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/CorePosition/PagedByLoadId": {
       "get": {
         "tags": [
@@ -17551,6 +18041,76 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePosition/BulkUpdate/{lcId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to bulkupdate positions",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the load collection",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for items to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -18487,6 +19047,76 @@
         }
       }
     },
+    "/CorePositionCalc/BulkUpdate/{lcId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to bulkupdate positions",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the load collection",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for items to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/CorePositionSingle/PagedByLoadId": {
       "get": {
         "tags": [
@@ -19369,6 +19999,76 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePositionSingle/BulkUpdate/{lcId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to bulkupdate positions",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the load collection",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for items to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -30090,6 +30790,30 @@
         "properties": {
           "item": {
             "$ref": "#/components/schemas/BookingCenter"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BulkUpdateParameter": {
+        "type": "object",
+        "properties": {
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FilterParameter"
+            },
+            "nullable": true
+          },
+          "field": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "nullable": true
           },
           "comment": {
             "type": "string",
