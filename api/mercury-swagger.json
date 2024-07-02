@@ -9727,23 +9727,50 @@
         }
       }
     },
-    "/Task/TasksSince": {
+    "/Task/FinishedTasks": {
       "get": {
         "tags": [
           "Task"
         ],
-        "summary": "Allow to fetch all the tasks since a provided date",
+        "summary": "Allow to fetch the x finished tasks",
         "parameters": [
           {
-            "name": "since",
+            "name": "number",
             "in": "query",
-            "description": "Date from when fetching the tasks",
+            "description": "Number of tasks to return",
             "schema": {
-              "type": "string",
-              "format": "date-time"
+              "type": "integer",
+              "format": "int32",
+              "default": 100
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RunningTaskDTO"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Task/NotFinishedTasks": {
+      "get": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "Allow to fetch the not finished tasks",
         "responses": {
           "200": {
             "description": "OK",
