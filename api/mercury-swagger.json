@@ -34308,6 +34308,26 @@
           "caltvDefinedRWFlag": {
             "type": "boolean"
           },
+          "ccrForceSupervisoryDelta": {
+            "type": "number",
+            "format": "float"
+          },
+          "ccrForceAdjustedNotional": {
+            "type": "number",
+            "format": "float"
+          },
+          "ccrForceSubHedgingSetId": {
+            "type": "string",
+            "nullable": true
+          },
+          "ccrForceHedgingSetId": {
+            "type": "string",
+            "nullable": true
+          },
+          "ccrProxy": {
+            "type": "integer",
+            "format": "int32"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
