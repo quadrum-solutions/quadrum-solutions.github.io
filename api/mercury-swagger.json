@@ -30391,6 +30391,9 @@
       "Amortization": {
         "type": "object",
         "properties": {
+          "isEdited": {
+            "type": "boolean"
+          },
           "id": {
             "type": "string",
             "nullable": true
@@ -32049,6 +32052,9 @@
       "Derivative": {
         "type": "object",
         "properties": {
+          "isEdited": {
+            "type": "boolean"
+          },
           "id": {
             "type": "string",
             "nullable": true
@@ -32186,6 +32192,9 @@
       "DerivativeCalc": {
         "type": "object",
         "properties": {
+          "isEdited": {
+            "type": "boolean"
+          },
           "id": {
             "type": "string",
             "nullable": true
@@ -32487,6 +32496,9 @@
       "DerivativesSwap": {
         "type": "object",
         "properties": {
+          "isEdited": {
+            "type": "boolean"
+          },
           "id": {
             "type": "string",
             "nullable": true
@@ -33038,6 +33050,9 @@
       "InterestRate": {
         "type": "object",
         "properties": {
+          "isEdited": {
+            "type": "boolean"
+          },
           "id": {
             "type": "string",
             "nullable": true
@@ -34146,6 +34161,9 @@
       "ModuleSpecific": {
         "type": "object",
         "properties": {
+          "isEdited": {
+            "type": "boolean"
+          },
           "id": {
             "type": "string",
             "nullable": true
@@ -34698,6 +34716,9 @@
       "Pledge": {
         "type": "object",
         "properties": {
+          "isEdited": {
+            "type": "boolean"
+          },
           "loadId": {
             "type": "integer",
             "format": "int32",
@@ -34813,6 +34834,9 @@
       "Position": {
         "type": "object",
         "properties": {
+          "isEdited": {
+            "type": "boolean"
+          },
           "id": {
             "type": "string",
             "nullable": true
@@ -35251,6 +35275,9 @@
       "PositionCalc": {
         "type": "object",
         "properties": {
+          "isEdited": {
+            "type": "boolean"
+          },
           "id": {
             "type": "string",
             "nullable": true
@@ -36081,6 +36108,9 @@
       "PositionSingle": {
         "type": "object",
         "properties": {
+          "isEdited": {
+            "type": "boolean"
+          },
           "id": {
             "type": "integer",
             "format": "int64"
