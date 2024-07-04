@@ -37218,6 +37218,10 @@
             "type": "string",
             "nullable": true
           },
+          "estimatedDuration": {
+            "type": "string",
+            "format": "date-span"
+          },
           "isStarted": {
             "type": "boolean",
             "readOnly": true
