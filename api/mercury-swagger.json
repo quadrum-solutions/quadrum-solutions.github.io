@@ -11398,7 +11398,7 @@
         }
       }
     },
-    "/CoreAmortization/BulkUpdateByLoadId/{lcId}": {
+    "/CoreAmortization/BulkUpdateByLoadId/{loadId}": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -11407,19 +11407,12 @@
         "parameters": [
           {
             "name": "loadId",
-            "in": "query",
+            "in": "path",
             "description": "Id of the load",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
-          },
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
             }
           }
         ],
@@ -12454,7 +12447,7 @@
         }
       }
     },
-    "/CoreDerivative/BulkUpdateByLoadId/{lcId}": {
+    "/CoreDerivative/BulkUpdateByLoadId/{loadId}": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -12463,19 +12456,12 @@
         "parameters": [
           {
             "name": "loadId",
-            "in": "query",
+            "in": "path",
             "description": "Id of the load",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
-          },
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
             }
           }
         ],
@@ -13510,7 +13496,7 @@
         }
       }
     },
-    "/CoreDerivativeCalc/BulkUpdateByLoadId/{lcId}": {
+    "/CoreDerivativeCalc/BulkUpdateByLoadId/{loadId}": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -13519,19 +13505,12 @@
         "parameters": [
           {
             "name": "loadId",
-            "in": "query",
+            "in": "path",
             "description": "Id of the load",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
-          },
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
             }
           }
         ],
@@ -14566,7 +14545,7 @@
         }
       }
     },
-    "/CoreDerivativesSwap/BulkUpdateByLoadId/{lcId}": {
+    "/CoreDerivativesSwap/BulkUpdateByLoadId/{loadId}": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -14575,19 +14554,12 @@
         "parameters": [
           {
             "name": "loadId",
-            "in": "query",
+            "in": "path",
             "description": "Id of the load",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
-          },
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
             }
           }
         ],
@@ -15622,7 +15594,7 @@
         }
       }
     },
-    "/CoreInterestRate/BulkUpdateByLoadId/{lcId}": {
+    "/CoreInterestRate/BulkUpdateByLoadId/{loadId}": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -15631,19 +15603,12 @@
         "parameters": [
           {
             "name": "loadId",
-            "in": "query",
+            "in": "path",
             "description": "Id of the load",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
-          },
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
             }
           }
         ],
@@ -16678,7 +16643,7 @@
         }
       }
     },
-    "/CoreModuleSpecific/BulkUpdateByLoadId/{lcId}": {
+    "/CoreModuleSpecific/BulkUpdateByLoadId/{loadId}": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -16687,19 +16652,12 @@
         "parameters": [
           {
             "name": "loadId",
-            "in": "query",
+            "in": "path",
             "description": "Id of the load",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
-          },
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
             }
           }
         ],
@@ -17734,7 +17692,7 @@
         }
       }
     },
-    "/CorePledge/BulkUpdateByLoadId/{lcId}": {
+    "/CorePledge/BulkUpdateByLoadId/{loadId}": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -17743,19 +17701,12 @@
         "parameters": [
           {
             "name": "loadId",
-            "in": "query",
+            "in": "path",
             "description": "Id of the load",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
-          },
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
             }
           }
         ],
@@ -18790,7 +18741,7 @@
         }
       }
     },
-    "/CorePosition/BulkUpdateByLoadId/{lcId}": {
+    "/CorePosition/BulkUpdateByLoadId/{loadId}": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -18799,19 +18750,12 @@
         "parameters": [
           {
             "name": "loadId",
-            "in": "query",
+            "in": "path",
             "description": "Id of the load",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
-          },
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
             }
           }
         ],
@@ -19846,7 +19790,7 @@
         }
       }
     },
-    "/CorePositionCalc/BulkUpdateByLoadId/{lcId}": {
+    "/CorePositionCalc/BulkUpdateByLoadId/{loadId}": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -19855,19 +19799,12 @@
         "parameters": [
           {
             "name": "loadId",
-            "in": "query",
+            "in": "path",
             "description": "Id of the load",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
-          },
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
             }
           }
         ],
@@ -20902,7 +20839,7 @@
         }
       }
     },
-    "/CorePositionSingle/BulkUpdateByLoadId/{lcId}": {
+    "/CorePositionSingle/BulkUpdateByLoadId/{loadId}": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -20911,19 +20848,12 @@
         "parameters": [
           {
             "name": "loadId",
-            "in": "query",
+            "in": "path",
             "description": "Id of the load",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
-          },
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
             }
           }
         ],
