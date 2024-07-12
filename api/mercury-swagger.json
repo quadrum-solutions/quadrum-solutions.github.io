@@ -9595,26 +9595,26 @@
         }
       }
     },
-    "/Scenario/OnTheFly/{name}": {
+    "/Simulation/OnTheFly/{name}": {
       "post": {
         "tags": [
-          "Scenario"
+          "Simulation"
         ],
         "summary": "Run a calculation on the fly",
         "parameters": [
           {
             "name": "name",
             "in": "path",
-            "description": "Name of the scenario",
+            "description": "Name of the simulation",
             "required": true,
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "scenarioTypeName",
+            "name": "simulationTypeName",
             "in": "query",
-            "description": "Type of scenario to apply",
+            "description": "Type of simulation to apply",
             "schema": {
               "type": "string"
             }
@@ -9669,10 +9669,10 @@
         }
       }
     },
-    "/Scenario/OnTheFlyWithLc/{lcId}": {
+    "/Simulation/OnTheFlyWithLc/{lcId}": {
       "post": {
         "tags": [
-          "Scenario"
+          "Simulation"
         ],
         "summary": "Run a calculation on the fly with an existing load collection",
         "parameters": [
@@ -9688,9 +9688,9 @@
             "example": 1
           },
           {
-            "name": "scenarioTypeName",
+            "name": "simulationTypeName",
             "in": "query",
-            "description": "Type of scenario to apply",
+            "description": "Type of simulation to apply",
             "schema": {
               "type": "string"
             }
@@ -9755,12 +9755,12 @@
         }
       }
     },
-    "/Scenario/Scenarios/{lcId}": {
+    "/Simulation/Simulations/{lcId}": {
       "post": {
         "tags": [
-          "Scenario"
+          "Simulation"
         ],
-        "summary": "Run a scenario",
+        "summary": "Run a simulation",
         "parameters": [
           {
             "name": "lcId",
@@ -9784,7 +9784,7 @@
           }
         ],
         "requestBody": {
-          "description": "Names of scenarios to run",
+          "description": "Names of simulations to run",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -26814,7 +26814,7 @@
         }
       }
     },
-    "/ScenarioGroup": {
+    "/SimulationGroup": {
       "get": {
         "tags": [
           "zGenericDyn"
@@ -26828,7 +26828,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ScenarioGroup"
+                    "$ref": "#/components/schemas/SimulationGroup"
                   }
                 }
               }
@@ -26846,22 +26846,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioGroup"
+                "$ref": "#/components/schemas/SimulationGroup"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioGroup"
+                "$ref": "#/components/schemas/SimulationGroup"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioGroup"
+                "$ref": "#/components/schemas/SimulationGroup"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioGroup"
+                "$ref": "#/components/schemas/SimulationGroup"
               }
             }
           }
@@ -26902,22 +26902,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioGroup"
+                "$ref": "#/components/schemas/SimulationGroup"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioGroup"
+                "$ref": "#/components/schemas/SimulationGroup"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioGroup"
+                "$ref": "#/components/schemas/SimulationGroup"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioGroup"
+                "$ref": "#/components/schemas/SimulationGroup"
               }
             }
           }
@@ -26949,7 +26949,7 @@
         }
       }
     },
-    "/ScenarioGroup/{id}": {
+    "/SimulationGroup/{id}": {
       "get": {
         "tags": [
           "zGenericDyn"
@@ -26973,7 +26973,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ScenarioGroup"
+                  "$ref": "#/components/schemas/SimulationGroup"
                 }
               }
             }
@@ -27102,7 +27102,7 @@
         }
       }
     },
-    "/ScenarioGroup/withcomment": {
+    "/SimulationGroup/withcomment": {
       "put": {
         "tags": [
           "zGenericDyn"
@@ -27113,22 +27113,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioGroupRecordAuditUpdateDTO"
+                "$ref": "#/components/schemas/SimulationGroupRecordAuditUpdateDTO"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioGroupRecordAuditUpdateDTO"
+                "$ref": "#/components/schemas/SimulationGroupRecordAuditUpdateDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioGroupRecordAuditUpdateDTO"
+                "$ref": "#/components/schemas/SimulationGroupRecordAuditUpdateDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioGroupRecordAuditUpdateDTO"
+                "$ref": "#/components/schemas/SimulationGroupRecordAuditUpdateDTO"
               }
             }
           }
@@ -27160,7 +27160,7 @@
         }
       }
     },
-    "/ScenarioGroup/withcomment/{id}": {
+    "/SimulationGroup/withcomment/{id}": {
       "patch": {
         "tags": [
           "zGenericDyn"
@@ -27182,22 +27182,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioGroupRecordAuditPatchDTO"
+                "$ref": "#/components/schemas/SimulationGroupRecordAuditPatchDTO"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioGroupRecordAuditPatchDTO"
+                "$ref": "#/components/schemas/SimulationGroupRecordAuditPatchDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioGroupRecordAuditPatchDTO"
+                "$ref": "#/components/schemas/SimulationGroupRecordAuditPatchDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioGroupRecordAuditPatchDTO"
+                "$ref": "#/components/schemas/SimulationGroupRecordAuditPatchDTO"
               }
             }
           }
@@ -27229,7 +27229,7 @@
         }
       }
     },
-    "/ScenarioGroup/RecordsAuditById/{id}": {
+    "/SimulationGroup/RecordsAuditById/{id}": {
       "get": {
         "tags": [
           "zGenericDyn"
@@ -27273,7 +27273,7 @@
         }
       }
     },
-    "/ScenarioRule": {
+    "/SimulationRule": {
       "get": {
         "tags": [
           "zGenericDyn"
@@ -27287,7 +27287,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ScenarioRule"
+                    "$ref": "#/components/schemas/SimulationRule"
                   }
                 }
               }
@@ -27305,22 +27305,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioRule"
+                "$ref": "#/components/schemas/SimulationRule"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioRule"
+                "$ref": "#/components/schemas/SimulationRule"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioRule"
+                "$ref": "#/components/schemas/SimulationRule"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioRule"
+                "$ref": "#/components/schemas/SimulationRule"
               }
             }
           }
@@ -27361,22 +27361,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioRule"
+                "$ref": "#/components/schemas/SimulationRule"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioRule"
+                "$ref": "#/components/schemas/SimulationRule"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioRule"
+                "$ref": "#/components/schemas/SimulationRule"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioRule"
+                "$ref": "#/components/schemas/SimulationRule"
               }
             }
           }
@@ -27408,7 +27408,7 @@
         }
       }
     },
-    "/ScenarioRule/{id}": {
+    "/SimulationRule/{id}": {
       "get": {
         "tags": [
           "zGenericDyn"
@@ -27432,7 +27432,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ScenarioRule"
+                  "$ref": "#/components/schemas/SimulationRule"
                 }
               }
             }
@@ -27561,7 +27561,7 @@
         }
       }
     },
-    "/ScenarioRule/withcomment": {
+    "/SimulationRule/withcomment": {
       "put": {
         "tags": [
           "zGenericDyn"
@@ -27572,22 +27572,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioRuleRecordAuditUpdateDTO"
+                "$ref": "#/components/schemas/SimulationRuleRecordAuditUpdateDTO"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioRuleRecordAuditUpdateDTO"
+                "$ref": "#/components/schemas/SimulationRuleRecordAuditUpdateDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioRuleRecordAuditUpdateDTO"
+                "$ref": "#/components/schemas/SimulationRuleRecordAuditUpdateDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioRuleRecordAuditUpdateDTO"
+                "$ref": "#/components/schemas/SimulationRuleRecordAuditUpdateDTO"
               }
             }
           }
@@ -27619,7 +27619,7 @@
         }
       }
     },
-    "/ScenarioRule/withcomment/{id}": {
+    "/SimulationRule/withcomment/{id}": {
       "patch": {
         "tags": [
           "zGenericDyn"
@@ -27641,22 +27641,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioRuleRecordAuditPatchDTO"
+                "$ref": "#/components/schemas/SimulationRuleRecordAuditPatchDTO"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioRuleRecordAuditPatchDTO"
+                "$ref": "#/components/schemas/SimulationRuleRecordAuditPatchDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioRuleRecordAuditPatchDTO"
+                "$ref": "#/components/schemas/SimulationRuleRecordAuditPatchDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ScenarioRuleRecordAuditPatchDTO"
+                "$ref": "#/components/schemas/SimulationRuleRecordAuditPatchDTO"
               }
             }
           }
@@ -27688,7 +27688,466 @@
         }
       }
     },
-    "/ScenarioRule/RecordsAuditById/{id}": {
+    "/SimulationRule/RecordsAuditById/{id}": {
+      "get": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SimulationType": {
+      "get": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to fetch all items",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SimulationType"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to create an item",
+        "requestBody": {
+          "description": "Item to create",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SimulationType"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SimulationType"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SimulationType"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SimulationType"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SimulationType"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SimulationType"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SimulationType"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SimulationType"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SimulationType/{id}": {
+      "get": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to fetch one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "1"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimulationType"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to patch an item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Item to patch",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SimulationType/withcomment": {
+      "put": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to update an item with comment",
+        "requestBody": {
+          "description": "Item to update with comment",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SimulationTypeRecordAuditUpdateDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SimulationTypeRecordAuditUpdateDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SimulationTypeRecordAuditUpdateDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SimulationTypeRecordAuditUpdateDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SimulationType/withcomment/{id}": {
+      "patch": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to patch an item with comment",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Item to patch",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SimulationTypeRecordAuditPatchDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SimulationTypeRecordAuditPatchDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SimulationTypeRecordAuditPatchDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SimulationTypeRecordAuditPatchDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SimulationType/RecordsAuditById/{id}": {
       "get": {
         "tags": [
           "zGenericDyn"
@@ -38223,229 +38682,6 @@
         },
         "additionalProperties": false
       },
-      "ScenarioGroup": {
-        "required": [
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "type": {
-            "type": "string",
-            "nullable": true
-          },
-          "author": {
-            "type": "string",
-            "nullable": true
-          },
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
-          "comment": {
-            "type": "string",
-            "nullable": true
-          },
-          "scenarioRules": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ScenarioRule"
-            },
-            "nullable": true
-          },
-          "id": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "uniqueId": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ScenarioGroupJsonPatchDocument": {
-        "type": "object",
-        "properties": {
-          "operations": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ScenarioGroupOperation"
-            },
-            "nullable": true,
-            "readOnly": true
-          },
-          "contractResolver": {
-            "$ref": "#/components/schemas/IContractResolver"
-          }
-        },
-        "additionalProperties": false
-      },
-      "ScenarioGroupOperation": {
-        "type": "object",
-        "properties": {
-          "operationType": {
-            "$ref": "#/components/schemas/OperationType"
-          },
-          "path": {
-            "type": "string",
-            "nullable": true
-          },
-          "op": {
-            "type": "string",
-            "nullable": true
-          },
-          "from": {
-            "type": "string",
-            "nullable": true
-          },
-          "value": {
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ScenarioGroupRecordAuditPatchDTO": {
-        "type": "object",
-        "properties": {
-          "item": {
-            "$ref": "#/components/schemas/ScenarioGroupJsonPatchDocument"
-          },
-          "comment": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ScenarioGroupRecordAuditUpdateDTO": {
-        "type": "object",
-        "properties": {
-          "item": {
-            "$ref": "#/components/schemas/ScenarioGroup"
-          },
-          "comment": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ScenarioRule": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "scenarioName": {
-            "type": "string",
-            "nullable": true
-          },
-          "scenarioGroup": {
-            "$ref": "#/components/schemas/ScenarioGroup"
-          },
-          "impact": {
-            "type": "string",
-            "nullable": true
-          },
-          "condition": {
-            "type": "string",
-            "nullable": true
-          },
-          "table": {
-            "type": "string",
-            "nullable": true
-          },
-          "join": {
-            "type": "string",
-            "nullable": true
-          },
-          "id": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "uniqueId": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ScenarioRuleJsonPatchDocument": {
-        "type": "object",
-        "properties": {
-          "operations": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ScenarioRuleOperation"
-            },
-            "nullable": true,
-            "readOnly": true
-          },
-          "contractResolver": {
-            "$ref": "#/components/schemas/IContractResolver"
-          }
-        },
-        "additionalProperties": false
-      },
-      "ScenarioRuleOperation": {
-        "type": "object",
-        "properties": {
-          "operationType": {
-            "$ref": "#/components/schemas/OperationType"
-          },
-          "path": {
-            "type": "string",
-            "nullable": true
-          },
-          "op": {
-            "type": "string",
-            "nullable": true
-          },
-          "from": {
-            "type": "string",
-            "nullable": true
-          },
-          "value": {
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ScenarioRuleRecordAuditPatchDTO": {
-        "type": "object",
-        "properties": {
-          "item": {
-            "$ref": "#/components/schemas/ScenarioRuleJsonPatchDocument"
-          },
-          "comment": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ScenarioRuleRecordAuditUpdateDTO": {
-        "type": "object",
-        "properties": {
-          "item": {
-            "$ref": "#/components/schemas/ScenarioRule"
-          },
-          "comment": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "Security": {
         "type": "object",
         "properties": {
@@ -38631,6 +38867,328 @@
         "properties": {
           "item": {
             "$ref": "#/components/schemas/Security"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SimulationGroup": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "author": {
+            "type": "string",
+            "nullable": true
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          },
+          "simulationRules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SimulationRule"
+            },
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SimulationGroupJsonPatchDocument": {
+        "type": "object",
+        "properties": {
+          "operations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SimulationGroupOperation"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "contractResolver": {
+            "$ref": "#/components/schemas/IContractResolver"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SimulationGroupOperation": {
+        "type": "object",
+        "properties": {
+          "operationType": {
+            "$ref": "#/components/schemas/OperationType"
+          },
+          "path": {
+            "type": "string",
+            "nullable": true
+          },
+          "op": {
+            "type": "string",
+            "nullable": true
+          },
+          "from": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SimulationGroupRecordAuditPatchDTO": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/SimulationGroupJsonPatchDocument"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SimulationGroupRecordAuditUpdateDTO": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/SimulationGroup"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SimulationRule": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "simulationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "simulationGroup": {
+            "$ref": "#/components/schemas/SimulationGroup"
+          },
+          "impact": {
+            "type": "string",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "table": {
+            "type": "string",
+            "nullable": true
+          },
+          "join": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SimulationRuleJsonPatchDocument": {
+        "type": "object",
+        "properties": {
+          "operations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SimulationRuleOperation"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "contractResolver": {
+            "$ref": "#/components/schemas/IContractResolver"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SimulationRuleOperation": {
+        "type": "object",
+        "properties": {
+          "operationType": {
+            "$ref": "#/components/schemas/OperationType"
+          },
+          "path": {
+            "type": "string",
+            "nullable": true
+          },
+          "op": {
+            "type": "string",
+            "nullable": true
+          },
+          "from": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SimulationRuleRecordAuditPatchDTO": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/SimulationRuleJsonPatchDocument"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SimulationRuleRecordAuditUpdateDTO": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/SimulationRule"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SimulationType": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "order": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "action": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SimulationTypeJsonPatchDocument": {
+        "type": "object",
+        "properties": {
+          "operations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SimulationTypeOperation"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "contractResolver": {
+            "$ref": "#/components/schemas/IContractResolver"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SimulationTypeOperation": {
+        "type": "object",
+        "properties": {
+          "operationType": {
+            "$ref": "#/components/schemas/OperationType"
+          },
+          "path": {
+            "type": "string",
+            "nullable": true
+          },
+          "op": {
+            "type": "string",
+            "nullable": true
+          },
+          "from": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SimulationTypeRecordAuditPatchDTO": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/SimulationTypeJsonPatchDocument"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SimulationTypeRecordAuditUpdateDTO": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/SimulationType"
           },
           "comment": {
             "type": "string",
