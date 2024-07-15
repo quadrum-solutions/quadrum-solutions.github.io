@@ -3,6 +3,10 @@ on:
   schedule:
     - cron: '0 8 1 * *'
   workflow_dispatch: # Allow to manually trigger
+
+permissions:
+  contents: write
+  
 jobs:
   build:
     name: Build
