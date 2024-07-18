@@ -35718,6 +35718,9 @@
             "type": "integer",
             "format": "int32"
           },
+          "levExclude": {
+            "type": "boolean"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
