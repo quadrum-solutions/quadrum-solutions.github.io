@@ -8669,6 +8669,16 @@
               "type": "string"
             },
             "example": "M201"
+          },
+          {
+            "name": "includePositions",
+            "in": "query",
+            "description": "True to include the positions detail",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            },
+            "example": true
           }
         ],
         "responses": {
