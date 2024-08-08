@@ -2621,6 +2621,16 @@
             "example": true
           },
           {
+            "name": "reportingEntityId",
+            "in": "query",
+            "description": "Reporting entity Id",
+            "schema": {
+              "type": "string",
+              "default": ""
+            },
+            "example": "001"
+          },
+          {
             "name": "async",
             "in": "query",
             "description": "False to wait for the task to end",
@@ -2720,6 +2730,16 @@
               "default": true
             },
             "example": true
+          },
+          {
+            "name": "reportingEntityId",
+            "in": "query",
+            "description": "Reporting entity Id",
+            "schema": {
+              "type": "string",
+              "default": ""
+            },
+            "example": "001"
           },
           {
             "name": "async",
@@ -2826,6 +2846,16 @@
             "example": true
           },
           {
+            "name": "reportingEntityId",
+            "in": "query",
+            "description": "Reporting entity Id",
+            "schema": {
+              "type": "string",
+              "default": ""
+            },
+            "example": "001"
+          },
+          {
             "name": "linkToLc",
             "in": "query",
             "description": "True to link Load a LoadCollection",
@@ -2916,6 +2946,16 @@
               "default": true
             },
             "example": true
+          },
+          {
+            "name": "reportingEntityId",
+            "in": "query",
+            "description": "Reporting entity Id",
+            "schema": {
+              "type": "string",
+              "default": ""
+            },
+            "example": "001"
           },
           {
             "name": "linkToLc",
@@ -3047,6 +3087,16 @@
             "example": true
           },
           {
+            "name": "reportingEntityId",
+            "in": "query",
+            "description": "Reporting entity Id",
+            "schema": {
+              "type": "string",
+              "default": ""
+            },
+            "example": "001"
+          },
+          {
             "name": "async",
             "in": "query",
             "description": "False to wait for the task to end",
@@ -3169,6 +3219,16 @@
             "example": true
           },
           {
+            "name": "reportingEntityId",
+            "in": "query",
+            "description": "Reporting entity Id",
+            "schema": {
+              "type": "string",
+              "default": ""
+            },
+            "example": "001"
+          },
+          {
             "name": "async",
             "in": "query",
             "description": "False to wait for the task to end",
@@ -3269,6 +3329,16 @@
               "default": true
             },
             "example": true
+          },
+          {
+            "name": "reportingEntityId",
+            "in": "query",
+            "description": "Reporting entity Id",
+            "schema": {
+              "type": "string",
+              "default": ""
+            },
+            "example": "001"
           },
           {
             "name": "async",
@@ -3564,6 +3634,138 @@
           },
           "500": {
             "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Import/Batch": {
+      "post": {
+        "tags": [
+          "Import"
+        ],
+        "summary": "Allow to import and calculate data from a rt01 file",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "Name of the load",
+            "schema": {
+              "type": "string"
+            },
+            "example": "My Load"
+          },
+          {
+            "name": "date",
+            "in": "query",
+            "description": "Reporting date",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2022-12-31"
+          },
+          {
+            "name": "reportingEntityId",
+            "in": "query",
+            "description": "Reporting entity Id",
+            "schema": {
+              "type": "string",
+              "default": ""
+            },
+            "example": "001"
+          },
+          {
+            "name": "overwrite",
+            "in": "query",
+            "description": "Overwite the existing data if any",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            },
+            "example": true
+          },
+          {
+            "name": "async",
+            "in": "query",
+            "description": "False to wait for the task to end",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "linkToLc",
+            "in": "query",
+            "description": "True to link Load a LoadCollection",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
+            "name": "idLc",
+            "in": "query",
+            "description": "Specify the id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "inputFiles": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  },
+                  "calculations": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "surveys": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "encoding": {
+                "inputFiles": {
+                  "style": "form"
+                },
+                "calculations": {
+                  "style": "form"
+                },
+                "surveys": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       }
