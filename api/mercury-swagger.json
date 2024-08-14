@@ -21306,6 +21306,58 @@
         }
       }
     },
+    "/Description/Descriptions/Values": {
+      "get": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to fetch all the different SubValues of a field",
+        "parameters": [
+          {
+            "name": "language",
+            "in": "query",
+            "description": "Language of the value",
+            "schema": {
+              "type": "string"
+            },
+            "example": "FR"
+          },
+          {
+            "name": "field",
+            "in": "query",
+            "description": "Field of the value",
+            "schema": {
+              "type": "string"
+            },
+            "example": "Configs"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "Name of the value",
+            "schema": {
+              "type": "string"
+            },
+            "example": "ASTA2CRMTYPE"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Description"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Description/Values": {
       "get": {
         "tags": [
