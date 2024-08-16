@@ -1869,6 +1869,122 @@
         }
       }
     },
+    "/Engine/CalcCaB4/{lcId}": {
+      "post": {
+        "tags": [
+          "Engine"
+        ],
+        "summary": "Run the Basel 4 CRM CA calculation",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the LoadCollection to run",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "async",
+            "in": "query",
+            "description": "False to wait for the task to end",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Engine/CalcCrmCaB4/{lcId}": {
+      "post": {
+        "tags": [
+          "Engine"
+        ],
+        "summary": "Run the Basel 4 CRM CA calculation",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the LoadCollection to run",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "async",
+            "in": "query",
+            "description": "False to wait for the task to end",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/Engine/CalcCrmLex/{lcId}": {
       "post": {
         "tags": [
@@ -32828,7 +32944,8 @@
           4,
           5,
           6,
-          7
+          7,
+          8
         ],
         "type": "integer",
         "format": "int32"
@@ -36575,6 +36692,20 @@
             },
             "nullable": true
           },
+          "positionsCrmCaB4Exposures": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PositionCrmCaB4"
+            },
+            "nullable": true
+          },
+          "positionsCrmCaB4Collaterals": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PositionCrmCaB4"
+            },
+            "nullable": true
+          },
           "positionsCrmLexExposures": {
             "type": "array",
             "items": {
@@ -37388,6 +37519,70 @@
         "additionalProperties": false
       },
       "PositionCrmCa": {
+        "type": "object",
+        "properties": {
+          "loadCollectionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "loadCollection": {
+            "$ref": "#/components/schemas/LoadCollection"
+          },
+          "positionExposure": {
+            "$ref": "#/components/schemas/Position"
+          },
+          "positionCollateral": {
+            "$ref": "#/components/schemas/Position"
+          },
+          "collateralLoadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "collateralId": {
+            "type": "string",
+            "nullable": true
+          },
+          "exposureLoadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "exposureId": {
+            "type": "string",
+            "nullable": true
+          },
+          "order": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "amountCovered": {
+            "type": "number",
+            "format": "double"
+          },
+          "collateralAmountUsed": {
+            "type": "number",
+            "format": "double"
+          },
+          "fxHaircut": {
+            "type": "number",
+            "format": "double"
+          },
+          "maturityHaircut": {
+            "type": "number",
+            "format": "double"
+          },
+          "adaptedHaircut": {
+            "type": "number",
+            "format": "double"
+          },
+          "rwa": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PositionCrmCaB4": {
         "type": "object",
         "properties": {
           "loadCollectionId": {
