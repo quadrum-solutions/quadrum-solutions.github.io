@@ -2827,6 +2827,7 @@
           }
         ],
         "requestBody": {
+          "description": "RT01 file to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -2938,6 +2939,7 @@
           }
         ],
         "requestBody": {
+          "description": "RT01 files to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -3043,6 +3045,7 @@
           }
         ],
         "requestBody": {
+          "description": "RT01 file to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -3145,6 +3148,7 @@
           }
         ],
         "requestBody": {
+          "description": "RT01 file to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -3293,6 +3297,7 @@
           }
         ],
         "requestBody": {
+          "description": "Excel file to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -3880,6 +3885,7 @@
           }
         ],
         "requestBody": {
+          "description": "RT01 files to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -4541,6 +4547,7 @@
           }
         ],
         "requestBody": {
+          "description": "File to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -4698,6 +4705,7 @@
         ],
         "summary": "Allow to load a csv file",
         "requestBody": {
+          "description": "File to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -4746,6 +4754,7 @@
           }
         ],
         "requestBody": {
+          "description": "File to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -5241,6 +5250,7 @@
         ],
         "summary": "Allow to load a csv file",
         "requestBody": {
+          "description": "File to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -5289,6 +5299,7 @@
           }
         ],
         "requestBody": {
+          "description": "File to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -9877,6 +9888,7 @@
           }
         ],
         "requestBody": {
+          "description": "Excel file",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -10009,6 +10021,7 @@
           }
         ],
         "requestBody": {
+          "description": "Excel file containing the data",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -10085,6 +10098,7 @@
           }
         ],
         "requestBody": {
+          "description": "Excel file containing the data",
           "content": {
             "multipart/form-data": {
               "schema": {
