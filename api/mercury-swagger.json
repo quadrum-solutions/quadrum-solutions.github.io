@@ -9764,6 +9764,151 @@
         }
       }
     },
+    "/Reports/FetchDynamicReport/{lcId}/{reportName}": {
+      "post": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to retieve a dynamic report",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the load collection",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "reportName",
+            "in": "path",
+            "description": "Name of the report",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "simple_example"
+          }
+        ],
+        "requestBody": {
+          "description": "Filters to apply to the report",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/DynamicReportFilterDTO"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/DynamicReportFilterDTO"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/DynamicReportFilterDTO"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/DynamicReportFilterDTO"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Reports/FetchDynamicReport/Categories/{lcId}/{reportName}": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to retieve a dynamic report",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the load collection",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "reportName",
+            "in": "path",
+            "description": "Name of the report",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "simple_example"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Reports/List": {
       "get": {
         "tags": [
@@ -34597,6 +34742,20 @@
             "$ref": "#/components/schemas/Description"
           },
           "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DynamicReportFilterDTO": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "nullable": true
+          },
+          "item": {
             "type": "string",
             "nullable": true
           }
