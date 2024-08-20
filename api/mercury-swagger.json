@@ -2346,6 +2346,32 @@
         }
       }
     },
+    "/Engine/CalcEndpoints": {
+      "get": {
+        "tags": [
+          "Engine"
+        ],
+        "summary": "Provide the list of endpoints to run the calculations",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Engine/CalcEndpoints/File": {
+      "get": {
+        "tags": [
+          "Engine"
+        ],
+        "summary": "Provide the list of endpoints to run the calculations in a file",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Engine/CalcsForSurvey/{surveyName}": {
       "get": {
         "tags": [
@@ -9915,6 +9941,29 @@
           "Reports"
         ],
         "summary": "Allow to retieve the list of available surveys and reports",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SurveyListDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Reports/ListSurveys/File": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to retieve the list of available surveys in a text file",
         "responses": {
           "200": {
             "description": "OK",
