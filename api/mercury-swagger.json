@@ -33546,6 +33546,10 @@
             "type": "string",
             "nullable": true
           },
+          "incomeCurrency": {
+            "type": "string",
+            "nullable": true
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
@@ -36374,6 +36378,14 @@
           },
           "levExclude": {
             "type": "boolean"
+          },
+          "forceCAPositionClassB4": {
+            "type": "string",
+            "nullable": true
+          },
+          "forceCCF": {
+            "type": "number",
+            "format": "float"
           },
           "uniqueId": {
             "type": "string",
