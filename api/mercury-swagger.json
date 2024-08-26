@@ -36240,7 +36240,7 @@
             "type": "number",
             "format": "double"
           },
-          "excludeZIR": {
+          "zirExclude": {
             "type": "boolean"
           },
           "forceLIQCurrency": {
