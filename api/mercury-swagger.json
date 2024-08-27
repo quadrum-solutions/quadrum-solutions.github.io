@@ -3969,6 +3969,66 @@
         }
       }
     },
+    "/Import/AnonymizeSingleFile": {
+      "post": {
+        "tags": [
+          "Import"
+        ],
+        "summary": "Allow to anonymize a single file",
+        "requestBody": {
+          "description": "RT01 file to anonymize",
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "parameters": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                },
+                "parameters": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/InterestRateCurve": {
       "get": {
         "tags": [
@@ -10944,6 +11004,7 @@
           {
             "name": "tableName",
             "in": "path",
+            "description": "Table to get the columns from",
             "required": true,
             "schema": {
               "type": "string"
@@ -11011,6 +11072,7 @@
         ],
         "summary": "Allow to execute a raw query",
         "requestBody": {
+          "description": "SQL Query to execute",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -11075,6 +11137,7 @@
         ],
         "summary": "Allow to execute a raw query and get results in an Excel file",
         "requestBody": {
+          "description": "SQL query to execute",
           "content": {
             "application/json-patch+json": {
               "schema": {
