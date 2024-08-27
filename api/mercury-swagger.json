@@ -37697,6 +37697,10 @@
           "caExposureFlagB4": {
             "type": "boolean"
           },
+          "caIssuerPositionClassB4": {
+            "type": "string",
+            "nullable": true
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
