@@ -7016,19 +7016,6 @@
         }
       }
     },
-    "/ReportingEntity/Tree": {
-      "get": {
-        "tags": [
-          "ReportingEntity"
-        ],
-        "summary": "Allow to retrieve the reporting structure",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/ReportingEntity": {
       "get": {
         "tags": [
