@@ -37956,6 +37956,14 @@
           "rwa": {
             "type": "number",
             "format": "double"
+          },
+          "exposureLtvLoadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "exposureLtvId": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
