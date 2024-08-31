@@ -35827,13 +35827,6 @@
             },
             "nullable": true
           },
-          "properties": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Property"
-            },
-            "nullable": true
-          },
           "toString": {
             "type": "string",
             "nullable": true,
