@@ -1,0 +1,3 @@
+Version : v0.0.6
+Date : 2024-09-03T13:42:23
+Digest : ebed57effa8a6c6e5d2114ad1e8574a9c8c87b2955b43d14ff638ab51c2ccd22
