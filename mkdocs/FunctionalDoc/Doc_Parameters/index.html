@@ -1842,33 +1842,17 @@
                   
 
 
-<div id="mkdocs-encrypted-content" style="display:none">fleU23nQFDCs3IuPyv9thA==;VAnWwHFePxwxpDPaNACPKpMB31UAA56Ood9mVYCEYC7D21fhWs6hTNhYFntjXmK2zp0UePKALMK601WXFrDgPH2dhQeQ2cewuj69QwIkUOEQde41oel2/9wHjG0U8XLI4cRAQZzVG4SjMxgbBT6EsKUS0149S7Ad1UZq+jNZVaBysdwqw6tKQHgTOOoKTQraN5wyiPo667OTNFEtn/ZzwGLM1XZPPJIH2v9KfKTgRTWQukzAow6Fy6k6UEtB0w1dcS9E30ZEc4JV3aSSfUEM2xJsc9XofdZHEWmqzlfTID2ym/u9ko2jj3WXaauuEzbYf4Za1XRNRjx/PfOMYG5OsF038p/j96A1/x4zTCC2BxhH3N1ZmpFdWNz0YawkHOGFKPIcNnYc7KYIRpKq+/cs7KpSS+dLv1OAZBckToUqMxPE+o9HnCzFqDxDttBtc9EMTkniD5rELZhJfc5TtEVi5q13+lHHhoi24eo7/a/cooHUFEFs24oNDRWOI4IbxQxh7BsTYSmFiGq8gG8LWvSFS5T5MwlhMh3iaqUeLtZstKmootXkCFHx7Wc8GU4XbzZ1O7FO/UWvNG2CtM0bYrKpDZ9J3nNvt2/15zwNggHBIKxJY61uU8ZUxwi0WP89cDFXYdjUJJ8qGkuxJknexVwhR4v866uCjOLng/mHobCoF5r6TjTUvJXLgPkgaOBzHZ1j9pyFfbYDwQ85nuNz/9CI47xrVLeQelkLRw23jYrnhskv0cikpQeW6dTm3ELlHx45kkGBIHtjFsbZWr7mwqvIyA7ixHz62PRSllm9n1AbA++t+oULXqDkQVlFGyiSx/nzkitUIja0D6CIpV6H8Jbwy0RKyf33TZIFn11MKnssz58AYbyahJXQ05huigD7yby2QFMjyLblvpSJgjZWOzhV+mK8qIhHjEuumwrXbiOrYI0ExvcvKsd6TXAcQhdR6I84TvZllfbgPL0vwyDLGXtXOd9CeQBQ1RKQWffBkV8YDVKVLaSCw+0WvgNzuu/B6pnO3xAhcke2OQ7gRoFoSJaxtbTSRmh7y4eG5vEDMAnmpmIqgE84JzQfla2IHcoY8VvSPInL2xpyHb3AezsLIEZMDQ==</div>
-<div id="mkdocs-decrypted-content">
-    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
-        <h1>This content is protected with AES encryption. </h1>
-        <p>Contact your administrator for access to this page.</p>
-        <input class="md-input" type="password" id="mkdocs-content-password" placeholder="Password">
-        
-        <p id="mkdocs-decrypt-msg"></p>
-    </form>
-</div>
+  <h1>Doc Parameters</h1>
 
-<script type="text/javascript">
-var encryptcontent_id = "encryptcontent_1";
-var encryptcontent_path = "FunctionalDoc/Doc_Parameters/";
-var decryption_failure_message = "Invalid password.";
-var encryptcontent_keystore = ["Sh1T5A559gG/b5DpphjKKg==;UyRSlTOaXSSDWvFRFFjiwIxa3vJ9Td8gIAJK/wIO3dX3NzrnxuR0CocBCIcrA9GXd9nnW4zZuHeJTWNyOHS7hSe1aatQ8wRsmC38EH6NP8oSBi6jQCQeMIv5Lwy67K9Z;nJ1Io8f4yV4pJV+SQpmQXQ=="];
-var encryptcontent_obfuscate = 0;
-
-</script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js"></script>
-<script type="text/javascript" src="../../assets/javascripts/decrypt-contents.js" defer></script>
+<h2 id="list-of-parameters">List of parameters</h2>
+<h2 id="per-categorymodule">Per category/module</h2>
+<h3 id="mona">MONA :</h3>
+<ul>
+<li>MONA_CANCELLABLE_OVER_MATURITY : Boolean. In the MONA_U and MONA_B reports, there are positions that are splitted between 'OnSight', 'Cancellable' and 'FixedTerm'. You can decide if you want to allocate your positions with a priority on the maturity date (Default approach) or on the maturity type 
+Example: Reporting Date is 2024-06-30. You have a Due From Customer (LegalAccountNumber=104001) with MaturityDate = 2024-12-31 and MaturityType = 'Cancellable'. 
+With the first approach (Value=0), position will be alloacted line 67 and 70 in MONA, fixed term between 3 months and a year. 
+With the second approach (Value=1), position will be allocated line 66 in MONA, cancellable.</li>
+</ul>
 
 
 
@@ -1900,7 +1884,7 @@ var encryptcontent_obfuscate = 0;
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2023 Quadrum SA
+      Copyright &copy; 2024 Quadrum SA
     </div>
   
   

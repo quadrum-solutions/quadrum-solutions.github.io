@@ -1821,33 +1821,17 @@
                   
 
 
-<div id="mkdocs-encrypted-content" style="display:none">jQ942HDSYwXRS+6jviKvKQ==;kvOrwEc4CWxR5MKJd5x7v3z5mhcq/jJwFn4IjxfND+4GqD1JSlw269G4ZQrb0E8NLgnsrlz7V4alH5vqypAy94HklVxDYtpZrnTPjQ742Pd+vpjXi5NN5bh0LbNFM1DMbNoSjlQdowSxt7LgYilJ58Sszuoz/lrZuW1FpGLbU/vGk+RD1Qpk92JxHqGkacWUNdHtx1EWdFNU9l2zlepeg3Qrh9RVn5X7LQG7/fct318+enqTFpX5WS0qRbavrttY3a8To8+4EexRFbEB1BkTQBPmPHb8bTg2dG5rdOfRYbgXF4PDi2SOoOQgE3EkKNZRFITX/pROOpi024zyL4hxGwxONYcqh5cSq22A73F6lSfiNXajclqYcbJvz9wR0Va2p97TxRoEz9864fVzZJVWY1UhbkssOFGuFBk7qhlSIFdNgM0d3inj7+gqROddICKxjRIRcyTUWf25R0JEO3C6bmTtQm6uYjbmC8fd6YDpu9EvI8Lw8gS5yVwS4gzQ4KIJ/y7aEgAe8UfHT4VXWA2ABATspJ5RDT0AUkzkq7+sWd8J9jporcGsj8FqnBuL1HIGE9AcyaJWCD1zW6IuCPcgpqjW92Y2Ni3QDx6DDPKduyITkYtHXuAgfDJSIO42mLszSlAugrilACDpr/RCJmseeu76GpnVrDhmbuqxmsey06AjRPBM6cAZGa4vrpwT7B34WygynRRnqsF0TPb61y/RQSipvMzljfLNTzlL0tgwqwZ9UGc0bxQ4tyn78ByuoRR8/OsOWB0RXl4SBvMY8IfwzOjL3gg+JVQFxC7bwGCzcIPMxLka+959SeipJ8LWmiFGW7a0NbBYFPc/FJrdvMurmBcIH1rH0NXkMim+2gRFNH5Sgmr2HKmZP+PH/q+l2IzRCRRam14OzWwaV7J7AKaowckCsXOWsBaMcxorKpgPO9C9dWNFDtCLOlWOADEobuUvurnquJYD5anL6JZxv6YR96qahHR+RtM5n57Y5OY6UMzrX40p1WfD2eOSiDQw/m4Te7FEt+5QE0u1hTWtpgaVXj+sCLXMRlgFFX8fbGWlvOOqWs23MRr41IeNjPMfGb9XJ+VJ/wb10iSoIpfUgWA0hWQUTuS968f1155ZZmZgdWrJVXG7AcwFr5hPJ3FzGd2K8XPalXbdXphXS363HR+G5VqVxqMh+lr6Cc4QjWNiw5FeoSiwWHMTVg0L2HsVosh24DUnwS1pbehCnCc8FwDg2VPXvaG+87GyAnMhNAu2tHM=</div>
-<div id="mkdocs-decrypted-content">
-    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
-        <h1>This content is protected with AES encryption. </h1>
-        <p>Contact your administrator for access to this page.</p>
-        <input class="md-input" type="password" id="mkdocs-content-password" placeholder="Password">
-        
-        <p id="mkdocs-decrypt-msg"></p>
-    </form>
-</div>
-
-<script type="text/javascript">
-var encryptcontent_id = "encryptcontent_1";
-var encryptcontent_path = "FunctionalDoc/Doc_CREParams/";
-var decryption_failure_message = "Invalid password.";
-var encryptcontent_keystore = ["Sh1T5A559gG/b5DpphjKKg==;UyRSlTOaXSSDWvFRFFjiwIxa3vJ9Td8gIAJK/wIO3dX3NzrnxuR0CocBCIcrA9GXd9nnW4zZuHeJTWNyOHS7hSe1aatQ8wRsmC38EH6NP8oSBi6jQCQeMIv5Lwy67K9Z;nJ1Io8f4yV4pJV+SQpmQXQ=="];
-var encryptcontent_obfuscate = 0;
-
-</script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/core.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/enc-base64.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/cipher-core.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/sha256.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/hmac.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/pbkdf2.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/aes.js"></script>
-<script type="text/javascript" src="../../assets/javascripts/decrypt-contents.js" defer></script>
+<h1 id="cre-parameters">CRE parameters</h1>
+<ul>
+<li><strong>CRSABIS_CCF_0</strong>: Boolean: Set to 1 to include off-bs positions with CCF of 0 in the reports CRSABIS 1 to 7 and its WP. Deafult value 1.<ul>
+<li>If set to 0 off-balance sheet positions with a credit conversion factor of 0 will be excluded from the CRSABIS reports. Otherwise, they will be included and displayed in the CCF = 0% column.</li>
+</ul>
+</li>
+<li><strong>RETAIL_TEST_REL_THRESHOLD</strong>: Boolean: Set to 1 to consider only retail positions &lt; CHF 1.5mio in the denominator for the 1% threshold. Deafult value 0.<ul>
+<li>The wording in the OFR Appendix 3 chi.1.2 can be interpretated in two ways: either the 1% threshold applies to all positions against retail counterparties (param value = 0), or the 1% threshold applies to all positions against retail counterparties with an exposure lower than CHF 1.5mio (param value = 1).</li>
+</ul>
+</li>
+</ul>
 
 
 
@@ -1917,7 +1901,7 @@ var encryptcontent_obfuscate = 0;
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2023 Quadrum SA
+      Copyright &copy; 2024 Quadrum SA
     </div>
   
   
