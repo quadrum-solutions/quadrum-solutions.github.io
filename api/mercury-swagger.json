@@ -4732,7 +4732,7 @@
       }
     },
     "/List/Download/{name}": {
-      "post": {
+      "get": {
         "tags": [
           "List"
         ],
@@ -4767,6 +4767,37 @@
               "application/json": {
                 "schema": {
                   "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/List/Download": {
+      "get": {
+        "tags": [
+          "List"
+        ],
+        "summary": "Allow to download all the static files from the API",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
                 }
               }
             }
