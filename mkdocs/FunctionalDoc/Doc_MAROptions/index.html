@@ -641,6 +641,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Doc_LTV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    B4 - Loan-to-value (LTV)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -935,6 +956,15 @@
   <a href="#greeks-calculation" class="md-nav__link">
     <span class="md-ellipsis">
       Greeks calculation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#greeks-calculation-in-mercury" class="md-nav__link">
+    <span class="md-ellipsis">
+      Greeks calculation in Mercury
     </span>
   </a>
   
@@ -2053,6 +2083,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#greeks-calculation-in-mercury" class="md-nav__link">
+    <span class="md-ellipsis">
+      Greeks calculation in Mercury
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#remark-regarding-delivery-consistency" class="md-nav__link">
     <span class="md-ellipsis">
       Remark regarding delivery consistency
@@ -2199,6 +2238,33 @@
 </li>
 <li>
 <script type="math/tex">\text{Change in option price} = Delta * (\text{Small change in underlying price}) + \frac{1}{2} * Gamma * (\text{Small change in underlying price})^2</script>
+</li>
+</ul>
+<h3 id="greeks-calculation-in-mercury">Greeks calculation in Mercury</h3>
+<ul>
+<li>Delta, Gamma and Vega can be computed in Mercury by setting the parameter <code>OPTION_GREEKS</code> to 1.</li>
+<li>The Black-Scholes model is applied for the calculation.</li>
+<li>Input:</li>
+<li>
+<p>Spot:</p>
+<p><code>when cdc.SingleUnderlyingSpotValue &lt;&gt; 0 and cdc.SingleUnderlyingStrikeForwardValue &lt;&gt; 0 then abs(cdc.SingleUnderlyingSpotValue)
+when cdc.UnderlyingSpotValue &lt;&gt; 0 then abs(cdc.UnderlyingSpotValue)
+else 1</code></p>
+</li>
+<li>
+<p>Strike:</p>
+<p><code>when cdc.SingleUnderlyingSpotValue &lt;&gt; 0 and cdc.SingleUnderlyingStrikeForwardValue &lt;&gt; 0 then abs(cdc.SingleUnderlyingStrikeForwardValue)
+when cdc.UnderlyingStrikeForwardValue &lt;&gt; 0 then abs(cdc.UnderlyingStrikeForwardValue)
+else 1</code></p>
+</li>
+<li>
+<p>Calculation of <code>cdc.SingleUnderlyingSpotValue</code> and <code>cdc.SingleUnderlyingStrikeForwardValue</code>:</p>
+<ul>
+<li>If delivered in <code>core_derivatives_calc</code>, the delivered value is used.</li>
+<li>If not delivered, computed in Rule: convert <code>cd.SpotUnderlyingCurrency</code> and <code>cd.StrikeUnderlyingCurrency</code> into the reporting currency (both of these fields are expected in the underlying's currency).</li>
+<li>RT01 delivery &rarr; <code>C041</code> of the strike/underlying leg leg for the strike divided by the number of underlying if delivered or 1.</li>
+<li>The default value for the implied volatility <script type="math/tex">\sigma</script> should be set in the param <code>GREEKS_SIGMA</code> and the default rate of return in the param <code>OPTION_GREEKS</code>. Note that the rate of return expected is discrete, but will be converted to a continuous rate in the formula. </li>
+</ul>
 </li>
 </ul>
 <h3 id="remark-regarding-delivery-consistency">Remark regarding delivery consistency</h3>
