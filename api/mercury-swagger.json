@@ -38160,6 +38160,10 @@
           "propertyUseOf": {
             "type": "string",
             "nullable": true
+          },
+          "reportingCategory": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
