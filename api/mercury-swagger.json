@@ -40565,6 +40565,18 @@
           "dbName": {
             "type": "string",
             "nullable": true
+          },
+          "hostname": {
+            "type": "string",
+            "nullable": true
+          },
+          "namespace": {
+            "type": "string",
+            "nullable": true
+          },
+          "podIp": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
