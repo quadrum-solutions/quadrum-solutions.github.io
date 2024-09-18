@@ -350,6 +350,42 @@
         }
       }
     },
+    "/Adaptation/EnableByTags": {
+      "put": {
+        "tags": [
+          "Adaptation"
+        ],
+        "summary": "Allow to enable adaptations by tags",
+        "parameters": [
+          {
+            "name": "tags",
+            "in": "query",
+            "description": "Tags to enable",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Adaptation/EnableAll": {
       "put": {
         "tags": [
@@ -376,12 +412,74 @@
         }
       }
     },
+    "/Adaptation/DisableByTags": {
+      "put": {
+        "tags": [
+          "Adaptation"
+        ],
+        "summary": "Allow to disable adaptations by tags",
+        "parameters": [
+          {
+            "name": "tags",
+            "in": "query",
+            "description": "Tags to disable",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Adaptation/DisableAll": {
       "put": {
         "tags": [
           "Adaptation"
         ],
         "summary": "Allow to disable all adaptations",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Adaptation/Tags": {
+      "get": {
+        "tags": [
+          "Adaptation"
+        ],
+        "summary": "Allow to get all tags",
         "responses": {
           "200": {
             "description": "OK"
@@ -32539,6 +32637,10 @@
           "order": {
             "type": "integer",
             "format": "int64"
+          },
+          "tags": {
+            "type": "string",
+            "nullable": true
           },
           "alias": {
             "type": "string",
