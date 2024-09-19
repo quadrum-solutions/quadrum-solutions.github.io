@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#liq-withdrawal-restrictions-draft" class="md-skip">
+        <a href="#liq-withdrawal-restrictions" class="md-skip">
           Skip to content
         </a>
       
@@ -1095,19 +1095,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mercury-input" class="md-nav__link">
+  <a href="#mercury-calculation" class="md-nav__link">
     <span class="md-ellipsis">
-      Mercury input:
+      Mercury calculation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Mercury input:">
+    <nav class="md-nav" aria-label="Mercury calculation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#input-fields" class="md-nav__link">
+  <a href="#scope" class="md-nav__link">
     <span class="md-ellipsis">
-      Input Fields:
+      Scope:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-for-deposits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output for Deposits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-for-loans-advances" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output for Loans &amp; advances
     </span>
   </a>
   
@@ -1926,19 +1953,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mercury-input" class="md-nav__link">
+  <a href="#mercury-calculation" class="md-nav__link">
     <span class="md-ellipsis">
-      Mercury input:
+      Mercury calculation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Mercury input:">
+    <nav class="md-nav" aria-label="Mercury calculation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#input-fields" class="md-nav__link">
+  <a href="#scope" class="md-nav__link">
     <span class="md-ellipsis">
-      Input Fields:
+      Scope:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-for-deposits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output for Deposits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-for-loans-advances" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output for Loans &amp; advances
     </span>
   </a>
   
@@ -1964,37 +2018,56 @@
                   
 
 
-<h1 id="liq-withdrawal-restrictions-draft">LIQ - Withdrawal restrictions DRAFT</h1>
+<h1 id="liq-withdrawal-restrictions">LIQ - Withdrawal restrictions</h1>
 <h2 id="used-in-the-following-modules">Used in the following modules</h2>
 <ul>
 <li>LIQ</li>
-<li>SNB</li>
 </ul>
 <h2 id="legal-references">Legal references</h2>
 <ul>
 <li>Finma circ. 2015/02<ul>
-<li>cm. 183.3</li>
-<li>cm. 194-197</li>
-<li>cm. 198:</li>
+<li>cm. 194-199.6</li>
 </ul>
 </li>
 </ul>
-<h2 id="mercury-input">Mercury input:</h2>
-<h3 id="input-fields">Input Fields:</h3>
-<ul>
-<li>Account with a withdrawal limitation: </li>
-</ul>
-<p><code>core_positions.SubType = 'WLACC'</code></p>
-<ul>
-<li>Account with a partial withdrawal limitation</li>
-</ul>
-<p><code>core_positions."LimitWithdrawalAmount" = 123456</code></p>
-<p>### Parameter:
-   - Only used when importing a flat file: <br>
-    <strong>LIQ_WITHDRAWAL_AMOUNT possible values:</strong>
-       - D - (Default) BookAmount or InternalLending if delivered. 
-       - I - InternalLending
-       - N - No limit</p>
+<h2 id="mercury-calculation">Mercury calculation</h2>
+<h3 id="scope">Scope:</h3>
+<p>Deposits: cp.LegalAccountNumber&gt;=201000 and cp.LegalAccountNumber&lt;204000</p>
+<p>Loans &amp; advances: cp.LegalAccountNumber&gt;=102000 and cp.LegalAccountNumber&lt;106000</p>
+<h3 id="input">Input:</h3>
+<p>core_positions.BookAmount <br>
+core_positions.LegalAccountNumber <br>
+core_positions.InternalLendingValue <br>
+core_module_specific.LimitLIQAmount (cms.LimitLIQAmount) <br></p>
+<h3 id="output-for-deposits">Output for Deposits</h3>
+<p>When parameter <code>LIQ_WITHDRAWAL_AMOUNT = I</code></p>
+<pre><code>If cms.LimitLIQAmount = 0 and InternalLendingValue = 0 then LimitLIQAmount = 0
+</code></pre>
+<p>When parameter <code>LIQ_WITHDRAWAL_AMOUNT in (I,D)</code></p>
+<pre><code>If cms.LimitLIQAmount is delivered (cms.LimitLIQAmount &gt; 0):
+  when cms.LimitLIQAmount &gt; BookAmount then LimitLIQAmount = BookAmount
+  when cms.LimitLIQAmount &lt;= BookAmount then LimitLIQAmount = cms.LimitLIQAmount
+
+If InternalLendingValue is delivered (InternalLendingValue &gt; 0):
+  when InternalLendingValue &gt; BookAmount then LimitLIQAmount = BookAmount
+  when InternalLendingValue &lt;= BookAmount then LimitLIQAmount = LimitLIQAmount
+</code></pre>
+<p>When parameter <code>LIQ_WITHDRAWAL_AMOUNT in (N,I,D)</code></p>
+<pre><code>Else LimitLIQAmount = BookAmount
+</code></pre>
+<h3 id="output-for-loans-advances">Output for Loans &amp; advances</h3>
+<p>When parameter <code>LIQ_INFLOW_LIMITATION_AMOUNT = D</code></p>
+<pre><code>LimitLIQAmount = 0
+</code></pre>
+<p>When parameter <code>LIQ_INFLOW_LIMITATION_AMOUNT = L</code></p>
+<pre><code>If cms.LimitLIQAmount &gt; 0 and cms.LimitLIQAmount &lt; BookAmount then LimitLIQAmount = BookAmount - cms.LimitLIQAmount
+If cms.LimitLIQAmount = BookAmount and BookAmount &gt; 0 then LimitLIQAmount = BookAmount
+
+</code></pre>
+<p>When parameter <code>LIQ_INFLOW_LIMITATION_AMOUNT = B</code></p>
+<pre><code>If cms.LimitLIQAmount &gt;= 0 and cms.LimitLIQAmount &lt; BookAmount then LimitLIQAmount = cms.LimitLIQAmount
+If cms.LimitLIQAmount &gt;= BookAmount and BookAmount &gt; 0 then LimitLIQAmount = BookAmount
+</code></pre>
 
 
 
