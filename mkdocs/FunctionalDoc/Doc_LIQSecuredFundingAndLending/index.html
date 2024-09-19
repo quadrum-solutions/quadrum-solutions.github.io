@@ -2218,16 +2218,16 @@ The above treatment does not apply to a deposit which is pledged against an undr
 </br><strong>Deposits</strong>:</br><code>left(core_positions.LegalAccountNumber,3) in (202) and PledgeFlag = 1 and ((MaturityType not in('Cancellable') and ResidualDurationDays &lt;= 30) or LCRIncludeFlow = 1) and core_positions_calc.LiqTypeOf = 'Retail</code> 
 </br><strong>Link</strong>:</br><code>Loans.CounterpartyId = Deposits.CollateralHolderId</code></p>
 <h3 id="process_1">Process:</h3>
-<p>Treatment is similar to a crm we use securities to "cover" load/deposit 
+<p>Treatment is similar to a crm but we use deposits to "cover" loans.
 </br><strong>No priority applied</strong></br></p>
-<p>Loan is covered up to his core_positions.BookAmount
-</br>Deposit are used up to his core_positions.BookAmount</p>
+<p>Loans are covered up to their core_positions.BookAmount
+</br>Deposit are used up to their core_positions.BookAmount</p>
 <h3 id="output-fields_1">Output Fields:</h3>
 <p><code>core_positions_calc_lc.LIQDepositRunOff</code> similar to what is calculated on MonaCollateralUsedAmount <strong>but on the Deposits record</strong> 
 </br>use case: 
-</br>if a deposits covers completely a loan
+</br>if a deposit covers completely a loan
 </br>deposit.BookAmount - deposit.LIQDepositRunOff = 0
-</br>if a deposits covers partially a loan
+</br>if a deposit covers partially a loan
 </br>deposit.BookAmount - deposit.LIQDepositRunOff &gt; 0</p>
 <p>details could be added in <code>core_positions_crm_liq</code> only these fields would be filled:
 - LoadCollectionId<br />

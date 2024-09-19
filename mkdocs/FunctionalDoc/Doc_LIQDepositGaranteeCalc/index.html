@@ -2062,12 +2062,16 @@
 <li>Record selection: </li>
 <li>
 <p><strong>Perimeter:</strong> (no foreign subsidiaries or foreign branches)</p>
-<p><code>v_conso_entities.ConsoBankOffice = 1</code>
-   - <strong>Positions:</strong> </p>
+<p><code>v_conso_entities.ConsoBankOffice = 1</code></p>
+</li>
+<li>
+<p><strong>Positions:</strong> </p>
 <p><code>core_positions_calc.AccountGroupLevel1 in('DueToCustomer','MTBonds') 
- core_positions.SubType not in('Pillar2','Pillar3A')
- core_positions.Currency not in('XAG','XAU','XPD','XPT','XRH')</code>
-- <strong>Type of counterparties:</strong></p>
+ core_positions.SubType not in('Pillar2','Pillar3A','LDasGuarantee')
+ core_positions.Currency not in('XAG','XAU','XPD','XPT','XRH')</code></p>
+<ul>
+<li><strong>Type of counterparties:</strong></li>
+</ul>
 <p><code>core_module_specifics.PosCounterpartyType not in('Bank','BIS','CGCB','CHSIB','GSIB','CBank','MDB1','MDB2','JI','SCMBI','SF')
  list_counterpraties.TypeOf not in('Bank','BIS','CGCB','CHSIB','GSIB','CBank','MDB1','MDB2','JI','SCMBI','SF')</code></p>
 <h3 id="coverage-logic">Coverage logic:</h3>
@@ -2086,7 +2090,7 @@
 <ul>
 <li><strong>2015/02 cm. 187</strong> </li>
 <li><strong>First round</strong>: "Stable retail client deposits":
-    <code>core_positions_calc.LiqTypeOf = 'Retail' and (core_module_specifics.PosCounterpartyType not in('NPPO', 'Corp') or list_counterpraties.TypeOf not in('NPPO', 'Corp')) and (core_positions.SubType in('TxAcc','OpAcc') or list_counterparties.EstablishedRelationshipFlag = 1)</code> 
+    <code>core_positions_calc.LiqTypeOf = 'Retail' and (core_module_specifics.PosCounterpartyType not in('NPPO', 'Corp') and list_counterpraties.TypeOf not in('NPPO', 'Corp')) and (core_positions.SubType in('TxAcc','OpAcc') or list_counterparties.EstablishedRelationshipFlag = 1)</code> 
     </br><strong>2015/02 cm. 187.1 to 187.3</strong>
      <code>order by ResidualDurationDays desc</code>
      </br>First iteration <code>core_positions.MaturityType &lt;&gt; 'Cancelled'</code>
@@ -2095,7 +2099,7 @@
    <code>core_positions_calc.LiqTypeOf in('Retail','SMEs') and (core_module_specifics.PosCounterpartyType in('NPPO', 'Corp') or list_counterpraties.TypeOf in('NPPO', 'Corp')) and (core_positions.SubType in('TxAcc','OpAcc') or list_counterparties.EstablishedRelationshipFlag = 1)</code>
    <code>order by ResidualDurationDays asc</code> </li>
 <li><strong>Third round</strong>: "less stable retail client deposits" 
-   <code>core_positions_calc.LiqTypeOf = 'Retail' and (core_module_specifics.PosCounterpartyType not in('NPPO', 'Corp') or list_counterpraties.TypeOf not in('NPPO', 'Corp')) and core_positions.SubType not in('TxAcc','OpAcc') and list_counterparties.EstablishedRelationshipFlag = 0</code> 
+   <code>core_positions_calc.LiqTypeOf = 'Retail' and (core_module_specifics.PosCounterpartyType not in('NPPO', 'Corp') and list_counterpraties.TypeOf not in('NPPO', 'Corp')) and core_positions.SubType not in('TxAcc','OpAcc') and list_counterparties.EstablishedRelationshipFlag = 0</code> 
     </br><strong>2015/02 cm. 187.1 to 187.3</strong>
      <code>order by ResidualDurationDays desc</code>
     </br>First iteration <code>core_positions.MaturityType &lt;&gt; 'Cancelled'</code>

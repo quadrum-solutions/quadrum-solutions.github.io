@@ -2034,10 +2034,9 @@
 <li>Record selection:   </li>
 <li>
 <p><strong>Positions: High Value deposit</strong> (Missing: rationale)</p>
-<p><code>AccountGroupLevel1 in('DueToCustomer','MTBonds') 
- core_positions.SubType not in('Pillar2','Pillar3A')</code>
+<p><code>AccountGroupLevel1 in ('DueToBanks','DueToCustomer')</code>
    - <strong>Positions: High Value loan</strong> (Missing: rationale)</p>
-<p><code>AccountGroupLevel1 in('DueFromBanks','DueFromSFT','DueFromCustomer','MortgageLoans','ContingentLiabilities','IrrevocableCommitments','ObligationToPayUp','CreditCommitments')</code>
+<p><code>AccountGroupLevel1 in ('DueFromBanks','DueFromCustomer','MortgageLoans','ContingentLiabilities')</code>
 - <strong>Grouping:</strong> (Missing: rationale)
   - For now, grouping is done by Counterparty ID. We might give more options in a second iteration.</p>
 </li>
