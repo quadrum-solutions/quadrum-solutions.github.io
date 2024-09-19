@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.35">
     
     
       
@@ -1948,7 +1948,8 @@
 <li>Small and medium company or private non financial company with (consolidated) credit or deposit volume lower than 1.5m can be considered as retail deposits</li>
 <li>In mercury we consider:<ul>
 <li>AccountGroupLevel1 in('DueToBanks','DueToCustomer') for TotalDeposits</li>
-<li>AccountGroupLevel1 in('DueFromBanks','DueFromCustomer') for TotalLoans</li>
+<li>AccountGroupLevel1 in('DueFromBanks','DueFromCustomer','MortgageLoans','ContingentLiabilities','IrrevocableCommitments','CreditCommitments') for TotalLoans</li>
+<li>SubType &lt;&gt; 'IC2' to exclude limits</li>
 <li>list_counterparties.TypeOf in('NPPO','Corp')</li>
 <li>sum of core_positions.Bookamount</li>
 <li>if none of the sums above pass the threshold of CHF 1.5m the field <strong>LiqRetailSmeEligibleFlag</strong> is equal to 1 in the view <strong>v_LCR_LiqRetailSmeEligibleFlag</strong>. As a consequence the core_positions_calc.<strong>LiqTypeOf</strong> field is forced to <strong>Retail</strong> or <strong>SMEs</strong></li>
@@ -2040,7 +2041,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
