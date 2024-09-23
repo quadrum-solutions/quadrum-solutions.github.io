@@ -2107,7 +2107,35 @@
 </ul>
 </li>
 <li>The LTV is computed per pledged property<ul>
-<li>If multiple pledges for one credit, use an appropriate distribution key to distribute the total credit amount to each pledge so that an LTV can be computed for each pledge (art.72a al.2)</li>
+<li>If multiple pledges for one credit, an appropriate distribution key to distribute credit amount to each pledge must be chosen so that an LTV can be computed for each pledge (art.72a al.2).</li>
+<li>The credit is distributed to each property proportionally to the lending value of the property.</li>
+<li>Ex:<ul>
+<li>Loan<ul>
+<li>Value = 500'000</li>
+</ul>
+</li>
+<li>Mortgage certificate 1<ul>
+<li>Value = 200'000</li>
+<li>Associated property's lending value = 800'000</li>
+<li>Share of the loan for LTV calculation = <script type="math/tex">\frac{800}{800+1'300}*500'000 = 190'476</script>
+</li>
+<li>
+<script type="math/tex">LTV = \frac{190'476}{800'000} = 24\%</script>
+</li>
+</ul>
+</li>
+<li>Mortgage certificate 2<ul>
+<li>Value = 100'000</li>
+<li>Associated property's lending value = 1'300'000</li>
+<li>Share of the loan for LTV calculation = <script type="math/tex">\frac{1'300}{800+1'300}*500'000 = 309'254</script>
+</li>
+<li>
+<script type="math/tex">LTV = \frac{309'254}{1'300'000} = 24\%</script>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
