@@ -1,0 +1,44 @@
+<form id="form">
+    <label for="repo">Repository:</label><br>
+    <input type="text" id="repo" name="repo" required><br><br>
+  
+    <label for="versionfrom">Version from:</label><br>
+    <input type="text" id="versionfrom" name="versionfrom" required><br><br>
+  
+    <label for="versionto">Version from:</label><br>
+    <input type="text" id="versionto" name="versionto" required><br><br>
+  
+    <label for="token">Token:</label><br>
+    <input type="text" id="token" name="token" required><br><br>
+  
+    <button type="submit">Generate</button>
+  </form>
+
+  <script>
+    document.getElementById('form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+  
+      // Capture the values of the textboxes
+      const repo = document.getElementById('repo').value;
+      const versionfrom = document.getElementById('versionfrom').value;
+      const versionto = document.getElementById('versionto').value;
+      const token = document.getElementById('token').value;
+    
+      // Make the POST request
+      fetch('https://api.github.com/repos/quadrum-solutions/sputnik/actions/workflows/generate-release-note.yml/dispatches', { 
+        method: 'POST',
+        headers: {
+          'Accept': 'application/vnd.github+json',
+          'Authorization': 'token '+token,
+        },
+        body: '{"ref":"main","inputs":{"repository":"'+repo+'","versionfrom":"'+versionfrom+'","versionto":"'+versionto+'"}}'
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data); 
+      })
+      .catch((error) => {
+        console.error('Error:', error); 
+      });
+    });
+  </script>
