@@ -4703,6 +4703,53 @@
         }
       }
     },
+    "/List/Import": {
+      "post": {
+        "tags": [
+          "List"
+        ],
+        "summary": "Allow to load a zip file containing multiple static files from the API",
+        "requestBody": {
+          "description": "Zip containing the files to import",
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "archive": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "archive": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/List/Load": {
       "post": {
         "tags": [
