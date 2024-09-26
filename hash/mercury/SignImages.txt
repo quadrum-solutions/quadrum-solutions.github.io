@@ -1,3 +1,0 @@
-Version : SignImages
-Date : 2024-09-13T09:04:44
-Digest : 63161c26ac8373ff7389e0e3f4aa3c478feb953620982225ef991b639ef4b768
