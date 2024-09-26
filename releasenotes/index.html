@@ -38,7 +38,7 @@
         body: '{"ref":"main","inputs":{"repository":"'+repo+'","versionfrom":"'+versionfrom+'","versionto":"'+versionto+'"}}'
       })
       .then(response => {
-        if (response.status === 200) {
+        if (response.status === 200 || response.status === 204) {
             resultDiv.innerHTML = '<p>Success! You will be able to download the release note <a href=https://github.com/quadrum-solutions/sputnik/releases/download/'+repo+'-'+versionfrom+'-'+versionto+'/'+repo+'_release_note_from_'+versionfrom+'_to_'+versionto+'.html>here</a> in a few seconds</p>';
         } else {
             // Handle other response statuses (e.g., 404, 500, etc.)
