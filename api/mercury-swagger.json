@@ -29204,6 +29204,58 @@
         }
       }
     },
+    "/ListUnderlying/{pit}": {
+      "get": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to fetch all items by Pit",
+        "parameters": [
+          {
+            "name": "pit",
+            "in": "path",
+            "description": "Point in time",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Number of the page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 50
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Underlying"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/ListUnderlying/{pit}/{id}": {
       "get": {
         "tags": [
@@ -29214,6 +29266,7 @@
           {
             "name": "pit",
             "in": "path",
+            "description": "Point in time",
             "required": true,
             "schema": {
               "type": "integer",
@@ -29223,6 +29276,7 @@
           {
             "name": "id",
             "in": "path",
+            "description": "Id of the item",
             "required": true,
             "schema": {
               "type": "string"
@@ -29629,6 +29683,58 @@
         }
       }
     },
+    "/ListCommodity/{pit}": {
+      "get": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to fetch all items by Pit",
+        "parameters": [
+          {
+            "name": "pit",
+            "in": "path",
+            "description": "Point in time",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Number of the page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 50
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Commodity"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/ListCommodity/{pit}/{id}": {
       "get": {
         "tags": [
@@ -29639,6 +29745,7 @@
           {
             "name": "pit",
             "in": "path",
+            "description": "Point in time",
             "required": true,
             "schema": {
               "type": "integer",
@@ -29648,6 +29755,7 @@
           {
             "name": "id",
             "in": "path",
+            "description": "Id of the item",
             "required": true,
             "schema": {
               "type": "string"
@@ -30054,6 +30162,58 @@
         }
       }
     },
+    "/ListCounterparty/{pit}": {
+      "get": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to fetch all items by Pit",
+        "parameters": [
+          {
+            "name": "pit",
+            "in": "path",
+            "description": "Point in time",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Number of the page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 50
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Counterparty"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/ListCounterparty/{pit}/{id}": {
       "get": {
         "tags": [
@@ -30064,6 +30224,7 @@
           {
             "name": "pit",
             "in": "path",
+            "description": "Point in time",
             "required": true,
             "schema": {
               "type": "integer",
@@ -30073,6 +30234,7 @@
           {
             "name": "id",
             "in": "path",
+            "description": "Id of the item",
             "required": true,
             "schema": {
               "type": "string"
@@ -30479,6 +30641,58 @@
         }
       }
     },
+    "/ListExternalRating/{pit}": {
+      "get": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to fetch all items by Pit",
+        "parameters": [
+          {
+            "name": "pit",
+            "in": "path",
+            "description": "Point in time",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Number of the page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 50
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExternalRating"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/ListExternalRating/{pit}/{id}": {
       "get": {
         "tags": [
@@ -30489,6 +30703,7 @@
           {
             "name": "pit",
             "in": "path",
+            "description": "Point in time",
             "required": true,
             "schema": {
               "type": "integer",
@@ -30498,6 +30713,7 @@
           {
             "name": "id",
             "in": "path",
+            "description": "Id of the item",
             "required": true,
             "schema": {
               "type": "string"
@@ -30904,6 +31120,58 @@
         }
       }
     },
+    "/ListMarginAgreement/{pit}": {
+      "get": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to fetch all items by Pit",
+        "parameters": [
+          {
+            "name": "pit",
+            "in": "path",
+            "description": "Point in time",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Number of the page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 50
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginAgreement"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/ListMarginAgreement/{pit}/{id}": {
       "get": {
         "tags": [
@@ -30914,6 +31182,7 @@
           {
             "name": "pit",
             "in": "path",
+            "description": "Point in time",
             "required": true,
             "schema": {
               "type": "integer",
@@ -30923,6 +31192,7 @@
           {
             "name": "id",
             "in": "path",
+            "description": "Id of the item",
             "required": true,
             "schema": {
               "type": "string"
@@ -31329,6 +31599,58 @@
         }
       }
     },
+    "/ListProperty/{pit}": {
+      "get": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to fetch all items by Pit",
+        "parameters": [
+          {
+            "name": "pit",
+            "in": "path",
+            "description": "Point in time",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Number of the page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 50
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Property"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/ListProperty/{pit}/{id}": {
       "get": {
         "tags": [
@@ -31339,6 +31661,7 @@
           {
             "name": "pit",
             "in": "path",
+            "description": "Point in time",
             "required": true,
             "schema": {
               "type": "integer",
@@ -31348,6 +31671,7 @@
           {
             "name": "id",
             "in": "path",
+            "description": "Id of the item",
             "required": true,
             "schema": {
               "type": "string"
@@ -31754,6 +32078,58 @@
         }
       }
     },
+    "/ListProxySecurity/{pit}": {
+      "get": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to fetch all items by Pit",
+        "parameters": [
+          {
+            "name": "pit",
+            "in": "path",
+            "description": "Point in time",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Number of the page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 50
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProxySecurity"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/ListProxySecurity/{pit}/{id}": {
       "get": {
         "tags": [
@@ -31764,6 +32140,7 @@
           {
             "name": "pit",
             "in": "path",
+            "description": "Point in time",
             "required": true,
             "schema": {
               "type": "integer",
@@ -31773,6 +32150,7 @@
           {
             "name": "id",
             "in": "path",
+            "description": "Id of the item",
             "required": true,
             "schema": {
               "type": "string"
@@ -32179,6 +32557,58 @@
         }
       }
     },
+    "/ListSecurity/{pit}": {
+      "get": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to fetch all items by Pit",
+        "parameters": [
+          {
+            "name": "pit",
+            "in": "path",
+            "description": "Point in time",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Number of the page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 50
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Security"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/ListSecurity/{pit}/{id}": {
       "get": {
         "tags": [
@@ -32189,6 +32619,7 @@
           {
             "name": "pit",
             "in": "path",
+            "description": "Point in time",
             "required": true,
             "schema": {
               "type": "integer",
@@ -32198,6 +32629,7 @@
           {
             "name": "id",
             "in": "path",
+            "description": "Id of the item",
             "required": true,
             "schema": {
               "type": "string"
