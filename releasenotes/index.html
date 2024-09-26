@@ -14,6 +14,8 @@
     <button type="submit">Generate</button>
   </form>
 
+  <div id="result"></div>
+
   <script>
     document.getElementById('form').addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent form submission
@@ -23,6 +25,8 @@
       const versionfrom = document.getElementById('versionfrom').value;
       const versionto = document.getElementById('versionto').value;
       const token = document.getElementById('token').value;
+
+      const resultDiv = document.getElementById('result');
     
       // Make the POST request
       fetch('https://api.github.com/repos/quadrum-solutions/sputnik/actions/workflows/generate-release-note.yml/dispatches', { 
@@ -35,10 +39,10 @@
       })
       .then(response => response.json())
       .then(data => {
-        console.log('Success:', data); 
+        resultDiv.innerHTML = '<p>Success! You will be able to download the release note <a href=https://github.com/quadrum-solutions/sputnik/releases/download/'+repo+'-'+versionfrom+'-'+versionto+'/'+repo+'_release_note_from_'+versionfrom+'_to_'+versionto+'.html>here</a> in a few seconds</p>';
       })
       .catch((error) => {
-        console.error('Error:', error); 
+        resultDiv.innerHTML = '<p>Error</p>';
       });
     });
   </script>
