@@ -37,12 +37,13 @@
         },
         body: '{"ref":"main","inputs":{"repository":"'+repo+'","versionfrom":"'+versionfrom+'","versionto":"'+versionto+'"}}'
       })
-      .then(response => response.json())
-      .then(data => {
-        resultDiv.innerHTML = '<p>Success! You will be able to download the release note <a href=https://github.com/quadrum-solutions/sputnik/releases/download/'+repo+'-'+versionfrom+'-'+versionto+'/'+repo+'_release_note_from_'+versionfrom+'_to_'+versionto+'.html>here</a> in a few seconds</p>';
-      })
-      .catch((error) => {
-        resultDiv.innerHTML = '<p>Error</p>';
-      });
+      .then(response => {
+        if (response.status === 200) {
+            resultDiv.innerHTML = '<p>Success! You will be able to download the release note <a href=https://github.com/quadrum-solutions/sputnik/releases/download/'+repo+'-'+versionfrom+'-'+versionto+'/'+repo+'_release_note_from_'+versionfrom+'_to_'+versionto+'.html>here</a> in a few seconds</p>';
+        } else {
+            // Handle other response statuses (e.g., 404, 500, etc.)
+            resultDiv.innerHTML = 'Request failed with status ' + response.status;
+        }
+        });
     });
   </script>
