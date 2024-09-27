@@ -40990,8 +40990,9 @@
             "type": "string",
             "nullable": true
           },
-          "listedFlag": {
-            "type": "boolean"
+          "listedType": {
+            "type": "string",
+            "nullable": true
           },
           "indexFlag": {
             "type": "boolean"
