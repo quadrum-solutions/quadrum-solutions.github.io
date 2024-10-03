@@ -2876,6 +2876,50 @@
         }
       }
     },
+    "/Export/DfConnector/Validate": {
+      "post": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Allow to Validate the df connector export",
+        "parameters": [
+          {
+            "name": "truncate",
+            "in": "query",
+            "description": "Truncate the table",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            },
+            "example": true
+          },
+          {
+            "name": "async",
+            "in": "query",
+            "description": "False to wait for the task to end",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Import/RT01": {
       "post": {
         "tags": [
