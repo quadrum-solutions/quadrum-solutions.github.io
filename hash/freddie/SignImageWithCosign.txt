@@ -1,0 +1,3 @@
+Version : SignImageWithCosign
+Date : 2024-10-07T09:33:44
+Digest : 47494f9cdcf45c96056c0cacf8f7b5cffe2487acd9ba50cb10823e7354301068
