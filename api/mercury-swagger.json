@@ -34406,6 +34406,9 @@
           "type": {
             "type": "string"
           },
+          "forceType": {
+            "$ref": "#/components/schemas/ForceCellExportType"
+          },
           "editions": {
             "type": "array",
             "items": {
@@ -36423,6 +36426,16 @@
           }
         },
         "additionalProperties": false
+      },
+      "ForceCellExportType": {
+        "enum": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "type": "integer",
+        "format": "int32"
       },
       "GetParameter": {
         "type": "object",
@@ -41552,6 +41565,9 @@
           },
           "toExport": {
             "type": "boolean"
+          },
+          "forceType": {
+            "$ref": "#/components/schemas/ForceCellExportType"
           },
           "type": {
             "type": "string"
