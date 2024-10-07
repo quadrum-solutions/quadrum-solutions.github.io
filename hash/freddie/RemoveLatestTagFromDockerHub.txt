@@ -1,0 +1,3 @@
+Version : RemoveLatestTagFromDockerHub
+Date : 2024-10-07T19:52:47
+Digest : 75c7bad01c2ebf308dff20424892cbcb0f4c882082d7f0ded637dfdb960873ae
