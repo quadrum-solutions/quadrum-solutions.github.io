@@ -2995,7 +2995,6 @@
           }
         ],
         "requestBody": {
-          "description": "RT01 file to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -3003,6 +3002,7 @@
                 "properties": {
                   "file": {
                     "type": "string",
+                    "description": "RT01 file to import",
                     "format": "binary"
                   }
                 }
@@ -3107,7 +3107,6 @@
           }
         ],
         "requestBody": {
-          "description": "RT01 files to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -3118,7 +3117,8 @@
                     "items": {
                       "type": "string",
                       "format": "binary"
-                    }
+                    },
+                    "description": "RT01 files to import"
                   }
                 }
               },
@@ -3213,7 +3213,6 @@
           }
         ],
         "requestBody": {
-          "description": "RT01 file to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -3221,6 +3220,7 @@
                 "properties": {
                   "file": {
                     "type": "string",
+                    "description": "RT01 file to import",
                     "format": "binary"
                   }
                 }
@@ -3316,7 +3316,6 @@
           }
         ],
         "requestBody": {
-          "description": "RT01 file to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -3327,7 +3326,8 @@
                     "items": {
                       "type": "string",
                       "format": "binary"
-                    }
+                    },
+                    "description": "RT01 file to import"
                   }
                 }
               },
@@ -3465,7 +3465,6 @@
           }
         ],
         "requestBody": {
-          "description": "Excel file to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -3473,6 +3472,7 @@
                 "properties": {
                   "file": {
                     "type": "string",
+                    "description": "Excel file to import",
                     "format": "binary"
                   }
                 }
@@ -4053,7 +4053,6 @@
           }
         ],
         "requestBody": {
-          "description": "RT01 files to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -4064,19 +4063,22 @@
                     "items": {
                       "type": "string",
                       "format": "binary"
-                    }
+                    },
+                    "description": "RT01 files to import"
                   },
                   "calculations": {
                     "type": "array",
                     "items": {
                       "type": "string"
-                    }
+                    },
+                    "description": "List of calculations to perform"
                   },
                   "surveys": {
                     "type": "array",
                     "items": {
                       "type": "string"
-                    }
+                    },
+                    "description": "List of surveys to calculate"
                   }
                 }
               },
@@ -4118,7 +4120,6 @@
         ],
         "summary": "Allow to anonymize a single file",
         "requestBody": {
-          "description": "RT01 file to anonymize",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -4126,13 +4127,15 @@
                 "properties": {
                   "file": {
                     "type": "string",
+                    "description": "RT01 file to anonymize",
                     "format": "binary"
                   },
                   "parameters": {
                     "type": "array",
                     "items": {
                       "type": "string"
-                    }
+                    },
+                    "description": "Anonymization parameter"
                   }
                 }
               },
@@ -4754,7 +4757,6 @@
         ],
         "summary": "Allow to load a zip file containing multiple static files from the API",
         "requestBody": {
-          "description": "Zip containing the files to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -4762,6 +4764,7 @@
                 "properties": {
                   "archive": {
                     "type": "string",
+                    "description": "Zip containing the files to import",
                     "format": "binary"
                   }
                 }
@@ -4822,7 +4825,6 @@
           }
         ],
         "requestBody": {
-          "description": "File to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -4830,6 +4832,7 @@
                 "properties": {
                   "file": {
                     "type": "string",
+                    "description": "File to import",
                     "format": "binary"
                   }
                 }
@@ -5011,7 +5014,6 @@
         ],
         "summary": "Allow to load a csv file",
         "requestBody": {
-          "description": "File to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -5019,6 +5021,7 @@
                 "properties": {
                   "file": {
                     "type": "string",
+                    "description": "File to import",
                     "format": "binary"
                   }
                 }
@@ -5060,7 +5063,6 @@
           }
         ],
         "requestBody": {
-          "description": "File to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -5068,6 +5070,7 @@
                 "properties": {
                   "file": {
                     "type": "string",
+                    "description": "File to import",
                     "format": "binary"
                   }
                 }
@@ -5556,7 +5559,6 @@
         ],
         "summary": "Allow to load a csv file",
         "requestBody": {
-          "description": "File to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -5564,6 +5566,7 @@
                 "properties": {
                   "file": {
                     "type": "string",
+                    "description": "File to import",
                     "format": "binary"
                   }
                 }
@@ -5605,7 +5608,6 @@
           }
         ],
         "requestBody": {
-          "description": "File to import",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -5613,6 +5615,7 @@
                 "properties": {
                   "file": {
                     "type": "string",
+                    "description": "File to import",
                     "format": "binary"
                   }
                 }
@@ -10544,7 +10547,6 @@
           }
         ],
         "requestBody": {
-          "description": "Excel file",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -10552,6 +10554,7 @@
                 "properties": {
                   "file": {
                     "type": "string",
+                    "description": "Excel file",
                     "format": "binary"
                   }
                 }
@@ -10677,7 +10680,6 @@
           }
         ],
         "requestBody": {
-          "description": "Excel file containing the data",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -10685,6 +10687,7 @@
                 "properties": {
                   "file": {
                     "type": "string",
+                    "description": "Excel file containing the data",
                     "format": "binary"
                   }
                 }
@@ -10754,7 +10757,6 @@
           }
         ],
         "requestBody": {
-          "description": "Excel file containing the data",
           "content": {
             "multipart/form-data": {
               "schema": {
@@ -10762,6 +10764,7 @@
                 "properties": {
                   "file": {
                     "type": "string",
+                    "description": "Excel file containing the data",
                     "format": "binary"
                   }
                 }
