@@ -11192,29 +11192,6 @@
         }
       }
     },
-    "/Technical": {
-      "get": {
-        "tags": [
-          "Technical"
-        ],
-        "summary": "Allow to fetch the technical information",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TechnicalInfoDTO"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
     "/Technical/Infos": {
       "get": {
         "tags": [
@@ -11238,58 +11215,23 @@
         }
       }
     },
-    "/Technical/Logs": {
-      "get": {
-        "tags": [
-          "Technical"
-        ],
-        "summary": "Allow to fetch the business logs of the day",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
     "/Technical/BusinessLogs": {
       "get": {
         "tags": [
           "Technical"
         ],
-        "summary": "Allow to fetch the business logs of the day",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
+        "summary": "Allow to fetch the business logs for a specified day",
+        "parameters": [
+          {
+            "name": "date",
+            "in": "query",
+            "description": "The date for which to retrieve the logs. If not specified, today's date will be used.",
+            "schema": {
+              "type": "string",
+              "format": "date"
             }
-          },
-          "500": {
-            "description": "Internal Server Error"
           }
-        }
-      }
-    },
-    "/Technical/LogFile": {
-      "get": {
-        "tags": [
-          "Technical"
         ],
-        "summary": "Allow to fetch the business logs of the day in a file",
         "responses": {
           "200": {
             "description": "OK",
@@ -11312,7 +11254,18 @@
         "tags": [
           "Technical"
         ],
-        "summary": "Allow to fetch the business logs of the day in a file",
+        "summary": "Allow to fetch the business logs for a specified day in a file",
+        "parameters": [
+          {
+            "name": "date",
+            "in": "query",
+            "description": "The date for which to retrieve the logs file. If not specified, today's date will be used.",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -11335,7 +11288,18 @@
         "tags": [
           "Technical"
         ],
-        "summary": "Allow to fetch the business logs of the day",
+        "summary": "Allow to fetch the technical logs for a specified day",
+        "parameters": [
+          {
+            "name": "date",
+            "in": "query",
+            "description": "The date for which to retrieve the logs. If not specified, today's date will be used.",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -11358,7 +11322,18 @@
         "tags": [
           "Technical"
         ],
-        "summary": "Allow to fetch the business logs of the day in a file",
+        "summary": "Allow to fetch the technical logs for a specified day in a file",
+        "parameters": [
+          {
+            "name": "date",
+            "in": "query",
+            "description": "The date for which to retrieve the logs file. If not specified, today's date will be used.",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
