@@ -2842,7 +2842,7 @@
           {
             "name": "overwrite",
             "in": "query",
-            "description": "Overwite the existing data if any",
+            "description": "Overwrite the existing data if any",
             "schema": {
               "type": "boolean",
               "default": true
@@ -2876,7 +2876,7 @@
         }
       }
     },
-    "/Export/DfConnector/Validate": {
+    "/Export/DfConnector/Validate/{lcId}": {
       "post": {
         "tags": [
           "Export"
@@ -2884,9 +2884,19 @@
         "summary": "Allow to Validate the df connector export",
         "parameters": [
           {
-            "name": "truncate",
+            "name": "lcId",
+            "in": "path",
+            "description": "Load collection to validate",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "overwrite",
             "in": "query",
-            "description": "Truncate the table",
+            "description": "Overwrite the table entries with same load collection",
             "schema": {
               "type": "boolean",
               "default": true
@@ -2903,6 +2913,120 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Allow to delete the validation results from a load collection",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Load collection for which the validations will be removed",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Export/DfConnector/Validate/Download": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Allow to download all the validation result",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Export/DfConnector/Validate/{lcId}/Download": {
+      "get": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Allow to download the validation result of a load collecion",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Load collection to validate",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Export/DfConnector/Validate": {
+      "delete": {
+        "tags": [
+          "Export"
+        ],
+        "summary": "Allow to delete all the validation results",
         "responses": {
           "200": {
             "description": "OK"
