@@ -10706,6 +10706,19 @@
         }
       }
     },
+    "/Reports/Xbrl/Load": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to load the xbrl taxonomies in the database",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Rules": {
       "get": {
         "tags": [
