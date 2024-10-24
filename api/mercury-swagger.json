@@ -7339,6 +7339,285 @@
         }
       }
     },
+    "/ScenarioAnalysis/IRRBB/{lcId}/{scenario}": {
+      "post": {
+        "tags": [
+          "ManagementReport"
+        ],
+        "summary": "Allow to retrieve the IRRBB Scenario Analysis report",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the load collection",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "scenario",
+            "in": "path",
+            "description": "Id of the scenario",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          }
+        ],
+        "requestBody": {
+          "description": "Filters to apply to the report",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/DynamicReportFilterDTO"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/DynamicReportFilterDTO"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/DynamicReportFilterDTO"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/DynamicReportFilterDTO"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ScenarioAnalysis/IRRBB/{lcId}/{scenario}/Categories": {
+      "get": {
+        "tags": [
+          "ManagementReport"
+        ],
+        "summary": "Allow to retrieve the IRRBB Scenario Analysis report categories",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the load collection",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "scenario",
+            "in": "path",
+            "description": "Id of the scenario",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/YearComparison/IRRBB/{scenario}": {
+      "post": {
+        "tags": [
+          "ManagementReport"
+        ],
+        "summary": "Allow to retrieve the IRRBB Monthly Comparison report",
+        "parameters": [
+          {
+            "name": "scenario",
+            "in": "path",
+            "description": "Id of the scenario",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for the report generation",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IRRBBYearComparisonDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IRRBBYearComparisonDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IRRBBYearComparisonDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IRRBBYearComparisonDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/YearComparison/IRRBB/Currencies": {
+      "get": {
+        "tags": [
+          "ManagementReport"
+        ],
+        "summary": "Allow to retrieve the IRRBB Currencies",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Query/History": {
       "get": {
         "tags": [
@@ -36689,6 +36968,27 @@
       },
       "IContractResolver": {
         "type": "object",
+        "additionalProperties": false
+      },
+      "IRRBBYearComparisonDTO": {
+        "type": "object",
+        "properties": {
+          "currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "tolerance": {
+            "type": "number",
+            "format": "double"
+          },
+          "loadCollectionsIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
         "additionalProperties": false
       },
       "InterestRate": {
