@@ -10331,9 +10331,9 @@
             }
           },
           {
-            "name": "divideBy1000",
+            "name": "divideBy",
             "in": "query",
-            "description": "True to divide amounts by 1000",
+            "description": "True to divide amounts by the number specify in the report (default 1000)",
             "schema": {
               "type": "boolean",
               "default": true
@@ -34967,6 +34967,10 @@
             "type": "integer",
             "format": "int32"
           },
+          "divideBy": {
+            "type": "integer",
+            "format": "int32"
+          },
           "cells": {
             "type": "array",
             "items": {
@@ -40913,6 +40917,10 @@
           "order": {
             "type": "integer",
             "format": "int32"
+          },
+          "divideBy": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -42231,6 +42239,10 @@
             "nullable": true
           },
           "order": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "divideBy": {
             "type": "integer",
             "format": "int32"
           },
