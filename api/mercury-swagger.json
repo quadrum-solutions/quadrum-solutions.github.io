@@ -3317,6 +3317,15 @@
             "example": "001"
           },
           {
+            "name": "async",
+            "in": "query",
+            "description": "False to wait for the task to end",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
             "name": "linkToLc",
             "in": "query",
             "description": "True to link Load a LoadCollection",
@@ -3420,6 +3429,15 @@
             "example": "001"
           },
           {
+            "name": "async",
+            "in": "query",
+            "description": "False to wait for the task to end",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          },
+          {
             "name": "linkToLc",
             "in": "query",
             "description": "True to link Load a LoadCollection",
@@ -3494,6 +3512,15 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "async",
+            "in": "query",
+            "description": "False to wait for the task to end",
+            "schema": {
+              "type": "boolean",
+              "default": true
             }
           }
         ],
