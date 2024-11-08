@@ -11991,6 +11991,44 @@
         }
       }
     },
+    "/Technical/Locks": {
+      "get": {
+        "tags": [
+          "Technical"
+        ],
+        "summary": "Allow to get all locks",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Technical"
+        ],
+        "summary": "Allow to remove all locks",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/CoreAmortization/PagedByLoadId": {
       "get": {
         "tags": [
