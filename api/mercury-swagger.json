@@ -39868,6 +39868,14 @@
           "exposureLtvId": {
             "type": "string",
             "nullable": true
+          },
+          "collateralLtvLoadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "collateralLtvId": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
