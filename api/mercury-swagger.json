@@ -41822,7 +41822,7 @@
             "type": "string",
             "nullable": true
           },
-          "simulationName": {
+          "simulationGroupName": {
             "type": "string",
             "nullable": true
           },
