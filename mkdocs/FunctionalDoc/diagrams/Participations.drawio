@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-06-10T00:01:48.897Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.5.1 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="hyQnEpwJYz7_AGPoyHae" version="24.5.1" type="device">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8">
   <diagram id="8fR3vlSnVLAmuQqtyXcf" name="Page-1">
-    <mxGraphModel dx="1674" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2314" dy="1196" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -19,11 +19,11 @@
             <mxPoint x="320" y="400" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1I_q_eXfddDbX86g2_ze-4" value="Consolidé" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="290" y="210" width="130" height="60" as="geometry" />
+        <mxCell id="1I_q_eXfddDbX86g2_ze-4" value="Consolidé&lt;div&gt;ParticipationLevel &amp;gt; 0.5&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="290" y="210" width="150" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="1I_q_eXfddDbX86g2_ze-6" value="Pas consolidé" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="240" y="470" width="120" height="60" as="geometry" />
+        <mxCell id="1I_q_eXfddDbX86g2_ze-6" value="Pas consolidé&lt;div&gt;ParticipationLevel &amp;lt;= 0.5&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="220" y="470" width="140" height="60" as="geometry" />
         </mxCell>
         <mxCell id="1I_q_eXfddDbX86g2_ze-12" value="&lt;span style=&quot;color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(42, 42, 42); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Déduction intégrale&lt;br&gt;imposée par la FINMA ?&lt;br&gt;&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="490" y="190" width="220" height="100" as="geometry" />
