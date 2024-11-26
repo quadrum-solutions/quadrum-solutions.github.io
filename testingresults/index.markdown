@@ -7,5 +7,5 @@
 
 ## Testing reports:
 
-| Status | Version BE | version FE | reports |
-|----------|----------|----------|----------|
+| Status | Version BE | Version FE | Reports | Date |
+|----------|----------|----------|----------|----------|
