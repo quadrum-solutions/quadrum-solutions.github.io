@@ -1,4 +1,6 @@
-# e2e Testing - Documentation and reports
+---
+title: "e2e Testing - Documentation and reports"
+---
 
 ## Test suites documentation:
 
