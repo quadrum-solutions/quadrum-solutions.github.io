@@ -11107,6 +11107,16 @@
           "Reports"
         ],
         "summary": "Allow to load the xbrl taxonomies in the database",
+        "parameters": [
+          {
+            "name": "async",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
