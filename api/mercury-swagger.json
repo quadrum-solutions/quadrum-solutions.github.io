@@ -3344,6 +3344,16 @@
             }
           },
           {
+            "name": "overwrite",
+            "in": "query",
+            "description": "Overwite the existing data if any",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            },
+            "example": true
+          },
+          {
             "name": "async",
             "in": "query",
             "description": "False to wait for the task to end",
