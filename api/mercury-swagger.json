@@ -25,7 +25,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id of the adaptation to test",
+            "description": "Id of the adaptation to validate",
             "required": true,
             "schema": {
               "type": "integer",
@@ -64,7 +64,7 @@
         ],
         "summary": "Allow to validate set of adaptations",
         "requestBody": {
-          "description": "Ids of the adaptations to test",
+          "description": "Ids of the adaptations to validate",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -156,16 +156,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AdaptationValidationResultDTO"
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad Request",
             "content": {
@@ -23705,6 +23695,47 @@
         }
       }
     },
+    "/RuleGroup/Validate/{name}": {
+      "get": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to validate a rule",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "Id of the rule to validate",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RulesValidationResultDTO"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/RuleGroup": {
       "get": {
         "tags": [
@@ -42392,6 +42423,23 @@
             "$ref": "#/components/schemas/RuleItem"
           },
           "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RulesValidationResultDTO": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "isValid": {
+            "type": "boolean"
+          },
+          "error": {
             "type": "string",
             "nullable": true
           }
