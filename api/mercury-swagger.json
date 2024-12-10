@@ -8726,7 +8726,7 @@
         }
       }
     },
-    "/Reports/Validate": {
+    "/Reports/GetValidationConsolidationGroup": {
       "get": {
         "tags": [
           "Reports"
@@ -8790,7 +8790,9 @@
             "description": "Internal Server Error"
           }
         }
-      },
+      }
+    },
+    "/Reports/Validate": {
       "post": {
         "tags": [
           "Reports"
@@ -8843,6 +8845,70 @@
               "type": "boolean",
               "default": true
             }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to validate a survey",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "surveyName",
+            "in": "query",
+            "description": "Name of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "MONA_U"
+          },
+          {
+            "name": "surveyVersion",
+            "in": "query",
+            "description": "Version of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1.4.0"
           }
         ],
         "responses": {
@@ -8948,7 +9014,8 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/Reports/FetchSurvey": {
@@ -43290,11 +43357,11 @@
             },
             "nullable": true
           },
-          "breachedValidationRuleSets": {
+          "validations": {
             "maxItems": -1,
             "type": "array",
             "items": {
-              "type": "string"
+              "$ref": "#/components/schemas/SurveyValidation"
             },
             "nullable": true
           },
@@ -43393,6 +43460,34 @@
             "type": "string",
             "nullable": true,
             "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SurveyValidation": {
+        "type": "object",
+        "properties": {
+          "consolidationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "validated": {
+            "type": "boolean"
+          },
+          "user": {
+            "type": "string",
+            "nullable": true
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "breaches": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -43651,6 +43746,10 @@
       "ValidationBreachDTO": {
         "type": "object",
         "properties": {
+          "consolidationName": {
+            "type": "string",
+            "nullable": true
+          },
           "group": {
             "type": "string",
             "nullable": true
@@ -43680,6 +43779,11 @@
               "$ref": "#/components/schemas/ValidationBreachDetailDTO"
             },
             "nullable": true
+          },
+          "breachId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
           }
         },
         "additionalProperties": false
