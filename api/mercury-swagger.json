@@ -1899,128 +1899,12 @@
         }
       }
     },
-    "/Engine/CalcCa/{lcId}": {
-      "post": {
-        "tags": [
-          "Engine"
-        ],
-        "summary": "Run the Basel 3 CRM CA calculation",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "path",
-            "description": "Id of the LoadCollection to run",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "async",
-            "in": "query",
-            "description": "False to wait for the task to end",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
     "/Engine/CalcCrmCa/{lcId}": {
       "post": {
         "tags": [
           "Engine"
         ],
         "summary": "Run the Basel 3 CRM CA calculation",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "path",
-            "description": "Id of the LoadCollection to run",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "async",
-            "in": "query",
-            "description": "False to wait for the task to end",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/Engine/CalcCaB4/{lcId}": {
-      "post": {
-        "tags": [
-          "Engine"
-        ],
-        "summary": "Run the Basel 4 CRM CA calculation",
         "parameters": [
           {
             "name": "lcId",
