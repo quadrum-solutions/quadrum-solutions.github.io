@@ -43279,6 +43279,14 @@
           "isXbrl": {
             "type": "boolean"
           },
+          "validFrom": {
+            "type": "string",
+            "nullable": true
+          },
+          "validTo": {
+            "type": "string",
+            "nullable": true
+          },
           "reports": {
             "type": "array",
             "items": {
