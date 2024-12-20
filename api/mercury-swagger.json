@@ -38620,6 +38620,9 @@
             "type": "integer",
             "format": "int32"
           },
+          "isPointInTime": {
+            "type": "boolean"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
