@@ -2177,7 +2177,7 @@
         }
       }
     },
-    "/Engine/CalcCrmCaB4/{lcId}": {
+    "/Engine/CalcCrmCaB3F/{lcId}": {
       "post": {
         "tags": [
           "Engine"
@@ -40005,7 +40005,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "pfeFactorB4": {
+          "pfeFactorB3F": {
             "type": "number",
             "format": "float"
           },
@@ -41976,7 +41976,7 @@
           "marExclude": {
             "type": "boolean"
           },
-          "caForceRiskWeightB4": {
+          "caForceRiskWeightB3F": {
             "type": "number",
             "format": "float"
           },
@@ -42042,7 +42042,7 @@
           "levExclude": {
             "type": "boolean"
           },
-          "forceCAPositionClassB4": {
+          "forceCAPositionClassB3F": {
             "type": "string",
             "nullable": true
           },
@@ -42589,17 +42589,17 @@
             },
             "nullable": true
           },
-          "positionsCrmCaB4Exposures": {
+          "positionsCrmCaB3FExposures": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PositionCrmCaB4"
+              "$ref": "#/components/schemas/PositionCrmCaB3F"
             },
             "nullable": true
           },
-          "positionsCrmCaB4Collaterals": {
+          "positionsCrmCaB3FCollaterals": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PositionCrmCaB4"
+              "$ref": "#/components/schemas/PositionCrmCaB3F"
             },
             "nullable": true
           },
@@ -43234,7 +43234,7 @@
             "type": "number",
             "format": "float"
           },
-          "ccfB4": {
+          "ccfB3F": {
             "type": "number",
             "format": "float"
           },
@@ -43242,30 +43242,30 @@
             "type": "string",
             "nullable": true
           },
-          "caPositionClassB4": {
+          "caPositionClassB3F": {
             "type": "string",
             "nullable": true
           },
-          "caIssuerRiskWeightB4": {
+          "caIssuerRiskWeightB3F": {
             "type": "number",
             "format": "float"
           },
-          "caIssuerExposureB4": {
+          "caIssuerExposureB3F": {
             "type": "number",
             "format": "double"
           },
-          "caExposureB4": {
+          "caExposureB3F": {
             "type": "number",
             "format": "double"
           },
-          "caRiskWeightB4": {
+          "caRiskWeightB3F": {
             "type": "number",
             "format": "float"
           },
           "caQualifiedRetailFlag": {
             "type": "boolean"
           },
-          "regulatoryHaircutB4": {
+          "regulatoryHaircutB3F": {
             "type": "number",
             "format": "float"
           },
@@ -43273,7 +43273,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "cvaWeightB4": {
+          "cvaWeightB3F": {
             "type": "number",
             "format": "float"
           },
@@ -43281,10 +43281,10 @@
             "type": "number",
             "format": "double"
           },
-          "caExposureFlagB4": {
+          "caExposureFlagB3F": {
             "type": "boolean"
           },
-          "caIssuerPositionClassB4": {
+          "caIssuerPositionClassB3F": {
             "type": "string",
             "nullable": true
           },
@@ -43483,7 +43483,7 @@
         },
         "additionalProperties": false
       },
-      "PositionCrmCaB4": {
+      "PositionCrmCaB3F": {
         "type": "object",
         "properties": {
           "loadCollectionId": {
@@ -43735,7 +43735,7 @@
             "type": "number",
             "format": "double"
           },
-          "caRiskWeightB4": {
+          "caRiskWeightB3F": {
             "type": "number",
             "format": "double"
           },
