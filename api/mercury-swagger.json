@@ -38538,7 +38538,8 @@
             "type": "boolean"
           },
           "type": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "forceType": {
             "$ref": "#/components/schemas/ForceCellExportType"
@@ -45931,7 +45932,8 @@
             "$ref": "#/components/schemas/ForceCellExportType"
           },
           "type": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "mappingTech": {
             "type": "string",
@@ -46054,7 +46056,8 @@
             "nullable": true
           },
           "type": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "isRef": {
             "type": "boolean"
