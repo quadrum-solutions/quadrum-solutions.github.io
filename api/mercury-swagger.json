@@ -45300,6 +45300,14 @@
             "type": "string",
             "nullable": true
           },
+          "category": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
           "user": {
             "type": "string",
             "nullable": true
