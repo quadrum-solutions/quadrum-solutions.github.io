@@ -42147,14 +42147,18 @@
             "format": "date"
           },
           "accountsA": {
-            "type": "string",
-            "nullable": true
+            "type": "integer",
+            "format": "int32"
           },
           "accountsB": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "comment": {
             "type": "string",
             "nullable": true
           },
-          "comment": {
+          "counterpartyReference": {
             "type": "string",
             "nullable": true
           },
