@@ -41514,6 +41514,11 @@
           "date": {
             "type": "string",
             "format": "date-time"
+          },
+          "typeString": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
           }
         },
         "additionalProperties": false
