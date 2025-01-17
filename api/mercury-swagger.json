@@ -44829,6 +44829,14 @@
             "type": "string",
             "nullable": true
           },
+          "reportingCurrency": {
+            "type": "string",
+            "nullable": true
+          },
+          "fxRateId": {
+            "type": "string",
+            "nullable": true
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
