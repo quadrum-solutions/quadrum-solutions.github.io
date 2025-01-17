@@ -24897,6 +24897,47 @@
         }
       }
     },
+    "/RuleGroup/Query/{name}": {
+      "get": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to get the select query of a rule",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "Id of the rule",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/RuleGroup/Paged": {
       "get": {
         "tags": [
