@@ -11343,6 +11343,101 @@
         }
       }
     },
+    "/Reports/UploadExcel": {
+      "post": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to upload an Excel file to feed a survey",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "surveyName",
+            "in": "query",
+            "description": "Name of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "MONA_U"
+          },
+          {
+            "name": "surveyVersion",
+            "in": "query",
+            "description": "Version of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1.4.0"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "description": "Excel file to import",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/Reports/Fields": {
       "get": {
         "tags": [
