@@ -10039,6 +10039,145 @@
         }
       }
     },
+    "/Reports/FetchSurvey/Audit": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to fetch a survey audits",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "surveyName",
+            "in": "query",
+            "description": "Name of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "MONA_U"
+          },
+          {
+            "name": "surveyVersion",
+            "in": "query",
+            "description": "Version of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1.4.0"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SurveyAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Reports/Status/{status}": {
+      "post": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to add a status to a survey",
+        "parameters": [
+          {
+            "name": "status",
+            "in": "path",
+            "description": "Status",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "READY_FOR_APPROVAL"
+          },
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "surveyName",
+            "in": "query",
+            "description": "Name of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "MONA_U"
+          },
+          {
+            "name": "surveyVersion",
+            "in": "query",
+            "description": "Version of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1.4.0"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Reports/FetchSurvey/ListReports": {
       "get": {
         "tags": [
@@ -38879,15 +39018,34 @@
             "type": "string",
             "format": "date-time"
           },
-          "validated": {
-            "type": "boolean"
-          },
           "breaches": {
             "type": "integer",
             "format": "int32"
           },
+          "validated": {
+            "type": "boolean"
+          },
+          "readyForApproval": {
+            "type": "boolean"
+          },
+          "approved": {
+            "type": "boolean"
+          },
+          "frozen": {
+            "type": "boolean"
+          },
           "exported": {
             "type": "boolean"
+          },
+          "delivered": {
+            "type": "boolean"
+          },
+          "status": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
           },
           "reports": {
             "type": "array",
@@ -46050,6 +46208,35 @@
         },
         "additionalProperties": false
       },
+      "SurveyAudit": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "surveyFullCalcId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "surveyFullCalc": {
+            "$ref": "#/components/schemas/SurveyFullCalc"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "user": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "SurveyCellCalc": {
         "type": "object",
         "properties": {
@@ -46259,20 +46446,24 @@
           "isXbrl": {
             "type": "boolean"
           },
-          "validated": {
-            "type": "boolean"
-          },
-          "exported": {
-            "type": "boolean"
-          },
           "calcDate": {
             "type": "string",
             "format": "date-time"
+          },
+          "status": {
+            "$ref": "#/components/schemas/SurveyStatusType"
           },
           "reports": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/SurveyReportCalc"
+            },
+            "nullable": true
+          },
+          "audits": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SurveyAudit"
             },
             "nullable": true
           },
@@ -46390,6 +46581,20 @@
           }
         },
         "additionalProperties": false
+      },
+      "SurveyStatusType": {
+        "enum": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128
+        ],
+        "type": "integer",
+        "format": "int32"
       },
       "SurveyValidation": {
         "type": "object",
