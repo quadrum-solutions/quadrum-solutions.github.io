@@ -8128,6 +8128,74 @@
         }
       }
     },
+    "/AllScenarios/IRRBB/{lcId}/ByCurrency": {
+      "post": {
+        "tags": [
+          "ManagementReport"
+        ],
+        "summary": "Allow to retrieve all IRRBB scenarios with maturity and repricing gaps",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Load collection id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Limits for scenario by group (EVE and NII)",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IRRBBLimitByGroupDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IRRBBLimitByGroupDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IRRBBLimitByGroupDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IRRBBLimitByGroupDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Query/History": {
       "get": {
         "tags": [
@@ -41067,6 +41135,44 @@
       },
       "IContractResolver": {
         "type": "object",
+        "additionalProperties": false
+      },
+      "IRRBBLimitByGroupDTO": {
+        "type": "object",
+        "properties": {
+          "eve": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IRRBBLimitByScenarioCurrency"
+            },
+            "nullable": true
+          },
+          "nii": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IRRBBLimitByScenarioCurrency"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IRRBBLimitByScenarioCurrency": {
+        "type": "object",
+        "properties": {
+          "currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "scenarioNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "limit": {
+            "type": "number",
+            "format": "double"
+          }
+        },
         "additionalProperties": false
       },
       "IRRBBYearComparisonDTO": {
