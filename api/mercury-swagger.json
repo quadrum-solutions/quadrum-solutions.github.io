@@ -42508,6 +42508,9 @@
             "type": "number",
             "format": "float"
           },
+          "excludeFromDepositProtection": {
+            "type": "boolean"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
