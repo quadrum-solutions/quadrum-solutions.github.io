@@ -43616,26 +43616,6 @@
             "type": "string",
             "nullable": true
           },
-          "lexExposure": {
-            "type": "number",
-            "format": "double"
-          },
-          "lexIssuerExposure": {
-            "type": "number",
-            "format": "double"
-          },
-          "lexRiskWeight": {
-            "type": "number",
-            "format": "float"
-          },
-          "lexIssuerRiskWeight": {
-            "type": "number",
-            "format": "float"
-          },
-          "lexIssuerRWA": {
-            "type": "number",
-            "format": "double"
-          },
           "lexccf": {
             "type": "number",
             "format": "double"
@@ -43710,22 +43690,6 @@
           "caPositionClassB3F": {
             "type": "string",
             "nullable": true
-          },
-          "caIssuerRiskWeightB3F": {
-            "type": "number",
-            "format": "float"
-          },
-          "caIssuerExposureB3F": {
-            "type": "number",
-            "format": "double"
-          },
-          "caExposureB3F": {
-            "type": "number",
-            "format": "double"
-          },
-          "caRiskWeightB3F": {
-            "type": "number",
-            "format": "float"
           },
           "caQualifiedRetailFlag": {
             "type": "boolean"
