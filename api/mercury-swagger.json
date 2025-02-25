@@ -4134,6 +4134,16 @@
               "format": "int32",
               "default": 0
             }
+          },
+          {
+            "name": "lcIdCopyGlobalInputFrom",
+            "in": "query",
+            "description": "Specify the id of the load collection to copy the Global Inputs from",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
           }
         ],
         "requestBody": {
