@@ -6847,6 +6847,57 @@
         }
       }
     },
+    "/Load/Duplicate": {
+      "post": {
+        "tags": [
+          "Load"
+        ],
+        "summary": "Allow to duplicate a load",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Id of the load to copy",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "Name of the new load",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Load/RecordsAuditById/{id}": {
       "get": {
         "tags": [
@@ -7453,6 +7504,57 @@
           },
           "404": {
             "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/LoadCollection/Duplicate": {
+      "post": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to duplicate a load collection",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Id of the load collection to copy",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "Name of the new load collection",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
             "content": {
               "application/json": {
                 "schema": {
