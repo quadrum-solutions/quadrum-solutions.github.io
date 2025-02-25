@@ -6879,6 +6879,15 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "async",
+            "in": "query",
+            "description": "False to wait for the task to end",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
           }
         ],
         "responses": {
@@ -7546,6 +7555,15 @@
             "description": "Name of the new load collection",
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "name": "async",
+            "in": "query",
+            "description": "False to wait for the task to end",
+            "schema": {
+              "type": "boolean",
+              "default": true
             }
           }
         ],
