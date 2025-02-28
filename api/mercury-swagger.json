@@ -11096,7 +11096,8 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/Reports/Audit": {
@@ -11640,6 +11641,81 @@
               "type": "string"
             },
             "example": "1.4.0"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Reports/DrillUp": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to drill up a position",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "positionId",
+            "in": "query",
+            "description": "Id of the position to drill up",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1"
+          },
+          {
+            "name": "loadId",
+            "in": "query",
+            "description": "LoadId of the position to drill up",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
           }
         ],
         "responses": {
@@ -46761,6 +46837,9 @@
             "nullable": true
           },
           "isContentBased": {
+            "type": "boolean"
+          },
+          "hasDrillUp": {
             "type": "boolean"
           },
           "isXbrl": {
