@@ -39282,7 +39282,7 @@
           "approved": {
             "type": "boolean"
           },
-          "frozen": {
+          "locked": {
             "type": "boolean"
           },
           "exported": {
