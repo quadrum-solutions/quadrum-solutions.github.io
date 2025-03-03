@@ -47215,6 +47215,14 @@
           "report": {
             "type": "string",
             "nullable": true
+          },
+          "row": {
+            "type": "string",
+            "nullable": true
+          },
+          "column": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
