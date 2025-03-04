@@ -11403,6 +11403,192 @@
         }
       }
     },
+    "/Reports/EditCellValue": {
+      "post": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to edit a cell value",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "surveyName",
+            "in": "query",
+            "description": "Name of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "MONA_U"
+          },
+          {
+            "name": "surveyVersion",
+            "in": "query",
+            "description": "Version of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1.4.0"
+          },
+          {
+            "name": "cellPosition",
+            "in": "query",
+            "description": "Position of the cell",
+            "schema": {
+              "type": "string"
+            },
+            "example": "BILAKTFMINOTICHF"
+          },
+          {
+            "name": "value",
+            "in": "query",
+            "description": "New value of the cell",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12345"
+          },
+          {
+            "name": "reason",
+            "in": "query",
+            "description": "Reason of the change",
+            "schema": {
+              "type": "string"
+            },
+            "example": "my reason"
+          },
+          {
+            "name": "reportName",
+            "in": "query",
+            "description": "Name of the report if needed",
+            "schema": {
+              "type": "string"
+            },
+            "example": "M201"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Reports/RestoreCellValue": {
+      "post": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to restore a cell value",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "surveyName",
+            "in": "query",
+            "description": "Name of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "MONA_U"
+          },
+          {
+            "name": "surveyVersion",
+            "in": "query",
+            "description": "Version of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1.4.0"
+          },
+          {
+            "name": "cellPosition",
+            "in": "query",
+            "description": "Position of the cell",
+            "schema": {
+              "type": "string"
+            },
+            "example": "BILAKTFMINOTICHF"
+          },
+          {
+            "name": "reportName",
+            "in": "query",
+            "description": "Name of the report if needed",
+            "schema": {
+              "type": "string"
+            },
+            "example": "M201"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/Reports/AuditExcel": {
       "get": {
         "tags": [
