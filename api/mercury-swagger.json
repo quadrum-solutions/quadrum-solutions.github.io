@@ -3039,6 +3039,15 @@
               "format": "int32",
               "default": 0
             }
+          },
+          {
+            "name": "splitBc",
+            "in": "query",
+            "description": "Split data in different loads by BookingCenterId",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
           }
         ],
         "requestBody": {
@@ -3150,6 +3159,15 @@
               "type": "integer",
               "format": "int32",
               "default": 0
+            }
+          },
+          {
+            "name": "splitBc",
+            "in": "query",
+            "description": "Split data in different loads by BookingCenterId",
+            "schema": {
+              "type": "boolean",
+              "default": false
             }
           }
         ],
@@ -3266,6 +3284,15 @@
               "format": "int32",
               "default": 0
             }
+          },
+          {
+            "name": "splitBc",
+            "in": "query",
+            "description": "Split data in different loads by BookingCenterId",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
           }
         ],
         "requestBody": {
@@ -3377,6 +3404,15 @@
               "type": "integer",
               "format": "int32",
               "default": 0
+            }
+          },
+          {
+            "name": "splitBc",
+            "in": "query",
+            "description": "Split data in different loads by BookingCenterId",
+            "schema": {
+              "type": "boolean",
+              "default": false
             }
           }
         ],
@@ -3678,6 +3714,15 @@
               "type": "integer",
               "format": "int32",
               "default": 0
+            }
+          },
+          {
+            "name": "splitBc",
+            "in": "query",
+            "description": "Split data in different loads by BookingCenterId",
+            "schema": {
+              "type": "boolean",
+              "default": false
             }
           }
         ],
