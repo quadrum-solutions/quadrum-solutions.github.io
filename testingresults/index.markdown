@@ -16,6 +16,7 @@ title: "e2e Testing - Documentation and reports"
 
 | Status | Version BE | Version FE | Reports | Date |
 |----------|----------|----------|----------|----------|
+| failed | v1.9.0 | v1.9.0 | [link](reports/20250311160437_v1.9.0_v1.9.0_failed_report.html) | 2025-03-11_16:04:37 |
 | passed | v1.9.0 | v1.9.0 | [link](reports/20250311154855_v1.9.0_v1.9.0_passed_report.html) | 2025-03-11_15:48:55 |
 | passed | v1.9.0 | v1.9.0 | [link](reports/20250311153958_v1.9.0_v1.9.0_passed_report.html) | 2025-03-11_15:39:58 |
 | passed | v1.9.0 | v1.9.0 | [link](reports/20250311144554_v1.9.0_v1.9.0_passed_report.html) | 2025-03-11_14:45:54 |
