@@ -39546,6 +39546,9 @@
           "isEdited": {
             "type": "boolean"
           },
+          "hasBeenReinitialized": {
+            "type": "boolean"
+          },
           "isFormula": {
             "type": "boolean"
           },
