@@ -2119,6 +2119,64 @@
         }
       }
     },
+    "/Engine/CalcFieldsDFConnector/{lcId}": {
+      "post": {
+        "tags": [
+          "Engine"
+        ],
+        "summary": "Run the calculated field DF Connector calculation",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the LoadCollection to run",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "async",
+            "in": "query",
+            "description": "False to wait for the task to end",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/Engine/CalcCrmCa/{lcId}": {
       "post": {
         "tags": [
@@ -39833,7 +39891,8 @@
           6,
           7,
           8,
-          9
+          9,
+          10
         ],
         "type": "integer",
         "format": "int32"
