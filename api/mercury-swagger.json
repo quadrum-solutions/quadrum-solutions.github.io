@@ -47317,6 +47317,10 @@
           "isXbrl": {
             "type": "boolean"
           },
+          "group": {
+            "type": "string",
+            "nullable": true
+          },
           "validFrom": {
             "type": "string",
             "nullable": true
