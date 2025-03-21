@@ -47039,6 +47039,9 @@
           "value": {
             "type": "string",
             "nullable": true
+          },
+          "isCalculated": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
