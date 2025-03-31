@@ -16,6 +16,7 @@ title: "e2e Testing - Documentation and reports"
 
 | Status | Version BE | Commit BE | Version FE | Commit FE | Reports | Date |
 |----------|----------|----------|----------|----------|----------|----------|
+| failed | nightly | c562d0a | nightly | 21127e0 | [link](reports/20250331030400_fe_nightly_be_nightly_failed_report.html) | 2025-03-31_03:04:00 |
 | failed | nightly | 9fa0b43 | nightly | 21127e0 | [link](reports/20250329030404_fe_nightly_be_nightly_failed_report.html) | 2025-03-29_03:04:04 |
 | failed | nightly | 0319b95 | nightly | 21127e0 | [link](reports/20250328030408_fe_nightly_be_nightly_failed_report.html) | 2025-03-28_03:04:08 |
 | failed | v1.11.2 | 51b48ab | v1.11.1 | 21127e0 | [link](reports/20250327073105_fe_v1.11.1_be_v1.11.2_failed_report.html) | 2025-03-27_07:31:05 |
