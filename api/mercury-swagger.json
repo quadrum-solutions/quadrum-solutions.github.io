@@ -128,6 +128,48 @@
         }
       }
     },
+    "/Adaptation/Query/{id}": {
+      "get": {
+        "tags": [
+          "Adaptation"
+        ],
+        "summary": "Allow to get the select query of an adaptation",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the rule",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Adaptation/Duplicate/{id}": {
       "post": {
         "tags": [
