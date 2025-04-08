@@ -1964,7 +1964,7 @@
         "tags": [
           "Engine"
         ],
-        "summary": "Run multiple tasks (always async)",
+        "summary": "Run multiple tasks",
         "parameters": [
           {
             "name": "lcId",
@@ -1976,6 +1976,15 @@
               "format": "int32"
             },
             "example": 1
+          },
+          {
+            "name": "async",
+            "in": "query",
+            "description": "False to wait for the task to end",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
           }
         ],
         "requestBody": {
