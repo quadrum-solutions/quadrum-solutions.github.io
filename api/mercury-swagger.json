@@ -2109,7 +2109,8 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/Engine/CalcFieldsEU/{lcId}": {
@@ -2167,7 +2168,8 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/Engine/CalcFieldsDFConnector/{lcId}": {
@@ -2225,7 +2227,8 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/Engine/CalcCrmCa/{lcId}": {
@@ -2283,7 +2286,8 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/Engine/CalcCrmCaB3F/{lcId}": {
@@ -2341,7 +2345,8 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/Engine/CalcCrmLex/{lcId}": {
@@ -2399,7 +2404,8 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/Engine/CalcCrmMona/{lcId}": {
@@ -2457,7 +2463,8 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/Engine/CalcIrrbb/{lcId}": {
@@ -2515,7 +2522,8 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/Engine/CalcCrmAsta/{lcId}": {
@@ -2573,7 +2581,8 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/Engine/CalcLiq/{lcId}": {
@@ -2631,7 +2640,8 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/Engine/CalcBsNetting/{lcId}": {
@@ -2689,7 +2699,8 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/Engine/GetCalcEndpoints": {
