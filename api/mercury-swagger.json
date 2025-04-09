@@ -43877,6 +43877,12 @@
             "type": "string",
             "nullable": true
           },
+          "isImported": {
+            "type": "boolean"
+          },
+          "isLinkable": {
+            "type": "boolean"
+          },
           "logSummary": {
             "$ref": "#/components/schemas/LogSummary"
           }
@@ -43932,7 +43938,8 @@
           0,
           1,
           2,
-          3
+          3,
+          4
         ],
         "type": "integer",
         "format": "int32"
