@@ -17299,7 +17299,7 @@
         }
       }
     },
-    "/CoreDerivativesSwap/PagedByLoadId": {
+    "/CoreDerivativeSchedule/PagedByLoadId": {
       "get": {
         "tags": [
           "zCoreGenericDyn"
@@ -17413,7 +17413,7 @@
         }
       }
     },
-    "/CoreDerivativesSwap/ExcelByLoadId": {
+    "/CoreDerivativeSchedule/ExcelByLoadId": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -17460,7 +17460,7 @@
         }
       }
     },
-    "/CoreDerivativesSwap/ByLoadId/{loadId}": {
+    "/CoreDerivativeSchedule/ByLoadId/{loadId}": {
       "get": {
         "tags": [
           "zCoreGenericDyn"
@@ -17485,7 +17485,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/DerivativesSwap"
+                    "$ref": "#/components/schemas/DerivativeSchedule"
                   }
                 }
               }
@@ -17494,7 +17494,7 @@
         }
       }
     },
-    "/CoreDerivativesSwap/PagedByLcId": {
+    "/CoreDerivativeSchedule/PagedByLcId": {
       "get": {
         "tags": [
           "zCoreGenericDyn"
@@ -17608,7 +17608,7 @@
         }
       }
     },
-    "/CoreDerivativesSwap/ExcelByLcId": {
+    "/CoreDerivativeSchedule/ExcelByLcId": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -17655,7 +17655,7 @@
         }
       }
     },
-    "/CoreDerivativesSwap/ByLcId/{lcId}": {
+    "/CoreDerivativeSchedule/ByLcId/{lcId}": {
       "get": {
         "tags": [
           "zCoreGenericDyn"
@@ -17680,7 +17680,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/DerivativesSwap"
+                    "$ref": "#/components/schemas/DerivativeSchedule"
                   }
                 }
               }
@@ -17689,7 +17689,7 @@
         }
       }
     },
-    "/CoreDerivativesSwap/{loadId}/{id}": {
+    "/CoreDerivativeSchedule/{loadId}/{id}": {
       "get": {
         "tags": [
           "zCoreGenericDyn"
@@ -17720,7 +17720,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DerivativesSwap"
+                  "$ref": "#/components/schemas/DerivativeSchedule"
                 }
               }
             }
@@ -17859,7 +17859,7 @@
         }
       }
     },
-    "/CoreDerivativesSwap": {
+    "/CoreDerivativeSchedule": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -17870,22 +17870,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/DerivativesSwap"
+                "$ref": "#/components/schemas/DerivativeSchedule"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DerivativesSwap"
+                "$ref": "#/components/schemas/DerivativeSchedule"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/DerivativesSwap"
+                "$ref": "#/components/schemas/DerivativeSchedule"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/DerivativesSwap"
+                "$ref": "#/components/schemas/DerivativeSchedule"
               }
             }
           }
@@ -17916,22 +17916,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/DerivativesSwap"
+                "$ref": "#/components/schemas/DerivativeSchedule"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DerivativesSwap"
+                "$ref": "#/components/schemas/DerivativeSchedule"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/DerivativesSwap"
+                "$ref": "#/components/schemas/DerivativeSchedule"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/DerivativesSwap"
+                "$ref": "#/components/schemas/DerivativeSchedule"
               }
             }
           }
@@ -17963,7 +17963,7 @@
         }
       }
     },
-    "/CoreDerivativesSwap/withcomment": {
+    "/CoreDerivativeSchedule/withcomment": {
       "put": {
         "tags": [
           "zCoreGenericDyn"
@@ -17974,22 +17974,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/DerivativesSwapRecordAuditUpdateDTO"
+                "$ref": "#/components/schemas/DerivativeScheduleRecordAuditUpdateDTO"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DerivativesSwapRecordAuditUpdateDTO"
+                "$ref": "#/components/schemas/DerivativeScheduleRecordAuditUpdateDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/DerivativesSwapRecordAuditUpdateDTO"
+                "$ref": "#/components/schemas/DerivativeScheduleRecordAuditUpdateDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/DerivativesSwapRecordAuditUpdateDTO"
+                "$ref": "#/components/schemas/DerivativeScheduleRecordAuditUpdateDTO"
               }
             }
           }
@@ -18021,7 +18021,7 @@
         }
       }
     },
-    "/CoreDerivativesSwap/withcomment/{loadId}/{id}": {
+    "/CoreDerivativeSchedule/withcomment/{loadId}/{id}": {
       "patch": {
         "tags": [
           "zCoreGenericDyn"
@@ -18053,22 +18053,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/DerivativesSwapRecordAuditPatchDTO"
+                "$ref": "#/components/schemas/DerivativeScheduleRecordAuditPatchDTO"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DerivativesSwapRecordAuditPatchDTO"
+                "$ref": "#/components/schemas/DerivativeScheduleRecordAuditPatchDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/DerivativesSwapRecordAuditPatchDTO"
+                "$ref": "#/components/schemas/DerivativeScheduleRecordAuditPatchDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/DerivativesSwapRecordAuditPatchDTO"
+                "$ref": "#/components/schemas/DerivativeScheduleRecordAuditPatchDTO"
               }
             }
           }
@@ -18100,7 +18100,7 @@
         }
       }
     },
-    "/CoreDerivativesSwap/RecordsAuditById/{loadId}/{id}": {
+    "/CoreDerivativeSchedule/RecordsAuditById/{loadId}/{id}": {
       "get": {
         "tags": [
           "zCoreGenericDyn"
@@ -18154,7 +18154,7 @@
         }
       }
     },
-    "/CoreDerivativesSwap/Duplicate/{loadId}/{id}": {
+    "/CoreDerivativeSchedule/Duplicate/{loadId}/{id}": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -18208,7 +18208,7 @@
         }
       }
     },
-    "/CoreDerivativesSwap/BulkUpdateByLcId/{lcId}": {
+    "/CoreDerivativeSchedule/BulkUpdateByLcId/{lcId}": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -18278,7 +18278,1056 @@
         }
       }
     },
-    "/CoreDerivativesSwap/BulkUpdateByLoadId/{loadId}": {
+    "/CoreDerivativeSchedule/BulkUpdateByLoadId/{loadId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to bulkupdate positions by LoadId",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "Id of the load",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for items to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreDerivativeSwap/PagedByLoadId": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to fetch pages items by Load Id",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to fetch pages items by Load Id",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreDerivativeSwap/ExcelByLoadId": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to fetch excel file with filters",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/CoreDerivativeSwap/ByLoadId/{loadId}": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to fetch items by Load Id",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DerivativeSwap"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreDerivativeSwap/PagedByLcId": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to fetch pages items by LoadCollection",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to fetch pages items by LoadCollection",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreDerivativeSwap/ExcelByLcId": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to fetch excel file with filters",
+        "parameters": [
+          {
+            "name": "lcid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/CoreDerivativeSwap/ByLcId/{lcId}": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to fetch pages by LoadCollection",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DerivativeSwap"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreDerivativeSwap/{loadId}/{id}": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to fetch one item by Load Id and Id",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DerivativeSwap"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to patch an item",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "LoadId of the item",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Item to patch",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "LoadId of the item",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreDerivativeSwap": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to create an item",
+        "requestBody": {
+          "description": "Item to create",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DerivativeSwap"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DerivativeSwap"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DerivativeSwap"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DerivativeSwap"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DerivativeSwap"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DerivativeSwap"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DerivativeSwap"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DerivativeSwap"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreDerivativeSwap/withcomment": {
+      "put": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update with comment",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DerivativeSwapRecordAuditUpdateDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DerivativeSwapRecordAuditUpdateDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DerivativeSwapRecordAuditUpdateDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DerivativeSwapRecordAuditUpdateDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreDerivativeSwap/withcomment/{loadId}/{id}": {
+      "patch": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to patch an item with comment",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "LoadId of the item",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Item to patch with comment",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DerivativeSwapRecordAuditPatchDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DerivativeSwapRecordAuditPatchDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DerivativeSwapRecordAuditPatchDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DerivativeSwapRecordAuditPatchDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreDerivativeSwap/RecordsAuditById/{loadId}/{id}": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "LoadId of the item",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreDerivativeSwap/Duplicate/{loadId}/{id}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "Id of the load",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreDerivativeSwap/BulkUpdateByLcId/{lcId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to bulkupdate positions by LoadCollection Id",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the load collection",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for items to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreDerivativeSwap/BulkUpdateByLoadId/{loadId}": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -42433,7 +43482,104 @@
         },
         "additionalProperties": false
       },
-      "DerivativesSwap": {
+      "DerivativeSchedule": {
+        "type": "object",
+        "properties": {
+          "isEdited": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "loadId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "load": {
+            "$ref": "#/components/schemas/Load"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DerivativeScheduleJsonPatchDocument": {
+        "type": "object",
+        "properties": {
+          "operations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DerivativeScheduleOperation"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "contractResolver": {
+            "$ref": "#/components/schemas/IContractResolver"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DerivativeScheduleOperation": {
+        "type": "object",
+        "properties": {
+          "operationType": {
+            "$ref": "#/components/schemas/OperationType"
+          },
+          "path": {
+            "type": "string",
+            "nullable": true
+          },
+          "op": {
+            "type": "string",
+            "nullable": true
+          },
+          "from": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DerivativeScheduleRecordAuditPatchDTO": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/DerivativeScheduleJsonPatchDocument"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DerivativeScheduleRecordAuditUpdateDTO": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/DerivativeSchedule"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DerivativeSwap": {
         "type": "object",
         "properties": {
           "isEdited": {
@@ -42557,13 +43703,13 @@
         },
         "additionalProperties": false
       },
-      "DerivativesSwapJsonPatchDocument": {
+      "DerivativeSwapJsonPatchDocument": {
         "type": "object",
         "properties": {
           "operations": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/DerivativesSwapOperation"
+              "$ref": "#/components/schemas/DerivativeSwapOperation"
             },
             "nullable": true,
             "readOnly": true
@@ -42574,7 +43720,7 @@
         },
         "additionalProperties": false
       },
-      "DerivativesSwapOperation": {
+      "DerivativeSwapOperation": {
         "type": "object",
         "properties": {
           "operationType": {
@@ -42598,11 +43744,11 @@
         },
         "additionalProperties": false
       },
-      "DerivativesSwapRecordAuditPatchDTO": {
+      "DerivativeSwapRecordAuditPatchDTO": {
         "type": "object",
         "properties": {
           "item": {
-            "$ref": "#/components/schemas/DerivativesSwapJsonPatchDocument"
+            "$ref": "#/components/schemas/DerivativeSwapJsonPatchDocument"
           },
           "comment": {
             "type": "string",
@@ -42611,11 +43757,11 @@
         },
         "additionalProperties": false
       },
-      "DerivativesSwapRecordAuditUpdateDTO": {
+      "DerivativeSwapRecordAuditUpdateDTO": {
         "type": "object",
         "properties": {
           "item": {
-            "$ref": "#/components/schemas/DerivativesSwap"
+            "$ref": "#/components/schemas/DerivativeSwap"
           },
           "comment": {
             "type": "string",
