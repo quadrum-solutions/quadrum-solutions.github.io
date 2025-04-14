@@ -46785,6 +46785,10 @@
             "type": "string",
             "nullable": true
           },
+          "lexccfB3F": {
+            "type": "number",
+            "format": "double"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
