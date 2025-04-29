@@ -41568,18 +41568,8 @@
             "type": "string",
             "nullable": true
           },
-          "groupLEXPIT": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
           "groupARISId": {
             "type": "string",
-            "nullable": true
-          },
-          "groupARISPIT": {
-            "type": "integer",
-            "format": "int32",
             "nullable": true
           },
           "headcount": {
@@ -42423,10 +42413,6 @@
             "type": "string",
             "nullable": true
           },
-          "issuerGroupLEXPIT": {
-            "type": "integer",
-            "format": "int32"
-          },
           "issuerLEXId": {
             "type": "string",
             "nullable": true
@@ -42438,10 +42424,6 @@
           "issuerGroupARISId": {
             "type": "string",
             "nullable": true
-          },
-          "issuerGroupARISPIT": {
-            "type": "integer",
-            "format": "int32"
           },
           "pfeFactorB3F": {
             "type": "number",
@@ -45815,10 +45797,6 @@
             "type": "number",
             "format": "double"
           },
-          "groupLEXPIT": {
-            "type": "integer",
-            "format": "int32"
-          },
           "counterpartyLEXId": {
             "type": "string",
             "nullable": true
@@ -45837,10 +45815,6 @@
           "groupARISId": {
             "type": "string",
             "nullable": true
-          },
-          "groupARISPIT": {
-            "type": "integer",
-            "format": "int32"
           },
           "lexMortgageLoanClaimLevel1": {
             "type": "number",
