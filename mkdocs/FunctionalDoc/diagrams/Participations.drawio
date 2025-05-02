@@ -1,10 +1,10 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.4 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.4">
   <diagram id="8fR3vlSnVLAmuQqtyXcf" name="Page-1">
-    <mxGraphModel dx="3663" dy="2239" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3038" dy="1986" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="55xLRYJCAfBFtzbybxeJ-20" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="55xLRYJCAfBFtzbybxeJ-20" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="290" y="-130" width="190" height="260" as="geometry" />
         </mxCell>
         <mxCell id="1I_q_eXfddDbX86g2_ze-2" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="1I_q_eXfddDbX86g2_ze-4" edge="1">
@@ -25,7 +25,7 @@
         <mxCell id="1I_q_eXfddDbX86g2_ze-6" value="Pas consolidé&lt;div&gt;ParticipationLevel &amp;lt;= 0.5&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="220" y="470" width="140" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="1I_q_eXfddDbX86g2_ze-12" value="&lt;span style=&quot;color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(42, 42, 42); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Déduction intégrale&lt;br&gt;imposée par la FINMA ?&lt;br&gt;&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="1I_q_eXfddDbX86g2_ze-12" value="&lt;span style=&quot;color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(42, 42, 42); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Déduction intégrale&lt;br&gt;imposée par la FINMA ?&lt;br&gt;&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;gradientColor=none;" parent="1" vertex="1">
           <mxGeometry x="490" y="190" width="220" height="100" as="geometry" />
         </mxCell>
         <mxCell id="1I_q_eXfddDbX86g2_ze-16" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="1I_q_eXfddDbX86g2_ze-12" target="1I_q_eXfddDbX86g2_ze-41" edge="1">
@@ -97,7 +97,7 @@
         <mxCell id="1I_q_eXfddDbX86g2_ze-45" value="&lt;br&gt;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(42, 42, 42); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Au dessus des 2ème ou 3ème seuil&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="810" y="700" width="100" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="1I_q_eXfddDbX86g2_ze-49" value="RW = 250%&lt;br&gt;art. 40 al.2" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="1I_q_eXfddDbX86g2_ze-49" value="RW = 250%&lt;br&gt;art. 40 al.2&lt;div&gt;Annexe 3 chi. 6.5&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="970" y="710" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="1I_q_eXfddDbX86g2_ze-50" value="ParticipationLevel &amp;gt; 0.1" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -154,34 +154,34 @@
         <mxCell id="1I_q_eXfddDbX86g2_ze-63" value="NON" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="910" y="750" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="55xLRYJCAfBFtzbybxeJ-12" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="55xLRYJCAfBFtzbybxeJ-17">
+        <mxCell id="55xLRYJCAfBFtzbybxeJ-12" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="55xLRYJCAfBFtzbybxeJ-17" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-110" y="330" as="sourcePoint" />
             <mxPoint x="160" y="330" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="55xLRYJCAfBFtzbybxeJ-13" value="RW = 250%&lt;br&gt;ann. 4 chi. 4" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="55xLRYJCAfBFtzbybxeJ-13" value="RW = 250%&lt;br&gt;ann. 4 chi. 4" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="320" y="-30" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="55xLRYJCAfBFtzbybxeJ-14" value="RW = 400%&lt;br&gt;ann. 4 chi. 3" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="55xLRYJCAfBFtzbybxeJ-14" value="RW = 400%&lt;br&gt;ann. 4 chi. 3" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="320" y="-110" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="55xLRYJCAfBFtzbybxeJ-16" value="RW = 1&#39;250%&lt;br&gt;ann. 4 chi. 5" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="55xLRYJCAfBFtzbybxeJ-16" value="RW = 1&#39;250%&lt;br&gt;ann. 4 chi. 5" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="320" y="50" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="55xLRYJCAfBFtzbybxeJ-17" value="&lt;span style=&quot;color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(42, 42, 42); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;color: rgb(0, 0, 0); background-color: rgb(251, 251, 251);&quot;&gt;Participation&lt;/b&gt;&lt;br style=&quot;color: rgb(0, 0, 0); background-color: rgb(251, 251, 251);&quot;&gt;&lt;br style=&quot;color: rgb(0, 0, 0); background-color: rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(251, 251, 251);&quot;&gt;secteur financier&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0); background-color: rgb(251, 251, 251);&quot;&gt;&lt;br style=&quot;color: rgb(0, 0, 0); background-color: rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(251, 251, 251);&quot;&gt;ParticipationLevel &amp;gt; 0&lt;/span&gt;&lt;br&gt;&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="55xLRYJCAfBFtzbybxeJ-17" value="&lt;span style=&quot;color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(42, 42, 42); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;color: rgb(0, 0, 0); background-color: rgb(251, 251, 251);&quot;&gt;Participation&lt;/b&gt;&lt;br style=&quot;color: rgb(0, 0, 0); background-color: rgb(251, 251, 251);&quot;&gt;&lt;br style=&quot;color: rgb(0, 0, 0); background-color: rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(251, 251, 251);&quot;&gt;secteur financier&lt;/span&gt;&lt;br style=&quot;color: rgb(0, 0, 0); background-color: rgb(251, 251, 251);&quot;&gt;&lt;br style=&quot;color: rgb(0, 0, 0); background-color: rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(251, 251, 251);&quot;&gt;ParticipationLevel &amp;gt; 0&lt;/span&gt;&lt;br&gt;&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-350" y="240" width="220" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="55xLRYJCAfBFtzbybxeJ-18" value="OUI" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="55xLRYJCAfBFtzbybxeJ-18" value="OUI" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-60" y="350" width="110" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="55xLRYJCAfBFtzbybxeJ-19" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="55xLRYJCAfBFtzbybxeJ-17" target="55xLRYJCAfBFtzbybxeJ-20">
+        <mxCell id="55xLRYJCAfBFtzbybxeJ-19" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="55xLRYJCAfBFtzbybxeJ-17" target="55xLRYJCAfBFtzbybxeJ-20" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="720" y="250" as="sourcePoint" />
             <mxPoint x="280" y="10" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="55xLRYJCAfBFtzbybxeJ-21" value="NON" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="55xLRYJCAfBFtzbybxeJ-21" value="NON" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="100" y="50" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
