@@ -52652,6 +52652,9 @@
             "type": "number",
             "format": "double"
           },
+          "financialSectorFlag": {
+            "type": "boolean"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
