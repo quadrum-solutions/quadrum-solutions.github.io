@@ -54488,6 +54488,10 @@
             "type": "string",
             "nullable": true
           },
+          "finmaCode": {
+            "type": "string",
+            "nullable": true
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
