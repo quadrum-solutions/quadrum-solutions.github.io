@@ -7820,7 +7820,7 @@
         }
       }
     },
-    "/ScenarioAnalysis/IRRBB/{lcId}/{scenario}": {
+    "/ManagementReport/ScenarioAnalysis/IRRBB/{lcId}/{scenario}": {
       "post": {
         "tags": [
           "ManagementReport"
@@ -7922,7 +7922,7 @@
         }
       }
     },
-    "/ScenarioAnalysis/IRRBB/{lcId}/{scenario}/Categories": {
+    "/ManagementReport/ScenarioAnalysis/IRRBB/{lcId}/{scenario}/Categories": {
       "get": {
         "tags": [
           "ManagementReport"
@@ -7987,7 +7987,7 @@
         }
       }
     },
-    "/YearComparison/IRRBB/{scenario}": {
+    "/ManagementReport/YearComparison/IRRBB/{scenario}": {
       "post": {
         "tags": [
           "ManagementReport"
@@ -8066,7 +8066,7 @@
         }
       }
     },
-    "/YearComparison/IRRBB/Currencies": {
+    "/ManagementReport/YearComparison/IRRBB/Currencies": {
       "get": {
         "tags": [
           "ManagementReport"
@@ -8099,7 +8099,7 @@
         }
       }
     },
-    "/AllScenarios/IRRBB/{lcId}/ByCurrency": {
+    "/ManagementReport/AllScenarios/IRRBB/{lcId}/ByCurrency": {
       "post": {
         "tags": [
           "ManagementReport"
