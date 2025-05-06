@@ -53426,47 +53426,11 @@
             "type": "string",
             "nullable": true
           },
-          "amortizedCost": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "fairValue": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "faceValue": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "bookAmount": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "positionCurrency": {
-            "type": "string",
-            "nullable": true
-          },
-          "reportingCurrency": {
-            "type": "string",
-            "nullable": true
-          },
-          "exchangeRate": {
-            "type": "number",
-            "format": "float"
-          },
-          "loadCollectionId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "provision": {
-            "type": "number",
-            "format": "double"
-          },
           "stage": {
+            "type": "string",
+            "nullable": true
+          },
+          "stageOpening": {
             "type": "string",
             "nullable": true
           },
@@ -56172,6 +56136,14 @@
             "format": "double"
           },
           "purchasedQuantity": {
+            "type": "number",
+            "format": "double"
+          },
+          "positionCurrencySoldAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "positionCurrencyPurchasedAmount": {
             "type": "number",
             "format": "double"
           }
