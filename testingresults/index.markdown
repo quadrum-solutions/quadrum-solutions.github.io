@@ -1,16 +1,6 @@
 ---
-title: "e2e Testing - Documentation and reports"
+title: "e2e Testing - reports"
 ---
-
-## Test suites documentation:
-
-### [TS01 - load management flow](docs/ts01.md)
-### [TS02 - tools section](docs/ts02.md)
-### [TS03 - e2e - surveys values assertions](docs/ts03.md)
-### [TS04 - calc on load collections](docs/ts04.md)
-### [TS05 - surveys load and display correctly](docs/ts05.md)
-### [TS06 - configuration pages flow](docs/ts06.md)
-
 
 ## Testing reports:
 
