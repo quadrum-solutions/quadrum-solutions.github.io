@@ -9610,6 +9610,15 @@
             }
           },
           {
+            "name": "recalcDep",
+            "in": "query",
+            "description": "True to re-calculate the surveys on which this survey depends",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
             "name": "async",
             "in": "query",
             "description": "False to wait for the task to end",
