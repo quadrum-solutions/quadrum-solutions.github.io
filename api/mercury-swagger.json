@@ -56225,6 +56225,10 @@
             "type": "number",
             "format": "float"
           },
+          "caForceRiskWeight": {
+            "type": "number",
+            "format": "float"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
