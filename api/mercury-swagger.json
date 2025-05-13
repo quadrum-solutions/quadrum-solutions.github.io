@@ -47221,8 +47221,8 @@
             "format": "int32"
           },
           "cells": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/CalcCellDTO"
             },
             "nullable": true
