@@ -47869,10 +47869,6 @@
             "type": "integer",
             "format": "int32"
           },
-          "reportingEntityId": {
-            "type": "string",
-            "nullable": true
-          },
           "name": {
             "type": "string",
             "nullable": true
@@ -47970,10 +47966,6 @@
           "loadCollectionId": {
             "type": "integer",
             "format": "int32"
-          },
-          "reportingEntityId": {
-            "type": "string",
-            "nullable": true
           },
           "name": {
             "type": "string",
