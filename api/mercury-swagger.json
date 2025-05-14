@@ -12166,6 +12166,77 @@
         }
       }
     },
+    "/Reports/Fields/Allocations/Query": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to get the allocation sql query of a cell",
+        "parameters": [
+          {
+            "name": "surveyName",
+            "in": "query",
+            "description": "Name of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "MONA_U"
+          },
+          {
+            "name": "surveyVersion",
+            "in": "query",
+            "description": "Version of the survey",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1.4.0"
+          },
+          {
+            "name": "reportName",
+            "in": "query",
+            "description": "Name of the report",
+            "schema": {
+              "type": "string"
+            },
+            "example": "M201"
+          },
+          {
+            "name": "cellPosition",
+            "in": "query",
+            "description": "Position of the cell",
+            "schema": {
+              "type": "string"
+            },
+            "example": "BILAKTFMINOTICHF"
+          },
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Load collection id",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Reports/FetchDynReport": {
       "get": {
         "tags": [
