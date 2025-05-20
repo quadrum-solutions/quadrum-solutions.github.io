@@ -12469,24 +12469,45 @@
         }
       }
     },
+    "/Reports/Xbrl/Load": {
+      "post": {
+        "tags": [
+          "Reports"
+        ],
+        "summary": "Allow to load the xbrl taxonomies",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Reports/Xbrl/Taxonomies": {
       "get": {
         "tags": [
           "Reports"
         ],
         "summary": "Allow to retieve the list of taxonomies",
-        "parameters": [
-          {
-            "name": "includeOld",
-            "in": "query",
-            "description": "Include old taxonomies",
-            "schema": {
-              "type": "boolean",
-              "default": false
-            },
-            "example": true
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -12495,7 +12516,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/XbrlTaxonomy"
+                    "$ref": "#/components/schemas/XbrlCategoryDTO"
                   }
                 }
               }
@@ -12504,7 +12525,7 @@
         }
       }
     },
-    "/Reports/Xbrl/Modules/{taxonomyId}": {
+    "/Reports/Xbrl/Modules/{category}": {
       "get": {
         "tags": [
           "Reports"
@@ -12513,14 +12534,20 @@
         "parameters": [
           {
             "name": "taxonomyId",
-            "in": "path",
+            "in": "query",
             "description": "Taxonomy Id of the modules to retrieve",
+            "schema": {
+              "type": "string"
+            },
+            "example": "IRRBB"
+          },
+          {
+            "name": "category",
+            "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -12531,7 +12558,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/XbrlModule"
+                    "$ref": "#/components/schemas/XbrlModuleDTO"
                   }
                 }
               }
@@ -12540,7 +12567,7 @@
         }
       }
     },
-    "/Reports/Xbrl/ExcelToXbrl/{taxonomyId}/{moduleCode}": {
+    "/Reports/Xbrl/ExcelToXbrl": {
       "post": {
         "tags": [
           "Reports"
@@ -12548,25 +12575,13 @@
         "summary": "Generate xbrl from an Excel file",
         "parameters": [
           {
-            "name": "taxonomyId",
-            "in": "path",
-            "description": "Taxonomy Id of the survey",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "moduleCode",
-            "in": "path",
-            "description": "Module Code of the survey",
-            "required": true,
+            "name": "entrypoint",
+            "in": "query",
+            "description": "Url of the entrypoint",
             "schema": {
               "type": "string"
             },
-            "example": "MODULE_CODE"
+            "example": "http://www.eba.europa.eu/..."
           }
         ],
         "requestBody": {
@@ -12605,25 +12620,66 @@
         }
       }
     },
-    "/Reports/Xbrl/Load": {
-      "get": {
+    "/Reports/Xbrl/ExcelToXbrl/{taxonomyId}/{moduleId}": {
+      "post": {
         "tags": [
           "Reports"
         ],
-        "summary": "Allow to load the xbrl taxonomies in the database",
+        "summary": "Generate xbrl from an Excel file",
         "parameters": [
           {
-            "name": "async",
-            "in": "query",
+            "name": "taxonomyId",
+            "in": "path",
+            "description": "Id of the taxonomy",
+            "required": true,
             "schema": {
-              "type": "boolean",
-              "default": true
-            }
+              "type": "string"
+            },
+            "example": "eba_CORE_ALM"
+          },
+          {
+            "name": "moduleId",
+            "in": "path",
+            "description": "Id of the module",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "eba_CORE_ALM-2.3.0"
           }
         ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "description": "Excel file",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              }
+            }
           }
         }
       }
@@ -56371,102 +56427,50 @@
         },
         "additionalProperties": false
       },
-      "XbrlModule": {
+      "XbrlCategoryDTO": {
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "taxonomyID": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "moduleCode": {
             "type": "string",
             "nullable": true
           },
-          "moduleLabel": {
+          "name": {
             "type": "string",
             "nullable": true
           },
-          "xbrlSchemaRef": {
-            "type": "string",
-            "nullable": true
-          },
-          "conceptualModuleID": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "conceptID": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "fromDate": {
-            "type": "string",
-            "format": "date"
-          },
-          "toDate": {
-            "type": "string",
-            "format": "date"
-          },
-          "version": {
+          "description": {
             "type": "string",
             "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "XbrlTaxonomy": {
+      "XbrlModuleDTO": {
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "taxonomyID": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "frameworkID": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "taxonomyCode": {
             "type": "string",
             "nullable": true
           },
-          "taxonomyLabel": {
+          "name": {
             "type": "string",
             "nullable": true
-          },
-          "technicalStandard": {
-            "type": "string",
-            "nullable": true
-          },
-          "notionalPublicationDate": {
-            "type": "string",
-            "format": "date"
-          },
-          "actualPublicationDate": {
-            "type": "string",
-            "format": "date"
           },
           "version": {
             "type": "string",
             "nullable": true
           },
-          "dpmPackageCode": {
+          "fromDate": {
             "type": "string",
             "nullable": true
           },
-          "fromDate": {
-            "type": "string",
-            "format": "date"
-          },
           "toDate": {
             "type": "string",
-            "format": "date"
+            "nullable": true
+          },
+          "entryPoint": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
