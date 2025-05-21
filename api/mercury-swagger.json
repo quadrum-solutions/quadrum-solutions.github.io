@@ -2667,7 +2667,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/Import/Global": {
@@ -2734,7 +2735,7 @@
             }
           },
           {
-            "name": "idLc",
+            "name": "lcId",
             "in": "query",
             "description": "Specify the id of the load collection",
             "schema": {
