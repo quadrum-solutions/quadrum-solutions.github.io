@@ -54625,6 +54625,14 @@
             "type": "string",
             "nullable": true
           },
+          "euContextIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "euContextIdentifierSchema": {
+            "type": "string",
+            "nullable": true
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
@@ -55986,6 +55994,10 @@
           },
           "isXbrl": {
             "type": "boolean"
+          },
+          "entrypoint": {
+            "type": "string",
+            "nullable": true
           },
           "calcDate": {
             "type": "string",
