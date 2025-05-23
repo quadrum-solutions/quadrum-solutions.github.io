@@ -12685,6 +12685,324 @@
         }
       }
     },
+    "/Task": {
+      "get": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "Allow to fetch all tasks",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RunningTaskDTO"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Task/{status}": {
+      "get": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "Allow to fetch all tasks of a type",
+        "parameters": [
+          {
+            "name": "status",
+            "in": "path",
+            "description": "Type of task",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "NotFinished"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RunningTaskDTO"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Task/Paged": {
+      "get": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "Allow to fetch all tasks paged",
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Number of the page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            },
+            "example": 1
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 50
+            },
+            "example": 50
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RunningTaskDTOPagedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "Allow to fetch all tasks paged",
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Number of the page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            },
+            "example": 1
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 50
+            },
+            "example": 50
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for tasks to fetch",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RunningTaskDTOPagedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Task/{status}/Paged": {
+      "get": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "Allow to fetch all tasks of a type paged",
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Number of the page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            },
+            "example": 1
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 50
+            },
+            "example": 50
+          },
+          {
+            "name": "status",
+            "in": "path",
+            "description": "Status of task",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "NotFinished"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RunningTaskDTOPagedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "Allow to fetch all tasks of a type paged",
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Number of the page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            },
+            "example": 1
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 50
+            },
+            "example": 50
+          },
+          {
+            "name": "status",
+            "in": "path",
+            "description": "Status of task",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "NotFinished"
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for tasks to fetch",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RunningTaskDTOPagedResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/Task/Running": {
       "get": {
         "tags": [
@@ -12708,7 +13026,8 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/Task/InQueue": {
@@ -12734,44 +13053,8 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
-      }
-    },
-    "/Task/LastXTasks": {
-      "get": {
-        "tags": [
-          "Task"
-        ],
-        "summary": "Allow to fetch the x last created tasks",
-        "parameters": [
-          {
-            "name": "number",
-            "in": "query",
-            "description": "Number of tasks to return",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/RunningTaskDTO"
-                  }
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
+        },
+        "deprecated": true
       }
     },
     "/Task/FinishedTasks": {
@@ -12809,7 +13092,8 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/Task/NotFinishedTasks": {
@@ -12835,7 +13119,46 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "deprecated": true
+      }
+    },
+    "/Task/LastXTasks": {
+      "get": {
+        "tags": [
+          "Task"
+        ],
+        "summary": "Allow to fetch the x last created tasks",
+        "parameters": [
+          {
+            "name": "number",
+            "in": "query",
+            "description": "Number of tasks to return",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RunningTaskDTO"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "deprecated": true
       }
     },
     "/Task/FinishedTasksBetween": {
@@ -55177,27 +55500,38 @@
             "type": "string",
             "format": "date-span"
           },
-          "isStarted": {
-            "type": "boolean",
-            "readOnly": true
+          "status": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RunningTaskDTOPagedResponse": {
+        "type": "object",
+        "properties": {
+          "pageTotal": {
+            "type": "integer",
+            "format": "int32"
           },
-          "isOver": {
-            "type": "boolean",
-            "readOnly": true
+          "pageNumber": {
+            "type": "integer",
+            "format": "int32"
           },
-          "isCompleted": {
-            "type": "boolean",
-            "readOnly": true
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
           },
-          "isError": {
-            "type": "boolean",
-            "readOnly": true
+          "recordTotal": {
+            "type": "integer",
+            "format": "int32"
           },
-          "isCancelled": {
-            "type": "boolean"
-          },
-          "isCancelling": {
-            "type": "boolean"
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RunningTaskDTO"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
