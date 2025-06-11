@@ -6389,9 +6389,9 @@
         "tags": [
           "Load"
         ],
-        "summary": "Allow to create an item",
+        "summary": "Allow to create a load",
         "requestBody": {
-          "description": "Item to create",
+          "description": "load to create",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -6445,9 +6445,9 @@
         "tags": [
           "Load"
         ],
-        "summary": "Allow to update an item",
+        "summary": "Allow to update a load",
         "requestBody": {
-          "description": "Item to update",
+          "description": "load to update",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -6503,12 +6503,12 @@
         "tags": [
           "Load"
         ],
-        "summary": "Allow to fetch one item",
+        "summary": "Allow to fetch one load",
         "parameters": [
           {
             "name": "id",
             "in": "path",
-            "description": "Id of the item",
+            "description": "Id of the load",
             "required": true,
             "schema": {
               "type": "string"
@@ -6543,12 +6543,12 @@
         "tags": [
           "Load"
         ],
-        "summary": "Allow to delete one item",
+        "summary": "Allow to delete one load",
         "parameters": [
           {
             "name": "id",
             "in": "path",
-            "description": "Id of the item to delete",
+            "description": "Id of the load to delete",
             "required": true,
             "schema": {
               "type": "string"
@@ -6575,12 +6575,12 @@
         "tags": [
           "Load"
         ],
-        "summary": "Allow to patch an item",
+        "summary": "Allow to patch an load",
         "parameters": [
           {
             "name": "id",
             "in": "path",
-            "description": "Id of the item",
+            "description": "Id of the load",
             "required": true,
             "schema": {
               "type": "string"
@@ -6588,7 +6588,7 @@
           }
         ],
         "requestBody": {
-          "description": "Item to update",
+          "description": "load to update",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -6769,7 +6769,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id of the item",
+            "description": "Id of the load",
             "required": true,
             "schema": {
               "type": "string"
