@@ -46720,6 +46720,10 @@
         "additionalProperties": false
       },
       "Adaptation": {
+        "required": [
+          "name",
+          "type"
+        ],
         "type": "object",
         "properties": {
           "id": {
@@ -46727,17 +46731,20 @@
             "format": "int64"
           },
           "name": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "type": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 20,
+            "minLength": 1,
+            "type": "string"
           },
           "enabled": {
             "type": "boolean"
           },
           "author": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -46746,26 +46753,32 @@
             "format": "date"
           },
           "impact": {
+            "maxLength": 500,
             "type": "string",
             "nullable": true
           },
           "condition": {
+            "maxLength": 2000,
             "type": "string",
             "nullable": true
           },
           "table": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "join": {
+            "maxLength": 2000,
             "type": "string",
             "nullable": true
           },
           "comment": {
+            "maxLength": 500,
             "type": "string",
             "nullable": true
           },
           "bookingCenter": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -46774,6 +46787,7 @@
             "format": "int64"
           },
           "tags": {
+            "maxLength": 1000,
             "type": "string",
             "nullable": true
           },
@@ -46885,28 +46899,34 @@
         "additionalProperties": false
       },
       "Amortization": {
+        "required": [
+          "id",
+          "loadId"
+        ],
         "type": "object",
         "properties": {
           "isEdited": {
             "type": "boolean"
           },
           "id": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "loadId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "load": {
             "$ref": "#/components/schemas/Load"
           },
           "typeOf": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "frequency": {
+            "maxLength": 5,
             "type": "string",
             "nullable": true
           },
@@ -46999,21 +47019,26 @@
       },
       "ArisCounterparty": {
         "required": [
-          "code"
+          "code",
+          "domesticForeign",
+          "name"
         ],
         "type": "object",
         "properties": {
           "code": {
+            "maxLength": 8,
             "minLength": 1,
             "type": "string"
           },
           "name": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "domesticForeign": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 1,
+            "minLength": 1,
+            "type": "string"
           },
           "id": {
             "type": "string",
@@ -47226,33 +47251,45 @@
         "additionalProperties": false
       },
       "BookingCenter": {
+        "required": [
+          "id",
+          "name",
+          "officeCountry",
+          "officeType"
+        ],
         "type": "object",
         "properties": {
           "id": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "creationDate": {
             "type": "string",
             "format": "date"
           },
           "name": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "officeType": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 20,
+            "minLength": 1,
+            "type": "string"
           },
           "officeCountry": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 2,
+            "minLength": 1,
+            "type": "string"
           },
           "officeCanton": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
           "ownerId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -47443,7 +47480,15 @@
       },
       "CalcField": {
         "required": [
-          "name"
+          "category",
+          "fieldFrom",
+          "fieldTo",
+          "isPointInTime",
+          "loadCollectionIdField",
+          "name",
+          "order",
+          "tableFrom",
+          "tableTo"
         ],
         "type": "object",
         "properties": {
@@ -47452,28 +47497,33 @@
             "type": "string"
           },
           "category": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "tableFrom": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "fieldFrom": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 500,
+            "minLength": 1,
+            "type": "string"
           },
           "tableTo": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "fieldTo": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 500,
+            "minLength": 1,
+            "type": "string"
           },
           "loadCollectionIdField": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "type": "string"
           },
           "order": {
             "type": "integer",
@@ -47558,15 +47608,22 @@
         "additionalProperties": false
       },
       "CalcOrderSurvey": {
+        "required": [
+          "calc",
+          "order",
+          "survey"
+        ],
         "type": "object",
         "properties": {
           "survey": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "calc": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "order": {
             "type": "integer",
@@ -47835,14 +47892,18 @@
         "additionalProperties": false
       },
       "Commodity": {
+        "required": [
+          "id",
+          "pointInTime"
+        ],
         "type": "object",
         "properties": {
           "isEdited": {
             "type": "boolean"
           },
           "id": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "type": "string"
           },
           "pointInTime": {
             "type": "integer",
@@ -47853,22 +47914,27 @@
             "format": "date"
           },
           "typeOf": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "creType": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "marType": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "marSubType": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "unitOfMeaure": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
@@ -47953,11 +48019,20 @@
       },
       "ConsistencyCheck": {
         "required": [
-          "name"
+          "check",
+          "enabled",
+          "field",
+          "level",
+          "message",
+          "name",
+          "posId",
+          "select",
+          "source"
         ],
         "type": "object",
         "properties": {
           "name": {
+            "maxLength": 100,
             "minLength": 1,
             "type": "string"
           },
@@ -47968,24 +48043,29 @@
             "$ref": "#/components/schemas/CheckLevelType"
           },
           "posId": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 20,
+            "minLength": 1,
+            "type": "string"
           },
           "field": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 20,
+            "minLength": 1,
+            "type": "string"
           },
           "check": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
           },
           "select": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 1000,
+            "minLength": 1,
+            "type": "string"
           },
           "message": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "enabled": {
             "type": "boolean"
@@ -48072,29 +48152,40 @@
       },
       "CopyView": {
         "required": [
-          "name"
+          "category",
+          "deleteTable",
+          "fieldId",
+          "name",
+          "order",
+          "tableTo",
+          "viewFrom"
         ],
         "type": "object",
         "properties": {
           "name": {
+            "maxLength": 100,
             "minLength": 1,
             "type": "string"
           },
           "category": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "viewFrom": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "tableTo": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "fieldId": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "deleteTable": {
             "type": "boolean"
@@ -48179,14 +48270,18 @@
         "additionalProperties": false
       },
       "Counterparty": {
+        "required": [
+          "id",
+          "pointInTime"
+        ],
         "type": "object",
         "properties": {
           "isEdited": {
             "type": "boolean"
           },
           "id": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 150,
+            "type": "string"
           },
           "pointInTime": {
             "type": "integer",
@@ -48197,38 +48292,47 @@
             "format": "date"
           },
           "name": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "legalName": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "lei": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "domicileCountry": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
           "domicileCanton": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
           "hqDomicile": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
           "relatedPartyType": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "typeOf": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "economicActivityType": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
@@ -48246,14 +48350,17 @@
             "nullable": true
           },
           "bookingCenterId": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "groupLEXId": {
+            "maxLength": 150,
             "type": "string",
             "nullable": true
           },
           "groupARISId": {
+            "maxLength": 150,
             "type": "string",
             "nullable": true
           },
@@ -48284,6 +48391,7 @@
             "type": "boolean"
           },
           "relationshipManagerId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -48294,14 +48402,17 @@
             "type": "boolean"
           },
           "creditQuality": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
           "incomeCurrency": {
+            "maxLength": 3,
             "type": "string",
             "nullable": true
           },
           "nationality": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
@@ -48314,23 +48425,32 @@
         "additionalProperties": false
       },
       "CounterpartyGroupAris": {
+        "required": [
+          "arisCode",
+          "id",
+          "loadCollectionId",
+          "name"
+        ],
         "type": "object",
         "properties": {
           "id": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 150,
+            "minLength": 1,
+            "type": "string"
           },
           "loadCollectionId": {
             "type": "integer",
             "format": "int32"
           },
           "name": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "arisCode": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 10,
+            "minLength": 1,
+            "type": "string"
           },
           "limitAris": {
             "type": "number",
@@ -48412,23 +48532,33 @@
         "additionalProperties": false
       },
       "CounterpartyGroupLex": {
+        "required": [
+          "domicileCountry",
+          "economicActivityType",
+          "id",
+          "loadCollectionId",
+          "name",
+          "typeOf"
+        ],
         "type": "object",
         "properties": {
           "id": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 150,
+            "minLength": 1,
+            "type": "string"
           },
           "loadCollectionId": {
             "type": "integer",
             "format": "int32"
           },
           "name": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "typeOf": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 3,
+            "type": "string"
           },
           "sinceU": {
             "type": "string",
@@ -48443,12 +48573,12 @@
             "format": "float"
           },
           "domicileCountry": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 2,
+            "type": "string"
           },
           "economicActivityType": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 20,
+            "type": "string"
           },
           "uniqueId": {
             "type": "string",
@@ -48594,31 +48724,41 @@
       },
       "Country": {
         "required": [
-          "code"
+          "code",
+          "code3",
+          "currency",
+          "name",
+          "rating"
         ],
         "type": "object",
         "properties": {
           "code": {
+            "maxLength": 2,
             "minLength": 1,
             "type": "string"
           },
           "code3": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 3,
+            "minLength": 1,
+            "type": "string"
           },
           "name": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "region": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "subRegion": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "interRegion": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -48627,8 +48767,8 @@
             "format": "int32"
           },
           "currency": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "id": {
             "type": "string",
@@ -48712,17 +48852,23 @@
       },
       "Currency": {
         "required": [
-          "code"
+          "centralBank",
+          "code",
+          "minorUnit",
+          "name",
+          "numCode"
         ],
         "type": "object",
         "properties": {
           "code": {
+            "maxLength": 3,
             "minLength": 1,
             "type": "string"
           },
           "name": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "numCode": {
             "type": "integer",
@@ -48733,8 +48879,9 @@
             "format": "int32"
           },
           "centralBank": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 2,
+            "minLength": 1,
+            "type": "string"
           },
           "id": {
             "type": "string",
@@ -48817,36 +48964,44 @@
         "additionalProperties": false
       },
       "Derivative": {
+        "required": [
+          "id",
+          "loadId"
+        ],
         "type": "object",
         "properties": {
           "isEdited": {
             "type": "boolean"
           },
           "id": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "loadId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "load": {
             "$ref": "#/components/schemas/Load"
           },
           "typeOf": {
+            "maxLength": 10,
             "type": "string",
             "nullable": true
           },
           "subType": {
+            "maxLength": 10,
             "type": "string",
             "nullable": true
           },
           "underlyingCurrency": {
+            "maxLength": 3,
             "type": "string",
             "nullable": true
           },
           "quoteCurrency": {
+            "maxLength": 3,
             "type": "string",
             "nullable": true
           },
@@ -48902,6 +49057,7 @@
             "format": "date"
           },
           "underlyingSecurityId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -48911,10 +49067,12 @@
             "nullable": true
           },
           "underlyingInterestRateId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "underlyingCommodityId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -48924,6 +49082,7 @@
             "nullable": true
           },
           "underlyingReferenceEntityId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -48941,6 +49100,7 @@
             "format": "int32"
           },
           "deliveryMethod": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
@@ -48957,19 +49117,23 @@
         "additionalProperties": false
       },
       "DerivativeCalc": {
+        "required": [
+          "id",
+          "loadId"
+        ],
         "type": "object",
         "properties": {
           "isEdited": {
             "type": "boolean"
           },
           "id": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "loadId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "load": {
             "$ref": "#/components/schemas/Load"
@@ -48999,10 +49163,12 @@
             "format": "double"
           },
           "rCurrency": {
+            "maxLength": 3,
             "type": "string",
             "nullable": true
           },
           "pCurrency": {
+            "maxLength": 3,
             "type": "string",
             "nullable": true
           },
@@ -49039,10 +49205,12 @@
             "format": "double"
           },
           "marGammaNettingCategory": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "assetClass": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
@@ -49075,6 +49243,7 @@
             "format": "float"
           },
           "nettingSetId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -49091,10 +49260,12 @@
             "format": "double"
           },
           "issuerGroupLEXId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "issuerLEXId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -49103,6 +49274,7 @@
             "format": "int32"
           },
           "issuerGroupARISId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -49253,19 +49425,23 @@
         "additionalProperties": false
       },
       "DerivativeSchedule": {
+        "required": [
+          "id",
+          "loadId"
+        ],
         "type": "object",
         "properties": {
           "isEdited": {
             "type": "boolean"
           },
           "id": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "loadId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "load": {
             "$ref": "#/components/schemas/Load"
@@ -49350,32 +49526,39 @@
         "additionalProperties": false
       },
       "DerivativeSwap": {
+        "required": [
+          "id",
+          "loadId"
+        ],
         "type": "object",
         "properties": {
           "isEdited": {
             "type": "boolean"
           },
           "id": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "loadId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "load": {
             "$ref": "#/components/schemas/Load"
           },
           "typeOf": {
+            "maxLength": 10,
             "type": "string",
             "nullable": true
           },
           "rCurrency": {
+            "maxLength": 3,
             "type": "string",
             "nullable": true
           },
           "pCurrency": {
+            "maxLength": 3,
             "type": "string",
             "nullable": true
           },
@@ -49404,6 +49587,7 @@
             "format": "date"
           },
           "rUnderlyingSecurityId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -49413,6 +49597,7 @@
             "nullable": true
           },
           "pUnderlyingSecurityId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -49428,14 +49613,17 @@
             "type": "boolean"
           },
           "rUnderlyingInterestRateId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "pUnderlyingInterestRateId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "rUnderlyingCommodityId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -49445,6 +49633,7 @@
             "nullable": true
           },
           "pUnderlyingCommodityId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -49458,6 +49647,7 @@
             "format": "int64"
           },
           "deliveryMethod": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
@@ -49544,18 +49734,22 @@
         "type": "object",
         "properties": {
           "language": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
           "field": {
+            "maxLength": 50,
             "type": "string",
             "nullable": true
           },
           "name": {
+            "maxLength": 50,
             "type": "string",
             "nullable": true
           },
           "value": {
+            "maxLength": 1000,
             "type": "string",
             "nullable": true
           },
@@ -49649,19 +49843,26 @@
         "additionalProperties": false
       },
       "ExportCellOrder": {
+        "required": [
+          "mapping",
+          "order",
+          "survey"
+        ],
         "type": "object",
         "properties": {
           "survey": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
           },
           "order": {
             "type": "integer",
             "format": "int32"
           },
           "mapping": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 500,
+            "minLength": 1,
+            "type": "string"
           },
           "uniqueId": {
             "type": "string",
@@ -49845,32 +50046,41 @@
         "additionalProperties": false
       },
       "ExternalRating": {
+        "required": [
+          "id",
+          "pointInTime"
+        ],
         "type": "object",
         "properties": {
           "isEdited": {
             "type": "boolean"
           },
           "id": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 20,
+            "minLength": 1,
+            "type": "string"
           },
           "pointInTime": {
             "type": "integer",
             "format": "int32"
           },
           "typeOf": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "ratingAgency": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "ratingName": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "ratingValue": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
@@ -50001,37 +50211,46 @@
         "additionalProperties": false
       },
       "GlobalInput": {
+        "required": [
+          "loadCollectionId",
+          "property1"
+        ],
         "type": "object",
         "properties": {
           "loadCollectionId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "loadCollection": {
             "$ref": "#/components/schemas/LoadCollection"
           },
           "property1": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 20,
+            "minLength": 1,
+            "type": "string"
           },
           "property2": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "property3": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "property4": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "property5": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "value": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -50179,24 +50398,29 @@
         "additionalProperties": false
       },
       "InterestRate": {
+        "required": [
+          "id",
+          "loadId"
+        ],
         "type": "object",
         "properties": {
           "isEdited": {
             "type": "boolean"
           },
           "id": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "loadId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "load": {
             "$ref": "#/components/schemas/Load"
           },
           "reference": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -50209,6 +50433,7 @@
             "format": "float"
           },
           "typeOf": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
@@ -50217,6 +50442,7 @@
             "format": "date"
           },
           "reFixingFrequency": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
@@ -50225,10 +50451,12 @@
             "format": "date"
           },
           "paymentFrequency": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "compoundingType": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
@@ -50241,6 +50469,12 @@
         "additionalProperties": false
       },
       "InterestRateCurve": {
+        "required": [
+          "currency",
+          "date",
+          "rate",
+          "tenor"
+        ],
         "type": "object",
         "properties": {
           "date": {
@@ -50248,12 +50482,14 @@
             "format": "date"
           },
           "currency": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 3,
+            "minLength": 1,
+            "type": "string"
           },
           "tenor": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 3,
+            "minLength": 1,
+            "type": "string"
           },
           "rate": {
             "type": "number",
@@ -50417,27 +50653,37 @@
         "additionalProperties": false
       },
       "IrrbbReplicationKeyRule": {
+        "required": [
+          "currency",
+          "name",
+          "split"
+        ],
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "currency": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 3,
+            "minLength": 1,
+            "type": "string"
           },
           "accountGroupLevel1": {
+            "maxLength": 40,
             "type": "string",
             "nullable": true
           },
           "extendedCondition": {
+            "maxLength": 500,
             "type": "string",
             "nullable": true
           },
           "split": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "id": {
             "type": "string",
@@ -50520,11 +50766,17 @@
         "additionalProperties": false
       },
       "IrrbbReplicationKeySplit": {
+        "required": [
+          "bucket",
+          "name",
+          "percentage"
+        ],
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "bucket": {
             "type": "integer",
@@ -50615,9 +50867,15 @@
         "additionalProperties": false
       },
       "IrrbbScenario": {
+        "required": [
+          "bucket",
+          "scenario",
+          "shock"
+        ],
         "type": "object",
         "properties": {
           "currency": {
+            "maxLength": 3,
             "type": "string",
             "nullable": true
           },
@@ -50757,6 +51015,10 @@
         "additionalProperties": false
       },
       "Load": {
+        "required": [
+          "name",
+          "reportingDate"
+        ],
         "type": "object",
         "properties": {
           "loadId": {
@@ -50772,8 +51034,9 @@
             "format": "date"
           },
           "name": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
           },
           "lastUpdate": {
             "type": "string",
@@ -50871,6 +51134,10 @@
         "additionalProperties": false
       },
       "LoadCollection": {
+        "required": [
+          "name",
+          "reportingDate"
+        ],
         "type": "object",
         "properties": {
           "loadCollectionId": {
@@ -50886,8 +51153,9 @@
             "format": "date"
           },
           "name": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
           },
           "calculations": {
             "type": "array",
@@ -50911,6 +51179,7 @@
             "nullable": true
           },
           "reportingEntityId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -51096,6 +51365,12 @@
         "additionalProperties": false
       },
       "LogDetail": {
+        "required": [
+          "computedPositionId",
+          "description",
+          "logSummaryId",
+          "positionId"
+        ],
         "type": "object",
         "properties": {
           "id": {
@@ -51107,19 +51382,22 @@
             "format": "int32"
           },
           "positionId": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "computedPositionId": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "type": {
             "$ref": "#/components/schemas/LogType"
           },
           "description": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 250,
+            "minLength": 1,
+            "type": "string"
           },
           "isImported": {
             "type": "boolean"
@@ -51134,6 +51412,10 @@
         "additionalProperties": false
       },
       "LogSummary": {
+        "required": [
+          "loadId",
+          "name"
+        ],
         "type": "object",
         "properties": {
           "id": {
@@ -51149,8 +51431,9 @@
             "format": "date-time"
           },
           "name": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
           },
           "warnings": {
             "type": "integer",
@@ -51189,14 +51472,19 @@
         "format": "int32"
       },
       "MarginAgreement": {
+        "required": [
+          "id",
+          "pointInTime"
+        ],
         "type": "object",
         "properties": {
           "isEdited": {
             "type": "boolean"
           },
           "id": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "pointInTime": {
             "type": "integer",
@@ -51207,6 +51495,7 @@
             "format": "date"
           },
           "remarginingFrequency": {
+            "maxLength": 1,
             "type": "string",
             "nullable": true
           },
@@ -51305,24 +51594,29 @@
         "additionalProperties": false
       },
       "ModuleSpecific": {
+        "required": [
+          "id",
+          "loadId"
+        ],
         "type": "object",
         "properties": {
           "isEdited": {
             "type": "boolean"
           },
           "id": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "loadId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "load": {
             "$ref": "#/components/schemas/Load"
           },
           "forceHQLACategory": {
+            "maxLength": 10,
             "type": "string",
             "nullable": true
           },
@@ -51360,50 +51654,62 @@
             "type": "boolean"
           },
           "forceLIQCurrency": {
+            "maxLength": 3,
             "type": "string",
             "nullable": true
           },
           "forceLiqTypeOf": {
+            "maxLength": 40,
             "type": "string",
             "nullable": true
           },
           "posRiskDomicile": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
           "posCounterpartyDomicile": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
           "posIssuerDomicile": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
           "posHQDomicile": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
           "posCounterpartyType": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "posIssuerType": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "posClientEconomicActivityType": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "posIssuerEconomicActivityType": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "beneficialOwnerId": {
+            "maxLength": 150,
             "type": "string",
             "nullable": true
           },
           "posGroupLEXId": {
+            "maxLength": 150,
             "type": "string",
             "nullable": true
           },
@@ -51481,10 +51787,12 @@
             "format": "float"
           },
           "ccrForceSubHedgingSetId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "ccrForceHedgingSetId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -51496,6 +51804,7 @@
             "type": "boolean"
           },
           "forceCAPositionClassB3F": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -51588,6 +51897,7 @@
         "type": "object",
         "properties": {
           "name": {
+            "maxLength": 20,
             "minLength": 1,
             "type": "string"
           },
@@ -51595,6 +51905,7 @@
             "type": "boolean"
           },
           "author": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
@@ -51603,14 +51914,17 @@
             "format": "date"
           },
           "category": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "query": {
+            "maxLength": 4000,
             "type": "string",
             "nullable": true
           },
           "comment": {
+            "maxLength": 500,
             "type": "string",
             "nullable": true
           },
@@ -51696,11 +52010,14 @@
       },
       "Netting": {
         "required": [
+          "counterpartyReference",
+          "enabled",
           "name"
         ],
         "type": "object",
         "properties": {
           "name": {
+            "maxLength": 20,
             "minLength": 1,
             "type": "string"
           },
@@ -51708,6 +52025,7 @@
             "type": "boolean"
           },
           "author": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
@@ -51724,12 +52042,14 @@
             "format": "int32"
           },
           "comment": {
+            "maxLength": 500,
             "type": "string",
             "nullable": true
           },
           "counterpartyReference": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "id": {
             "type": "string",
@@ -51890,7 +52210,10 @@
       },
       "Parameter": {
         "required": [
-          "name"
+          "category",
+          "description",
+          "name",
+          "value"
         ],
         "type": "object",
         "properties": {
@@ -51899,16 +52222,17 @@
             "type": "string"
           },
           "category": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 40,
+            "minLength": 1,
+            "type": "string"
           },
           "value": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "type": "string"
           },
           "description": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 200,
+            "type": "string"
           },
           "id": {
             "type": "string",
@@ -52002,18 +52326,22 @@
             "nullable": true
           },
           "payerId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "receiverId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "payerPledgeLink": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "receiverPledgeLink": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -52109,19 +52437,22 @@
         "additionalProperties": false
       },
       "Position": {
+        "required": [
+          "id",
+          "loadId"
+        ],
         "type": "object",
         "properties": {
           "isEdited": {
             "type": "boolean"
           },
           "id": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "loadId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "load": {
             "$ref": "#/components/schemas/Load"
@@ -52296,6 +52627,7 @@
             "nullable": true
           },
           "bookingCenterId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -52304,34 +52636,42 @@
             "format": "int32"
           },
           "currency": {
+            "maxLength": 3,
             "type": "string",
             "nullable": true
           },
           "locationCountry": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
           "internalReference1": {
+            "maxLength": 255,
             "type": "string",
             "nullable": true
           },
           "internalReference2": {
+            "maxLength": 150,
             "type": "string",
             "nullable": true
           },
           "internalReference3": {
+            "maxLength": 40,
             "type": "string",
             "nullable": true
           },
           "internalReference4": {
+            "maxLength": 40,
             "type": "string",
             "nullable": true
           },
           "internalReference5": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "dataSource": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -52371,6 +52711,7 @@
             "format": "double"
           },
           "capacity": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
@@ -52379,6 +52720,7 @@
             "format": "date"
           },
           "maturityType": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
@@ -52396,6 +52738,7 @@
             "type": "boolean"
           },
           "relatedPartyType": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
@@ -52414,6 +52757,7 @@
             "type": "boolean"
           },
           "pledgeLink": {
+            "maxLength": 150,
             "type": "string",
             "nullable": true
           },
@@ -52422,6 +52766,7 @@
             "format": "date"
           },
           "generalLedger": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
@@ -52436,18 +52781,22 @@
             "type": "boolean"
           },
           "nettingSetId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "nettingAgreementType": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "counterpartyId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "guarantorId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -52462,10 +52811,12 @@
             "nullable": true
           },
           "counterpartyBookingCenterId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "marginAgreementId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -52475,10 +52826,12 @@
             "nullable": true
           },
           "clearingFacilityTypeOf": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "clearingFacilityId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -52495,6 +52848,7 @@
             "format": "date"
           },
           "collateralHolderId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -52504,10 +52858,12 @@
             "nullable": true
           },
           "contractId": {
+            "maxLength": 150,
             "type": "string",
             "nullable": true
           },
           "propertyId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -52517,18 +52873,22 @@
             "nullable": true
           },
           "account": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "derivativeId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "derivativeSwapId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "securityId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -52538,6 +52898,7 @@
             "nullable": true
           },
           "commodityId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -52547,6 +52908,7 @@
             "nullable": true
           },
           "irReference": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -52562,6 +52924,7 @@
             "format": "float"
           },
           "irTypeOf": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -52570,6 +52933,7 @@
             "format": "date"
           },
           "irReFixingFrequency": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
@@ -52578,18 +52942,22 @@
             "format": "date"
           },
           "irPaymentFrequency": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "irCompoundingType": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "irDayCount": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "typeOf": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
@@ -52606,25 +52974,31 @@
         "additionalProperties": false
       },
       "PositionAccountPlan": {
+        "required": [
+          "id",
+          "loadId"
+        ],
         "type": "object",
         "properties": {
           "isEdited": {
             "type": "boolean"
           },
           "id": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "loadId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "type": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "value": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -52704,19 +53078,23 @@
         "additionalProperties": false
       },
       "PositionAmount": {
+        "required": [
+          "id",
+          "loadId"
+        ],
         "type": "object",
         "properties": {
           "isEdited": {
             "type": "boolean"
           },
           "id": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "loadId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "bookAmount": {
             "type": "number",
@@ -52854,19 +53232,23 @@
         "additionalProperties": false
       },
       "PositionCalc": {
+        "required": [
+          "id",
+          "loadId"
+        ],
         "type": "object",
         "properties": {
           "isEdited": {
             "type": "boolean"
           },
           "id": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "loadId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "load": {
             "$ref": "#/components/schemas/Load"
@@ -52876,14 +53258,17 @@
             "format": "int32"
           },
           "accountGroupLevel1": {
+            "maxLength": 40,
             "type": "string",
             "nullable": true
           },
           "webeSector": {
+            "maxLength": 40,
             "type": "string",
             "nullable": true
           },
           "riskCountry": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
@@ -52896,6 +53281,7 @@
             "format": "float"
           },
           "longShort": {
+            "maxLength": 10,
             "type": "string",
             "nullable": true
           },
@@ -52904,10 +53290,12 @@
             "format": "float"
           },
           "reportingCategory": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "issuerReportingCategory": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -52967,14 +53355,17 @@
             "type": "boolean"
           },
           "hqlaCategory": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "ownShare": {
+            "maxLength": 50,
             "type": "string",
             "nullable": true
           },
           "liqTypeOf": {
+            "maxLength": 40,
             "type": "string",
             "nullable": true
           },
@@ -53011,6 +53402,7 @@
             "format": "double"
           },
           "pnlCategory": {
+            "maxLength": 40,
             "type": "string",
             "nullable": true
           },
@@ -53031,6 +53423,7 @@
             "format": "int32"
           },
           "groupLEXId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -53039,6 +53432,7 @@
             "format": "double"
           },
           "counterpartyLEXId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -53054,6 +53448,7 @@
             "format": "double"
           },
           "groupARISId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -53074,10 +53469,12 @@
             "format": "float"
           },
           "caPositionClass": {
+            "maxLength": 10,
             "type": "string",
             "nullable": true
           },
           "caPositionClassB3F": {
+            "maxLength": 10,
             "type": "string",
             "nullable": true
           },
@@ -53104,6 +53501,7 @@
             "type": "boolean"
           },
           "caIssuerPositionClassB3F": {
+            "maxLength": 10,
             "type": "string",
             "nullable": true
           },
@@ -53190,12 +53588,15 @@
         "additionalProperties": false
       },
       "PositionCrmAsta": {
+        "required": [
+          "collateralId",
+          "loadCollectionId"
+        ],
         "type": "object",
         "properties": {
           "loadCollectionId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "loadCollection": {
             "$ref": "#/components/schemas/LoadCollection"
@@ -53211,14 +53612,16 @@
             "format": "int32"
           },
           "collateralId": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "exposureLoadId": {
             "type": "integer",
             "format": "int32"
           },
           "exposureId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -53231,14 +53634,17 @@
             "format": "double"
           },
           "astaUltimateRiskCountry": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
           "collateralTypeOf": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "collateralSubType": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           }
@@ -53246,12 +53652,16 @@
         "additionalProperties": false
       },
       "PositionCrmCa": {
+        "required": [
+          "collateralId",
+          "collateralLoadId",
+          "loadCollectionId"
+        ],
         "type": "object",
         "properties": {
           "loadCollectionId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "loadCollection": {
             "$ref": "#/components/schemas/LoadCollection"
@@ -53267,14 +53677,16 @@
             "format": "int32"
           },
           "collateralId": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "exposureLoadId": {
             "type": "integer",
             "format": "int32"
           },
           "exposureId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -53305,17 +53717,25 @@
           "rwa": {
             "type": "number",
             "format": "double"
+          },
+          "mortgageLevel": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
       },
       "PositionCrmCaB3F": {
+        "required": [
+          "collateralId",
+          "collateralLoadId",
+          "loadCollectionId"
+        ],
         "type": "object",
         "properties": {
           "loadCollectionId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "loadCollection": {
             "$ref": "#/components/schemas/LoadCollection"
@@ -53331,14 +53751,16 @@
             "format": "int32"
           },
           "collateralId": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "exposureLoadId": {
             "type": "integer",
             "format": "int32"
           },
           "exposureId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -53369,12 +53791,17 @@
           "rwa": {
             "type": "number",
             "format": "double"
+          },
+          "mortgageLevel": {
+            "type": "integer",
+            "format": "int32"
           },
           "exposureLtvLoadId": {
             "type": "integer",
             "format": "int32"
           },
           "exposureLtvId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -53383,6 +53810,7 @@
             "format": "int32"
           },
           "collateralLtvId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           }
@@ -53390,12 +53818,15 @@
         "additionalProperties": false
       },
       "PositionCrmEuCa": {
+        "required": [
+          "collateralId",
+          "loadCollectionId"
+        ],
         "type": "object",
         "properties": {
           "loadCollectionId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "loadCollection": {
             "$ref": "#/components/schemas/LoadCollection"
@@ -53411,14 +53842,16 @@
             "format": "int32"
           },
           "collateralId": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "exposureLoadId": {
             "type": "integer",
             "format": "int32"
           },
           "exposureId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -53450,11 +53883,16 @@
             "type": "number",
             "format": "double"
           },
+          "mortgageLevel": {
+            "type": "integer",
+            "format": "int32"
+          },
           "exposureLtvLoadId": {
             "type": "integer",
             "format": "int32"
           },
           "exposureLtvId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -53463,6 +53901,7 @@
             "format": "int32"
           },
           "collateralLtvId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           }
@@ -53470,12 +53909,15 @@
         "additionalProperties": false
       },
       "PositionCrmEuLex": {
+        "required": [
+          "collateralId",
+          "loadCollectionId"
+        ],
         "type": "object",
         "properties": {
           "loadCollectionId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "loadCollection": {
             "$ref": "#/components/schemas/LoadCollection"
@@ -53491,14 +53933,16 @@
             "format": "int32"
           },
           "collateralId": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "exposureLoadId": {
             "type": "integer",
             "format": "int32"
           },
           "exposureId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -53529,17 +53973,25 @@
           "rwa": {
             "type": "number",
             "format": "double"
+          },
+          "mortgageLevel": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
       },
       "PositionCrmEuLtv": {
+        "required": [
+          "collateralId",
+          "exposureLoadId",
+          "loadCollectionId"
+        ],
         "type": "object",
         "properties": {
           "loadCollectionId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "loadCollection": {
             "$ref": "#/components/schemas/LoadCollection"
@@ -53555,18 +54007,21 @@
             "format": "int32"
           },
           "collateralId": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "exposureLoadId": {
             "type": "integer",
             "format": "int32"
           },
           "exposureId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "propertyId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -53611,12 +54066,16 @@
         "additionalProperties": false
       },
       "PositionCrmLex": {
+        "required": [
+          "collateralId",
+          "collateralLoadId",
+          "loadCollectionId"
+        ],
         "type": "object",
         "properties": {
           "loadCollectionId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "loadCollection": {
             "$ref": "#/components/schemas/LoadCollection"
@@ -53632,14 +54091,16 @@
             "format": "int32"
           },
           "collateralId": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "exposureLoadId": {
             "type": "integer",
             "format": "int32"
           },
           "exposureId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -53670,17 +54131,24 @@
           "rwa": {
             "type": "number",
             "format": "double"
+          },
+          "mortgageLevel": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
       },
       "PositionCrmLiq": {
+        "required": [
+          "collateralId",
+          "loadCollectionId"
+        ],
         "type": "object",
         "properties": {
           "loadCollectionId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "loadCollection": {
             "$ref": "#/components/schemas/LoadCollection"
@@ -53696,14 +54164,16 @@
             "format": "int32"
           },
           "collateralId": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "exposureLoadId": {
             "type": "integer",
             "format": "int32"
           },
           "exposureId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -53720,10 +54190,12 @@
             "format": "double"
           },
           "collateralHQLACategory": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "collateralLiqTypeOf": {
+            "maxLength": 40,
             "type": "string",
             "nullable": true
           },
@@ -53738,12 +54210,14 @@
         "additionalProperties": false
       },
       "PositionCrmLtv": {
+        "required": [
+          "loadCollectionId"
+        ],
         "type": "object",
         "properties": {
           "loadCollectionId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "loadCollection": {
             "$ref": "#/components/schemas/LoadCollection"
@@ -53759,6 +54233,7 @@
             "format": "int32"
           },
           "collateralId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -53767,10 +54242,12 @@
             "format": "int32"
           },
           "exposureId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "propertyId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -53787,14 +54264,17 @@
             "format": "double"
           },
           "propertyTypeOf": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "propertyUseOf": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "reportingCategory": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -53815,12 +54295,15 @@
         "additionalProperties": false
       },
       "PositionCrmMona": {
+        "required": [
+          "collateralId",
+          "loadCollectionId"
+        ],
         "type": "object",
         "properties": {
           "loadCollectionId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "loadCollection": {
             "$ref": "#/components/schemas/LoadCollection"
@@ -53836,14 +54319,16 @@
             "format": "int32"
           },
           "collateralId": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "exposureLoadId": {
             "type": "integer",
             "format": "int32"
           },
           "exposureId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -53856,10 +54341,12 @@
             "format": "double"
           },
           "collateralTypeOf": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "collateralSubType": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           }
@@ -53867,25 +54354,31 @@
         "additionalProperties": false
       },
       "PositionFinrepMapping": {
+        "required": [
+          "id",
+          "loadId"
+        ],
         "type": "object",
         "properties": {
           "isEdited": {
             "type": "boolean"
           },
           "id": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "loadId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "finrepPortfolioType": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "stage": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
@@ -53994,6 +54487,7 @@
             "nullable": true
           },
           "id": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -54009,14 +54503,17 @@
             "$ref": "#/components/schemas/Position"
           },
           "type": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "name": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "value": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           }
@@ -54104,30 +54601,37 @@
             "nullable": true
           },
           "entityType": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
           "currency": {
+            "maxLength": 3,
             "type": "string",
             "nullable": true
           },
           "riskDomicile": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
           "counterpartyDomicile": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
           "issuerDomicile": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
           "hqDomicile": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
           "reference": {
+            "maxLength": 255,
             "type": "string",
             "nullable": true
           },
@@ -54236,10 +54740,12 @@
             "format": "int32"
           },
           "issuerId": {
+            "maxLength": 150,
             "type": "string",
             "nullable": true
           },
           "portfolioId": {
+            "maxLength": 150,
             "type": "string",
             "nullable": true
           },
@@ -54256,6 +54762,7 @@
             "format": "int32"
           },
           "counterpartyGroupId": {
+            "maxLength": 150,
             "type": "string",
             "nullable": true
           },
@@ -54276,14 +54783,17 @@
             "format": "float"
           },
           "securityId": {
+            "maxLength": 150,
             "type": "string",
             "nullable": true
           },
           "issuerGroupId": {
+            "maxLength": 150,
             "type": "string",
             "nullable": true
           },
           "instrumentId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -54320,10 +54830,12 @@
             "format": "int32"
           },
           "internalAccountNumber": {
+            "maxLength": 15,
             "type": "string",
             "nullable": true
           },
           "intercompanyEntity": {
+            "maxLength": 5,
             "type": "string",
             "nullable": true
           },
@@ -54332,6 +54844,7 @@
             "nullable": true
           },
           "collateralPledgeId": {
+            "maxLength": 150,
             "type": "string",
             "nullable": true
           },
@@ -54348,10 +54861,12 @@
             "nullable": true
           },
           "nettingSetId1": {
+            "maxLength": 150,
             "type": "string",
             "nullable": true
           },
           "nettingSetId2": {
+            "maxLength": 150,
             "type": "string",
             "nullable": true
           },
@@ -54360,10 +54875,12 @@
             "format": "int32"
           },
           "customField1": {
+            "maxLength": 40,
             "type": "string",
             "nullable": true
           },
           "customField2": {
+            "maxLength": 40,
             "type": "string",
             "nullable": true
           },
@@ -54502,24 +55019,31 @@
         "additionalProperties": { }
       },
       "Property": {
+        "required": [
+          "id",
+          "pointInTime"
+        ],
         "type": "object",
         "properties": {
           "isEdited": {
             "type": "boolean"
           },
           "id": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "pointInTime": {
             "type": "integer",
             "format": "int32"
           },
           "typeOf": {
+            "maxLength": 5,
             "type": "string",
             "nullable": true
           },
           "useOf": {
+            "maxLength": 5,
             "type": "string",
             "nullable": true
           },
@@ -54536,18 +55060,22 @@
             "format": "double"
           },
           "country": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
           "canton": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
           "city": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "zipCode": {
+            "maxLength": 10,
             "type": "string",
             "nullable": true
           },
@@ -54560,6 +55088,7 @@
             "format": "double"
           },
           "portfolioId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -54639,14 +55168,19 @@
         "additionalProperties": false
       },
       "ProxySecurity": {
+        "required": [
+          "id",
+          "pointInTime"
+        ],
         "type": "object",
         "properties": {
           "isEdited": {
             "type": "boolean"
           },
           "id": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "pointInTime": {
             "type": "integer",
@@ -54657,6 +55191,7 @@
             "format": "date"
           },
           "proxySecurityId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -54666,6 +55201,7 @@
             "nullable": true
           },
           "proxyCommodityId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -54675,6 +55211,7 @@
             "nullable": true
           },
           "proxyPropertyId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -54851,11 +55388,15 @@
       },
       "ReportingEntity": {
         "required": [
-          "id"
+          "finmaCategory",
+          "id",
+          "name",
+          "snbCode"
         ],
         "type": "object",
         "properties": {
           "id": {
+            "maxLength": 100,
             "minLength": 1,
             "type": "string"
           },
@@ -54871,14 +55412,18 @@
             "format": "date"
           },
           "name": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "snbCode": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 20,
+            "minLength": 1,
+            "type": "string"
           },
           "finmaCategory": {
+            "maximum": 5,
+            "minimum": 1,
             "type": "integer",
             "format": "int32"
           },
@@ -54892,30 +55437,37 @@
             "type": "boolean"
           },
           "streetName": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "streetNumber": {
+            "maxLength": 10,
             "type": "string",
             "nullable": true
           },
           "postBox": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "zipCode": {
+            "maxLength": 10,
             "type": "string",
             "nullable": true
           },
           "city": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "contactName": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "contactType": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -54924,38 +55476,47 @@
             "nullable": true
           },
           "contactEmail": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "subGroupName": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "divisionName": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "referredPerson": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "reportingCurrency": {
+            "maxLength": 3,
             "type": "string",
             "nullable": true
           },
           "fxRateId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "finmaCode": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "euContextIdentifier": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "euContextIdentifierSchema": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -55078,25 +55639,34 @@
         "additionalProperties": false
       },
       "ReportingSet": {
+        "required": [
+          "consolidatedBookingCenterId",
+          "officeType",
+          "reportingEntityId"
+        ],
         "type": "object",
         "properties": {
           "reportingEntityId": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "consolidatedBookingCenterId": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "creationDate": {
             "type": "string",
             "format": "date"
           },
           "officeType": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 20,
+            "minLength": 1,
+            "type": "string"
           },
           "officeCountry": {
+            "maxLength": 2,
             "type": "string",
             "nullable": true
           },
@@ -55187,30 +55757,37 @@
         "type": "object",
         "properties": {
           "name": {
+            "maxLength": 50,
             "minLength": 1,
             "type": "string"
           },
           "query": {
+            "maxLength": 2000,
             "type": "string",
             "nullable": true
           },
           "where": {
+            "maxLength": 500,
             "type": "string",
             "nullable": true
           },
           "tableAlias": {
+            "maxLength": 50,
             "type": "string",
             "nullable": true
           },
           "tableName": {
+            "maxLength": 50,
             "type": "string",
             "nullable": true
           },
           "field": {
+            "maxLength": 50,
             "type": "string",
             "nullable": true
           },
           "defaultValue": {
+            "maxLength": 50,
             "type": "string",
             "nullable": true
           },
@@ -55219,6 +55796,7 @@
             "format": "int32"
           },
           "description": {
+            "maxLength": 200,
             "type": "string",
             "nullable": true
           },
@@ -55229,6 +55807,7 @@
             "type": "boolean"
           },
           "category": {
+            "maxLength": 50,
             "type": "string",
             "nullable": true
           },
@@ -55326,6 +55905,7 @@
         "type": "object",
         "properties": {
           "ruleGroupId": {
+            "maxLength": 50,
             "type": "string",
             "nullable": true
           },
@@ -55333,14 +55913,17 @@
             "$ref": "#/components/schemas/RuleGroup"
           },
           "name": {
+            "maxLength": 50,
             "type": "string",
             "nullable": true
           },
           "condition": {
+            "maxLength": 500,
             "type": "string",
             "nullable": true
           },
           "value": {
+            "maxLength": 200,
             "type": "string",
             "nullable": true
           },
@@ -55349,6 +55932,7 @@
             "format": "int32"
           },
           "description": {
+            "maxLength": 200,
             "type": "string",
             "nullable": true
           },
@@ -55573,14 +56157,19 @@
         "additionalProperties": false
       },
       "Security": {
+        "required": [
+          "id",
+          "pointInTime"
+        ],
         "type": "object",
         "properties": {
           "isEdited": {
             "type": "boolean"
           },
           "id": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 150,
+            "minLength": 1,
+            "type": "string"
           },
           "pointInTime": {
             "type": "integer",
@@ -55591,30 +56180,37 @@
             "format": "date"
           },
           "name": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "isin": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "bbgTicker": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "figi": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "sedol": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "currency": {
+            "maxLength": 3,
             "type": "string",
             "nullable": true
           },
           "listedType": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
@@ -55625,6 +56221,7 @@
             "type": "boolean"
           },
           "revaluationFrequency": {
+            "maxLength": 1,
             "type": "string",
             "nullable": true
           },
@@ -55632,6 +56229,7 @@
             "type": "boolean"
           },
           "cmaApproachType": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
@@ -55660,18 +56258,22 @@
             "format": "date"
           },
           "typeOf": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "subType": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
           "interestRateId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "issuerId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -55688,6 +56290,7 @@
             "format": "int64"
           },
           "hqlaCategory": {
+            "maxLength": 20,
             "type": "string",
             "nullable": true
           },
@@ -55771,19 +56374,23 @@
       },
       "SimulationGroup": {
         "required": [
-          "name"
+          "name",
+          "type"
         ],
         "type": "object",
         "properties": {
           "name": {
+            "maxLength": 40,
             "minLength": 1,
             "type": "string"
           },
           "type": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 20,
+            "minLength": 1,
+            "type": "string"
           },
           "author": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -55792,6 +56399,7 @@
             "format": "date"
           },
           "comment": {
+            "maxLength": 255,
             "type": "string",
             "nullable": true
           },
@@ -55883,32 +56491,42 @@
         "additionalProperties": false
       },
       "SimulationRule": {
+        "required": [
+          "name",
+          "simulationGroupName"
+        ],
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 40,
+            "minLength": 1,
+            "type": "string"
           },
           "simulationGroupName": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 40,
+            "minLength": 1,
+            "type": "string"
           },
           "simulationGroup": {
             "$ref": "#/components/schemas/SimulationGroup"
           },
           "impact": {
+            "maxLength": 255,
             "type": "string",
             "nullable": true
           },
           "condition": {
+            "maxLength": 2000,
             "type": "string",
             "nullable": true
           },
           "table": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "join": {
+            "maxLength": 2000,
             "type": "string",
             "nullable": true
           },
@@ -55993,23 +56611,32 @@
         "additionalProperties": false
       },
       "SimulationType": {
+        "required": [
+          "action",
+          "name",
+          "order",
+          "value"
+        ],
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
           },
           "order": {
             "type": "integer",
             "format": "int32"
           },
           "action": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
           },
           "value": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
           },
           "id": {
             "type": "string",
@@ -56319,10 +56946,12 @@
             "$ref": "#/components/schemas/LoadCollection"
           },
           "name": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "version": {
+            "maxLength": 10,
             "type": "string",
             "nullable": true
           },
@@ -56333,6 +56962,7 @@
             "type": "boolean"
           },
           "entrypoint": {
+            "maxLength": 200,
             "type": "string",
             "nullable": true
           },
@@ -56428,10 +57058,12 @@
             "format": "int32"
           },
           "name": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "version": {
+            "maxLength": 10,
             "type": "string",
             "nullable": true
           },
@@ -56568,6 +57200,9 @@
         "additionalProperties": false
       },
       "Transaction": {
+        "required": [
+          "loadId"
+        ],
         "type": "object",
         "properties": {
           "id": {
@@ -56576,8 +57211,7 @@
           },
           "loadId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "load": {
             "$ref": "#/components/schemas/Load"
@@ -56586,22 +57220,27 @@
             "$ref": "#/components/schemas/Position"
           },
           "positionId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "typeOf": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "capacity": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "traderId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "tradingDeskId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -56647,6 +57286,7 @@
             "format": "int64"
           },
           "cmaId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -56656,6 +57296,7 @@
             "nullable": true
           },
           "underlyingSecurityId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -56665,6 +57306,7 @@
             "nullable": true
           },
           "underlyingCommodityId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -56674,6 +57316,7 @@
             "nullable": true
           },
           "underlyingPropertyId": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -56683,6 +57326,7 @@
             "nullable": true
           },
           "cashCurrency": {
+            "maxLength": 3,
             "type": "string",
             "nullable": true
           },
