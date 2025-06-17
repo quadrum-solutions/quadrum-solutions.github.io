@@ -9803,7 +9803,7 @@
         "tags": [
           "Reports"
         ],
-        "summary": "Allow to validate a survey",
+        "summary": "Allow to fetch validation of a survey",
         "parameters": [
           {
             "name": "lcId",
