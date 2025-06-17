@@ -4942,6 +4942,64 @@
           "200": {
             "description": "OK"
           },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/ListCounterpartyGroupAris/Copy/{lcIdFrom}/{lcIdTo}": {
+      "post": {
+        "tags": [
+          "ListCounterpartyGroupAris"
+        ],
+        "summary": "Allow to copy positions from on LoadCollection to another",
+        "parameters": [
+          {
+            "name": "lcIdFrom",
+            "in": "path",
+            "description": "LoadCollectionId to copy from",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "lcIdTo",
+            "in": "path",
+            "description": "LoadCollectionId to copy to",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -5673,6 +5731,64 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/ListCounterpartyGroupLex/Copy/{lcIdFrom}/{lcIdTo}": {
+      "post": {
+        "tags": [
+          "ListCounterpartyGroupLex"
+        ],
+        "summary": "Allow to copy positions from on LoadCollection to another",
+        "parameters": [
+          {
+            "name": "lcIdFrom",
+            "in": "path",
+            "description": "LoadCollectionId to copy from",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "lcIdTo",
+            "in": "path",
+            "description": "LoadCollectionId to copy to",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           },
           "500": {
             "description": "Internal Server Error"
