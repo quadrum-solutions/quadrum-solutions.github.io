@@ -6,6 +6,14 @@ title: "e2e Testing - reports"
 
 | Status | Version BE | Commit BE | Version FE | Commit FE | Reports | Date |
 |----------|----------|----------|----------|----------|----------|----------|
+| passed | nightly | 553dc78 | nightly | 2eedf8f | [link](reports/20250620030514_fe_nightly_be_nightly_passed_report.html) | 2025-06-20_03:05:14 |
+| passed | nightly | 6d1aa2f | nightly | c8c510c | [link](reports/20250619030517_fe_nightly_be_nightly_passed_report.html) | 2025-06-19_03:05:17 |
+| failed | v1.23.0 | 6f1f048 | v1.23.0 | 573c396 | [link](reports/20250618185102_fe_v1.23.0_be_v1.23.0_failed_report.html) | 2025-06-18_18:51:02 |
+| passed | nightly | 5fafbfe | nightly | 573c396 | [link](reports/20250618030509_fe_nightly_be_nightly_passed_report.html) | 2025-06-18_03:05:09 |
+| failed | nightly | ee97169 | nightly | 5977074 | [link](reports/20250614031745_fe_nightly_be_nightly_failed_report.html) | 2025-06-14_03:17:45 |
+| failed | v1.22.0 | 30ed7c4 | v1.22.0 | 5977074 | [link](reports/20250613102544_fe_v1.22.0_be_v1.22.0_failed_report.html) | 2025-06-13_10:25:44 |
+| failed | nightly | 30ed7c4 | nightly | 5977074 | [link](reports/20250613031745_fe_nightly_be_nightly_failed_report.html) | 2025-06-13_03:17:45 |
+| failed | nightly | 2a614df | nightly | 8713c86 | [link](reports/20250612030611_fe_nightly_be_nightly_failed_report.html) | 2025-06-12_03:06:11 |
 | failed | nightly | 3c61651 | nightly | bcdc4c9 | [link](reports/20250607030535_fe_nightly_be_nightly_failed_report.html) | 2025-06-07_03:05:35 |
 | failed | nightly | ee2079d | nightly | 13499b3 | [link](reports/20250606030539_fe_nightly_be_nightly_failed_report.html) | 2025-06-06_03:05:39 |
 | failed | nightly | 4dd5594 | nightly | da6d92d | [link](reports/20250605030537_fe_nightly_be_nightly_failed_report.html) | 2025-06-05_03:05:37 |
