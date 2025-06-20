@@ -30673,6 +30673,575 @@
         }
       }
     },
+    "/SnbBasket/Paged": {
+      "get": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to fetch all items paged",
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Number of the page",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 50
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SnbBasket"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to fetch paged items",
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Number of the page",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 50
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for items to fetch",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SnbBasket": {
+      "get": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to fetch all items",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SnbBasket"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to create an item",
+        "requestBody": {
+          "description": "Item to create",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SnbBasket"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SnbBasket"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SnbBasket"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SnbBasket"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SnbBasket"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SnbBasket"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SnbBasket"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SnbBasket"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SnbBasket/{id}": {
+      "get": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to fetch one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "1"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SnbBasket"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to patch an item",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Item to patch",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SnbBasket/withcomment": {
+      "put": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to update an item with comment",
+        "requestBody": {
+          "description": "Item to update with comment",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SnbBasketRecordAuditUpdateDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SnbBasketRecordAuditUpdateDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SnbBasketRecordAuditUpdateDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SnbBasketRecordAuditUpdateDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SnbBasket/withcomment/{id}": {
+      "patch": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to patch an item with comment",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Item to patch",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SnbBasketRecordAuditPatchDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SnbBasketRecordAuditPatchDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SnbBasketRecordAuditPatchDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SnbBasketRecordAuditPatchDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SnbBasket/RecordsAuditById/{id}": {
+      "get": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Country/Paged": {
       "get": {
         "tags": [
@@ -56826,6 +57395,154 @@
         "properties": {
           "item": {
             "$ref": "#/components/schemas/SimulationType"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SnbBasket": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "isin": {
+            "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "valorNumber": {
+            "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "issuerName": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "issuerDomicile": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "coupon": {
+            "type": "number",
+            "format": "float"
+          },
+          "issueDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "maturityDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "currency": {
+            "maxLength": 3,
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "sector": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "assetType": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "basket": {
+            "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "hqla": {
+            "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SnbBasketJsonPatchDocument": {
+        "type": "object",
+        "properties": {
+          "operations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SnbBasketOperation"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "contractResolver": {
+            "$ref": "#/components/schemas/IContractResolver"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SnbBasketOperation": {
+        "type": "object",
+        "properties": {
+          "operationType": {
+            "$ref": "#/components/schemas/OperationType"
+          },
+          "path": {
+            "type": "string",
+            "nullable": true
+          },
+          "op": {
+            "type": "string",
+            "nullable": true
+          },
+          "from": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SnbBasketRecordAuditPatchDTO": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/SnbBasketJsonPatchDocument"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SnbBasketRecordAuditUpdateDTO": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/SnbBasket"
           },
           "comment": {
             "type": "string",
