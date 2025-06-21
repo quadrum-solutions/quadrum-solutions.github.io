@@ -600,7 +600,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -1629,7 +1630,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -2424,253 +2426,6 @@
         }
       }
     },
-    "/Import/RT01": {
-      "post": {
-        "tags": [
-          "Import"
-        ],
-        "summary": "Allow to import data from a rt01 file",
-        "parameters": [
-          {
-            "name": "name",
-            "in": "query",
-            "description": "Name of the load",
-            "schema": {
-              "type": "string"
-            },
-            "example": "My Load"
-          },
-          {
-            "name": "date",
-            "in": "query",
-            "description": "Reporting date",
-            "schema": {
-              "type": "string"
-            },
-            "example": "2022-12-31"
-          },
-          {
-            "name": "overwrite",
-            "in": "query",
-            "description": "Overwite the existing data if any",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            },
-            "example": true
-          },
-          {
-            "name": "reportingEntityId",
-            "in": "query",
-            "description": "Reporting entity Id",
-            "schema": {
-              "type": "string",
-              "default": ""
-            },
-            "example": "001"
-          },
-          {
-            "name": "async",
-            "in": "query",
-            "description": "False to wait for the task to end",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          },
-          {
-            "name": "linkToLc",
-            "in": "query",
-            "description": "True to link Load a LoadCollection",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          },
-          {
-            "name": "idLc",
-            "in": "query",
-            "description": "Specify the id of the load collection",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 0
-            }
-          },
-          {
-            "name": "splitBc",
-            "in": "query",
-            "description": "Split data in different loads by BookingCenterId",
-            "schema": {
-              "type": "boolean",
-              "default": false
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "multipart/form-data": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "file": {
-                    "type": "string",
-                    "description": "RT01 file to import",
-                    "format": "binary"
-                  }
-                }
-              },
-              "encoding": {
-                "file": {
-                  "style": "form"
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      }
-    },
-    "/Import/RT01s": {
-      "post": {
-        "tags": [
-          "Import"
-        ],
-        "summary": "Allow to import data from a rt01 file",
-        "parameters": [
-          {
-            "name": "name",
-            "in": "query",
-            "description": "Name of the load",
-            "schema": {
-              "type": "string"
-            },
-            "example": "My Load"
-          },
-          {
-            "name": "date",
-            "in": "query",
-            "description": "Reporting date",
-            "schema": {
-              "type": "string"
-            },
-            "example": "2022-12-31"
-          },
-          {
-            "name": "overwrite",
-            "in": "query",
-            "description": "Overwite the existing data if any",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            },
-            "example": true
-          },
-          {
-            "name": "reportingEntityId",
-            "in": "query",
-            "description": "Reporting entity Id",
-            "schema": {
-              "type": "string",
-              "default": ""
-            },
-            "example": "001"
-          },
-          {
-            "name": "async",
-            "in": "query",
-            "description": "False to wait for the task to end",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          },
-          {
-            "name": "linkToLc",
-            "in": "query",
-            "description": "True to link Load a LoadCollection",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          },
-          {
-            "name": "idLc",
-            "in": "query",
-            "description": "Specify the id of the load collection",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 0
-            }
-          },
-          {
-            "name": "splitBc",
-            "in": "query",
-            "description": "Split data in different loads by BookingCenterId",
-            "schema": {
-              "type": "boolean",
-              "default": false
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "multipart/form-data": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "inputFiles": {
-                    "type": "array",
-                    "items": {
-                      "type": "string",
-                      "format": "binary"
-                    },
-                    "description": "RT01 files to import"
-                  }
-                }
-              },
-              "encoding": {
-                "inputFiles": {
-                  "style": "form"
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      }
-    },
     "/Import/Global": {
       "post": {
         "tags": [
@@ -2793,128 +2548,6 @@
             }
           }
         }
-      }
-    },
-    "/Import/RT01Import": {
-      "post": {
-        "tags": [
-          "Import"
-        ],
-        "summary": "Allow to execute the import step of the UploadRt01",
-        "parameters": [
-          {
-            "name": "name",
-            "in": "query",
-            "description": "Name of the load",
-            "schema": {
-              "type": "string"
-            },
-            "example": "My Load"
-          },
-          {
-            "name": "date",
-            "in": "query",
-            "description": "Reporting date",
-            "schema": {
-              "type": "string"
-            },
-            "example": "2022-12-31"
-          },
-          {
-            "name": "overwrite",
-            "in": "query",
-            "description": "Overwite the existing data if any",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            },
-            "example": true
-          },
-          {
-            "name": "reportingEntityId",
-            "in": "query",
-            "description": "Reporting entity Id",
-            "schema": {
-              "type": "string",
-              "default": ""
-            },
-            "example": "001"
-          },
-          {
-            "name": "async",
-            "in": "query",
-            "description": "False to wait for the task to end",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          },
-          {
-            "name": "linkToLc",
-            "in": "query",
-            "description": "True to link Load a LoadCollection",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          },
-          {
-            "name": "idLc",
-            "in": "query",
-            "description": "Specify the id of the load collection",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 0
-            }
-          },
-          {
-            "name": "splitBc",
-            "in": "query",
-            "description": "Split data in different loads by BookingCenterId",
-            "schema": {
-              "type": "boolean",
-              "default": false
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "multipart/form-data": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "file": {
-                    "type": "string",
-                    "description": "RT01 file to import",
-                    "format": "binary"
-                  }
-                }
-              },
-              "encoding": {
-                "file": {
-                  "style": "form"
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
       }
     },
     "/Import/RT01sImport": {
@@ -3092,119 +2725,6 @@
             }
           }
         }
-      }
-    },
-    "/Import/Excel": {
-      "post": {
-        "tags": [
-          "Import"
-        ],
-        "summary": "Allow to import data from an excel file",
-        "parameters": [
-          {
-            "name": "name",
-            "in": "query",
-            "description": "Name of the load",
-            "schema": {
-              "type": "string"
-            },
-            "example": "My Load"
-          },
-          {
-            "name": "date",
-            "in": "query",
-            "description": "Reporting date",
-            "schema": {
-              "type": "string"
-            },
-            "example": "2022-12-31"
-          },
-          {
-            "name": "overwrite",
-            "in": "query",
-            "description": "Overwite the existing data if any",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            },
-            "example": true
-          },
-          {
-            "name": "reportingEntityId",
-            "in": "query",
-            "description": "Reporting entity Id",
-            "schema": {
-              "type": "string",
-              "default": ""
-            },
-            "example": "001"
-          },
-          {
-            "name": "async",
-            "in": "query",
-            "description": "False to wait for the task to end",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          },
-          {
-            "name": "linkToLc",
-            "in": "query",
-            "description": "True to link Load a LoadCollection",
-            "schema": {
-              "type": "boolean",
-              "default": true
-            }
-          },
-          {
-            "name": "idLc",
-            "in": "query",
-            "description": "Specify the id of the load collection",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 0
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "multipart/form-data": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "file": {
-                    "type": "string",
-                    "description": "Excel file to import",
-                    "format": "binary"
-                  }
-                }
-              },
-              "encoding": {
-                "file": {
-                  "style": "form"
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
       }
     },
     "/Import/Views": {
@@ -3998,7 +3518,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -5049,7 +4570,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -5162,7 +4684,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -5839,7 +5362,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -5952,7 +5476,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -6961,7 +6486,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -7869,7 +7395,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -8532,7 +8059,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -9101,7 +8629,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -13119,164 +12648,6 @@
         }
       }
     },
-    "/Task/Running": {
-      "get": {
-        "tags": [
-          "Task"
-        ],
-        "summary": "Allow to fetch all the running tasks",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/RunningTaskDTO"
-                  }
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        },
-        "deprecated": true
-      }
-    },
-    "/Task/InQueue": {
-      "get": {
-        "tags": [
-          "Task"
-        ],
-        "summary": "Allow to fetch all the tasks in queue",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/RunningTaskDTO"
-                  }
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        },
-        "deprecated": true
-      }
-    },
-    "/Task/FinishedTasks": {
-      "get": {
-        "tags": [
-          "Task"
-        ],
-        "summary": "Allow to fetch the x finished tasks",
-        "parameters": [
-          {
-            "name": "number",
-            "in": "query",
-            "description": "Number of tasks to return",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 100
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/RunningTaskDTO"
-                  }
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        },
-        "deprecated": true
-      }
-    },
-    "/Task/NotFinishedTasks": {
-      "get": {
-        "tags": [
-          "Task"
-        ],
-        "summary": "Allow to fetch the not finished tasks",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/RunningTaskDTO"
-                  }
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        },
-        "deprecated": true
-      }
-    },
-    "/Task/LastXTasks": {
-      "get": {
-        "tags": [
-          "Task"
-        ],
-        "summary": "Allow to fetch the x last created tasks",
-        "parameters": [
-          {
-            "name": "number",
-            "in": "query",
-            "description": "Number of tasks to return",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/RunningTaskDTO"
-                  }
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        },
-        "deprecated": true
-      }
-    },
     "/Task/FinishedTasksBetween": {
       "get": {
         "tags": [
@@ -13878,7 +13249,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -14073,7 +13445,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -14927,7 +14300,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -15122,7 +14496,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -15976,7 +15351,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -16171,7 +15547,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -17025,7 +16402,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -17220,7 +16598,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -18074,7 +17453,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -18269,7 +17649,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -19123,7 +18504,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -19318,7 +18700,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -20172,7 +19555,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -20367,7 +19751,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -21221,7 +20606,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -21416,7 +20802,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -22270,7 +21657,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -22465,7 +21853,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -23319,7 +22708,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -23514,7 +22904,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -24368,7 +23759,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -24563,7 +23955,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -25417,7 +24810,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -25612,7 +25006,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -26466,7 +25861,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -26661,7 +26057,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -27515,7 +26912,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -27710,7 +27108,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -28751,7 +28150,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -29455,7 +28855,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -30146,7 +29547,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -30715,7 +30117,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -31284,7 +30687,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -31853,7 +31257,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -32422,7 +31827,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -32991,7 +32397,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -33560,7 +32967,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -34129,7 +33537,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -34698,7 +34107,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -35267,7 +34677,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -35836,7 +35247,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -36405,7 +35817,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -36974,7 +36387,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -37543,7 +36957,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -38112,7 +37527,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -38681,7 +38097,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -39250,7 +38667,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -39819,7 +39237,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -40388,7 +39807,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -40957,7 +40377,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -41526,7 +40947,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -42223,7 +41645,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -42891,7 +42314,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -43559,7 +42983,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -44227,7 +43652,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -44895,7 +44321,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -45563,7 +44990,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -46231,7 +45659,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
@@ -46899,7 +46328,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "post": {
         "tags": [
