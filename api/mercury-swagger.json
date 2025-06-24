@@ -53829,6 +53829,10 @@
             "type": "number",
             "format": "double"
           },
+          "finalHaircut": {
+            "type": "number",
+            "format": "double"
+          },
           "rwa": {
             "type": "number",
             "format": "double"
@@ -53900,6 +53904,10 @@
             "format": "double"
           },
           "adaptedHaircut": {
+            "type": "number",
+            "format": "double"
+          },
+          "finalHaircut": {
             "type": "number",
             "format": "double"
           },
@@ -53994,6 +54002,10 @@
             "type": "number",
             "format": "double"
           },
+          "finalHaircut": {
+            "type": "number",
+            "format": "double"
+          },
           "rwa": {
             "type": "number",
             "format": "double"
@@ -54082,6 +54094,10 @@
             "format": "double"
           },
           "adaptedHaircut": {
+            "type": "number",
+            "format": "double"
+          },
+          "finalHaircut": {
             "type": "number",
             "format": "double"
           },
@@ -54240,6 +54256,10 @@
             "format": "double"
           },
           "adaptedHaircut": {
+            "type": "number",
+            "format": "double"
+          },
+          "finalHaircut": {
             "type": "number",
             "format": "double"
           },
