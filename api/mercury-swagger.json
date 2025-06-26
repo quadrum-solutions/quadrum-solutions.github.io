@@ -57366,7 +57366,6 @@
             "format": "int32"
           },
           "cellsCalc": {
-            "maxItems": -1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/SurveyCellCalc"
