@@ -6139,6 +6139,111 @@
         }
       }
     },
+    "/Load/Paged": {
+      "post": {
+        "tags": [
+          "Load"
+        ],
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Load"
+        ],
+        "summary": "Allow to fetch all items paged",
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Number of the page",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 50
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Load"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
     "/Load/{id}": {
       "get": {
         "tags": [
@@ -6305,6 +6410,106 @@
         }
       }
     },
+    "/Load/Detail/Paged": {
+      "get": {
+        "tags": [
+          "Load"
+        ],
+        "summary": "Allow to retrieve load collections paged",
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Load"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Load"
+        ],
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Load/Detail/{id}": {
       "get": {
         "tags": [
@@ -6437,117 +6642,6 @@
               "application/json": {
                 "schema": {
                   "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/Load/Paged": {
-      "get": {
-        "tags": [
-          "Load"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Load"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
-      "post": {
-        "tags": [
-          "Load"
-        ],
-        "summary": "Allow to fetch paged items",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "requestBody": {
-          "description": "Parameters for items to fetch",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
@@ -6817,6 +6911,112 @@
         }
       }
     },
+    "/LoadCollection/Paged": {
+      "post": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to retrieve load collections paged",
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to fetch all items paged",
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Number of the page",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 50
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LoadCollection"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
     "/LoadCollection/{id}": {
       "get": {
         "tags": [
@@ -6976,6 +7176,90 @@
           "LoadCollection"
         ],
         "summary": "Allow to retrieve a load collection with details",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/LoadCollection/Detail/Paged": {
+      "get": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to retrieve a load collection with details paged",
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to retrieve a load collection with details paged",
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -7346,117 +7630,6 @@
               "application/json": {
                 "schema": {
                   "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/LoadCollection/Paged": {
-      "get": {
-        "tags": [
-          "LoadCollection"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/LoadCollection"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
-      "post": {
-        "tags": [
-          "LoadCollection"
-        ],
-        "summary": "Allow to fetch paged items",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "requestBody": {
-          "description": "Parameters for items to fetch",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
                 }
               }
             }
