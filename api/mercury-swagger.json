@@ -53681,10 +53681,6 @@
             "type": "number",
             "format": "double"
           },
-          "availableLimit": {
-            "type": "number",
-            "format": "double"
-          },
           "operationalAmount": {
             "type": "number",
             "format": "double"
