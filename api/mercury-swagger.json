@@ -6144,6 +6144,7 @@
         "tags": [
           "Load"
         ],
+        "summary": "Allow to retrieve loads paged",
         "parameters": [
           {
             "name": "pageNumber",
@@ -6411,49 +6412,11 @@
       }
     },
     "/Load/Detail/Paged": {
-      "get": {
-        "tags": [
-          "Load"
-        ],
-        "summary": "Allow to retrieve load collections paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Load"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
       "post": {
         "tags": [
           "Load"
         ],
+        "summary": "Allow to retrieve loads paged",
         "parameters": [
           {
             "name": "pageNumber",
