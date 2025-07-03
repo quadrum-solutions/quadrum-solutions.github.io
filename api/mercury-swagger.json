@@ -12309,7 +12309,7 @@
         }
       }
     },
-    "/Reports/Xbrl/Modules/{category}": {
+    "/Reports/Xbrl/Modules/{taxonomyId}": {
       "get": {
         "tags": [
           "Reports"
@@ -12318,20 +12318,13 @@
         "parameters": [
           {
             "name": "taxonomyId",
-            "in": "query",
+            "in": "path",
             "description": "Taxonomy Id of the modules to retrieve",
+            "required": true,
             "schema": {
               "type": "string"
             },
             "example": "IRRBB"
-          },
-          {
-            "name": "category",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "responses": {
