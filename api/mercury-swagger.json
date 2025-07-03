@@ -6408,7 +6408,8 @@
           "200": {
             "description": "OK"
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/Load/Detail/Paged": {
@@ -7143,7 +7144,8 @@
           "200": {
             "description": "OK"
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/LoadCollection/Detail/Paged": {
