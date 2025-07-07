@@ -51025,10 +51025,14 @@
             "type": "string"
           },
           "bucket": {
+            "maximum": 19,
+            "minimum": 1,
             "type": "integer",
             "format": "int32"
           },
           "percentage": {
+            "maximum": 100,
+            "minimum": 0,
             "type": "integer",
             "format": "int32"
           },
