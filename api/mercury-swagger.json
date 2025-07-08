@@ -6875,6 +6875,29 @@
         }
       }
     },
+    "/LoadCollection/Select": {
+      "get": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to fetch all items",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LoadCollectionSelectDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/LoadCollection/Paged": {
       "post": {
         "tags": [
@@ -51541,6 +51564,32 @@
             "$ref": "#/components/schemas/LoadCollection"
           },
           "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoadCollectionSelectDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loadCollectionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "reportingEntityId": {
             "type": "string",
             "nullable": true
           }
