@@ -559,50 +559,6 @@
       }
     },
     "/Adaptation/Paged": {
-      "get": {
-        "tags": [
-          "Adaptation"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Adaptation"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "Adaptation"
@@ -1589,50 +1545,6 @@
       }
     },
     "/BookingCenter/Paged": {
-      "get": {
-        "tags": [
-          "BookingCenter"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/BookingCenter"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "BookingCenter"
@@ -3477,50 +3389,6 @@
       }
     },
     "/InterestRateCurve/Paged": {
-      "get": {
-        "tags": [
-          "InterestRateCurve"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/InterestRateCurve"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "InterestRateCurve"
@@ -4528,51 +4396,6 @@
       }
     },
     "/ListCounterpartyGroupAris/PagedByLcId": {
-      "get": {
-        "tags": [
-          "ListCounterpartyGroupAris"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "ListCounterpartyGroupAris"
@@ -4643,50 +4466,6 @@
       }
     },
     "/ListCounterpartyGroupAris/Paged": {
-      "get": {
-        "tags": [
-          "ListCounterpartyGroupAris"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CounterpartyGroupAris"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "ListCounterpartyGroupAris"
@@ -5320,51 +5099,6 @@
       }
     },
     "/ListCounterpartyGroupLex/PagedByLcId": {
-      "get": {
-        "tags": [
-          "ListCounterpartyGroupLex"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "ListCounterpartyGroupLex"
@@ -5435,50 +5169,6 @@
       }
     },
     "/ListCounterpartyGroupLex/Paged": {
-      "get": {
-        "tags": [
-          "ListCounterpartyGroupLex"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CounterpartyGroupLex"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "ListCounterpartyGroupLex"
@@ -6004,12 +5694,12 @@
         }
       }
     },
-    "/Load": {
+    "/Load/Select": {
       "get": {
         "tags": [
           "Load"
         ],
-        "summary": "Allow to fetch all items",
+        "summary": "Allow to fetch all loads",
         "responses": {
           "200": {
             "description": "OK",
@@ -6018,120 +5708,8 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Load"
+                    "$ref": "#/components/schemas/LoadSelectDTO"
                   }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Load"
-        ],
-        "summary": "Allow to create a load",
-        "requestBody": {
-          "description": "load to create",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Load"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Load"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Load"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Load"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Load"
-        ],
-        "summary": "Allow to update a load",
-        "requestBody": {
-          "description": "load to update",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Load"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Load"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Load"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Load"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
                 }
               }
             }
@@ -6199,50 +5777,6 @@
             }
           }
         }
-      },
-      "get": {
-        "tags": [
-          "Load"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Load"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
       }
     },
     "/Load/{id}": {
@@ -6398,20 +5932,6 @@
         }
       }
     },
-    "/Load/Detail": {
-      "get": {
-        "tags": [
-          "Load"
-        ],
-        "summary": "Allow to retrieve a load with details",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        },
-        "deprecated": true
-      }
-    },
     "/Load/Detail/Paged": {
       "post": {
         "tags": [
@@ -6502,6 +6022,141 @@
               "application/json": {
                 "schema": {
                   "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Load": {
+      "post": {
+        "tags": [
+          "Load"
+        ],
+        "summary": "Allow to create a load",
+        "requestBody": {
+          "description": "load to create",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Load"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Load"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Load"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Load"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Load"
+        ],
+        "summary": "Allow to update a load",
+        "requestBody": {
+          "description": "load to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Load"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Load"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Load"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Load"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Load"
+        ],
+        "summary": "Allow to fetch all items",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Load"
+                  }
                 }
               }
             }
@@ -6740,141 +6395,6 @@
         }
       }
     },
-    "/LoadCollection": {
-      "get": {
-        "tags": [
-          "LoadCollection"
-        ],
-        "summary": "Allow to fetch all items",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/LoadCollection"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "LoadCollection"
-        ],
-        "summary": "Allow to create a load collection",
-        "requestBody": {
-          "description": "Load collection to create",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoadCollection"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoadCollection"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoadCollection"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoadCollection"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "LoadCollection"
-        ],
-        "summary": "Allow to update an item",
-        "requestBody": {
-          "description": "Item to update",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoadCollection"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoadCollection"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoadCollection"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoadCollection"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/LoadCollection/Select": {
       "get": {
         "tags": [
@@ -6958,50 +6478,6 @@
             }
           }
         }
-      },
-      "get": {
-        "tags": [
-          "LoadCollection"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/LoadCollection"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
       }
     },
     "/LoadCollection/{id}": {
@@ -7157,50 +6633,7 @@
         }
       }
     },
-    "/LoadCollection/Detail": {
-      "get": {
-        "tags": [
-          "LoadCollection"
-        ],
-        "summary": "Allow to retrieve a load collection with details",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        },
-        "deprecated": true
-      }
-    },
     "/LoadCollection/Detail/Paged": {
-      "get": {
-        "tags": [
-          "LoadCollection"
-        ],
-        "summary": "Allow to retrieve a load collection with details paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
       "post": {
         "tags": [
           "LoadCollection"
@@ -7283,6 +6716,141 @@
               "application/json": {
                 "schema": {
                   "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/LoadCollection": {
+      "post": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to create a load collection",
+        "requestBody": {
+          "description": "Load collection to create",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollection"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollection"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollection"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollection"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollection"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollection"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollection"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadCollection"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "LoadCollection"
+        ],
+        "summary": "Allow to fetch all items",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LoadCollection"
+                  }
                 }
               }
             }
@@ -8179,50 +7747,6 @@
       }
     },
     "/ReportingEntity/Paged": {
-      "get": {
-        "tags": [
-          "ReportingEntity"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ReportingEntity"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "ReportingEntity"
@@ -8749,50 +8273,6 @@
       }
     },
     "/ReportingSet/Paged": {
-      "get": {
-        "tags": [
-          "ReportingSet"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ReportingSet"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "ReportingSet"
@@ -13361,51 +12841,6 @@
       }
     },
     "/CoreAmortization/PagedByLoadId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -13557,51 +12992,6 @@
       }
     },
     "/CoreAmortization/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -14412,51 +13802,6 @@
       }
     },
     "/CoreDerivative/PagedByLoadId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -14608,51 +13953,6 @@
       }
     },
     "/CoreDerivative/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -15463,51 +14763,6 @@
       }
     },
     "/CoreDerivativeSchedule/PagedByLoadId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -15659,51 +14914,6 @@
       }
     },
     "/CoreDerivativeSchedule/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -16514,51 +15724,6 @@
       }
     },
     "/CoreDerivativeSwap/PagedByLoadId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -16710,51 +15875,6 @@
       }
     },
     "/CoreDerivativeSwap/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -17565,51 +16685,6 @@
       }
     },
     "/CoreInterestRate/PagedByLoadId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -17761,51 +16836,6 @@
       }
     },
     "/CoreInterestRate/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -18616,51 +17646,6 @@
       }
     },
     "/CoreModuleSpecific/PagedByLoadId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -18812,51 +17797,6 @@
       }
     },
     "/CoreModuleSpecific/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -19667,51 +18607,6 @@
       }
     },
     "/CorePledge/PagedByLoadId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -19863,51 +18758,6 @@
       }
     },
     "/CorePledge/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -20718,51 +19568,6 @@
       }
     },
     "/CorePosition/PagedByLoadId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -20914,51 +19719,6 @@
       }
     },
     "/CorePosition/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -21769,51 +20529,6 @@
       }
     },
     "/CoreDerivativeCalc/PagedByLoadId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -21965,51 +20680,6 @@
       }
     },
     "/CoreDerivativeCalc/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -22820,51 +21490,6 @@
       }
     },
     "/CorePositionCalc/PagedByLoadId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -23016,51 +21641,6 @@
       }
     },
     "/CorePositionCalc/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -23871,51 +22451,6 @@
       }
     },
     "/CorePositionAccountPlan/PagedByLoadId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -24067,51 +22602,6 @@
       }
     },
     "/CorePositionAccountPlan/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -24922,51 +23412,6 @@
       }
     },
     "/CorePositionAmount/PagedByLoadId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -25118,51 +23563,6 @@
       }
     },
     "/CorePositionAmount/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -25973,51 +24373,6 @@
       }
     },
     "/CorePositionFinrepMapping/PagedByLoadId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -26169,51 +24524,6 @@
       }
     },
     "/CorePositionFinrepMapping/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -27024,51 +25334,6 @@
       }
     },
     "/CorePositionSingle/PagedByLoadId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -27220,51 +25485,6 @@
       }
     },
     "/CorePositionSingle/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -28263,50 +26483,6 @@
       }
     },
     "/Description/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Description"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -28968,50 +27144,6 @@
       }
     },
     "/GlobalInput/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GlobalInput"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -29660,50 +27792,6 @@
       }
     },
     "/RuleGroup/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/RuleGroup"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -30230,50 +28318,6 @@
       }
     },
     "/SnbBasket/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SnbBasket"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -30800,50 +28844,6 @@
       }
     },
     "/Country/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Country"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -31370,50 +29370,6 @@
       }
     },
     "/Currency/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Currency"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -31940,50 +29896,6 @@
       }
     },
     "/ArisCounterparty/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ArisCounterparty"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -32510,50 +30422,6 @@
       }
     },
     "/IrrbbReplicationKeyRule/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/IrrbbReplicationKeyRule"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -33080,50 +30948,6 @@
       }
     },
     "/IrrbbReplicationKeySplit/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/IrrbbReplicationKeySplit"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -33650,50 +31474,6 @@
       }
     },
     "/IrrbbScenario/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/IrrbbScenario"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -34220,50 +32000,6 @@
       }
     },
     "/Parameter/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Parameter"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -34790,50 +32526,6 @@
       }
     },
     "/RuleItem/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/RuleItem"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -35360,50 +33052,6 @@
       }
     },
     "/CalcField/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CalcField"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -35930,50 +33578,6 @@
       }
     },
     "/CopyView/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CopyView"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -36500,50 +34104,6 @@
       }
     },
     "/SimulationRule/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SimulationRule"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -37070,50 +34630,6 @@
       }
     },
     "/SimulationGroup/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SimulationGroup"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -37640,50 +35156,6 @@
       }
     },
     "/SimulationType/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SimulationType"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -38210,50 +35682,6 @@
       }
     },
     "/Netting/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Netting"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -38780,50 +36208,6 @@
       }
     },
     "/CalcOrderSurvey/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CalcOrderSurvey"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -39350,50 +36734,6 @@
       }
     },
     "/ConsistencyCheck/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ConsistencyCheck"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -39920,50 +37260,6 @@
       }
     },
     "/ExportCellOrder/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ExportCellOrder"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -40490,50 +37786,6 @@
       }
     },
     "/ExportException/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ExportException"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -41060,50 +38312,6 @@
       }
     },
     "/MsaQuery/Paged": {
-      "get": {
-        "tags": [
-          "zGenericDyn"
-        ],
-        "summary": "Allow to fetch all items paged",
-        "parameters": [
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 1
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "example": 50
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/MsaQuery"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDyn"
@@ -41757,51 +38965,6 @@
       }
     },
     "/ListCommodity/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDynList"
@@ -42426,51 +39589,6 @@
       }
     },
     "/ListCounterparty/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDynList"
@@ -43095,51 +40213,6 @@
       }
     },
     "/ListExternalRating/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDynList"
@@ -43764,51 +40837,6 @@
       }
     },
     "/ListMarginAgreement/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDynList"
@@ -44433,51 +41461,6 @@
       }
     },
     "/ListProperty/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDynList"
@@ -45102,51 +42085,6 @@
       }
     },
     "/ListProxySecurity/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDynList"
@@ -45771,51 +42709,6 @@
       }
     },
     "/ListSecurity/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDynList"
@@ -46440,51 +43333,6 @@
       }
     },
     "/ListUnderlying/PagedByLcId": {
-      "get": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch pages items by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        },
-        "deprecated": true
-      },
       "post": {
         "tags": [
           "zGenericDynList"
@@ -51657,6 +48505,40 @@
             "$ref": "#/components/schemas/Load"
           },
           "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoadSelectDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "lastUpdate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "reportingEntityId": {
             "type": "string",
             "nullable": true
           }
