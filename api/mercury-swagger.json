@@ -43870,6 +43870,630 @@
           }
         }
       }
+    },
+    "/ListCrypto/{pit}": {
+      "get": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to fetch all items by Pit",
+        "parameters": [
+          {
+            "name": "pit",
+            "in": "path",
+            "description": "Point in time",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Number of the page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 50
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to fetch all items by Pit",
+        "parameters": [
+          {
+            "name": "pit",
+            "in": "path",
+            "description": "Point in time",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Number of the page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 50
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for items to fetch",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ListCrypto/PagedByLcId": {
+      "post": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to fetch pages items by LoadCollection",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ListCrypto/{pit}/{id}": {
+      "get": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to fetch one item by Pit and Id",
+        "parameters": [
+          {
+            "name": "pit",
+            "in": "path",
+            "description": "Point in time",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Crypto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to patch an item",
+        "parameters": [
+          {
+            "name": "pit",
+            "in": "path",
+            "description": "PIT of the item",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Item to patch",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "pit",
+            "in": "path",
+            "description": "PIT of the item",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ListCrypto": {
+      "post": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to create an item",
+        "requestBody": {
+          "description": "Item to create",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Crypto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Crypto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Crypto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Crypto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Crypto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Crypto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Crypto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Crypto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ListCrypto/withcomment": {
+      "put": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to update an item with comment",
+        "requestBody": {
+          "description": "Item to update, with comment",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CryptoRecordAuditUpdateDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CryptoRecordAuditUpdateDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CryptoRecordAuditUpdateDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CryptoRecordAuditUpdateDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ListCrypto/withcomment/{pit}/{id}": {
+      "patch": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to patch an item with comment",
+        "parameters": [
+          {
+            "name": "pit",
+            "in": "path",
+            "description": "PIT of the item",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Item to patch with comment",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CryptoRecordAuditPatchDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CryptoRecordAuditPatchDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CryptoRecordAuditPatchDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CryptoRecordAuditPatchDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ListCrypto/RecordsAuditById/{pit}/{id}": {
+      "get": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to retrieve all records audit",
+        "parameters": [
+          {
+            "name": "pit",
+            "in": "path",
+            "description": "PIT of the item",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -46009,6 +46633,119 @@
         },
         "additionalProperties": false
       },
+      "Crypto": {
+        "required": [
+          "id",
+          "pointInTime"
+        ],
+        "type": "object",
+        "properties": {
+          "isEdited": {
+            "type": "boolean"
+          },
+          "id": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "pointInTime": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "groupOf": {
+            "maxLength": 2,
+            "type": "string",
+            "nullable": true
+          },
+          "tokenType": {
+            "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "timeSeriesId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CryptoJsonPatchDocument": {
+        "type": "object",
+        "properties": {
+          "operations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CryptoOperation"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "contractResolver": {
+            "$ref": "#/components/schemas/IContractResolver"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CryptoOperation": {
+        "type": "object",
+        "properties": {
+          "operationType": {
+            "$ref": "#/components/schemas/OperationType"
+          },
+          "path": {
+            "type": "string",
+            "nullable": true
+          },
+          "op": {
+            "type": "string",
+            "nullable": true
+          },
+          "from": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CryptoRecordAuditPatchDTO": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/CryptoJsonPatchDocument"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CryptoRecordAuditUpdateDTO": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/Crypto"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Currency": {
         "required": [
           "centralBank",
@@ -46246,6 +46983,16 @@
             "nullable": true
           },
           "underlyingReferenceEntityPIT": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "underlyingCryptoAssetId": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "underlyingCryptoAssetPIT": {
             "type": "integer",
             "format": "int32",
             "nullable": true
@@ -46797,6 +47544,26 @@
             "nullable": true
           },
           "pUnderlyingCommodityPIT": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "rUnderlyingCryptoAssetId": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "rUnderlyingCryptoAssetPIT": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "pUnderlyingCryptoAssetId": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "pUnderlyingCryptoAssetPIT": {
             "type": "integer",
             "format": "int32",
             "nullable": true
@@ -50126,6 +50893,16 @@
             "nullable": true
           },
           "commodityPIT": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "cryptoAssetId": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "cryptoAssetPIT": {
             "type": "integer",
             "format": "int32",
             "nullable": true
@@ -54711,6 +55488,16 @@
             "nullable": true
           },
           "underlyingPropertyPIT": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "underlyingCryptoAssetId": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "underlyingCryptoAssetPIT": {
             "type": "integer",
             "format": "int32",
             "nullable": true
