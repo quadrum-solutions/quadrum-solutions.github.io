@@ -5700,6 +5700,24 @@
           "Load"
         ],
         "summary": "Allow to fetch all loads",
+        "parameters": [
+          {
+            "name": "isLinked",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "reportingDate",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -6401,6 +6419,48 @@
           "LoadCollection"
         ],
         "summary": "Allow to fetch all items",
+        "parameters": [
+          {
+            "name": "isArchived",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "hasLoads",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "reportingDate",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "hasCounterpartyGroupLex",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "hasCounterpartyGroupAris",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -49249,6 +49309,9 @@
           "reportingEntityId": {
             "type": "string",
             "nullable": true
+          },
+          "isArchived": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
