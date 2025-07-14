@@ -51575,6 +51575,11 @@
           "financialSectorFlag": {
             "type": "boolean"
           },
+          "astaSector": {
+            "maxLength": 40,
+            "type": "string",
+            "nullable": true
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
@@ -51708,6 +51713,11 @@
           },
           "collateralSubType": {
             "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "collateralASTASector": {
+            "maxLength": 40,
             "type": "string",
             "nullable": true
           }
