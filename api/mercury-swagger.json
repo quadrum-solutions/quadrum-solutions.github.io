@@ -54390,6 +54390,10 @@
           "lexGuaranteedFlag": {
             "type": "boolean"
           },
+          "startDate": {
+            "type": "string",
+            "format": "date"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
