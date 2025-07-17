@@ -45891,7 +45891,7 @@
             "type": "string"
           },
           "field": {
-            "maxLength": 20,
+            "maxLength": 30,
             "minLength": 1,
             "type": "string"
           },
