@@ -5716,6 +5716,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "isArchived",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean"
+            }
           }
         ],
         "responses": {
@@ -49413,6 +49421,9 @@
           "reportingEntityId": {
             "type": "string",
             "nullable": true
+          },
+          "isArchived": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
