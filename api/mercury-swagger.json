@@ -6467,6 +6467,22 @@
             "schema": {
               "type": "boolean"
             }
+          },
+          {
+            "name": "surveyName",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "surveyVersion",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
