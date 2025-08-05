@@ -15,24 +15,12 @@
     }
   },
   "paths": {
-    "/Adaptation/Validate/{id}": {
+    "/Adaptation/Validate": {
       "get": {
         "tags": [
           "Adaptation"
         ],
-        "summary": "Allow to validate an adaptation",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Id of the adaptation to validate",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
+        "summary": "Allow to validate all adaptations",
         "responses": {
           "200": {
             "description": "OK",
@@ -55,9 +43,7 @@
             }
           }
         }
-      }
-    },
-    "/Adaptation/Validate": {
+      },
       "post": {
         "tags": [
           "Adaptation"
@@ -104,6 +90,48 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdaptationValidationResultDTO"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Adaptation/Validate/{id}": {
+      "get": {
+        "tags": [
+          "Adaptation"
+        ],
+        "summary": "Allow to validate an adaptation",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the adaptation to validate",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
