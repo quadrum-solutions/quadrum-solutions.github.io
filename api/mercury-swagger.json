@@ -49354,6 +49354,10 @@
             "type": "string",
             "format": "date"
           },
+          "createDate": {
+            "type": "string",
+            "format": "date"
+          },
           "name": {
             "type": "string",
             "nullable": true
