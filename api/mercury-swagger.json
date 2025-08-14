@@ -12994,164 +12994,21 @@
         }
       }
     },
-    "/CoreAmortization/PagedByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CoreAmortization/ExcelByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch excel file with filters",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/CoreAmortization/ByLoadId/{loadId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Amortization"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CoreAmortization/PagedByLcId": {
+    "/CoreAmortization/Paged": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -13215,13 +13072,21 @@
         }
       }
     },
-    "/CoreAmortization/ExcelByLcId": {
+    "/CoreAmortization/Excel": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch excel file with filters",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcid",
             "in": "query",
@@ -13258,40 +13123,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/CoreAmortization/ByLcId/{lcId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Amortization"
-                  }
-                }
-              }
-            }
           }
         }
       }
@@ -13955,164 +13786,21 @@
         }
       }
     },
-    "/CoreDerivative/PagedByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CoreDerivative/ExcelByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch excel file with filters",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/CoreDerivative/ByLoadId/{loadId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Derivative"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CoreDerivative/PagedByLcId": {
+    "/CoreDerivative/Paged": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -14176,13 +13864,21 @@
         }
       }
     },
-    "/CoreDerivative/ExcelByLcId": {
+    "/CoreDerivative/Excel": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch excel file with filters",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcid",
             "in": "query",
@@ -14219,40 +13915,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/CoreDerivative/ByLcId/{lcId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Derivative"
-                  }
-                }
-              }
-            }
           }
         }
       }
@@ -14916,164 +14578,21 @@
         }
       }
     },
-    "/CoreDerivativeSchedule/PagedByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CoreDerivativeSchedule/ExcelByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch excel file with filters",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/CoreDerivativeSchedule/ByLoadId/{loadId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DerivativeSchedule"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CoreDerivativeSchedule/PagedByLcId": {
+    "/CoreDerivativeSchedule/Paged": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -15137,13 +14656,21 @@
         }
       }
     },
-    "/CoreDerivativeSchedule/ExcelByLcId": {
+    "/CoreDerivativeSchedule/Excel": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch excel file with filters",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcid",
             "in": "query",
@@ -15180,40 +14707,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/CoreDerivativeSchedule/ByLcId/{lcId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DerivativeSchedule"
-                  }
-                }
-              }
-            }
           }
         }
       }
@@ -15877,164 +15370,21 @@
         }
       }
     },
-    "/CoreDerivativeSwap/PagedByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CoreDerivativeSwap/ExcelByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch excel file with filters",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/CoreDerivativeSwap/ByLoadId/{loadId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DerivativeSwap"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CoreDerivativeSwap/PagedByLcId": {
+    "/CoreDerivativeSwap/Paged": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -16098,13 +15448,21 @@
         }
       }
     },
-    "/CoreDerivativeSwap/ExcelByLcId": {
+    "/CoreDerivativeSwap/Excel": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch excel file with filters",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcid",
             "in": "query",
@@ -16141,40 +15499,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/CoreDerivativeSwap/ByLcId/{lcId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DerivativeSwap"
-                  }
-                }
-              }
-            }
           }
         }
       }
@@ -16838,164 +16162,21 @@
         }
       }
     },
-    "/CoreInterestRate/PagedByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CoreInterestRate/ExcelByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch excel file with filters",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/CoreInterestRate/ByLoadId/{loadId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/InterestRate"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CoreInterestRate/PagedByLcId": {
+    "/CoreInterestRate/Paged": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -17059,13 +16240,21 @@
         }
       }
     },
-    "/CoreInterestRate/ExcelByLcId": {
+    "/CoreInterestRate/Excel": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch excel file with filters",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcid",
             "in": "query",
@@ -17102,40 +16291,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/CoreInterestRate/ByLcId/{lcId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/InterestRate"
-                  }
-                }
-              }
-            }
           }
         }
       }
@@ -17799,164 +16954,21 @@
         }
       }
     },
-    "/CoreModuleSpecific/PagedByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CoreModuleSpecific/ExcelByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch excel file with filters",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/CoreModuleSpecific/ByLoadId/{loadId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ModuleSpecific"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CoreModuleSpecific/PagedByLcId": {
+    "/CoreModuleSpecific/Paged": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -18020,13 +17032,21 @@
         }
       }
     },
-    "/CoreModuleSpecific/ExcelByLcId": {
+    "/CoreModuleSpecific/Excel": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch excel file with filters",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcid",
             "in": "query",
@@ -18063,40 +17083,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/CoreModuleSpecific/ByLcId/{lcId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ModuleSpecific"
-                  }
-                }
-              }
-            }
           }
         }
       }
@@ -18760,164 +17746,21 @@
         }
       }
     },
-    "/CorePledge/PagedByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CorePledge/ExcelByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch excel file with filters",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/CorePledge/ByLoadId/{loadId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Pledge"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CorePledge/PagedByLcId": {
+    "/CorePledge/Paged": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -18981,13 +17824,21 @@
         }
       }
     },
-    "/CorePledge/ExcelByLcId": {
+    "/CorePledge/Excel": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch excel file with filters",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcid",
             "in": "query",
@@ -19024,40 +17875,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/CorePledge/ByLcId/{lcId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Pledge"
-                  }
-                }
-              }
-            }
           }
         }
       }
@@ -19721,164 +18538,21 @@
         }
       }
     },
-    "/CorePosition/PagedByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CorePosition/ExcelByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch excel file with filters",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/CorePosition/ByLoadId/{loadId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Position"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CorePosition/PagedByLcId": {
+    "/CorePosition/Paged": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -19942,13 +18616,21 @@
         }
       }
     },
-    "/CorePosition/ExcelByLcId": {
+    "/CorePosition/Excel": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch excel file with filters",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcid",
             "in": "query",
@@ -19985,40 +18667,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/CorePosition/ByLcId/{lcId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Position"
-                  }
-                }
-              }
-            }
           }
         }
       }
@@ -20682,164 +19330,21 @@
         }
       }
     },
-    "/CoreDerivativeCalc/PagedByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CoreDerivativeCalc/ExcelByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch excel file with filters",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/CoreDerivativeCalc/ByLoadId/{loadId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DerivativeCalc"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CoreDerivativeCalc/PagedByLcId": {
+    "/CoreDerivativeCalc/Paged": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -20903,13 +19408,21 @@
         }
       }
     },
-    "/CoreDerivativeCalc/ExcelByLcId": {
+    "/CoreDerivativeCalc/Excel": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch excel file with filters",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcid",
             "in": "query",
@@ -20946,40 +19459,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/CoreDerivativeCalc/ByLcId/{lcId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DerivativeCalc"
-                  }
-                }
-              }
-            }
           }
         }
       }
@@ -21643,164 +20122,21 @@
         }
       }
     },
-    "/CorePositionCalc/PagedByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CorePositionCalc/ExcelByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch excel file with filters",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/CorePositionCalc/ByLoadId/{loadId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PositionCalc"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CorePositionCalc/PagedByLcId": {
+    "/CorePositionCalc/Paged": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -21864,13 +20200,21 @@
         }
       }
     },
-    "/CorePositionCalc/ExcelByLcId": {
+    "/CorePositionCalc/Excel": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch excel file with filters",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcid",
             "in": "query",
@@ -21907,40 +20251,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/CorePositionCalc/ByLcId/{lcId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PositionCalc"
-                  }
-                }
-              }
-            }
           }
         }
       }
@@ -22604,164 +20914,21 @@
         }
       }
     },
-    "/CorePositionAccountPlan/PagedByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CorePositionAccountPlan/ExcelByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch excel file with filters",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/CorePositionAccountPlan/ByLoadId/{loadId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PositionAccountPlan"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CorePositionAccountPlan/PagedByLcId": {
+    "/CorePositionAccountPlan/Paged": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -22825,13 +20992,21 @@
         }
       }
     },
-    "/CorePositionAccountPlan/ExcelByLcId": {
+    "/CorePositionAccountPlan/Excel": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch excel file with filters",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcid",
             "in": "query",
@@ -22868,40 +21043,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/CorePositionAccountPlan/ByLcId/{lcId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PositionAccountPlan"
-                  }
-                }
-              }
-            }
           }
         }
       }
@@ -23565,164 +21706,21 @@
         }
       }
     },
-    "/CorePositionAmount/PagedByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CorePositionAmount/ExcelByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch excel file with filters",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/CorePositionAmount/ByLoadId/{loadId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PositionAmount"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CorePositionAmount/PagedByLcId": {
+    "/CorePositionAmount/Paged": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -23786,13 +21784,21 @@
         }
       }
     },
-    "/CorePositionAmount/ExcelByLcId": {
+    "/CorePositionAmount/Excel": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch excel file with filters",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcid",
             "in": "query",
@@ -23829,40 +21835,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/CorePositionAmount/ByLcId/{lcId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PositionAmount"
-                  }
-                }
-              }
-            }
           }
         }
       }
@@ -24526,164 +22498,21 @@
         }
       }
     },
-    "/CorePositionFinrepMapping/PagedByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CorePositionFinrepMapping/ExcelByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch excel file with filters",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/CorePositionFinrepMapping/ByLoadId/{loadId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PositionFinrepMapping"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CorePositionFinrepMapping/PagedByLcId": {
+    "/CorePositionFinrepMapping/Paged": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -24747,13 +22576,21 @@
         }
       }
     },
-    "/CorePositionFinrepMapping/ExcelByLcId": {
+    "/CorePositionFinrepMapping/Excel": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch excel file with filters",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcid",
             "in": "query",
@@ -24790,40 +22627,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/CorePositionFinrepMapping/ByLcId/{lcId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PositionFinrepMapping"
-                  }
-                }
-              }
-            }
           }
         }
       }
@@ -25487,164 +23290,21 @@
         }
       }
     },
-    "/CorePositionSingle/PagedByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CorePositionSingle/ExcelByLoadId": {
-      "post": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch excel file with filters",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/CorePositionSingle/ByLoadId/{loadId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch items by Load Id",
-        "parameters": [
-          {
-            "name": "loadId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PositionSingle"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/CorePositionSingle/PagedByLcId": {
+    "/CorePositionSingle/Paged": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -25708,13 +23368,21 @@
         }
       }
     },
-    "/CorePositionSingle/ExcelByLcId": {
+    "/CorePositionSingle/Excel": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
         ],
         "summary": "Allow to fetch excel file with filters",
         "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcid",
             "in": "query",
@@ -25751,40 +23419,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/CorePositionSingle/ByLcId/{lcId}": {
-      "get": {
-        "tags": [
-          "zCoreGenericDyn"
-        ],
-        "summary": "Allow to fetch pages by LoadCollection",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PositionSingle"
-                  }
-                }
-              }
-            }
           }
         }
       }
@@ -38991,140 +36625,21 @@
         }
       }
     },
-    "/ListCommodity/{pit}": {
-      "get": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch all items by Pit",
-        "parameters": [
-          {
-            "name": "pit",
-            "in": "path",
-            "description": "Point in time",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 1
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 50
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch all items by Pit",
-        "parameters": [
-          {
-            "name": "pit",
-            "in": "path",
-            "description": "Point in time",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 1
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 50
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Parameters for items to fetch",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/ListCommodity/PagedByLcId": {
+    "/ListCommodity/Paged": {
       "post": {
         "tags": [
           "zGenericDynList"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "pit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -39615,140 +37130,21 @@
         }
       }
     },
-    "/ListCounterparty/{pit}": {
-      "get": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch all items by Pit",
-        "parameters": [
-          {
-            "name": "pit",
-            "in": "path",
-            "description": "Point in time",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 1
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 50
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch all items by Pit",
-        "parameters": [
-          {
-            "name": "pit",
-            "in": "path",
-            "description": "Point in time",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 1
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 50
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Parameters for items to fetch",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/ListCounterparty/PagedByLcId": {
+    "/ListCounterparty/Paged": {
       "post": {
         "tags": [
           "zGenericDynList"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "pit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -40239,140 +37635,21 @@
         }
       }
     },
-    "/ListExternalRating/{pit}": {
-      "get": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch all items by Pit",
-        "parameters": [
-          {
-            "name": "pit",
-            "in": "path",
-            "description": "Point in time",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 1
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 50
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch all items by Pit",
-        "parameters": [
-          {
-            "name": "pit",
-            "in": "path",
-            "description": "Point in time",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 1
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 50
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Parameters for items to fetch",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/ListExternalRating/PagedByLcId": {
+    "/ListExternalRating/Paged": {
       "post": {
         "tags": [
           "zGenericDynList"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "pit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -40863,140 +38140,21 @@
         }
       }
     },
-    "/ListMarginAgreement/{pit}": {
-      "get": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch all items by Pit",
-        "parameters": [
-          {
-            "name": "pit",
-            "in": "path",
-            "description": "Point in time",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 1
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 50
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch all items by Pit",
-        "parameters": [
-          {
-            "name": "pit",
-            "in": "path",
-            "description": "Point in time",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 1
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 50
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Parameters for items to fetch",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/ListMarginAgreement/PagedByLcId": {
+    "/ListMarginAgreement/Paged": {
       "post": {
         "tags": [
           "zGenericDynList"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "pit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -41487,140 +38645,21 @@
         }
       }
     },
-    "/ListProperty/{pit}": {
-      "get": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch all items by Pit",
-        "parameters": [
-          {
-            "name": "pit",
-            "in": "path",
-            "description": "Point in time",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 1
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 50
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch all items by Pit",
-        "parameters": [
-          {
-            "name": "pit",
-            "in": "path",
-            "description": "Point in time",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 1
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 50
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Parameters for items to fetch",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/ListProperty/PagedByLcId": {
+    "/ListProperty/Paged": {
       "post": {
         "tags": [
           "zGenericDynList"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "pit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -42111,140 +39150,21 @@
         }
       }
     },
-    "/ListProxySecurity/{pit}": {
-      "get": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch all items by Pit",
-        "parameters": [
-          {
-            "name": "pit",
-            "in": "path",
-            "description": "Point in time",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 1
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 50
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch all items by Pit",
-        "parameters": [
-          {
-            "name": "pit",
-            "in": "path",
-            "description": "Point in time",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 1
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 50
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Parameters for items to fetch",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/ListProxySecurity/PagedByLcId": {
+    "/ListProxySecurity/Paged": {
       "post": {
         "tags": [
           "zGenericDynList"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "pit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -42735,140 +39655,21 @@
         }
       }
     },
-    "/ListSecurity/{pit}": {
-      "get": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch all items by Pit",
-        "parameters": [
-          {
-            "name": "pit",
-            "in": "path",
-            "description": "Point in time",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 1
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 50
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch all items by Pit",
-        "parameters": [
-          {
-            "name": "pit",
-            "in": "path",
-            "description": "Point in time",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 1
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 50
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Parameters for items to fetch",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/ListSecurity/PagedByLcId": {
+    "/ListSecurity/Paged": {
       "post": {
         "tags": [
           "zGenericDynList"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "pit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -43359,140 +40160,21 @@
         }
       }
     },
-    "/ListUnderlying/{pit}": {
-      "get": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch all items by Pit",
-        "parameters": [
-          {
-            "name": "pit",
-            "in": "path",
-            "description": "Point in time",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 1
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 50
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch all items by Pit",
-        "parameters": [
-          {
-            "name": "pit",
-            "in": "path",
-            "description": "Point in time",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 1
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 50
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Parameters for items to fetch",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/ListUnderlying/PagedByLcId": {
+    "/ListUnderlying/Paged": {
       "post": {
         "tags": [
           "zGenericDynList"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "pit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
@@ -43983,140 +40665,21 @@
         }
       }
     },
-    "/ListCrypto/{pit}": {
-      "get": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch all items by Pit",
-        "parameters": [
-          {
-            "name": "pit",
-            "in": "path",
-            "description": "Point in time",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 1
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 50
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "zGenericDynList"
-        ],
-        "summary": "Allow to fetch all items by Pit",
-        "parameters": [
-          {
-            "name": "pit",
-            "in": "path",
-            "description": "Point in time",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Number of the page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 1
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "description": "Number of items per page",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "default": 50
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Parameters for items to fetch",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetParameter"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/ListCrypto/PagedByLcId": {
+    "/ListCrypto/Paged": {
       "post": {
         "tags": [
           "zGenericDynList"
         ],
         "summary": "Allow to fetch pages items by LoadCollection",
         "parameters": [
+          {
+            "name": "pit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
           {
             "name": "lcId",
             "in": "query",
