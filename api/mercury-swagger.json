@@ -47843,6 +47843,7 @@
           "computedPositionId",
           "description",
           "logSummaryId",
+          "name",
           "positionId"
         ],
         "type": "object",
@@ -47878,6 +47879,11 @@
           },
           "isLinkable": {
             "type": "boolean"
+          },
+          "name": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "logSummary": {
             "$ref": "#/components/schemas/LogSummary"
