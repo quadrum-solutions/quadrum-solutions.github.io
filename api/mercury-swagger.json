@@ -50402,6 +50402,11 @@
             "maxLength": 40,
             "type": "string",
             "nullable": true
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -50480,6 +50485,11 @@
           "mortgageLevel": {
             "type": "integer",
             "format": "int32"
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -50576,6 +50586,11 @@
             "maxLength": 100,
             "type": "string",
             "nullable": true
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -50653,6 +50668,11 @@
           "mortgageLevel": {
             "type": "integer",
             "format": "int32"
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
           },
           "exposureLtvLoadId": {
             "type": "integer",
@@ -50748,6 +50768,11 @@
           "mortgageLevel": {
             "type": "integer",
             "format": "int32"
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -50910,6 +50935,11 @@
           "mortgageLevel": {
             "type": "integer",
             "format": "int32"
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -50980,6 +51010,11 @@
           },
           "isRetailDepositRunoff": {
             "type": "boolean"
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -51065,6 +51100,11 @@
             "type": "integer",
             "format": "int32",
             "nullable": true
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -51124,6 +51164,11 @@
             "maxLength": 20,
             "type": "string",
             "nullable": true
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
           }
         },
         "additionalProperties": false
