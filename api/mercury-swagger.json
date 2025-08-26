@@ -42358,7 +42358,7 @@
         }
       }
     },
-    "/ListCrypto/Paged": {
+    "/ListCryptoAsset/Paged": {
       "post": {
         "tags": [
           "zGenericDynList"
@@ -42436,7 +42436,7 @@
         }
       }
     },
-    "/ListCrypto/{pit}/{id}": {
+    "/ListCryptoAsset/{pit}/{id}": {
       "get": {
         "tags": [
           "zGenericDynList"
@@ -42469,7 +42469,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Crypto"
+                  "$ref": "#/components/schemas/CryptoAsset"
                 }
               }
             }
@@ -42598,7 +42598,7 @@
         }
       }
     },
-    "/ListCrypto": {
+    "/ListCryptoAsset": {
       "post": {
         "tags": [
           "zGenericDynList"
@@ -42609,22 +42609,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/Crypto"
+                "$ref": "#/components/schemas/CryptoAsset"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Crypto"
+                "$ref": "#/components/schemas/CryptoAsset"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Crypto"
+                "$ref": "#/components/schemas/CryptoAsset"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Crypto"
+                "$ref": "#/components/schemas/CryptoAsset"
               }
             }
           }
@@ -42655,22 +42655,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/Crypto"
+                "$ref": "#/components/schemas/CryptoAsset"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Crypto"
+                "$ref": "#/components/schemas/CryptoAsset"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Crypto"
+                "$ref": "#/components/schemas/CryptoAsset"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Crypto"
+                "$ref": "#/components/schemas/CryptoAsset"
               }
             }
           }
@@ -42692,7 +42692,7 @@
         }
       }
     },
-    "/ListCrypto/withcomment": {
+    "/ListCryptoAsset/withcomment": {
       "put": {
         "tags": [
           "zGenericDynList"
@@ -42703,22 +42703,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/CryptoRecordAuditUpdateDTO"
+                "$ref": "#/components/schemas/CryptoAssetRecordAuditUpdateDTO"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CryptoRecordAuditUpdateDTO"
+                "$ref": "#/components/schemas/CryptoAssetRecordAuditUpdateDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CryptoRecordAuditUpdateDTO"
+                "$ref": "#/components/schemas/CryptoAssetRecordAuditUpdateDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CryptoRecordAuditUpdateDTO"
+                "$ref": "#/components/schemas/CryptoAssetRecordAuditUpdateDTO"
               }
             }
           }
@@ -42740,7 +42740,7 @@
         }
       }
     },
-    "/ListCrypto/withcomment/{pit}/{id}": {
+    "/ListCryptoAsset/withcomment/{pit}/{id}": {
       "patch": {
         "tags": [
           "zGenericDynList"
@@ -42772,22 +42772,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/CryptoRecordAuditPatchDTO"
+                "$ref": "#/components/schemas/CryptoAssetRecordAuditPatchDTO"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CryptoRecordAuditPatchDTO"
+                "$ref": "#/components/schemas/CryptoAssetRecordAuditPatchDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CryptoRecordAuditPatchDTO"
+                "$ref": "#/components/schemas/CryptoAssetRecordAuditPatchDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CryptoRecordAuditPatchDTO"
+                "$ref": "#/components/schemas/CryptoAssetRecordAuditPatchDTO"
               }
             }
           }
@@ -42809,7 +42809,7 @@
         }
       }
     },
-    "/ListCrypto/RecordsAuditById/{pit}/{id}": {
+    "/ListCryptoAsset/RecordsAuditById/{pit}/{id}": {
       "get": {
         "tags": [
           "zGenericDynList"
@@ -45002,7 +45002,7 @@
         },
         "additionalProperties": false
       },
-      "Crypto": {
+      "CryptoAsset": {
         "required": [
           "id",
           "pointInTime"
@@ -45048,13 +45048,13 @@
         },
         "additionalProperties": false
       },
-      "CryptoJsonPatchDocument": {
+      "CryptoAssetJsonPatchDocument": {
         "type": "object",
         "properties": {
           "operations": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CryptoOperation"
+              "$ref": "#/components/schemas/CryptoAssetOperation"
             },
             "nullable": true,
             "readOnly": true
@@ -45065,7 +45065,7 @@
         },
         "additionalProperties": false
       },
-      "CryptoOperation": {
+      "CryptoAssetOperation": {
         "type": "object",
         "properties": {
           "operationType": {
@@ -45089,11 +45089,11 @@
         },
         "additionalProperties": false
       },
-      "CryptoRecordAuditPatchDTO": {
+      "CryptoAssetRecordAuditPatchDTO": {
         "type": "object",
         "properties": {
           "item": {
-            "$ref": "#/components/schemas/CryptoJsonPatchDocument"
+            "$ref": "#/components/schemas/CryptoAssetJsonPatchDocument"
           },
           "comment": {
             "type": "string",
@@ -45102,11 +45102,11 @@
         },
         "additionalProperties": false
       },
-      "CryptoRecordAuditUpdateDTO": {
+      "CryptoAssetRecordAuditUpdateDTO": {
         "type": "object",
         "properties": {
           "item": {
-            "$ref": "#/components/schemas/Crypto"
+            "$ref": "#/components/schemas/CryptoAsset"
           },
           "comment": {
             "type": "string",
