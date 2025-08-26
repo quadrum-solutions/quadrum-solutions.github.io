@@ -25834,7 +25834,50 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Description"
+                    "$ref": "#/components/schemas/DescriptionsParamValues"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Description/EnumValues": {
+      "get": {
+        "tags": [
+          "zGenericDyn"
+        ],
+        "summary": "Allow to fetch all the different enums for a column",
+        "parameters": [
+          {
+            "name": "tableName",
+            "in": "query",
+            "description": "Name of the table",
+            "schema": {
+              "type": "string"
+            },
+            "example": "core_module_specifics"
+          },
+          {
+            "name": "columnName",
+            "in": "query",
+            "description": "Name of the column",
+            "schema": {
+              "type": "string"
+            },
+            "example": "ForceLiqTypeOf"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DescriptionsEnumValues"
                   }
                 }
               }
@@ -46224,6 +46267,42 @@
           "comment": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DescriptionsEnumValues": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DescriptionsParamValues": {
+        "type": "object",
+        "properties": {
+          "values": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "isMultiple": {
+            "type": "boolean"
+          },
+          "allowEmpty": {
+            "type": "boolean"
+          },
+          "isFloat": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
