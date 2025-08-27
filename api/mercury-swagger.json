@@ -3113,63 +3113,6 @@
         }
       }
     },
-    "/Import/LoadSnbBasket": {
-      "post": {
-        "tags": [
-          "Import"
-        ],
-        "summary": "Allow to load the SNB security list",
-        "parameters": [
-          {
-            "name": "lcId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "multipart/form-data": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "file": {
-                    "type": "string",
-                    "format": "binary"
-                  }
-                }
-              },
-              "encoding": {
-                "file": {
-                  "style": "form"
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        },
-        "deprecated": true
-      }
-    },
     "/Import/LoadSnbBasket/{date}": {
       "post": {
         "tags": [
