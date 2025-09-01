@@ -44954,6 +44954,16 @@
             "type": "string",
             "nullable": true,
             "readOnly": true
+          },
+          "enumId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "enumDescription": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -45177,6 +45187,16 @@
             "readOnly": true
           },
           "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "enumId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "enumDescription": {
             "type": "string",
             "nullable": true,
             "readOnly": true
