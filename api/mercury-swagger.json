@@ -44377,6 +44377,10 @@
             "type": "string",
             "nullable": true
           },
+          "displayValue": {
+            "type": "string",
+            "nullable": true
+          },
           "isEdited": {
             "type": "boolean"
           },
