@@ -13506,7 +13506,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -13595,7 +13596,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -13637,7 +13639,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/CoreAmortization/{uniqueId}": {
@@ -14118,6 +14121,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CoreAmortization/Duplicate/{uniqueId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -14430,7 +14478,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -14519,7 +14568,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -14561,7 +14611,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/CoreDerivative/{uniqueId}": {
@@ -15042,6 +15093,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CoreDerivative/Duplicate/{uniqueId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -15354,7 +15450,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -15443,7 +15540,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -15485,7 +15583,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/CoreDerivativeSchedule/{uniqueId}": {
@@ -15966,6 +16065,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CoreDerivativeSchedule/Duplicate/{uniqueId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -16278,7 +16422,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -16367,7 +16512,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -16409,7 +16555,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/CoreDerivativeSwap/{uniqueId}": {
@@ -16890,6 +17037,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CoreDerivativeSwap/Duplicate/{uniqueId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -17202,7 +17394,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -17291,7 +17484,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -17333,7 +17527,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/CoreInterestRate/{uniqueId}": {
@@ -17814,6 +18009,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CoreInterestRate/Duplicate/{uniqueId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -18126,7 +18366,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -18215,7 +18456,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -18257,7 +18499,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/CoreModuleSpecific/{uniqueId}": {
@@ -18738,6 +18981,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CoreModuleSpecific/Duplicate/{uniqueId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -19050,7 +19338,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -19139,7 +19428,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -19181,7 +19471,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/CorePledge/{uniqueId}": {
@@ -19662,6 +19953,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePledge/Duplicate/{uniqueId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -19974,7 +20310,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -20063,7 +20400,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -20105,7 +20443,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/CorePosition/{uniqueId}": {
@@ -20586,6 +20925,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePosition/Duplicate/{uniqueId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -20898,7 +21282,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -20987,7 +21372,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -21029,7 +21415,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/CoreDerivativeCalc/{uniqueId}": {
@@ -21510,6 +21897,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CoreDerivativeCalc/Duplicate/{uniqueId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -21822,7 +22254,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -21911,7 +22344,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -21953,7 +22387,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/CorePositionCalc/{uniqueId}": {
@@ -22434,6 +22869,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePositionCalc/Duplicate/{uniqueId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -22746,7 +23226,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -22835,7 +23316,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -22877,7 +23359,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/CoreDerivativeCalcLc/{uniqueId}": {
@@ -23358,6 +23841,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CoreDerivativeCalcLc/Duplicate/{uniqueId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -23670,7 +24198,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -23759,7 +24288,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -23801,7 +24331,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/CorePositionCalcLc/{uniqueId}": {
@@ -24282,6 +24813,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePositionCalcLc/Duplicate/{uniqueId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -24594,7 +25170,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -24683,7 +25260,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -24725,7 +25303,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/CorePositionAccountPlan/{uniqueId}": {
@@ -25206,6 +25785,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePositionAccountPlan/Duplicate/{uniqueId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -25518,7 +26142,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -25607,7 +26232,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -25649,7 +26275,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/CorePositionAmount/{uniqueId}": {
@@ -26130,6 +26757,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePositionAmount/Duplicate/{uniqueId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -26442,7 +27114,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -26531,7 +27204,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -26573,7 +27247,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/CorePositionFinrepMapping/{uniqueId}": {
@@ -27054,6 +27729,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePositionFinrepMapping/Duplicate/{uniqueId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -27366,7 +28086,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -27455,7 +28176,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -27497,7 +28219,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/CorePositionSingle/{uniqueId}": {
@@ -27948,6 +28671,51 @@
             "name": "id",
             "in": "path",
             "description": "Id of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePositionSingle/Duplicate/{uniqueId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId of the position",
             "required": true,
             "schema": {
               "type": "string"
@@ -41349,7 +42117,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -41428,7 +42197,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -41470,7 +42240,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/ListCommodity/{uniqueId}": {
@@ -41986,7 +42757,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -42065,7 +42837,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -42107,7 +42880,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/ListCounterparty/{uniqueId}": {
@@ -42623,7 +43397,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -42702,7 +43477,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -42744,7 +43520,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/ListExternalRating/{uniqueId}": {
@@ -43260,7 +44037,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -43339,7 +44117,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -43381,7 +44160,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/ListMarginAgreement/{uniqueId}": {
@@ -43897,7 +44677,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -43976,7 +44757,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -44018,7 +44800,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/ListProperty/{uniqueId}": {
@@ -44534,7 +45317,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -44613,7 +45397,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -44655,7 +45440,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/ListProxySecurity/{uniqueId}": {
@@ -45171,7 +45957,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -45250,7 +46037,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -45292,7 +46080,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/ListSecurity/{uniqueId}": {
@@ -45808,7 +46597,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -45887,7 +46677,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -45929,7 +46720,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/ListUnderlying/{uniqueId}": {
@@ -46445,7 +47237,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "patch": {
         "tags": [
@@ -46524,7 +47317,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       },
       "delete": {
         "tags": [
@@ -46566,7 +47360,8 @@
               }
             }
           }
-        }
+        },
+        "deprecated": true
       }
     },
     "/ListCryptoAsset/{uniqueId}": {
