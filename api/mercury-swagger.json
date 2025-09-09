@@ -47991,6 +47991,11 @@
             "type": "number",
             "format": "float"
           },
+          "dataSource": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
@@ -50305,6 +50310,11 @@
             "type": "string",
             "nullable": true
           },
+          "dataSource": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
@@ -50795,6 +50805,11 @@
             "type": "string",
             "format": "date"
           },
+          "dataSource": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
@@ -51017,6 +51032,11 @@
             "nullable": true
           },
           "optionalField": {
+            "type": "string",
+            "nullable": true
+          },
+          "dataSource": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -51976,6 +51996,11 @@
           },
           "compoundingType": {
             "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "dataSource": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -53414,6 +53439,11 @@
           "excludeFromDepositProtection": {
             "type": "boolean"
           },
+          "dataSource": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
@@ -53955,6 +53985,11 @@
           "maxAmount": {
             "type": "number",
             "format": "double"
+          },
+          "dataSource": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
           },
           "id": {
             "type": "string",
@@ -54611,6 +54646,11 @@
             "type": "string",
             "nullable": true
           },
+          "dataSource": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
@@ -54763,6 +54803,11 @@
           "limitLIQAmount": {
             "type": "number",
             "format": "double",
+            "nullable": true
+          },
+          "dataSource": {
+            "maxLength": 100,
+            "type": "string",
             "nullable": true
           },
           "uniqueId": {
@@ -56322,6 +56367,11 @@
             "nullable": true
           },
           "stageOpening": {
+            "type": "string",
+            "nullable": true
+          },
+          "dataSource": {
+            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
@@ -59356,6 +59406,11 @@
           "positionCurrencyPurchasedAmount": {
             "type": "number",
             "format": "double"
+          },
+          "dataSource": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
