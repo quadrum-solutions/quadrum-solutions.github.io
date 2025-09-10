@@ -13939,6 +13939,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CoreAmortization/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -14881,6 +14926,51 @@
             "name": "id",
             "in": "path",
             "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/CoreDerivative/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
             "required": true,
             "schema": {
               "type": "string"
@@ -15883,6 +15973,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CoreDerivativeSchedule/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -16825,6 +16960,51 @@
             "name": "id",
             "in": "path",
             "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/CoreDerivativeSwap/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
             "required": true,
             "schema": {
               "type": "string"
@@ -17827,6 +18007,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CoreInterestRate/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -18769,6 +18994,51 @@
             "name": "id",
             "in": "path",
             "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/CoreModuleSpecific/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
             "required": true,
             "schema": {
               "type": "string"
@@ -19771,6 +20041,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePledge/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -20713,6 +21028,51 @@
             "name": "id",
             "in": "path",
             "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePosition/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
             "required": true,
             "schema": {
               "type": "string"
@@ -21715,6 +22075,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CoreDerivativeCalc/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -22657,6 +23062,51 @@
             "name": "id",
             "in": "path",
             "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePositionCalc/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
             "required": true,
             "schema": {
               "type": "string"
@@ -23659,6 +24109,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CoreDerivativeCalcLc/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -24601,6 +25096,51 @@
             "name": "id",
             "in": "path",
             "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePositionCalcLc/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
             "required": true,
             "schema": {
               "type": "string"
@@ -25603,6 +26143,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePositionAccountPlan/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -26545,6 +27130,51 @@
             "name": "id",
             "in": "path",
             "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePositionAmount/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
             "required": true,
             "schema": {
               "type": "string"
@@ -27547,6 +28177,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePositionFinrepMapping/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -28489,6 +29164,51 @@
             "name": "id",
             "in": "path",
             "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePositionSingle/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
             "required": true,
             "schema": {
               "type": "string"
@@ -42510,6 +43230,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/ListCommodity/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -43120,6 +43885,51 @@
             "name": "id",
             "in": "path",
             "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/ListCounterparty/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
             "required": true,
             "schema": {
               "type": "string"
@@ -43790,6 +44600,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/ListExternalRating/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -44400,6 +45255,51 @@
             "name": "id",
             "in": "path",
             "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/ListMarginAgreement/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
             "required": true,
             "schema": {
               "type": "string"
@@ -45070,6 +45970,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/ListProperty/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -45680,6 +46625,51 @@
             "name": "id",
             "in": "path",
             "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/ListProxySecurity/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
             "required": true,
             "schema": {
               "type": "string"
@@ -46350,6 +47340,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/ListSecurity/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -46990,6 +48025,51 @@
               }
             }
           }
+        },
+        "deprecated": true
+      }
+    },
+    "/ListUnderlying/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -47600,6 +48680,51 @@
             "name": "id",
             "in": "path",
             "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/ListCryptoAsset/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zGenericDynList"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
             "required": true,
             "schema": {
               "type": "string"
