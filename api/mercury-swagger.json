@@ -4355,6 +4355,15 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "truncate",
+            "in": "query",
+            "description": "True to remove existing positions",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
           }
         ],
         "requestBody": {
@@ -4423,6 +4432,15 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "truncate",
+            "in": "query",
+            "description": "True to remove existing positions",
+            "schema": {
+              "type": "boolean",
+              "default": true
             }
           }
         ],
@@ -5058,6 +5076,15 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "truncate",
+            "in": "query",
+            "description": "True to remove existing positions",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
           }
         ],
         "requestBody": {
@@ -5126,6 +5153,15 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "truncate",
+            "in": "query",
+            "description": "True to remove existing positions",
+            "schema": {
+              "type": "boolean",
+              "default": true
             }
           }
         ],
