@@ -19311,6 +19311,1023 @@
         }
       }
     },
+    "/CoreTransaction/Paged": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to fetch pages items by LoadCollection",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "lcId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreTransaction/Excel": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to fetch excel file with filters",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "lcid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/CoreTransaction/{loadId}/{id}": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to fetch one item by Load Id and Id",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Transaction"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      },
+      "patch": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to patch an item",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "LoadId of the item",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Item to patch",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      },
+      "delete": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "LoadId of the item",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/CoreTransaction/{uniqueId}": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to fetch one item by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Transaction"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to patch an item",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Item to patch",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreTransaction": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to create an item",
+        "requestBody": {
+          "description": "Item to create",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Transaction"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Transaction"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Transaction"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Transaction"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Transaction"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Transaction"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Transaction"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Transaction"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreTransaction/withcomment": {
+      "put": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update with comment",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransactionRecordAuditUpdateDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransactionRecordAuditUpdateDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransactionRecordAuditUpdateDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransactionRecordAuditUpdateDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreTransaction/withcomment/{loadId}/{id}": {
+      "patch": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to patch an item with comment",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "LoadId of the item",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Item to patch with comment",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransactionRecordAuditPatchDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransactionRecordAuditPatchDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransactionRecordAuditPatchDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransactionRecordAuditPatchDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreTransaction/RecordsAuditById/{loadId}/{id}": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "LoadId of the item",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/CoreTransaction/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreTransaction/Duplicate/{loadId}/{id}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "Id of the load",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/CoreTransaction/Duplicate/{uniqueId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreTransaction/BulkUpdateByLcId/{lcId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to bulkupdate positions by LoadCollection Id",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the load collection",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for items to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CoreTransaction/BulkUpdateByLoadId/{loadId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to bulkupdate positions by LoadId",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "Id of the load",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for items to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/CorePledge/Paged": {
       "post": {
         "tags": [
@@ -28395,6 +29412,2040 @@
       }
     },
     "/CorePositionFinrepMapping/BulkUpdateByLoadId/{loadId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to bulkupdate positions by LoadId",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "Id of the load",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for items to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePositionCalcEuLc/Paged": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to fetch pages items by LoadCollection",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "lcId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePositionCalcEuLc/Excel": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to fetch excel file with filters",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "lcid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/CorePositionCalcEuLc/{loadId}/{id}": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to fetch one item by Load Id and Id",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PositionCalcEuLc"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      },
+      "patch": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to patch an item",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "LoadId of the item",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Item to patch",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      },
+      "delete": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "LoadId of the item",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePositionCalcEuLc/{uniqueId}": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to fetch one item by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PositionCalcEuLc"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to patch an item",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Item to patch",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePositionCalcEuLc": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to create an item",
+        "requestBody": {
+          "description": "Item to create",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcEuLc"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcEuLc"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcEuLc"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcEuLc"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcEuLc"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcEuLc"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcEuLc"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcEuLc"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePositionCalcEuLc/withcomment": {
+      "put": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update with comment",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcEuLcRecordAuditUpdateDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcEuLcRecordAuditUpdateDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcEuLcRecordAuditUpdateDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcEuLcRecordAuditUpdateDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePositionCalcEuLc/withcomment/{loadId}/{id}": {
+      "patch": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to patch an item with comment",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "LoadId of the item",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Item to patch with comment",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcEuLcRecordAuditPatchDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcEuLcRecordAuditPatchDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcEuLcRecordAuditPatchDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcEuLcRecordAuditPatchDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePositionCalcEuLc/RecordsAuditById/{loadId}/{id}": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "LoadId of the item",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePositionCalcEuLc/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePositionCalcEuLc/Duplicate/{loadId}/{id}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "Id of the load",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePositionCalcEuLc/Duplicate/{uniqueId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePositionCalcEuLc/BulkUpdateByLcId/{lcId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to bulkupdate positions by LoadCollection Id",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the load collection",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for items to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePositionCalcEuLc/BulkUpdateByLoadId/{loadId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to bulkupdate positions by LoadId",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "Id of the load",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for items to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePositionCalcDfcLc/Paged": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to fetch pages items by LoadCollection",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "lcId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectPagedResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePositionCalcDfcLc/Excel": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to fetch excel file with filters",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "lcid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/CorePositionCalcDfcLc/{loadId}/{id}": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to fetch one item by Load Id and Id",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PositionCalcDfcLc"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      },
+      "patch": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to patch an item",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "LoadId of the item",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Item to patch",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      },
+      "delete": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "LoadId of the item",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item to delete",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePositionCalcDfcLc/{uniqueId}": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to fetch one item by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PositionCalcDfcLc"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to patch an item",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Item to patch",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to delete one item",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePositionCalcDfcLc": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to create an item",
+        "requestBody": {
+          "description": "Item to create",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcDfcLc"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcDfcLc"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcDfcLc"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcDfcLc"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcDfcLc"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcDfcLc"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcDfcLc"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcDfcLc"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePositionCalcDfcLc/withcomment": {
+      "put": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update with comment",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcDfcLcRecordAuditUpdateDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcDfcLcRecordAuditUpdateDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcDfcLcRecordAuditUpdateDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcDfcLcRecordAuditUpdateDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePositionCalcDfcLc/withcomment/{loadId}/{id}": {
+      "patch": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to patch an item with comment",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "LoadId of the item",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Item to patch with comment",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcDfcLcRecordAuditPatchDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcDfcLcRecordAuditPatchDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcDfcLcRecordAuditPatchDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionCalcDfcLcRecordAuditPatchDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePositionCalcDfcLc/RecordsAuditById/{loadId}/{id}": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "LoadId of the item",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePositionCalcDfcLc/{uniqueId}/Audit": {
+      "get": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to retrieve all records audit by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecordAudit"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePositionCalcDfcLc/Duplicate/{loadId}/{id}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position",
+        "parameters": [
+          {
+            "name": "loadId",
+            "in": "path",
+            "description": "Id of the load",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/CorePositionCalcDfcLc/Duplicate/{uniqueId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to duplicate a position by UniqueId",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "description": "UniqueId of the position",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePositionCalcDfcLc/BulkUpdateByLcId/{lcId}": {
+      "post": {
+        "tags": [
+          "zCoreGenericDyn"
+        ],
+        "summary": "Allow to bulkupdate positions by LoadCollection Id",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "Id of the load collection",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Parameters for items to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdateParameter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CorePositionCalcDfcLc/BulkUpdateByLoadId/{loadId}": {
       "post": {
         "tags": [
           "zCoreGenericDyn"
@@ -48954,6 +52005,10 @@
           "isEdited": {
             "type": "boolean"
           },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
           "id": {
             "maxLength": 100,
             "minLength": 1,
@@ -49961,6 +53016,10 @@
           "isEdited": {
             "type": "boolean"
           },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
           "id": {
             "maxLength": 100,
             "type": "string"
@@ -50339,6 +53398,10 @@
           "isEdited": {
             "type": "boolean"
           },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
           "id": {
             "maxLength": 150,
             "type": "string"
@@ -50516,6 +53579,10 @@
             "type": "number",
             "format": "float"
           },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
@@ -50639,6 +53706,10 @@
           "economicActivityType": {
             "maxLength": 20,
             "type": "string"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
           },
           "uniqueId": {
             "type": "string",
@@ -50930,6 +54001,10 @@
           "isEdited": {
             "type": "boolean"
           },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
           "id": {
             "maxLength": 100,
             "minLength": 1,
@@ -51166,6 +54241,10 @@
           "isEdited": {
             "type": "boolean"
           },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
           "id": {
             "maxLength": 100,
             "minLength": 1,
@@ -51333,6 +54412,10 @@
         "properties": {
           "isEdited": {
             "type": "boolean"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
           },
           "id": {
             "maxLength": 100,
@@ -51525,6 +54608,10 @@
         "properties": {
           "isEdited": {
             "type": "boolean"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
           },
           "loadCollectionId": {
             "type": "integer",
@@ -51790,6 +54877,10 @@
           "isEdited": {
             "type": "boolean"
           },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
           "id": {
             "maxLength": 100,
             "minLength": 1,
@@ -51895,6 +54986,10 @@
         "properties": {
           "isEdited": {
             "type": "boolean"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
           },
           "id": {
             "maxLength": 100,
@@ -52595,6 +55690,10 @@
           "isEdited": {
             "type": "boolean"
           },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
           "id": {
             "maxLength": 20,
             "minLength": 1,
@@ -52946,6 +56045,10 @@
         "properties": {
           "isEdited": {
             "type": "boolean"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
           },
           "id": {
             "maxLength": 100,
@@ -54106,6 +57209,10 @@
           "isEdited": {
             "type": "boolean"
           },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
           "id": {
             "maxLength": 100,
             "minLength": 1,
@@ -54227,6 +57334,10 @@
         "properties": {
           "isEdited": {
             "type": "boolean"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
           },
           "id": {
             "maxLength": 100,
@@ -54950,6 +58061,10 @@
           "isEdited": {
             "type": "boolean"
           },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
           "loadId": {
             "type": "integer",
             "format": "int32",
@@ -55080,6 +58195,10 @@
         "properties": {
           "isEdited": {
             "type": "boolean"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
           },
           "id": {
             "minLength": 1,
@@ -55628,6 +58747,10 @@
           "isEdited": {
             "type": "boolean"
           },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
           "id": {
             "maxLength": 100,
             "minLength": 1,
@@ -55736,6 +58859,10 @@
         "properties": {
           "isEdited": {
             "type": "boolean"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
           },
           "id": {
             "maxLength": 100,
@@ -55895,6 +59022,10 @@
         "properties": {
           "isEdited": {
             "type": "boolean"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
           },
           "id": {
             "maxLength": 100,
@@ -56180,6 +59311,462 @@
         },
         "additionalProperties": false
       },
+      "PositionCalcDfcLc": {
+        "required": [
+          "id",
+          "loadCollectionId",
+          "loadId"
+        ],
+        "type": "object",
+        "properties": {
+          "isEdited": {
+            "type": "boolean"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "loadCollectionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "loadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "load": {
+            "$ref": "#/components/schemas/Load"
+          },
+          "productCode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "productRuleCode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "plClass": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "plClassRuleCode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "positionType": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTypeRuleCode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "finrepAccountGroupCode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "finrepAccountGroup": {
+            "type": "string",
+            "nullable": true
+          },
+          "bookAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "encumberedAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "notional": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "provision": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "accrual": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "pv": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "amortizedCost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "fairValue": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "faceValue": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "amortizationAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "operationalAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "positionCurrency": {
+            "maxLength": 3,
+            "type": "string",
+            "nullable": true
+          },
+          "reportingCurrency": {
+            "maxLength": 3,
+            "type": "string",
+            "nullable": true
+          },
+          "exchangeRate": {
+            "type": "number",
+            "format": "float",
+            "nullable": true
+          },
+          "stage": {
+            "type": "string",
+            "nullable": true
+          },
+          "stageOpening": {
+            "type": "string",
+            "nullable": true
+          },
+          "collateralType": {
+            "type": "string",
+            "nullable": true
+          },
+          "collateralTypeRuleCode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "positionPurpose": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionPurposeRuleCode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PositionCalcDfcLcJsonPatchDocument": {
+        "type": "object",
+        "properties": {
+          "operations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PositionCalcDfcLcOperation"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "contractResolver": {
+            "$ref": "#/components/schemas/IContractResolver"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PositionCalcDfcLcOperation": {
+        "type": "object",
+        "properties": {
+          "operationType": {
+            "$ref": "#/components/schemas/OperationType"
+          },
+          "path": {
+            "type": "string",
+            "nullable": true
+          },
+          "op": {
+            "type": "string",
+            "nullable": true
+          },
+          "from": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PositionCalcDfcLcRecordAuditPatchDTO": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/PositionCalcDfcLcJsonPatchDocument"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PositionCalcDfcLcRecordAuditUpdateDTO": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/PositionCalcDfcLc"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PositionCalcEuLc": {
+        "required": [
+          "id",
+          "loadCollectionId",
+          "loadId"
+        ],
+        "type": "object",
+        "properties": {
+          "isEdited": {
+            "type": "boolean"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "loadCollectionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "loadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "load": {
+            "$ref": "#/components/schemas/Load"
+          },
+          "exposureCategory": {
+            "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "caExposure": {
+            "type": "number",
+            "format": "double"
+          },
+          "caRiskWeight": {
+            "type": "number",
+            "format": "float"
+          },
+          "caExposureAfterCRM": {
+            "type": "number",
+            "format": "double"
+          },
+          "carwa": {
+            "type": "number",
+            "format": "double"
+          },
+          "issuerExposureCategory": {
+            "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "caIssuerExposure": {
+            "type": "number",
+            "format": "double"
+          },
+          "caIssuerRiskWeight": {
+            "type": "number",
+            "format": "float"
+          },
+          "caIssuerRWA": {
+            "type": "number",
+            "format": "double"
+          },
+          "smeFlag": {
+            "type": "boolean"
+          },
+          "stRatingFlag": {
+            "type": "boolean"
+          },
+          "slFlag": {
+            "type": "boolean"
+          },
+          "ccf": {
+            "type": "number",
+            "format": "float"
+          },
+          "lexExposure": {
+            "type": "number",
+            "format": "double"
+          },
+          "lexRiskWeight": {
+            "type": "number",
+            "format": "float"
+          },
+          "lexExposureAfterCRM": {
+            "type": "number",
+            "format": "double"
+          },
+          "lexrwa": {
+            "type": "number",
+            "format": "double"
+          },
+          "lexIssuerExposure": {
+            "type": "number",
+            "format": "double"
+          },
+          "lexIssuerRiskWeight": {
+            "type": "number",
+            "format": "float"
+          },
+          "lexIssuerRWA": {
+            "type": "number",
+            "format": "double"
+          },
+          "carwAnre": {
+            "type": "number",
+            "format": "double"
+          },
+          "caExposureAfterCRMnre": {
+            "type": "number",
+            "format": "double"
+          },
+          "defaultedPositionFlag": {
+            "type": "boolean"
+          },
+          "caCollateralUsedAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "lexCollateralUsedAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "fxHedgingMultiplier": {
+            "type": "number",
+            "format": "double"
+          },
+          "ratingClass": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "issuerRatingClass": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PositionCalcEuLcJsonPatchDocument": {
+        "type": "object",
+        "properties": {
+          "operations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PositionCalcEuLcOperation"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "contractResolver": {
+            "$ref": "#/components/schemas/IContractResolver"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PositionCalcEuLcOperation": {
+        "type": "object",
+        "properties": {
+          "operationType": {
+            "$ref": "#/components/schemas/OperationType"
+          },
+          "path": {
+            "type": "string",
+            "nullable": true
+          },
+          "op": {
+            "type": "string",
+            "nullable": true
+          },
+          "from": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PositionCalcEuLcRecordAuditPatchDTO": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/PositionCalcEuLcJsonPatchDocument"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PositionCalcEuLcRecordAuditUpdateDTO": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/PositionCalcEuLc"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "PositionCalcJsonPatchDocument": {
         "type": "object",
         "properties": {
@@ -56207,6 +59794,10 @@
         "properties": {
           "isEdited": {
             "type": "boolean"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
           },
           "loadCollectionId": {
             "type": "integer",
@@ -56522,6 +60113,10 @@
           "positionCollateral": {
             "$ref": "#/components/schemas/Position"
           },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
           "collateralLoadId": {
             "type": "integer",
             "format": "int32"
@@ -56596,6 +60191,10 @@
           },
           "positionCollateral": {
             "$ref": "#/components/schemas/Position"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
           },
           "collateralLoadId": {
             "type": "integer",
@@ -56679,6 +60278,10 @@
           },
           "positionCollateral": {
             "$ref": "#/components/schemas/Position"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
           },
           "collateralLoadId": {
             "type": "integer",
@@ -56780,6 +60383,10 @@
           "positionCollateral": {
             "$ref": "#/components/schemas/Position"
           },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
           "collateralLoadId": {
             "type": "integer",
             "format": "int32"
@@ -56880,6 +60487,10 @@
           "positionCollateral": {
             "$ref": "#/components/schemas/Position"
           },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
           "collateralLoadId": {
             "type": "integer",
             "format": "int32"
@@ -56962,6 +60573,10 @@
           },
           "positionCollateral": {
             "$ref": "#/components/schemas/Position"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
           },
           "collateralLoadId": {
             "type": "integer",
@@ -57047,6 +60662,10 @@
           "positionCollateral": {
             "$ref": "#/components/schemas/Position"
           },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
           "collateralLoadId": {
             "type": "integer",
             "format": "int32"
@@ -57129,6 +60748,10 @@
           "positionCollateral": {
             "$ref": "#/components/schemas/Position"
           },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
           "collateralLoadId": {
             "type": "integer",
             "format": "int32"
@@ -57202,6 +60825,10 @@
           },
           "positionCollateral": {
             "$ref": "#/components/schemas/Position"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
           },
           "collateralLoadId": {
             "type": "integer",
@@ -57294,6 +60921,10 @@
           "positionCollateral": {
             "$ref": "#/components/schemas/Position"
           },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
           "collateralLoadId": {
             "type": "integer",
             "format": "int32"
@@ -57347,6 +60978,10 @@
         "properties": {
           "isEdited": {
             "type": "boolean"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
           },
           "id": {
             "maxLength": 100,
@@ -57565,6 +61200,10 @@
         "properties": {
           "isEdited": {
             "type": "boolean"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
           },
           "id": {
             "type": "integer",
@@ -58018,6 +61657,10 @@
           "isEdited": {
             "type": "boolean"
           },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
           "id": {
             "maxLength": 100,
             "minLength": 1,
@@ -58166,6 +61809,10 @@
         "properties": {
           "isEdited": {
             "type": "boolean"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
           },
           "id": {
             "maxLength": 100,
@@ -59155,6 +62802,10 @@
         "properties": {
           "isEdited": {
             "type": "boolean"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
           },
           "id": {
             "maxLength": 150,
@@ -60341,6 +63992,13 @@
         ],
         "type": "object",
         "properties": {
+          "isEdited": {
+            "type": "boolean"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
           "id": {
             "type": "integer",
             "format": "int64"
@@ -60408,8 +64066,80 @@
             "type": "number",
             "format": "double"
           },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
           "dataSource": {
             "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TransactionJsonPatchDocument": {
+        "type": "object",
+        "properties": {
+          "operations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TransactionOperation"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "contractResolver": {
+            "$ref": "#/components/schemas/IContractResolver"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TransactionOperation": {
+        "type": "object",
+        "properties": {
+          "operationType": {
+            "$ref": "#/components/schemas/OperationType"
+          },
+          "path": {
+            "type": "string",
+            "nullable": true
+          },
+          "op": {
+            "type": "string",
+            "nullable": true
+          },
+          "from": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TransactionRecordAuditPatchDTO": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/TransactionJsonPatchDocument"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TransactionRecordAuditUpdateDTO": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/Transaction"
+          },
+          "comment": {
             "type": "string",
             "nullable": true
           }
@@ -60421,6 +64151,10 @@
         "properties": {
           "isEdited": {
             "type": "boolean"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
           },
           "id": {
             "type": "integer",
