@@ -59692,6 +59692,10 @@
             "type": "integer",
             "format": "int32"
           },
+          "creditQualityStep": {
+            "type": "integer",
+            "format": "int32"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
