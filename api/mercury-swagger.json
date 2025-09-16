@@ -2849,6 +2849,15 @@
               "type": "boolean",
               "default": false
             }
+          },
+          {
+            "name": "entity",
+            "in": "query",
+            "description": "Name of the only entity to load",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
           }
         ],
         "responses": {
