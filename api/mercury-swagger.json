@@ -56860,6 +56860,10 @@
             },
             "nullable": true
           },
+          "simulationFromLoadCollectionId": {
+            "type": "integer",
+            "format": "int32"
+          },
           "id": {
             "type": "string",
             "nullable": true,
