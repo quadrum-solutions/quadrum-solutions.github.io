@@ -3189,17 +3189,20 @@
           {
             "name": "tablename",
             "in": "query",
+            "description": "Name of the table to load",
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "overrideRecords",
+            "name": "truncate",
             "in": "query",
+            "description": "Truncate the existing data",
             "schema": {
               "type": "boolean",
               "default": true
-            }
+            },
+            "example": true
           }
         ],
         "requestBody": {
@@ -3210,6 +3213,7 @@
                 "properties": {
                   "file": {
                     "type": "string",
+                    "description": "File to import",
                     "format": "binary"
                   }
                 }
