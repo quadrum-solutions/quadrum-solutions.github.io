@@ -4473,6 +4473,44 @@
         }
       }
     },
+    "/ListCounterpartyGroupAris/Save/{lcId}": {
+      "get": {
+        "tags": [
+          "ListCounterpartyGroupAris"
+        ],
+        "summary": "Allow to save counterparty group to a csv file",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "LoadCollectionId to save",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/ListCounterpartyGroupAris/PagedByLcId": {
       "post": {
         "tags": [
@@ -5171,6 +5209,44 @@
             "schema": {
               "type": "boolean",
               "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/ListCounterpartyGroupLex/Save/{lcId}": {
+      "get": {
+        "tags": [
+          "ListCounterpartyGroupLex"
+        ],
+        "summary": "Allow to save counterparty group to a csv file",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "path",
+            "description": "LoadCollectionId to save",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],
