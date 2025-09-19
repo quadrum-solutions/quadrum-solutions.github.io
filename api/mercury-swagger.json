@@ -3060,7 +3060,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/LogSummary"
+                    "$ref": "#/components/schemas/LogDetailDTO"
                   }
                 }
               }
@@ -58245,6 +58245,53 @@
           },
           "logSummary": {
             "$ref": "#/components/schemas/LogSummary"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LogDetailDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "logSummaryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "positionId": {
+            "type": "string",
+            "nullable": true
+          },
+          "computedPositionId": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "$ref": "#/components/schemas/LogType"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "isImported": {
+            "type": "boolean"
+          },
+          "isLinkable": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionSingleUniqueId": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionUniqueId": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
