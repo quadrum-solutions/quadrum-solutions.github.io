@@ -57158,7 +57158,8 @@
           9,
           10,
           11,
-          12
+          12,
+          13
         ],
         "type": "integer",
         "format": "int32"
@@ -62872,6 +62873,20 @@
             },
             "nullable": true
           },
+          "positionsCrmEuLiqExposures": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PositionCrmEuLiq"
+            },
+            "nullable": true
+          },
+          "positionsCrmEuLiqCollaterals": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PositionCrmEuLiq"
+            },
+            "nullable": true
+          },
           "positionsLifeline": {
             "type": "array",
             "items": {
@@ -64195,6 +64210,38 @@
             "type": "integer",
             "format": "int32"
           },
+          "liqExposureAfterCRM": {
+            "type": "number",
+            "format": "double"
+          },
+          "liqCollateralUnusedAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "operationalAmountInsured": {
+            "type": "number",
+            "format": "double"
+          },
+          "operationalAmountNotInsured": {
+            "type": "number",
+            "format": "double"
+          },
+          "nonOperationalAmountInsured": {
+            "type": "number",
+            "format": "double"
+          },
+          "nonOperationalAmountNotInsured": {
+            "type": "number",
+            "format": "double"
+          },
+          "liqDepositRunOff": {
+            "type": "number",
+            "format": "double"
+          },
+          "insuredAmount": {
+            "type": "number",
+            "format": "double"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
@@ -65284,6 +65331,85 @@
           "mortgageLevel": {
             "type": "integer",
             "format": "int32"
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PositionCrmEuLiq": {
+        "required": [
+          "collateralId",
+          "loadCollectionId"
+        ],
+        "type": "object",
+        "properties": {
+          "loadCollectionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loadCollection": {
+            "$ref": "#/components/schemas/LoadCollection"
+          },
+          "positionExposure": {
+            "$ref": "#/components/schemas/Position"
+          },
+          "positionCollateral": {
+            "$ref": "#/components/schemas/Position"
+          },
+          "reportingDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "collateralLoadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "collateralId": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "exposureLoadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "exposureId": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "order": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "amountCovered": {
+            "type": "number",
+            "format": "double"
+          },
+          "collateralPVUsed": {
+            "type": "number",
+            "format": "double"
+          },
+          "collateralHQLACategory": {
+            "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "collateralLiqTypeOf": {
+            "maxLength": 40,
+            "type": "string",
+            "nullable": true
+          },
+          "collateralCARiskWeight": {
+            "type": "number",
+            "format": "float"
+          },
+          "isRetailDepositRunoff": {
+            "type": "boolean"
           },
           "uniqueId": {
             "type": "string",
