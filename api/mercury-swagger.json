@@ -64074,6 +64074,30 @@
             "format": "int32",
             "nullable": true
           },
+          "underlyingStrikeForwardValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "underlyingSpotValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "singleUnderlyingStrikeForwardValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "singleUnderlyingSpotValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "rAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "pAmount": {
+            "type": "number",
+            "format": "double"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
