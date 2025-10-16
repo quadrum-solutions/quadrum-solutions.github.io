@@ -61691,7 +61691,7 @@
             "type": "string",
             "nullable": true
           },
-          "computedPositionId": {
+          "positionSingleId": {
             "type": "string",
             "nullable": true
           },
@@ -61701,12 +61701,6 @@
           "description": {
             "type": "string",
             "nullable": true
-          },
-          "isImported": {
-            "type": "boolean"
-          },
-          "isLinkable": {
-            "type": "boolean"
           },
           "name": {
             "type": "string",
@@ -61719,6 +61713,9 @@
           "positionUniqueId": {
             "type": "string",
             "nullable": true
+          },
+          "isImported": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
