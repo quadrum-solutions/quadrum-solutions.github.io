@@ -69737,7 +69737,9 @@
   },
   "security": [
     {
-      "Bearer": [ ],
+      "Bearer": [ ]
+    },
+    {
       "ApiKey": [ ]
     }
   ]
