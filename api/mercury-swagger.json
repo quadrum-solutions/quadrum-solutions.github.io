@@ -166,7 +166,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Id of the rule",
+            "description": "Id of the adaptation",
             "required": true,
             "schema": {
               "type": "integer",
@@ -226,6 +226,58 @@
           }
         ],
         "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Adaptation/Audit/{id}": {
+      "get": {
+        "tags": [
+          "Adaptation"
+        ],
+        "summary": "Allow to get the audit an adaptation",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the adaptation",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "lastX",
+            "in": "query",
+            "description": "Number of audit to return",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "400": {
             "description": "Bad Request",
             "content": {
