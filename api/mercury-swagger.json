@@ -62517,6 +62517,9 @@
             "type": "string",
             "nullable": true
           },
+          "resIPREFlag": {
+            "type": "boolean"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
@@ -64830,11 +64833,7 @@
             "minLength": 1,
             "type": "string"
           },
-          "grossExposure": {
-            "type": "number",
-            "format": "double"
-          },
-          "netExposure": {
+          "exposure": {
             "type": "number",
             "format": "double"
           },
@@ -65988,10 +65987,19 @@
             "type": "number",
             "format": "double"
           },
+          "mortgageLevel": {
+            "type": "integer",
+            "format": "int32"
+          },
           "propertyPIT": {
             "type": "integer",
             "format": "int32",
             "nullable": true
+          },
+          "uniqueId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
           }
         },
         "additionalProperties": false
