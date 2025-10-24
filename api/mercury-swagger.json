@@ -64664,7 +64664,7 @@
             "type": "string"
           },
           "value": {
-            "maxLength": 100,
+            "maxLength": 1000,
             "type": "string"
           },
           "description": {
