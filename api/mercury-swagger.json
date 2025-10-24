@@ -2814,10 +2814,20 @@
           {
             "name": "entity",
             "in": "query",
-            "description": "Name of the only entity to load",
+            "description": "Tablename of the only entity to load",
             "schema": {
               "type": "string",
               "default": ""
+            }
+          },
+          {
+            "name": "pit",
+            "in": "query",
+            "description": "Point in time to force",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
             }
           }
         ],
