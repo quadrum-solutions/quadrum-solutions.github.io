@@ -4556,6 +4556,141 @@
         }
       }
     },
+    "/ListCounterpartyGroupAris": {
+      "post": {
+        "tags": [
+          "ListCounterpartyGroupAris"
+        ],
+        "summary": "Allow to create a list counterparty group",
+        "requestBody": {
+          "description": "List counterparty group to create",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CounterpartyGroupAris"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CounterpartyGroupAris"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CounterpartyGroupAris"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CounterpartyGroupAris"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "ListCounterpartyGroupAris"
+        ],
+        "summary": "Allow to fetch all items",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CounterpartyGroupAris"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "ListCounterpartyGroupAris"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CounterpartyGroupAris"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CounterpartyGroupAris"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CounterpartyGroupAris"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CounterpartyGroupAris"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/ListCounterpartyGroupAris/Paged": {
       "post": {
         "tags": [
@@ -4616,141 +4751,6 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/ListCounterpartyGroupAris": {
-      "get": {
-        "tags": [
-          "ListCounterpartyGroupAris"
-        ],
-        "summary": "Allow to fetch all items",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CounterpartyGroupAris"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "ListCounterpartyGroupAris"
-        ],
-        "summary": "Allow to create an item",
-        "requestBody": {
-          "description": "Item to create",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CounterpartyGroupAris"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CounterpartyGroupAris"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CounterpartyGroupAris"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CounterpartyGroupAris"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "ListCounterpartyGroupAris"
-        ],
-        "summary": "Allow to update an item",
-        "requestBody": {
-          "description": "Item to update",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CounterpartyGroupAris"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CounterpartyGroupAris"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CounterpartyGroupAris"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CounterpartyGroupAris"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
                 }
               }
             }
@@ -5315,6 +5315,141 @@
         }
       }
     },
+    "/ListCounterpartyGroupLex": {
+      "post": {
+        "tags": [
+          "ListCounterpartyGroupLex"
+        ],
+        "summary": "Allow to create a list counterparty group",
+        "requestBody": {
+          "description": "List counterparty group to create",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CounterpartyGroupLex"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CounterpartyGroupLex"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CounterpartyGroupLex"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CounterpartyGroupLex"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "ListCounterpartyGroupLex"
+        ],
+        "summary": "Allow to fetch all items",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CounterpartyGroupLex"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "ListCounterpartyGroupLex"
+        ],
+        "summary": "Allow to update an item",
+        "requestBody": {
+          "description": "Item to update",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CounterpartyGroupLex"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CounterpartyGroupLex"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CounterpartyGroupLex"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CounterpartyGroupLex"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/ListCounterpartyGroupLex/Paged": {
       "post": {
         "tags": [
@@ -5375,141 +5510,6 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectPagedResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/ListCounterpartyGroupLex": {
-      "get": {
-        "tags": [
-          "ListCounterpartyGroupLex"
-        ],
-        "summary": "Allow to fetch all items",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CounterpartyGroupLex"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "ListCounterpartyGroupLex"
-        ],
-        "summary": "Allow to create an item",
-        "requestBody": {
-          "description": "Item to create",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CounterpartyGroupLex"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CounterpartyGroupLex"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CounterpartyGroupLex"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CounterpartyGroupLex"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "ListCounterpartyGroupLex"
-        ],
-        "summary": "Allow to update an item",
-        "requestBody": {
-          "description": "Item to update",
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CounterpartyGroupLex"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CounterpartyGroupLex"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CounterpartyGroupLex"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CounterpartyGroupLex"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
                 }
               }
             }
