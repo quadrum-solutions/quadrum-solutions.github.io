@@ -7937,6 +7937,189 @@
         }
       }
     },
+    "/Survey/{surveyName}/Version/{surveyVersion}/Report/{reportName}": {
+      "get": {
+        "tags": [
+          "Report"
+        ],
+        "summary": "Allows to fetch a calculated report (by lcId)",
+        "parameters": [
+          {
+            "name": "surveyName",
+            "in": "path",
+            "description": "Name of the survey",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "MONA_U"
+          },
+          {
+            "name": "surveyVersion",
+            "in": "path",
+            "description": "Version of the survey",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "1.4.0"
+          },
+          {
+            "name": "reportName",
+            "in": "path",
+            "description": "Name of the report",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "M201"
+          },
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SurveyReportCoordinatedDTO"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Survey/{surveyName}/Version/{surveyVersion}/Report/{reportName}/Variance": {
+      "get": {
+        "tags": [
+          "Report"
+        ],
+        "summary": "Allows to fetch the variance between 2 calculated reports (by lcId and lcIdVariance)",
+        "parameters": [
+          {
+            "name": "surveyName",
+            "in": "path",
+            "description": "Name of the survey",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "MONA_U"
+          },
+          {
+            "name": "surveyVersion",
+            "in": "path",
+            "description": "Version of the survey",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "1.4.0"
+          },
+          {
+            "name": "reportName",
+            "in": "path",
+            "description": "Name of the report",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "M201"
+          },
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Id of the load collection",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 1
+          },
+          {
+            "name": "lcIdVariance",
+            "in": "query",
+            "description": "Load collection ID to get the variance from",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "example": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/CalcVarianceCoordinatedDTO"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/ReportingEntity/Tree/{id}": {
       "get": {
         "tags": [
@@ -58895,6 +59078,46 @@
         },
         "additionalProperties": false
       },
+      "CalcCellCoordinatedDTO": {
+        "type": "object",
+        "properties": {
+          "row": {
+            "type": "string",
+            "nullable": true
+          },
+          "column": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionTech": {
+            "type": "string",
+            "nullable": true
+          },
+          "originalValue": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "nullable": true
+          },
+          "displayValue": {
+            "type": "string",
+            "nullable": true
+          },
+          "isEdited": {
+            "type": "boolean"
+          },
+          "isFormula": {
+            "type": "boolean"
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CalcCellDTO": {
         "type": "object",
         "properties": {
@@ -58906,11 +59129,11 @@
             "type": "string",
             "nullable": true
           },
-          "position": {
+          "positionTech": {
             "type": "string",
             "nullable": true
           },
-          "positionTech": {
+          "position": {
             "type": "string",
             "nullable": true
           },
@@ -59302,6 +59525,36 @@
           },
           "hasCalcOlderThanLoadCollectionCalc": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CalcVarianceCoordinatedDTO": {
+        "type": "object",
+        "properties": {
+          "column": {
+            "type": "string",
+            "nullable": true
+          },
+          "row": {
+            "type": "string",
+            "nullable": true
+          },
+          "valueA": {
+            "type": "number",
+            "format": "double"
+          },
+          "valueB": {
+            "type": "number",
+            "format": "double"
+          },
+          "relative": {
+            "type": "number",
+            "format": "double"
+          },
+          "absolute": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
@@ -71490,6 +71743,50 @@
             "type": "string",
             "nullable": true,
             "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SurveyReportCoordinatedDTO": {
+        "type": "object",
+        "properties": {
+          "cells": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/CalcCellCoordinatedDTO"
+            },
+            "nullable": true
+          },
+          "rows": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/SurveyRowColCoordinatedDTO"
+            },
+            "nullable": true
+          },
+          "columns": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/SurveyRowColCoordinatedDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SurveyRowColCoordinatedDTO": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "dynamic": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
