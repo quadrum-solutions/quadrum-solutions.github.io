@@ -66335,6 +66335,14 @@
             "type": "number",
             "format": "double"
           },
+          "rNotional": {
+            "type": "number",
+            "format": "double"
+          },
+          "pNotional": {
+            "type": "number",
+            "format": "double"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
