@@ -11633,7 +11633,7 @@
         "tags": [
           "Reports"
         ],
-        "summary": "Allow to fetch the report in Excel",
+        "summary": "Allow to fetch the survey in Excel",
         "parameters": [
           {
             "name": "lcId",
