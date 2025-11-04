@@ -239,7 +239,7 @@
         }
       }
     },
-    "/Adaptation/Audit/{id}": {
+    "/Adaptation/Log/{id}": {
       "get": {
         "tags": [
           "Adaptation"
@@ -58450,6 +58450,13 @@
             "type": "string",
             "nullable": true
           },
+          "audits": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdaptationAudit"
+            },
+            "nullable": true
+          },
           "alias": {
             "type": "string",
             "nullable": true,
@@ -58469,6 +58476,49 @@
             "type": "string",
             "nullable": true,
             "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdaptationAudit": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "adaptationId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "adaptation": {
+            "$ref": "#/components/schemas/Adaptation"
+          },
+          "rowsAffected": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loadId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "load": {
+            "$ref": "#/components/schemas/Load"
+          },
+          "loadCollectionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isError": {
+            "type": "boolean"
+          },
+          "taskId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -63658,6 +63708,13 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Position"
+            },
+            "nullable": true
+          },
+          "adaptationAudits": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdaptationAudit"
             },
             "nullable": true
           },
