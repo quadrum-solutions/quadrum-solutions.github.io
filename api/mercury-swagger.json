@@ -66900,7 +66900,8 @@
             "nullable": true
           },
           "positionPurpose": {
-            "type": "string",
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           },
           "positionPurposeRuleCode": {
@@ -66937,6 +66938,10 @@
             "format": "double"
           },
           "pNotional": {
+            "type": "number",
+            "format": "double"
+          },
+          "unusedAmount": {
             "type": "number",
             "format": "double"
           },
