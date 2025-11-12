@@ -3565,6 +3565,56 @@
         }
       }
     },
+    "/Import/Extract": {
+      "get": {
+        "tags": [
+          "Import"
+        ],
+        "summary": "Allow to extract a LoadCollection",
+        "parameters": [
+          {
+            "name": "lcId",
+            "in": "query",
+            "description": "Load collection to extract",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "counterpartyId",
+            "in": "query",
+            "description": "Counterparty to filter",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/InterestRateCurve/Paged": {
       "post": {
         "tags": [
