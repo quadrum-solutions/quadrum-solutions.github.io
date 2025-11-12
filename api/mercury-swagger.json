@@ -58750,9 +58750,6 @@
             "type": "integer",
             "format": "int32"
           },
-          "load": {
-            "$ref": "#/components/schemas/Load"
-          },
           "loadCollectionId": {
             "type": "integer",
             "format": "int32"
@@ -63965,13 +63962,6 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Position"
-            },
-            "nullable": true
-          },
-          "adaptationAudits": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/AdaptationAudit"
             },
             "nullable": true
           },
