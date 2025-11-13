@@ -6,6 +6,7 @@ title: "e2e Testing - reports"
 
 | Status | Version BE | Commit BE | Version FE | Commit FE | Reports | Date |
 |----------|----------|----------|----------|----------|----------|----------|
+| passed | nightly | d66c814 | nightly | 52f59bb | [link](reports/20251113030611_fe_nightly_be_nightly_passed_report.html) | 2025-11-13_03:06:11 |
 | passed | nightly | f37b993 | nightly | fbd88dc | [link](reports/20251112030611_fe_nightly_be_nightly_passed_report.html) | 2025-11-12_03:06:11 |
 | passed | v1.37.1 | 9b414d8 | v1.37.1 | 312150b | [link](reports/20251111101212_fe_v1.37.1_be_v1.37.1_passed_report.html) | 2025-11-11_10:12:12 |
 | passed | nightly | 135075a | nightly | fbd88dc | [link](reports/20251111030608_fe_nightly_be_nightly_passed_report.html) | 2025-11-11_03:06:08 |
