@@ -244,7 +244,7 @@
         "tags": [
           "Adaptation"
         ],
-        "summary": "Allow to get the audit an adaptation",
+        "summary": "Allow to get the logs of an adaptation",
         "parameters": [
           {
             "name": "id",
