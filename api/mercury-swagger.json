@@ -14199,46 +14199,6 @@
         }
       }
     },
-    "/Technical/Config/{key}": {
-      "get": {
-        "tags": [
-          "Technical"
-        ],
-        "summary": "Allow to fetch an AppSetting configuration value",
-        "parameters": [
-          {
-            "name": "key",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/CoreAmortization/Paged": {
       "post": {
         "tags": [
