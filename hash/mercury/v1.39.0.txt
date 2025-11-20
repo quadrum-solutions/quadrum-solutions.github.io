@@ -1,0 +1,3 @@
+Version : v1.39.0
+Date : 2025-11-20T09:30:20
+Digest : 17937934be8cd99b8896cc062d575e3cce24c83e8e7e0b40faebd8ac66286afe
