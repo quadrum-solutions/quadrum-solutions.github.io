@@ -11976,6 +11976,15 @@
             }
           },
           {
+            "name": "overwriteFormulas",
+            "in": "query",
+            "description": "True to overwrite formulas in the Excel template file",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
             "name": "language",
             "in": "query",
             "description": "Language of the template (F, FR, D, DE, E, EN)",
