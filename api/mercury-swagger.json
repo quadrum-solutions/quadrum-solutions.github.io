@@ -70318,6 +70318,16 @@
             "type": "string",
             "nullable": true
           },
+          "euAccountingFramework": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "euReportingLevel": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
