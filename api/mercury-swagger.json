@@ -69629,12 +69629,12 @@
             "format": "int32"
           },
           "customField1": {
-            "maxLength": 40,
+            "maxLength": 255,
             "type": "string",
             "nullable": true
           },
           "customField2": {
-            "maxLength": 40,
+            "maxLength": 150,
             "type": "string",
             "nullable": true
           },
