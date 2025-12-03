@@ -60996,6 +60996,7 @@
       },
       "CounterpartyGroupLex": {
         "required": [
+          "comment",
           "domicileCountry",
           "economicActivityType",
           "id",
@@ -61041,6 +61042,10 @@
           },
           "economicActivityType": {
             "maxLength": 20,
+            "type": "string"
+          },
+          "comment": {
+            "maxLength": 1000,
             "type": "string"
           },
           "reportingDate": {
