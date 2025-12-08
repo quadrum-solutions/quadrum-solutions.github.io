@@ -61914,6 +61914,14 @@
             "type": "number",
             "format": "float"
           },
+          "rAccruedAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "pAccruedAmount": {
+            "type": "number",
+            "format": "double"
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
@@ -66555,6 +66563,26 @@
             "type": "string",
             "nullable": true
           },
+          "amortizedPremiumAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "amortizedDiscountAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "premiumAmortizableAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "discountAmortizableAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
           "uniqueId": {
             "type": "string",
             "nullable": true,
@@ -67133,6 +67161,26 @@
           "unusedAmount": {
             "type": "number",
             "format": "double"
+          },
+          "amortizedPremiumAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "amortizedDiscountAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "premiumAmortizableAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "discountAmortizableAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
           },
           "uniqueId": {
             "type": "string",
