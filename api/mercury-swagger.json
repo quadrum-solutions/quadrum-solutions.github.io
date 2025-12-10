@@ -2630,6 +2630,16 @@
               "type": "boolean",
               "default": false
             }
+          },
+          {
+            "name": "pit",
+            "in": "query",
+            "description": "Point in time to force",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
           }
         ],
         "requestBody": {
@@ -2830,6 +2840,16 @@
             "schema": {
               "type": "boolean",
               "default": true
+            }
+          },
+          {
+            "name": "pit",
+            "in": "query",
+            "description": "Point in time to force",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
             }
           }
         ],
