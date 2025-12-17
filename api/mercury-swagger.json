@@ -66045,12 +66045,12 @@
             "nullable": true
           },
           "internalReference4": {
-            "maxLength": 40,
+            "maxLength": 255,
             "type": "string",
             "nullable": true
           },
           "internalReference5": {
-            "maxLength": 20,
+            "maxLength": 150,
             "type": "string",
             "nullable": true
           },
