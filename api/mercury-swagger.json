@@ -59358,20 +59358,20 @@
       "AuditableBaseEntity": {
         "type": "object",
         "properties": {
-          "lastModifiedBy": {
+          "lmb": {
             "type": "string",
             "nullable": true
           },
-          "lastModified": {
+          "lm": {
             "type": "string",
             "format": "date-time",
             "nullable": true
           },
-          "reason": {
+          "r": {
             "type": "string",
             "nullable": true
           },
-          "value": {
+          "v": {
             "type": "string",
             "nullable": true
           }
@@ -71952,88 +71952,63 @@
       "SurveyCellCalc": {
         "type": "object",
         "properties": {
-          "row": {
+          "r": {
             "type": "string",
             "nullable": true
           },
-          "column": {
+          "c": {
             "type": "string",
             "nullable": true
           },
-          "sums": {
+          "s": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/SurveyCellCalcSum"
             },
             "nullable": true
           },
-          "originalValue": {
+          "ov": {
             "type": "string",
             "nullable": true
           },
-          "value": {
+          "v": {
             "type": "string",
             "nullable": true
           },
-          "isRef": {
+          "ir": {
             "type": "boolean"
           },
-          "dependencyOrder": {
+          "do": {
             "type": "integer",
             "format": "int32"
           },
-          "isEdited": {
+          "ie": {
             "type": "boolean"
           },
-          "toExport": {
+          "te": {
             "type": "boolean"
           },
-          "forceType": {
+          "ft": {
             "$ref": "#/components/schemas/ForceCellExportType"
           },
-          "type": {
+          "t": {
             "type": "string",
             "nullable": true
           },
-          "mappingTech": {
+          "mt": {
             "type": "string",
             "nullable": true
           },
-          "mappingDynTech": {
+          "mdt": {
             "type": "string",
             "nullable": true
           },
-          "mapping": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "mappingDyn": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "editions": {
+          "e": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/AuditableBaseEntity"
             },
             "nullable": true
-          },
-          "position": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "positionTech": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "positionTechIgnoreDyn": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -72096,50 +72071,18 @@
       "SurveyCellCalcSum": {
         "type": "object",
         "properties": {
-          "name": {
+          "n": {
             "type": "string",
             "nullable": true
           },
-          "where": {
+          "t": {
             "type": "string",
             "nullable": true
           },
-          "audit": {
-            "type": "string",
-            "nullable": true
-          },
-          "auditSummary": {
-            "type": "string",
-            "nullable": true
-          },
-          "conditionReport": {
-            "type": "string",
-            "nullable": true
-          },
-          "conditionRow": {
-            "type": "string",
-            "nullable": true
-          },
-          "conditionColumn": {
-            "type": "string",
-            "nullable": true
-          },
-          "conditionCell": {
-            "type": "string",
-            "nullable": true
-          },
-          "sum": {
-            "type": "string",
-            "nullable": true
-          },
-          "type": {
-            "type": "string",
-            "nullable": true
-          },
-          "isRef": {
+          "ir": {
             "type": "boolean"
           },
-          "value": {
+          "v": {
             "type": "string",
             "nullable": true
           }
@@ -72291,6 +72234,9 @@
             "format": "int32"
           },
           "toExport": {
+            "type": "boolean"
+          },
+          "processed": {
             "type": "boolean"
           },
           "dependencyOrder": {
