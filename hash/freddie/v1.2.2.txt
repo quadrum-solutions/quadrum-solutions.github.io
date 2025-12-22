@@ -1,3 +1,0 @@
-Version : v1.2.2
-Date : 2025-02-10T07:39:31
-Digest : 345cc9c5daf1ba2d1ecc112adc5c4f1cf2946b621eb0516625ff84ad766d41fb
